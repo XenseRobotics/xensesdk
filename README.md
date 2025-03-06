@@ -2,7 +2,7 @@
 
 ## 概述
 
-**Xense SDK** 是一款为触觉-视觉传感器和可视化工具设计的开发工具包，旨在帮助高效且无缝地将其集成到应用程序中。
+**Xense SDK** 是一款为 Xense 系列视触觉传感器设计的开发工具包，旨在帮助用户高效且无缝地将其集成到应用程序中。
 
 ---
 
@@ -58,13 +58,8 @@ pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl
 
 ---
 
-## 运行演示
+## 示例程序
 
-从终端直接运行演示应用程序：
-
-```bash
-xense_demo
-```
 
 ### 示例源代码
 
@@ -74,6 +69,40 @@ xense_demo
 site-packages/xensesdk/examples/*
 ```
 
+一个简单的例程如下:
+```python
+from xensesdk.xenseInterface.XenseSensor import Sensor
+from time import sleep
+
+def main():
+    # 1. 创建传感器, cam_id
+    #    Sensor.create(cam_id="your_cam_id", config_path="path_to_config")
+    sensor = Sensor.create(0, config_path="/home/linux/xensesdk/xensesdk/examples/config_0.2.1/W0")
+
+    # 2. 读取传感器数据
+    #   sensor.selectSensorInfo 可以通过传入 `Sensor.OutputType` 枚举量获取相应的传感器数据, 且的顺序或者数量无限制
+    #   可选的输出类型有:
+    #       * Raw : 原始触觉图像
+    #       * Rectify : 标定后的触觉图像
+    #       * Difference : 差分图像
+    #       * Depth : 深度图
+    #       * Marker2D : Marker点的二维像素坐标
+    #       * Marker2DInit : Marker点的初始二维坐标
+    #       * Marker3D : Marker点的三维坐标
+    #       * Marker3DInit : Marker点的初始三维坐标
+    #       * Marker3DFlow : Marker3D - Marker3DInit
+    #       * Force : 三维分布力
+    #       * ForceNorm : 法向分布力
+    while True:
+        rectify_img, depth= sensor.selectSensorInfo(Sensor.OutputType.Rectify, Sensor.OutputType.Depth)
+
+        # 数据处理
+        # ...
+        sleep(0.02)
+
+if __name__ == '__main__':
+    main()
+```
 
 ---
 
@@ -83,237 +112,142 @@ site-packages/xensesdk/examples/*
 
 ---
 
-## 1. `getRectifyImage`
+
+
+## 1. `create` 方法
 
 ### 描述
 
-从传感器获取一个校正后的图像。
+创建一个传感器
+
+### 输入参数
+- cam_id: 传感器 id, default: 0
+- config_path: 配置文件路径
 
 ### 返回
 
-- 一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组，表示校正后的图像。
+- 一个 `Sensor` 对象
 
 ### 示例
 
 ```python
-from xensesdk.xenseInterface.OmniSensor import Sensor
-sensor = Sensor(cam_id="your_cam_id", use_gpu=True, config_path="your_config_path")
-rectified_image = sensor.getRectifyImage()
+from xensesdk.xenseInterface.XenseSensor import Sensor
+sensor = Sensor.create(camera_id, config_path = configPath)
 ```
 
----
 
-## 2. `getDepthImage`
+## 2. `selectSensorInfo` 方法
 
 ### 描述
 
-根据输入的图像生成深度图。
+获取传感器信息
 
-### 参数
+### 输入参数
+args: 需要获取的传感器数据种类, `Sensor.OutputType` 类型的枚举量, 可选如下:
 
-- `image`：（可选）一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组。如果未提供图像，则默认为 `getRectifyImage` 的输出。
+* Raw : 原始触觉图像
+* Rectify : 标定后的触觉图像
+* Difference : 差分图像
+* Depth : 深度图
+* Marker2D : Marker点的二维像素坐标
+* Marker2DInit : Marker点的初始二维坐标
+* Marker3D : Marker点的三维坐标
+* Marker3DInit : Marker点的初始三维坐标
+* Marker3DFlow : Marker3D - Marker3DInit
+* Force : 三维分布力
+* ForceNorm : 法向分布力
 
 ### 返回
 
-- 一个形状为 `[336, 192]`（`h, w`）的 `float32` 数组，单位为毫米，表示深度图。
+- 计算得到的传感器信息
 
 ### 示例
 
 ```python
-from xensesdk.xenseInterface.OmniSensor import Sensor
-sensor = Sensor(cam_id="your_cam_id", use_gpu=True, config_path="your_config_path")
-depth_map = sensor.getDepthImage(image)
+from xensesdk.xenseInterface.XenseSensor import Sensor
+
+sensor = Sensor.create(camera_id,config_path = configPath)
+rectify, marker3d, marker3dInit, marker3dFlow, depth= sensor.selectSensorInfo(
+    Sensor.OutputType.Rectify, 
+    Sensor.OutputType.Marker3D, 
+    Sensor.OutputType.Marker3DInit,
+    Sensor.OutputType.Marker3DFlow,
+    Sensor.OutputType.Depth
+)
 ```
 
----
-
-## 3. `getDiffImage`
+## 3. `startSaveSensorInfo` 方法
 
 ### 描述
+开始录像
 
-根据输入的图像生成差异图。
+### 输入参数
+- data_to_save: list，用于选择要记录的数据类型：
+    - Sensor.OutputType.Rectify
+    - Sensor.OutputType.Difference 
+    - Sensor.OutputType.Depth
+    - Sensor.OutputType.Marker2D
 
-### 参数
-
-- `image`：（可选）一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组。如果未提供图像，则默认为 `getRectifyImage` 的输出。
-
+- path: 数据流保存路径
 ### 返回
-
-- 一个形状为 `[336, 192, 3]`（`h, w, c`）的 `uint8` 数组，表示差异图。
+- None
 
 ### 示例
-
 ```python
-from xensesdk.xenseInterface.OmniSensor import Sensor
-sensor = Sensor(cam_id="your_cam_id", use_gpu=True, config_path="your_config_path")
-diff_img = sensor.getDiffImage(image)
+from xensesdk.xenseInterface.XenseSensor import Sensor
+
+sensor = Sensor.create(camera_id,config_path = configPath)
+data_to_save = [
+    Sensor.OutputType.Rectify, 
+    Sensor.OutputType.Difference,
+    Sensor.OutputType.Depth,
+    Sensor.OutputType.Marker2D
+]
+sensor.startSaveSensorInfo(path, data_to_save)
 ```
 
----
-
-## 4. `getMarker`
+## 4. `stopSaveSensorInfo` 方法
 
 ### 描述
-
-检测标记位置，并更新内部的标记追踪器。
-
-### 参数
-
-- `image`：（可选）一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组。如果未提供图像，则默认为 `getRectifyImage` 的输出。
-
+停止录像
+### 输入参数
+- None
 ### 返回
-
-- 一个元组 `[current_marker_grid, confidence]`：
-  - `current_marker_grid`：形状为 `[18, 9, 2]`（`float32`），表示检测到的标记位置。
-  - `confidence`：形状为 `[18, 9]`（`float32`），表示每个标记的检测置信度。
+- None
 
 ### 示例
-
 ```python
-from xensesdk.xenseInterface.OmniSensor import Sensor
-sensor = Sensor(cam_id="your_cam_id", use_gpu=True, config_path="your_config_path")
-current_marker_grid, confidence = sensor.getMarker(image)
+from xensesdk.xenseInterface.XenseSensor import Sensor
+
+sensor = Sensor.create(camera_id,config_path = configPath)
+sensor.startSaveSensorInfo(path, data_to_save)
+# ...
+
+sensor.stopSaveSensorInfo()
 ```
 
----
 
-## 5. `getMarkerUnordered`
-
-### 描述
-
-检测无序的标记位置，不更新内部标记追踪器。
-
-### 参数
-
-- `image`：（可选）一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组。如果未提供图像，则默认为 `getRectifyImage` 的输出。
-
-### 返回
-
-- 一个数组，表示检测到的标记。格式取决于检测方法和配置。
-
-### 示例
-
-```python
-from xensesdk.xenseInterface.OmniSensor import Sensor
-sensor = Sensor(cam_id="your_cam_id", use_gpu=True, config_path="your_config_path")
-unordered_markers = sensor.getMarkerUnordered(image)
-```
-
----
-
-## 6. `getAllSensorInfo`
-
-### 描述
-
-聚合并返回所有处理过的传感器数据，包括校正图像、深度图、标记数据和差异图，便于统一访问。
-
-### 参数
-
-- `image`：（可选）一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组。如果未提供图像，则默认为 `getRectifyImage` 的输出。
-
-### 返回
-
-- 一个字典，包含以下键：
-  - `"src_img"`：源图像，一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组。
-  - `"depth_map"`：深度图，一个形状为 `[336, 192]`（`h, w`）的 `float32` 数组，单位为毫米，表示每个像素的深度。
-  - `"marker"`：一个列表，包含：
-    - `current_marker_grid`：标记网格，形状为 `[18, 9, 2]`（`float32`），表示标记的位置。
-    - `confidence`：置信度图，形状为 `[18, 9]`（`float32`），表示每个标记的检测置信度。
-  - `"diff_img"`：差异图，一个形状为 `[336, 192, 3]`（`uint8`）的图像。
-
-### 示例
-
-```python
-from xensesdk.xenseInterface.OmniSensor import Sensor
-sensor = Sensor(cam_id="your_cam_id", use_gpu=True, config_path="your_config_path")
-sensor_info = sensor.getAllSensorInfo(image)
-```
-
----
-
-## 7. `drawMarkerMove`
-
-### 描述
-
-在图像上绘制标记的运动向量。该方法使用标记追踪器可视化标记的运动。
-
-### 参数
-
-- `image`：一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组。
-
-### 返回
-
-- 一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组，表示输入图像并绘制标记的运动向量。
-
-### 示例
-
-```python
-from xensesdk.xenseInterface.OmniSensor import Sensor
-sensor = Sensor(cam_id="your_cam_id", use_gpu=True, config_path="your_config_path")
-img_with_marker_move = sensor.drawMarkerMove(image)
-```
-
----
-
-## 8. `drawMarker`
-
-### 描述
-
-在图像上绘制标记。
-
-### 参数
-
-- `image`：一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组。
-- `marker`：一个包含要绘制的标记位置的列表或数组。
-- `color`：一个元组 `(r, g, b)`，表示标记的颜色，默认为 `(3, 253, 253)`。
-- `radius`：绘制标记的半径，默认为 `2`。
-- `thickness`：标记边界的厚度，默认为 `2`。
-
-### 返回
-
-- 一个形状为 `[700, 400, 3]`（`h, w, c`）的 `uint8` 数组，表示输入图像并绘制标记。
-
-### 示例
-
-```python
-from xensesdk.xenseInterface.OmniSensor import Sensor
-sensor = Sensor(cam_id="your_cam_id", use_gpu=True, config_path="your_config_path")
-img_with_markers = sensor.drawMarker(image, markers)
-```
-
----
-
-## 9. `loadConfig`
-
-### 描述
-
-从配置文件加载设置，并更新内部的标记和校正配置。
-
-### 参数
-
-- `file_path`：配置文件的路径。
-
-### 返回
-
-- 无。该方法根据提供的文件修改内部配置。
-
-### 示例
-
-```python
-from xensesdk.xenseInterface.OmniSensor import Sensor
-sensor = Sensor(cam_id="your_cam_id", use_gpu=True, config_path="your_config_path")
-sensor.loadConfig("path_to_config_file")
-```
-
----
-
-### 注意事项：
-- 每个接受 `image` 参数的函数，如果未提供图像，将默认使用 `getRectifyImage` 的输出。
-
----
-
-
-### 常见问题解答 (FAQ)
+## 常见问题解答 (FAQ)
 
 **问：** 无法加载 Qt 平台插件 "xcb" 虽然它已被找到，错误信息为 "..."
-**答：** 进入 `.../plugins/platform` 目录并删除 `libqxcb.so` 文件。
+**答：** 
+```shell
+sudo apt install libxcb-cursor0 
+```
+
+**问：** 无法加载 Qt 平台插件 "xcb" 虽然它已被找到，错误信息为 "..."
+**答：** 进入 `.../Qt/plugins/platform` 目录并删除 `libqxcb.so` 文件。
+
+
+**问：** from 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.
+Could not load the Qt platform plugin "xcb" in "" even though it was found. This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+**答：** 终端内执行：
+sudo apt-get update
+sudo apt-get install libxcb-cursor0
+
+题外话
+还需安装：
+sudo apt-get install gcc #安装gcc编译器
+sudo apt-get install g++ #安装g++编译器
+sudo apt-get install make #安装make构建套件
+sudo apt-get install libgl1-mesa-dev #安装OpenGL核心库
