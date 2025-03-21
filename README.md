@@ -73,23 +73,16 @@ site-packages/xensesdk/examples/*
 ```python
 from xensesdk.xenseInterface.XenseSensor import Sensor
 from time import sleep
-class CameraSource:
-    CV2_MSMF = 1    #WIN
-    CV2_DSHOW = 2   #WIN
-    CV2_V4L2 = 3    #LINUX
-    AV_V4L2 = 4     #LINUX
-def main():
-    # 1. 创建传感器, cam_id
-    #    Sensor.create(cam_id="serial_number", config_path="path_to_config")
 
-    self._context._sensor = Sensor.create('OP000064',config_path = "/home/linux/xensesdk/xensesdk/examples/config_0.2.1/W0")
-    #注意serial_number 是传感器的序列号，config_path 是配置文件的路径，config_path下需要有名为OP000064的配置文件
+def main():
+    # 1. 创建传感器
+    #    Sensor.create("serial_number", config_path="path_to_config_file")
+    sensor = Sensor.create('OP000064', config_path = "/config")
+    # 注意OP000064 是传感器的序列号，config_path 是配置文件的路径，config_path下需要有名为OP000064的配置文件
 
     # 2. 读取传感器数据
     #   sensor.selectSensorInfo 可以通过传入 `Sensor.OutputType` 枚举量获取相应的传感器数据, 且的顺序或者数量无限制
     #   可选的输出类型有:
-    #       * Raw : 原始触觉图像
-    #       * Rectify : 标定后的触觉图像
     #       * Difference : 差分图像
     #       * Depth : 深度图
     #       * Marker2D : Marker点的二维像素坐标
@@ -100,7 +93,7 @@ def main():
     #       * Force : 三维分布力
     #       * ForceNorm : 法向分布力
     while True:
-        rectify_img, depth= sensor.selectSensorInfo(Sensor.OutputType.Rectify, Sensor.OutputType.Depth)
+        diff_img, depth= sensor.selectSensorInfo(Sensor.OutputType.Difference, Sensor.OutputType.Depth)
 
         # 数据处理
         # ...
@@ -137,7 +130,7 @@ if __name__ == '__main__':
 
 ```python
 from xensesdk.xenseInterface.XenseSensor import Sensor
-sensor = Sensor.create('OP000064', config_path = '/home/linux/xensesdk/xensesdk/')
+sensor = Sensor.create('OP000064', config_path = 'config/') # config_path 是配置文件的路径，config_path下需要有名为OP000064的配置文件
 ```
 
 ## 2. `selectSensorInfo` 方法
@@ -150,8 +143,6 @@ sensor = Sensor.create('OP000064', config_path = '/home/linux/xensesdk/xensesdk/
 
 args: 需要获取的传感器数据种类, `Sensor.OutputType` 类型的枚举量, 可选如下:
 
-* Raw : 原始触觉图像
-* Rectify : 标定后的触觉图像
 * Difference : 差分图像
 * Depth : 深度图
 * Marker2D : Marker点的二维像素坐标
@@ -172,8 +163,8 @@ args: 需要获取的传感器数据种类, `Sensor.OutputType` 类型的枚举�
 from xensesdk.xenseInterface.XenseSensor import Sensor
 
 sensor = Sensor.create(camera_id,config_path = configPath)
-rectify, marker3d, marker3dInit, marker3dFlow, depth= sensor.selectSensorInfo(
-    Sensor.OutputType.Rectify, 
+difference, marker3d, marker3dInit, marker3dFlow, depth= sensor.selectSensorInfo(
+    Sensor.OutputType.Difference, 
     Sensor.OutputType.Marker3D, 
     Sensor.OutputType.Marker3DInit,
     Sensor.OutputType.Marker3DFlow,
@@ -191,7 +182,6 @@ rectify, marker3d, marker3dInit, marker3dFlow, depth= sensor.selectSensorInfo(
 
 - data_to_save: list，用于选择要记录的数据类型：
 
-  - Sensor.OutputType.Rectify
   - Sensor.OutputType.Difference
   - Sensor.OutputType.Depth
   - Sensor.OutputType.Marker2D
@@ -208,7 +198,6 @@ from xensesdk.xenseInterface.XenseSensor import Sensor
 
 sensor = Sensor.create(camera_id,config_path = configPath)
 data_to_save = [
-    Sensor.OutputType.Rectify, 
     Sensor.OutputType.Difference,
     Sensor.OutputType.Depth,
     Sensor.OutputType.Marker2D
@@ -235,7 +224,12 @@ sensor.startSaveSensorInfo(path, data_to_save)
 ```python
 from xensesdk.xenseInterface.XenseSensor import Sensor
 
-sensor = Sensor.create(camera_id,config_path = configPath)
+sensor = Sensor.create(camera_id, config_path = configPath)
+data_to_save = [
+    Sensor.OutputType.Difference,
+    Sensor.OutputType.Depth,
+    Sensor.OutputType.Marker2D
+]
 sensor.startSaveSensorInfo(path, data_to_save)
 # ...
 
