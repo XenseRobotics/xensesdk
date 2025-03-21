@@ -2,7 +2,7 @@
 
 ## 概述
 
-**Xense SDK** 是一款为 Xense 系列视触觉传感器设计的开发工具包，旨在帮助用户高效且无缝地将其集成到应用程序中。
+**Xense SDK** 是一款为触觉-视觉传感器和可视化工具设计的开发工具包，旨在帮助高效且无缝地将其集成到应用程序中。
 
 ---
 
@@ -60,7 +60,6 @@ pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl
 
 ## 示例程序
 
-
 ### 示例源代码
 
 可以在以下目录中查找示例源代码：
@@ -70,14 +69,21 @@ site-packages/xensesdk/examples/*
 ```
 
 一个简单的例程如下:
+
 ```python
 from xensesdk.xenseInterface.XenseSensor import Sensor
 from time import sleep
-
+class CameraSource:
+    CV2_MSMF = 1    #WIN
+    CV2_DSHOW = 2   #WIN
+    CV2_V4L2 = 3    #LINUX
+    AV_V4L2 = 4     #LINUX
 def main():
     # 1. 创建传感器, cam_id
-    #    Sensor.create(cam_id="your_cam_id", config_path="path_to_config")
-    sensor = Sensor.create(0, config_path="/home/linux/xensesdk/xensesdk/examples/config_0.2.1/W0")
+    #    Sensor.create(cam_id="serial_number", config_path="path_to_config")
+
+    self._context._sensor = Sensor.create('OP000064',config_path = "/home/linux/xensesdk/xensesdk/examples/config_0.2.1/W0")
+    #注意serial_number 是传感器的序列号，config_path 是配置文件的路径，config_path下需要有名为OP000064的配置文件
 
     # 2. 读取传感器数据
     #   sensor.selectSensorInfo 可以通过传入 `Sensor.OutputType` 枚举量获取相应的传感器数据, 且的顺序或者数量无限制
@@ -112,8 +118,6 @@ if __name__ == '__main__':
 
 ---
 
-
-
 ## 1. `create` 方法
 
 ### 描述
@@ -121,8 +125,9 @@ if __name__ == '__main__':
 创建一个传感器
 
 ### 输入参数
-- cam_id: 传感器 id, default: 0
-- config_path: 配置文件路径
+
+- cam_id: 传感器id或者序列号, 默认为 0。如果是传感器id，则输入的数据类型是整形。如果是序列号，则输入的数据类型是字符串。
+- config_path: 配置文件所在文件夹，或者配置文件的路径。如果是配置文件所在文件夹的话，该文件夹内需要包含名为传感器序列号的配置文件。比如，该传感器的配置文件名为OP000064，config_path是 `/home/linux/xensesdk/xensesdk/`，则在/home/linux/xensesdk/xensesdk/ 下需要包含名为OP000064的标定文件。
 
 ### 返回
 
@@ -132,9 +137,8 @@ if __name__ == '__main__':
 
 ```python
 from xensesdk.xenseInterface.XenseSensor import Sensor
-sensor = Sensor.create(camera_id, config_path = configPath)
+sensor = Sensor.create('OP000064', config_path = '/home/linux/xensesdk/xensesdk/')
 ```
-
 
 ## 2. `selectSensorInfo` 方法
 
@@ -143,6 +147,7 @@ sensor = Sensor.create(camera_id, config_path = configPath)
 获取传感器信息
 
 ### 输入参数
+
 args: 需要获取的传感器数据种类, `Sensor.OutputType` 类型的枚举量, 可选如下:
 
 * Raw : 原始触觉图像
@@ -179,20 +184,25 @@ rectify, marker3d, marker3dInit, marker3dFlow, depth= sensor.selectSensorInfo(
 ## 3. `startSaveSensorInfo` 方法
 
 ### 描述
+
 开始录像
 
 ### 输入参数
-- data_to_save: list，用于选择要记录的数据类型：
-    - Sensor.OutputType.Rectify
-    - Sensor.OutputType.Difference 
-    - Sensor.OutputType.Depth
-    - Sensor.OutputType.Marker2D
 
+- data_to_save: list，用于选择要记录的数据类型：
+
+  - Sensor.OutputType.Rectify
+  - Sensor.OutputType.Difference
+  - Sensor.OutputType.Depth
+  - Sensor.OutputType.Marker2D
 - path: 数据流保存路径
+
 ### 返回
+
 - None
 
 ### 示例
+
 ```python
 from xensesdk.xenseInterface.XenseSensor import Sensor
 
@@ -209,13 +219,19 @@ sensor.startSaveSensorInfo(path, data_to_save)
 ## 4. `stopSaveSensorInfo` 方法
 
 ### 描述
+
 停止录像
+
 ### 输入参数
+
 - None
+
 ### 返回
+
 - None
 
 ### 示例
+
 ```python
 from xensesdk.xenseInterface.XenseSensor import Sensor
 
@@ -226,28 +242,23 @@ sensor.startSaveSensorInfo(path, data_to_save)
 sensor.stopSaveSensorInfo()
 ```
 
-
 ## 常见问题解答 (FAQ)
 
 **问：** 无法加载 Qt 平台插件 "xcb" 虽然它已被找到，错误信息为 "..."
-**答：** 
+**答：**
+
 ```shell
 sudo apt install libxcb-cursor0 
 ```
 
 **问：** 无法加载 Qt 平台插件 "xcb" 虽然它已被找到，错误信息为 "..."
-**答：** 进入 `.../Qt/plugins/platform` 目录并删除 `libqxcb.so` 文件。
-
+**答：** 进入 `.../site-packages/.../Qt/plugins/platform` 目录并删除 `libqxcb.so` 文件。
 
 **问：** from 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.
 Could not load the Qt platform plugin "xcb" in "" even though it was found. This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
 **答：** 终端内执行：
+
+```shelll
 sudo apt-get update
 sudo apt-get install libxcb-cursor0
-
-题外话
-还需安装：
-sudo apt-get install gcc #安装gcc编译器
-sudo apt-get install g++ #安装g++编译器
-sudo apt-get install make #安装make构建套件
-sudo apt-get install libgl1-mesa-dev #安装OpenGL核心库
+```
