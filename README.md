@@ -71,29 +71,19 @@ site-packages/xensesdk/examples/*
 一个简单的例程如下:
 
 ```python
-from xensesdk.xenseInterface.XenseSensor import Sensor
+from xensesdk import Sensor
 from time import sleep
 
 def main():
     # 1. 创建传感器
-    #    Sensor.create("serial_number", config_path="path_to_config_file")
-    sensor = Sensor.create('OP000064', config_path = "/config")
-    # 注意OP000064 是传感器的序列号，config_path 是配置文件的路径，config_path下需要有名为OP000064的配置文件
+
+    sensor = Sensor.create('OP000064')
 
     # 2. 读取传感器数据
-    #   sensor.selectSensorInfo 可以通过传入 `Sensor.OutputType` 枚举量获取相应的传感器数据, 且的顺序或者数量无限制
-    #   可选的输出类型有:
-    #       * Difference : 差分图像
-    #       * Depth : 深度图
-    #       * Marker2D : Marker点的二维像素坐标
-    #       * Marker2DInit : Marker点的初始二维坐标
-    #       * Marker3D : Marker点的三维坐标
-    #       * Marker3DInit : Marker点的初始三维坐标
-    #       * Marker3DFlow : Marker3D - Marker3DInit
-    #       * Force : 三维分布力
-    #       * ForceNorm : 法向分布力
+    #   sensor.selectSensorInfo 可以通过传入 `Sensor.OutputType` 枚举量获取相应的传感器数据, 顺序或者数量无限制
+    #   可选的输出类型参考API说明
     while True:
-        diff_img, depth= sensor.selectSensorInfo(Sensor.OutputType.Difference, Sensor.OutputType.Depth)
+        rectify_img, depth= sensor.selectSensorInfo(Sensor.OutputType.Rectify, Sensor.OutputType.Depth)
 
         # 数据处理
         # ...
@@ -115,126 +105,155 @@ if __name__ == '__main__':
 
 ### 描述
 
-创建一个传感器
+创建一个传感器实例，在结束时请调用`release`。
 
 ### 输入参数
 
-- cam_id: 传感器id或者序列号, 默认为 0。如果是传感器id，则输入的数据类型是整形。如果是序列号，则输入的数据类型是字符串。
-- config_path: 配置文件所在文件夹，或者配置文件的路径。如果是配置文件所在文件夹的话，该文件夹内需要包含名为传感器序列号的配置文件。比如，该传感器的配置文件名为OP000064，config_path是 `/home/linux/xensesdk/xensesdk/`，则在/home/linux/xensesdk/xensesdk/ 下需要包含名为OP000064的标定文件。
+* **cam\_id** (`int | str`, 可选): 传感器 ID、序列号或视频路径。默认为 0。
+* **use\_gpu** (`bool`, 可选): 是否使用 GPU 推理，默认为 True。
+* **config\_path** (`str | Path`, 可选): 配置文件路径或目录。如果是目录，需包含与传感器序列号同名的标定文件。
+* **api** (`Enum`, 可选): 相机 API 类型（如 OpenCV 后端），用于指定相机访问方式。
+* **infer\_size** (`tuple[int, int]`, 可选): 推理图像尺寸 (宽, 高)，默认 `(192, 336)`。
+* **check\_serial** (`bool`, 可选): 是否检查传感器序列号，默认 True。
+* **rectify\_size** (`tuple[int, int]`, 可选): 校正图像尺寸。
+* **ip\_address** (`str`, 可选): 远程连接使用的相机 IP。
+* **video\_path** (`str`, 可选): 离线模拟的视频路径。
 
 ### 返回
 
-- 一个 `Sensor` 对象
+* `Sensor` 对象
 
 ### 示例
 
 ```python
-from xensesdk.xenseInterface.XenseSensor import Sensor
-sensor = Sensor.create('OP000064', config_path = 'config/') # config_path 是配置文件的路径，config_path下需要有名为OP000064的配置文件
+
+# Example 1： 对于已有烧录config的传感器， 用SN码开启
+from xensesdk import Sensor
+sensor = Sensor.create('OP000064') 
+
+# Example 2： 对于已有烧录config的传感器， 用相机编号开启
+sensor = Sensor.create(0) 
+
+# Example 3： 对于无烧录config的传感器， 用SN码搭配config文件或文件路径
+sensor = Sensor.create('OP000064', config_path='/home/linux/xensesdk/xensesdk/') 
+
+# Example 4： 对于无烧录config的传感器， 用相机编号搭配config文件或文件路径
+sensor = Sensor.create(0, config_path='/home/linux/xensesdk/xensesdk/')
+
+# Example 5： 打开储存的数据
+sensor = Sensor.create(None, video_path=r"data.h5")
+
+# Example 6： 打开算力板上的传感器
+sensor =  Sensor.create('OP000064', ip_address="192.168.66.66")
 ```
+
+---
 
 ## 2. `selectSensorInfo` 方法
 
 ### 描述
 
-获取传感器信息
+获取指定类型的传感器数据。
 
 ### 输入参数
 
-args: 需要获取的传感器数据种类, `Sensor.OutputType` 类型的枚举量, 可选如下:
+* **args**: 任意数量的 `Sensor.OutputType` 枚举，用于指定需要获取的数据类型：
 
-* Difference : 差分图像
-* Depth : 深度图
-* Marker2D : Marker点的二维像素坐标
-* Marker2DInit : Marker点的初始二维坐标
-* Marker3D : Marker点的三维坐标
-* Marker3DInit : Marker点的初始三维坐标
-* Marker3DFlow : Marker3D - Marker3DInit
-* Force : 三维分布力
-* ForceNorm : 法向分布力
+  * Rectify 校正后的图像。
+  * Difference 差分图像。
+  * Depth 深度图，每个像素的深度信息。
+  * Marker2D / Marker2DInit / Marker2DFlip 当前帧中 marker 的二维像素坐标 / 初始帧中 marker 的二维坐标 / 在图像进行翻转处理后的 marker 位置
+  * Marker3D / Marker3DInit / Marker3DFlow / MarkerUnorder 当前帧中 marker 的三维坐标 / 初始帧中 marker 的三维坐标 / 3D 运动向量 / 未排序的 marker 点数据
+  * Force / ForceNorm / ForceResultant 三维分布力 / 法向力分量（即垂直于表面的力分量）/ 合力（总受力大小）
+  * Mesh3D / Mesh3DInit / Mesh3DFlow 当前帧的 3D 网格模型 / 初始帧的 3D 网格模型 / 当前网格与初始网格之间的形变差异 
 
 ### 返回
 
-- 计算得到的传感器信息
+* 所请求的传感器数据（返回数量和顺序与参数一致）
 
 ### 示例
 
 ```python
-from xensesdk.xenseInterface.XenseSensor import Sensor
-
-sensor = Sensor.create(camera_id,config_path = configPath)
-difference, marker3d, marker3dInit, marker3dFlow, depth= sensor.selectSensorInfo(
-    Sensor.OutputType.Difference, 
+from xensesdk import Sensor
+sensor = Sensor.create('OP000064') 
+rectify, marker3d, marker3dInit, marker3dFlow, depth = sensor.selectSensorInfo(
+    Sensor.OutputType.Rectify, 
     Sensor.OutputType.Marker3D, 
     Sensor.OutputType.Marker3DInit,
     Sensor.OutputType.Marker3DFlow,
     Sensor.OutputType.Depth
 )
+...
+sensor.release()
 ```
+
+---
 
 ## 3. `startSaveSensorInfo` 方法
 
 ### 描述
 
-开始录像
+开始保存指定类型的传感器数据，在结束时务必搭配`stopSaveSensorInfo`使用。
 
 ### 输入参数
 
-- data_to_save: list，用于选择要记录的数据类型：
-
-  - Sensor.OutputType.Difference
-  - Sensor.OutputType.Depth
-  - Sensor.OutputType.Marker2D
-- path: 数据流保存路径
+* **path** (`str`): 数据保存的文件夹路径。
+* **data\_to\_save** (`List[Sensor.OutputType]`, 可选): 需要保存的数据类型列表。为 `None` 则保存所有类型。
 
 ### 返回
 
-- None
+* 无
 
 ### 示例
 
 ```python
-from xensesdk.xenseInterface.XenseSensor import Sensor
-
-sensor = Sensor.create(camera_id,config_path = configPath)
+from xensesdk import Sensor
+sensor = Sensor.create('OP000064') 
 data_to_save = [
+    Sensor.OutputType.Rectify, 
     Sensor.OutputType.Difference,
     Sensor.OutputType.Depth,
     Sensor.OutputType.Marker2D
 ]
-sensor.startSaveSensorInfo(path, data_to_save)
+sensor.startSaveSensorInfo('/path/to/save', data_to_save)
+...
+sensor.stopSaveSensorInfo()
+...
+sensor.release()
 ```
+
+---
 
 ## 4. `stopSaveSensorInfo` 方法
 
 ### 描述
 
-停止录像
+停止数据保存。
+---
 
-### 输入参数
+## 5. `getCameraID` 方法
 
-- None
+### 描述
 
-### 返回
+获取当前传感器的相机编号。
 
-- None
+---
 
-### 示例
+## 6. `resetReferenceImage` 方法
 
-```python
-from xensesdk.xenseInterface.XenseSensor import Sensor
+### 描述
 
-sensor = Sensor.create(camera_id, config_path = configPath)
-data_to_save = [
-    Sensor.OutputType.Difference,
-    Sensor.OutputType.Depth,
-    Sensor.OutputType.Marker2D
-]
-sensor.startSaveSensorInfo(path, data_to_save)
-# ...
+重置数据处理流程。
 
-sensor.stopSaveSensorInfo()
-```
+---
+
+## 7. `release` 方法
+
+### 描述
+
+释放资源，关闭传感器。
+
+---
 
 ## 常见问题解答 (FAQ)
 
