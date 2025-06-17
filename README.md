@@ -259,17 +259,12 @@ sensor.release()
 ## 常见问题解答 (FAQ)
 
 **问：** 无法加载 Qt 平台插件 "xcb" 虽然它已被找到，错误信息为 "..."
-**答：**
 
-```shell
-sudo apt install libxcb-cursor0 
-```
-
-**问：** 无法加载 Qt 平台插件 "xcb" 虽然它已被找到，错误信息为 "..."
 **答：** 进入 `.../site-packages/.../Qt/plugins/platform` 目录并删除 `libqxcb.so` 文件。
 
 **问：** from 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.
 Could not load the Qt platform plugin "xcb" in "" even though it was found. This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
 **答：** 终端内执行：
 
 ```shelll
