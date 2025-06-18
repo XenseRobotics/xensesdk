@@ -112,10 +112,11 @@ if __name__ == '__main__':
 * **cam\_id** (`int | str`, 可选): 传感器 ID、序列号或视频路径。默认为 0。
 * **use\_gpu** (`bool`, 可选): 是否使用 GPU 推理，默认为 True。
 * **config\_path** (`str | Path`, 可选): 配置文件路径或目录。如果是目录，需包含与传感器序列号同名的标定文件。
+* **api** (`Enum`, 可选): 相机 API 类型（如 OpenCV 后端），用于指定相机访问方式。
 * **check\_serial** (`bool`, 可选): 是否检查传感器序列号，默认 True。
 * **rectify\_size** (`tuple[int, int]`, 可选): 校正图像尺寸。
-* **ip\_address** (`str`, 可选): 远程连接使用的算力板 IP。
-* **video\_path** (`str`, 可选): 离线保存的传感器数据路径, 用于重播数据。
+* **ip\_address** (`str`, 可选): 远程连接使用的相机 IP。
+* **video\_path** (`str`, 可选): 离线模拟的视频路径。
 
 ### 返回
 
@@ -125,13 +126,12 @@ if __name__ == '__main__':
 
 ```python
 
-# Example 1： 可用 SN 码或者相机编号启动对应的传感器
+# Example 1：  用SN码开启
 from xensesdk import Sensor
 sensor = Sensor.create('OP000064') 
-sensor = Sensor.create(0) 
 
-# Example 2： 启动传感器, 并指定标定文件覆盖传感器内部标定参数
-sensor = Sensor.create('OP000064', config_path='/home/linux/xensesdk/OP000064_config') 
+# Example 2：  用相机编号开启
+sensor = Sensor.create(0) 
 
 # Example 3： 打开储存的数据
 sensor = Sensor.create(None, video_path=r"data.h5")
@@ -152,13 +152,17 @@ sensor =  Sensor.create('OP000064', ip_address="192.168.66.66")
 
 * **args**: 任意数量的 `Sensor.OutputType` 枚举，用于指定需要获取的数据类型：
 
-  * Rectify 校正后的图像。
-  * Difference 差分图像。
-  * Depth 深度图，每个像素的深度信息。
-  * Marker2D / Marker2DInit / Marker2DFlip 当前帧中 marker 的二维像素坐标 / 初始帧中 marker 的二维坐标 / 在图像进行翻转处理后的 marker 位置
-  * Marker3D / Marker3DInit / Marker3DFlow / MarkerUnorder 当前帧中 marker 的三维坐标 / 初始帧中 marker 的三维坐标 / 3D 运动向量 / 未排序的 marker 点数据
-  * Force / ForceNorm / ForceResultant 三维分布力 / 法向力分量（即垂直于表面的力分量）/ 合力（总受力大小）
-  * Mesh3D / Mesh3DInit / Mesh3DFlow 当前帧的 3D 网格模型 / 初始帧的 3D 网格模型 / 当前网格与初始网格之间的形变差异 
+    * Rectify: Optional[np.ndarray]          # 校正图像, shape=(700, 400, 3), RGB
+    * Difference: Optional[np.ndarray]       # 差分图像, shape=(700, 400, 3), RGB
+    * Depth: Optional[np.ndarray]            # 深度图像, shape=(700, 400), 单位mm
+
+    * Force: Optional[np.ndarray]            # 三维力分布, shape=(35, 20, 3)
+    * ForceNorm: Optional[np.ndarray]        # 法向力分量, shape=(35, 20, 3)
+    * ForceResultant: Optional[np.ndarray]   # 六维合力, shape=(6,)
+
+    * Mesh3D: Optional[np.ndarray]           # 当前帧3D网格, shape=(35, 20, 3)
+    * Mesh3DInit: Optional[np.ndarray]       # 初始3D网格, shape=(35, 20, 3)
+    * Mesh3DFlow: Optional[np.ndarray]       # 网格形变向量, shape=(35, 20, 3)
 
 ### 返回
 
