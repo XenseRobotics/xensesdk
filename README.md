@@ -112,12 +112,10 @@ if __name__ == '__main__':
 * **cam\_id** (`int | str`, 可选): 传感器 ID、序列号或视频路径。默认为 0。
 * **use\_gpu** (`bool`, 可选): 是否使用 GPU 推理，默认为 True。
 * **config\_path** (`str | Path`, 可选): 配置文件路径或目录。如果是目录，需包含与传感器序列号同名的标定文件。
-* **api** (`Enum`, 可选): 相机 API 类型（如 OpenCV 后端），用于指定相机访问方式。
-* **infer\_size** (`tuple[int, int]`, 可选): 推理图像尺寸 (宽, 高)，默认 `(192, 336)`。
 * **check\_serial** (`bool`, 可选): 是否检查传感器序列号，默认 True。
 * **rectify\_size** (`tuple[int, int]`, 可选): 校正图像尺寸。
-* **ip\_address** (`str`, 可选): 远程连接使用的相机 IP。
-* **video\_path** (`str`, 可选): 离线模拟的视频路径。
+* **ip\_address** (`str`, 可选): 远程连接使用的算力板 IP。
+* **video\_path** (`str`, 可选): 离线保存的传感器数据路径, 用于重播数据。
 
 ### 返回
 
@@ -127,23 +125,18 @@ if __name__ == '__main__':
 
 ```python
 
-# Example 1： 对于已有烧录config的传感器， 用SN码开启
+# Example 1： 可用 SN 码或者相机编号启动对应的传感器
 from xensesdk import Sensor
 sensor = Sensor.create('OP000064') 
-
-# Example 2： 对于已有烧录config的传感器， 用相机编号开启
 sensor = Sensor.create(0) 
 
-# Example 3： 对于无烧录config的传感器， 用SN码搭配config文件或文件路径
-sensor = Sensor.create('OP000064', config_path='/home/linux/xensesdk/xensesdk/') 
+# Example 2： 启动传感器, 并指定标定文件覆盖传感器内部标定参数
+sensor = Sensor.create('OP000064', config_path='/home/linux/xensesdk/OP000064_config') 
 
-# Example 4： 对于无烧录config的传感器， 用相机编号搭配config文件或文件路径
-sensor = Sensor.create(0, config_path='/home/linux/xensesdk/xensesdk/')
-
-# Example 5： 打开储存的数据
+# Example 3： 打开储存的数据
 sensor = Sensor.create(None, video_path=r"data.h5")
 
-# Example 6： 打开算力板上的传感器
+# Example 4： 打开算力板上的传感器
 sensor =  Sensor.create('OP000064', ip_address="192.168.66.66")
 ```
 
