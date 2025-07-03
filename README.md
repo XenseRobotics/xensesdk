@@ -51,9 +51,12 @@ conda install --use-local cudnn-8.9.2.26-cuda11_0.conda
 ### 步骤 3: 安装 Xense SDK 包
 
 将 SDK 包安装到您的环境中：
-
 ```bash
-pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl
+pip install xensesdk 
+```
+或:
+```bash
+pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl # (对于定制软件包)
 ```
 
 ---
