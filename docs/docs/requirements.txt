@@ -4,3 +4,4 @@ sphinx-intl
 myst-parser
 sphinxcontrib.mermaid
 sphinx_copybutton
+sphinx-tabs

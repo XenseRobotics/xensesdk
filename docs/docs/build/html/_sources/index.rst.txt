@@ -25,6 +25,7 @@ XenseSDK_: Xense SDK开发工具包说明
 .. toctree::
    :maxdepth: 1
    :caption: 主目录
+   :hidden:
 
    XenseStudio/XenseStudio
 
