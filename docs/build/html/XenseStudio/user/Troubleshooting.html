@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>五、故障排查 &mdash; xense  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=b8e0feb6" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="六、联系方式" href="Contact_Information.html" />
+    <link rel="prev" title="四、界面与交互" href="User_Interface_and_Interaction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../XenseStudio.html">XenseStudio</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html">引言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software_Introduction.html">一、软件简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="System_Requirments.html">二、系统要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation_and_Setup.html">三、安装与设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="User_Interface_and_Interaction.html">四、界面与交互</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">五、故障排查</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">常见问题及解决方案</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Contact_Information.html">六、联系方式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../XenseStudio.html">XenseStudio</a></li>
+      <li class="breadcrumb-item active">五、故障排查</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/XenseStudio/user/Troubleshooting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tag-troubleshooting">
+<span id="id1"></span><h1>五、故障排查<a class="headerlink" href="#tag-troubleshooting" title="Link to this heading"></a></h1>
+<section id="id2">
+<h2>常见问题及解决方案<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>初始化时打印</p></li>
+</ol>
+<blockquote>
+<div><p>问题描述：</p>
+<blockquote>
+<div><p>安装后的初次启动加载会比较慢</p>
+</div></blockquote>
+<p>解决方案：</p>
+<blockquote>
+<div><p>初始化时，第一次需要加载所有组件并缓存，后续可正常使用</p>
+</div></blockquote>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>显卡驱动</p></li>
+</ol>
+<blockquote>
+<div><p>问题描述：</p>
+<blockquote>
+<div><p>如果不插传感器能启动,但插传感器无法启动，且命令行有如下类似报错或输出</p>
+</div></blockquote>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">命令行输出</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>段错误已中止<span class="o">(</span>核心已转储<span class="o">)</span>
+<span class="linenos">2</span>Segmentation<span class="w"> </span>Fault
+<span class="linenos">3</span>Init<span class="w"> </span>infer<span class="w"> </span>engine
+<span class="linenos">4</span>infer<span class="w"> </span>session<span class="w"> </span>using<span class="w"> </span>CPU<span class="o">(</span>GPU<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<p>解决方案：</p>
+<blockquote>
+<div><p>大概率是显卡驱动问题,
+先安装适配的显卡驱动
+(如果显卡是nvidia显卡的话)检查如下命令是否正常输出,如果不正常的话，先安装适配的显卡驱动。</p>
+</div></blockquote>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">命令行输入</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nvidia-smi
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>报错：</p></li>
+</ol>
+<blockquote>
+<div><p>问题描述：</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">命令行输出</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>from<span class="w"> </span><span class="m">6</span>.5.0,<span class="w"> </span>xcb-cursor0<span class="w"> </span>or<span class="w"> </span>libxcb-cursor0<span class="w"> </span>is<span class="w"> </span>needed<span class="w"> </span>to<span class="w"> </span>lload<span class="w"> </span>the<span class="w"> </span>Qt<span class="w"> </span>xcb<span class="w"> </span>platform<span class="w"> </span>plugin.
+<span class="linenos">2</span>Could<span class="w"> </span>not<span class="w"> </span>load<span class="w"> </span>the<span class="w"> </span>Qt<span class="w"> </span>platform<span class="w"> </span>plugin<span class="w"> </span><span class="s2">&quot;xcb&quot;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>even<span class="w"> </span>tkhough<span class="w"> </span>it<span class="w"> </span>was<span class="w"> </span>found.<span class="w"> </span>This
+<span class="linenos">3</span>application<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>start<span class="w"> </span>because<span class="w"> </span>no<span class="w"> </span>Qt<span class="w"> </span>platform<span class="w"> </span>plugiIn<span class="w"> </span>could<span class="w"> </span>be<span class="w"> </span>initialized.
+<span class="linenos">4</span>Reinstalling<span class="w"> </span>the<span class="w"> </span>application<span class="w"> </span>may<span class="w"> </span>fix<span class="w"> </span>this<span class="w"> </span>problem.
+</pre></div>
+</div>
+</div>
+<p>解决方案：</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">命令行输入</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="linenos">2</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libxcb-cursor0
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="User_Interface_and_Interaction.html" class="btn btn-neutral float-left" title="四、界面与交互" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Contact_Information.html" class="btn btn-neutral float-right" title="六、联系方式" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, IRonman.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
