@@ -8,10 +8,6 @@
 **Windows平台**
 提供XenseStudio.exe安装程序。双击以后，按照提示操作。安装完毕后将在桌面显示其快捷方式：Xense Studio。
 
-.. note:: 
-
-    注意：安装时请安装在英文路径下，不能使用中文路径。
-
 **Linux平台**
 提供安装程序xensegui0.2.10.deb，使用sudo命令进行安装：
 

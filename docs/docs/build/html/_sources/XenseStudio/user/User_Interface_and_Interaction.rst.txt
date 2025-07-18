@@ -163,29 +163,14 @@
 |
 |
 
-.. container:: grid-figure
+ .. figure:: ../images/touch_infromation_new.jpg
+    :alt: 触觉信息
+    :align: center
+    :width: 500px
+    :height: 450px
+    :name: touch_info
 
-    .. image:: ../images/touch_information_left.png
-        :alt: 三维左上
-        :width: 100%
-        :height: 380px
-
-    .. image:: ../images/touch_information_right.png
-        :alt: 三维右上
-        :width: 100%
-        :height: 380px
-
-    .. image:: ../images/touch_2d_left.png
-        :alt: 二维左下
-        :width: 100%
-        :height: 280px
-
-    .. image:: ../images/touch_2d_right.png
-        :alt: 二维右下
-        :width: 100%
-        :height: 280px
-
-    图 5 三维（上）/二维（下）触觉信息
+    图 5 触觉信息
 
 |
 
@@ -200,29 +185,14 @@
 
 |
 
-.. container:: grid-figure
+ .. figure:: ../images/contactforce_new.jpg
+    :alt: 接触力
+    :align: center
+    :width: 500px
+    :height: 450px
+    :name: contactforce_info
 
-    .. image:: ../images/contactforce_left.png
-        :alt: 三维左上
-        :width: 100%
-        :height: 380px
-
-    .. image:: ../images/contactforce_right.png
-        :alt: 三维右上
-        :width: 100%
-        :height: 380px
-
-    .. image:: ../images/contactforce_2d_left.png
-        :alt: 二维左下
-        :width: 100%
-        :height: 280px
-
-    .. image:: ../images/contactforce_2d_right.png
-        :alt: 二维右下
-        :width: 100%
-        :height: 280px
-
-    图 6 三维（上）/二维（下）接触力信息
+    图 6 接触力信息
 
 |
 
