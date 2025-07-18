@@ -5,7 +5,8 @@ XenseStudio
 .. image:: images/cover_new.png
     :alt: XenseStudio
     :align: center
-    :scale: 50
+    :scale: 80%
+    :name: cover
 
 +------------+--------------+--------------------------------+----------+----------+
 | 日期       | 修改章节     | 修改内容                       | 版本     | 修订人   |
