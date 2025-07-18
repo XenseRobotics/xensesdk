@@ -2,7 +2,7 @@
 XenseStudio
 ************
 
-.. image:: images/cover.png
+.. image:: images/cover_new.png
     :alt: XenseStudio
     :align: center
     :scale: 50
