@@ -26,3 +26,15 @@
 
     * - :ref:`release 方法 <tag_release_method>`
 
+.. toctree:: 
+    :maxdepth: 1
+    :hidden:
+    :caption: API目录
+
+    API/create
+    API/selectSensorInfo
+    API/startSaveSensorInfo
+    API/stopSaveSensorInfo
+    API/getCameraID
+    API/resetReferenceImage
+    API/release

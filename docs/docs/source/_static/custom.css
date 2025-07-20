@@ -113,3 +113,15 @@
     }
 }
 
+/* 确保所有层级的导航菜单保持展开状态 */
+.wy-menu-vertical li.toctree-l1 > ul,
+.wy-menu-vertical li.toctree-l2 > ul,
+.wy-menu-vertical li.toctree-l3 > ul {
+    display: block !important;
+}
+
+/* 隐藏折叠/展开按钮 */
+.toctree-expand {
+    display: none !important;
+}
+

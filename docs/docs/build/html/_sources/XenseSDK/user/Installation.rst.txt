@@ -34,17 +34,8 @@ SDK 支持 CUDA Toolkit 11.8 和 cuDNN 8.9.2.26
 
     .. tab::
 
-        选项 1: 从本地 Conda 环境包安装
-
-        .. code-block:: bash
-
-            # 安装 CUDA Toolkit 和 cuDNN
-            conda install --use-local cudatoolkit-11.8.0-hd77b12b_0.conda
-            conda install --use-local cudnn-8.9.2.26-cuda11_0.conda
-    
-    .. tab::
-
-        选项 2: 通过 Conda 直接安装
+        
+        选项 1: 通过 Conda 直接安装
 
         搜索所需版本：
 
@@ -58,11 +49,16 @@ SDK 支持 CUDA Toolkit 11.8 和 cuDNN 8.9.2.26
         .. code-block:: bash
 
             conda install cudnn==8.9.2.26 cudatoolkit==11.8.0
+    
+    .. tab::
 
+        选项 2: 从本地 Conda 环境包安装
 
+        .. code-block:: bash
 
-
-
+            # 安装 CUDA Toolkit 和 cuDNN
+            conda install --use-local cudatoolkit-11.8.0-hd77b12b_0.conda
+            conda install --use-local cudnn-8.9.2.26-cuda11_0.conda
 
 **步骤 3:** 安装 Xense SDK 包
 将 SDK 包安装到您的环境中：

@@ -28,6 +28,14 @@ exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
+html_js_files = ['custom.js']
+html_context = {
+    "display_github": True,  # 显示 GitHub 相关链接
+    "github_user": "XenseRobotics",  # 你的 GitHub 用户名
+    "github_repo": "xensesdk",  # 你的 GitHub 仓库名
+    "github_version": "docs",  # 分支名称，比如 main 或者 master
+    "conf_py_path": "/docs/docs/source/",  # 配置文件在仓库中的路径
+}
 
 # multi-language docs
 language = 'en'
