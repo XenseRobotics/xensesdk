@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'xense'
-copyright = '2025, IRonman'
+copyright = '2025, 千觉机器人科技(上海)有限公司'
 author = 'IRonman'
 
 # -- General configuration ---------------------------------------------------
