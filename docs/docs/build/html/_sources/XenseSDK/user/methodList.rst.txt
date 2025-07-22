@@ -26,6 +26,8 @@
 
     * - :ref:`release 方法 <tag_release_method>`
 
+    * - :ref:`更多代码示例 <tag_repo_example>`
+
 .. toctree:: 
     :maxdepth: 1
     :hidden:
@@ -38,3 +40,4 @@
     API/getCameraID
     API/resetReferenceImage
     API/release
+    API/repo_example

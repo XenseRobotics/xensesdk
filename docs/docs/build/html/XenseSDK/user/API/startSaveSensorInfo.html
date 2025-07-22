@@ -9,7 +9,7 @@
   <title>startSaveSensorInfo 方法 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=b6911c3f" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=3b240a38" />
 
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
@@ -62,6 +62,7 @@
 <li class="toctree-l3"><a class="reference internal" href="getCameraID.html">getCameraID 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="resetReferenceImage.html">resetReferenceImage 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html">release 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="repo_example.html">更多代码示例</a></li>
 </ul>
 </li>
 </ul>
@@ -85,9 +86,11 @@
           <li class="breadcrumb-item"><a href="../../XenseSDK.html">XenseSDK</a></li>
           <li class="breadcrumb-item"><a href="../methodList.html">使用XenseSDK API</a></li>
       <li class="breadcrumb-item active">startSaveSensorInfo 方法</li>
-      <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/XenseRobotics/xensesdk/blob/docs/docs/docs/source/XenseSDK/user/API/startSaveSensorInfo.rst" class="fa fa-github"> Edit on GitHub</a>
-      </li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics" class="fa fa-github" target="_blank">
+             Our Repositories
+        </a>
+    </li>
   </ul>
   <hr/>
 </div>
@@ -120,6 +123,7 @@
 <section id="id1">
 <h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sensor</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="c1"># 创建传感器实例</span>
 <span class="n">sensor</span> <span class="o">=</span> <span class="n">Sensor</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;OP000064&#39;</span><span class="p">)</span>
@@ -133,6 +137,7 @@
 <span class="p">])</span>
 
 <span class="c1"># 进行数据采集...</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="c1"># 停止保存数据</span>
 <span class="n">sensor</span><span class="o">.</span><span class="n">stopSaveSensorInfo</span><span class="p">()</span>

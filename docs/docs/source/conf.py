@@ -30,11 +30,9 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_js_files = ['custom.js']
 html_context = {
-    "display_github": True,  # 显示 GitHub 相关链接
-    "github_user": "XenseRobotics",  # 你的 GitHub 用户名
-    "github_repo": "xensesdk",  # 你的 GitHub 仓库名
-    "github_version": "docs",  # 分支名称，比如 main 或者 master
-    "conf_py_path": "/docs/docs/source/",  # 配置文件在仓库中的路径
+    'source_url_prefix': "https://github.com/XenseRobotics",
+    'source_suffix': "",  # 移除自动添加的文件后缀（如 .rst）
+    'conf_py_path': "",   # 清空配置文件路径，避免自动拼接
 }
 
 # multi-language docs
@@ -45,3 +43,4 @@ gettext_uuid = True  # optional.
 
 # EPUB options
 epub_show_urls = 'footnote'
+

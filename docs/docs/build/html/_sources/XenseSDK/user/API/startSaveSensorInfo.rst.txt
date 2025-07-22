@@ -26,6 +26,7 @@ startSaveSensorInfo 方法
 .. code-block:: python
 
    from xensesdk import Sensor
+   import time
 
    # 创建传感器实例
    sensor = Sensor.create('OP000064')
@@ -39,6 +40,7 @@ startSaveSensorInfo 方法
    ])
 
    # 进行数据采集...
+   time.sleep(5)
 
    # 停止保存数据
    sensor.stopSaveSensorInfo()

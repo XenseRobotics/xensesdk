@@ -38,7 +38,6 @@ create方法
    .. note::
       使用完毕后务必调用 :meth:`~Sensor.release` 释放系统资源。
 
-
 示例代码
 --------
 

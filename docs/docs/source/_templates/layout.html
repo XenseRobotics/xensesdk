@@ -1,0 +1,20 @@
+{% extends "!layout.html" %}
+
+{% block docs_navbar %}
+    {{ super() }}  {# 保留原导航栏内容 #}
+    
+    {# 移除默认的View page source链接，替换为自定义链接 #}
+    <script>
+        // 等待页面加载完成
+        document.addEventListener('DOMContentLoaded', function() {
+            // 找到默认的"View page source"链接并替换
+            const sourceLink = document.querySelector('.wy-breadcrumbs li:last-child a[href*=".rst"]');
+            if (sourceLink) {
+                // 强制设置为目标URL，完全移除文件名拼接
+                sourceLink.href = 'https://github.com/XenseRobotics';
+                // 可选：修改链接文本（如果需要）
+                // sourceLink.textContent = 'View on GitHub';
+            }
+        });
+    </script>
+{% endblock %}
