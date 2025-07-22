@@ -30,7 +30,7 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_js_files = ['custom.js']
 html_context = {
-    'source_url_prefix': "https://github.com/XenseRobotics",
+    'source_url_prefix': "https://github.com/XenseRobotics/xensesdk",
     'source_suffix': "",  # 移除自动添加的文件后缀（如 .rst）
     'conf_py_path': "",   # 清空配置文件路径，避免自动拼接
 }

@@ -12,6 +12,8 @@ XenseSDK
    * - :ref:`安装指南 <tag_installation>`
    
    * - :ref:`API文档 <tag_methodlist>` 
+
+   * - :ref:`代码示例 <tag_repo_example>`
   
 .. toctree::
    :maxdepth: 2
@@ -23,3 +25,5 @@ XenseSDK
    user/Installation
 
    user/methodList
+
+   user/repo_example
