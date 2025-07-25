@@ -1,5 +1,7 @@
 # Xense SDK 文档
 
+SDK开发文档和软件操作手册更新至： https://xensedoc.readthedocs.io/en/latest/
+
 ## 概述
 
 **Xense SDK** 是一款为触觉-视觉传感器和可视化工具设计的开发工具包，旨在帮助高效且无缝地将其集成到应用程序中。
