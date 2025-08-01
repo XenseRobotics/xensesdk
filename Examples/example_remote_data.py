@@ -1,10 +1,23 @@
+import sys
 from xensesdk import ExampleView
 from xensesdk import Sensor
-import sys
+from xensesdk import call_service
 
 
 def main():
-    sensor_0 = Sensor.create('OG000888', ip_address="192.168.77.74")
+    MASTERP_IP = "192.168.1.120"
+    
+    # find all sensors
+    ret = call_service(MASTERP_IP, "MasterService", "scan_sensor_sn")
+    if ret["success"] is False:
+        print(f"Failed to scan sensors: {ret['ret']}")
+        sys.exit(1)
+    else:
+        print(f"Found sensors: {ret['ret']}, using the first one.")
+    serial_number = list(ret["ret"].keys())[0]
+
+    # create a sensor
+    sensor_0 = Sensor.create(serial_number, ip_address=MASTERP_IP)
     View = ExampleView(sensor_0)
     View2d = View.create2d(Sensor.OutputType.Difference, Sensor.OutputType.Depth)
     
