@@ -1,11 +1,13 @@
-..  _tag_release_method:
+..  _tagrelease_method:
 
 release 方法
 ==============
 
-.. py:method:: Sensor.release()
-    :module: xensesdk
+.. container:: step-block
 
-    释放资源，关闭传感器
+    .. py:method:: Sensor.release()
+        :module: xensesdk
 
-    :return: None
+        释放资源，关闭传感器
+
+        :return: None

@@ -96,11 +96,8 @@
 <span id="tag-xensesdkinstallation"></span><h1>安装XenseSDK<a class="headerlink" href="#xensesdk" title="Link to this heading"></a></h1>
 <section id="id1">
 <h2>安装指南<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<div class="step-block docutils container">
 <p><strong>步骤 1:</strong> 准备 Python 开发环境</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>推荐使用 Anaconda,并使用 Python 版本 3.9或者3.10。</p>
-</div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 进入 Xense SDK 目录</span>
 <span class="nb">cd</span><span class="w"> </span>xensesdk
 
@@ -111,9 +108,15 @@ conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </
 conda<span class="w"> </span>activate<span class="w"> </span>xenseenv
 </pre></div>
 </div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>推荐使用 Anaconda,并使用 Python 版本 3.9或者3.10。</p>
+</div>
+<div class="step-block docutils container">
 <p><strong>步骤 2:</strong> 安装 CUDA 工具包和 cuDNN
 SDK 支持 CUDA Toolkit 11.8 和 cuDNN 8.9.2.26</p>
-<p>根据您的环境，选择以下安装方式：</p>
+<p>根据您的环境，选择以下安装方式:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">选项 1: 通过 Conda 直接安装</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">选项 2: 从本地 Conda 环境包安装</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>搜索所需版本：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>search<span class="w"> </span>cudnn
@@ -130,13 +133,16 @@ conda<span class="w"> </span>install<span class="w"> </span>--use-local<span cla
 </pre></div>
 </div>
 </div></div>
+</div>
+<div class="step-block docutils container">
 <p><strong>步骤 3:</strong> 安装 Xense SDK 包
-将 SDK 包安装到您的环境中：</p>
+将 SDK 包安装到您的环境中:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 如果是从本地目录安装</span>
 pip<span class="w"> </span>install<span class="w"> </span>xensesdk-0.1.0-cp39-cp39-win_amd64.whl<span class="w"> </span><span class="c1"># (对于定制软件包)</span>
 <span class="c1"># 或者从 PyPI 安装</span>
 pip<span class="w"> </span>install<span class="w"> </span>xensesdk
 </pre></div>
+</div>
 </div>
 </section>
 </section>

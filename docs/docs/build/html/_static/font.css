@@ -1,11 +1,1 @@
 /* 模拟 sphinx_rtd_theme 二级标题样式，确保生效 */
-div.wy-nav-content div.fake-h2 {
-    font-size: 140% !important;  
-    font-weight: bold !important;  
-    margin-top: 1.5em !important;  
-    margin-bottom: 0.8em !important;  
-    color: #000000 !important; /* 主题 h2 默认蓝色 */
-    border-bottom: 1px solid #eee !important;  
-    padding-bottom: 0.3em !important;  
-    font-family: "Roboto Slab", Georgia, Times, serif !important;  
-}

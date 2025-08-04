@@ -1,12 +1,13 @@
-.. _tag_reset_reference_image_method:
+.. _tagreset_reference_image_method:
 
 resetReferenceImage 方法
 ===========================
 
-.. py:method:: Sensor.resetReferenceImage()
+.. container:: step-block
 
-    :module: xensesdk
+    .. py:method:: Sensor.resetReferenceImage()
+        :module: xensesdk
 
-    重置数据处理流程。
+        重置数据处理流程。
 
-    :return: None
+        :return: None

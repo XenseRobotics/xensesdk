@@ -61,6 +61,9 @@
 <li class="toctree-l3"><a class="reference internal" href="getCameraID.html">getCameraID 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="resetReferenceImage.html">resetReferenceImage 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html">release 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call_service.html">call_service 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibrateSensor.html">calibrateSensor 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scanSerialNumber.html">scanSerialNumber 方法</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../repo_example.html">更多代码示例</a></li>
@@ -98,7 +101,8 @@
            <div itemprop="articleBody">
              
   <section id="selectsensorinfo">
-<span id="tag-select-sensor-info-method"></span><h1>selectSensorInfo 方法<a class="headerlink" href="#selectsensorinfo" title="Link to this heading"></a></h1>
+<span id="tagselect-sensor-info-method"></span><h1>selectSensorInfo 方法<a class="headerlink" href="#selectsensorinfo" title="Link to this heading"></a></h1>
+<div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensesdk.Sensor.selectSensorInfo">
 <span class="sig-prename descclassname"><span class="pre">Sensor.</span></span><span class="sig-name descname"><span class="pre">selectSensorInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensesdk.Sensor.selectSensorInfo" title="Link to this definition"></a></dt>
@@ -108,8 +112,8 @@
 <dd class="field-odd"><p><strong>args</strong> (<em>Sensor.OutputType</em>) – 任意数量的 <code class="docutils literal notranslate"><span class="pre">Sensor.OutputType</span></code> 枚举，用于指定需要获取的数据类型。支持的枚举值及对应数据如下：</p>
 </dd>
 </dl>
-<table class="docutils align-default" id="id4">
-<caption><span class="caption-text">支持的数据类型及说明</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">支持的数据类型及说明</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 20.0%" />
 <col style="width: 30.0%" />
@@ -124,39 +128,39 @@
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Rectify</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>校正图像，shape=(700, 400, 3)，BGR 格式</p></td>
+<td><p>校正图像,shape=(700, 400, 3),BGR 格式</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Difference</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>差分图像，shape=(700, 400, 3)，BGR 格式</p></td>
+<td><p>差分图像,shape=(700, 400, 3),BGR 格式</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Depth</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>深度图像，shape=(700, 400)，单位为毫米（mm）</p></td>
+<td><p>深度图像,shape=(700, 400)，单位为毫米(mm)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Force</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>三维力分布，shape=(35, 20, 3)</p></td>
+<td><p>三维力分布,shape=(35, 20, 3)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.ForceNorm</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>法向力分量，shape=(35, 20, 3)</p></td>
+<td><p>法向力分量,shape=(35, 20, 3)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.ForceResultant</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>六维合力，shape=(6,)</p></td>
+<td><p>六维合力,shape=(6,)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Marker2D</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>六维合力，shape=(6,)</p></td>
+<td><p>切向位移,shape=(35,20,2)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Mesh3D</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>当前帧 3D 网格，shape=(35, 20, 3)</p></td>
+<td><p>当前帧 3D 网格,shape=(35, 20, 3)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Mesh3DInit</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>初始 3D 网格，shape=(35, 20, 3)</p></td>
+<td><p>初始 3D 网格,shape=(35, 20, 3)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Mesh3DFlow</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
@@ -169,17 +173,19 @@
 <dd class="field-odd"><p>所请求的传感器数据，返回数量和顺序与输入参数一致。</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>与输入参数对应的 <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code> 或 <a href="#id1"><span class="problematic" id="id2">``</span></a>None``（数据未获取到时）</p>
+<dd class="field-even"><p>与输入参数对应的 <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code> 或 <code class="docutils literal notranslate"><span class="pre">None</span></code> (数据未获取到时)</p>
 </dd>
 </dl>
+</dd></dl>
+
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>如果需要同时获取多种类型的数据，请按照例程中的形式用同一次函数调用获取，这样可以保证所有数据来自于同一帧，并且计算速度是最优化的</p>
 </div>
-</dd></dl>
-
-<section id="id3">
-<h2>示例代码<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<section id="id1">
+<h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<div class="step-block docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sensor</span>
 
 <span class="c1"># 创建传感器实例</span>
@@ -200,6 +206,7 @@
 <span class="c1"># 释放资源</span>
 <span class="n">sensor</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
 </pre></div>
+</div>
 </div>
 </section>
 </section>

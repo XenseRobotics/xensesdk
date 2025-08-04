@@ -63,6 +63,9 @@
 <li class="toctree-l3"><a class="reference internal" href="getCameraID.html">getCameraID 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="resetReferenceImage.html">resetReferenceImage 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html">release 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call_service.html">call_service 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibrateSensor.html">calibrateSensor 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scanSerialNumber.html">scanSerialNumber 方法</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../repo_example.html">更多代码示例</a></li>
@@ -100,7 +103,8 @@
            <div itemprop="articleBody">
              
   <section id="create">
-<span id="tag-create-method"></span><h1>create方法<a class="headerlink" href="#create" title="Link to this heading"></a></h1>
+<span id="tagcreate-method"></span><h1>create方法<a class="headerlink" href="#create" title="Link to this heading"></a></h1>
+<div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensesdk.Sensor.create">
 <span class="sig-prename descclassname"><span class="pre">Sensor.</span></span><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cam_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_gpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_serial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rectify_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensesdk.Sensor.create" title="Link to this definition"></a></dt>
@@ -125,14 +129,16 @@
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Sensor</span></code></p>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>使用完毕后务必调用 <a class="reference internal" href="release.html#xensesdk.Sensor.release" title="xensesdk.Sensor.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a> 释放系统资源。</p>
-</div>
 </dd></dl>
 
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>使用完毕后务必调用 <code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code> 释放系统资源。</p>
+</div>
 <section id="id1">
 <h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<div class="step-block docutils container">
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">示例 1:通过 SN 码开启传感器</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">示例 2:通过相机编号开启传感器</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">示例 3:打开存储的离线数据</button><button aria-controls="panel-0-0-3" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-3" name="0-3" role="tab" tabindex="-1">示例 4:连接远程算力板上的传感器</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sensor</span>
 
@@ -171,6 +177,7 @@
 </pre></div>
 </div>
 </div></div>
+</div>
 </section>
 </section>
 

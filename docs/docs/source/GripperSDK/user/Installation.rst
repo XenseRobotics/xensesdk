@@ -31,7 +31,7 @@
     **步骤 1:** 准备 Python 开发环境
 
     请参考
-     `XenseSDK <../../XenseSDK/usr/Installation>`_ 中的 Python 开发环境准备。
+     `XenseSDK <../../XenseSDK/usr/Installation.html>`_ 中的 Python 开发环境准备。
 
 
 
@@ -40,7 +40,7 @@
     **步骤 2:** 安装 CUDA 工具包和 cuDNN
     
     请参考
-     `XenseSDK <../../XenseSDK/usr/Installation>`_ 中的 CUDA 工具包和 cuDNN 安装 。        
+     `XenseSDK <../../XenseSDK/usr/Installation.html>`_ 中的 CUDA 工具包和 cuDNN 安装 。        
 
 .. container:: step-block
 
