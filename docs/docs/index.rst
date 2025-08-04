@@ -11,18 +11,32 @@ xense
 
 :作者: XenseStudio
 
-最新的开发工具和XenseStudio使用说明如下：
+最新的开发工具和XenseStudio使用说明如下:
 
 XenseStudio_: XenseStudio使用文档
 
-XenseSDK_: Xense SDK开发工具包说明
+XenseSDK_: XenseSDK开发工具包说明
+
+GripperSDK_:GripperSDK开发工具包说明
+
+
 
 .. _XenseStudio: /XenseStudio/XenseStudio.rst
 .. _XenseSDK: /XenseSDK/XenseSDK.rst
+.. _GripperSDK: /GripperSDK/GripperSDK.rst
 
-测试测试
+
+|
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: 主目录
+   :hidden:
+
+   XenseStudio/XenseStudio
+
+   XenseSDK/XenseSDK
+
+   GripperSDK/GripperSDK
+
 

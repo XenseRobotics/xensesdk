@@ -132,3 +132,32 @@
     margin-bottom: 20px;
     text-align: center;
 }
+
+/* 状态标签样式 */
+.rubric.success {
+  color: #28a745;
+  border-bottom: 2px solid #28a745;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  /* 添加成功状态的背景色，可根据需求调整 */
+  background-color: #d4edda; 
+}
+
+.rubric.error {
+  color: #dc3545;
+  border-bottom: 2px solid #dc3545;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  /* 添加错误状态的背景色，可根据需求调整 */
+  background-color: #f8d7da; 
+}
+
+.rubric.success,
+.rubric.error {
+  /* 固定高度（根据需求调整） */
+  height: 40px; 
+   /* 让文字垂直居中 */
+  line-height: 40px;
+  padding: 0 10px; /* 仅保留水平内边距 */
+}
+

@@ -1,5 +1,5 @@
 XenseSDK
-========
+============
 
 .. list-table::
    :width: 30
@@ -7,11 +7,11 @@ XenseSDK
 
    * - 主目录
   
-   * - :ref:`简介 <tag_introduction>`
+   * - :ref:`简介 <tag_xensesdkintroduction>`
   
-   * - :ref:`安装指南 <tag_installation>`
+   * - :ref:`安装指南 <tag_xensesdkinstallation>`
    
-   * - :ref:`API文档 <tag_methodlist>` 
+   * - :ref:`API文档 <tag_xensesdkmethodlist>` 
 
    * - :ref:`代码示例 <tag_repo_example>`
   
@@ -20,10 +20,10 @@ XenseSDK
    :caption: 目录
    :hidden:
    
-   user/Introduction
+   usr/Introduction
 
-   user/Installation
+   usr/Installation
 
-   user/methodList
+   usr/methodList
 
-   user/repo_example
+   usr/repo_example

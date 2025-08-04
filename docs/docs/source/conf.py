@@ -27,7 +27,7 @@ exclude_patterns = []
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-html_css_files = ['custom.css']
+html_css_files = ['custom.css','rst-tips.css','rst-note.css','container_step.css']
 html_js_files = ['custom.js']
 html_context = {
     'source_url_prefix': "https://github.com/XenseRobotics/xensesdk",

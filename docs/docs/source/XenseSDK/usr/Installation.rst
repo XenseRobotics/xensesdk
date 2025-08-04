@@ -1,4 +1,4 @@
-.. _tag_installation:
+.. _tag_xensesdkinstallation:
 
 ***************
 安装XenseSDK

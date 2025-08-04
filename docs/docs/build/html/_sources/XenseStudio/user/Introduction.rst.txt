@@ -1,4 +1,3 @@
-.. _tag_introduction:
 
 引言
 ====

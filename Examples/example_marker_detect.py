@@ -4,7 +4,7 @@ from xensesdk import Sensor
 
 
 def main():
-    sensor_0 = Sensor.create('OG000888')
+    sensor_0 = Sensor.create('OG000102')
     View = ExampleView(sensor_0)
     View2d = View.create2d(Sensor.OutputType.Rectify, Sensor.OutputType.MarkerUnorder)
     

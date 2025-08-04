@@ -1,4 +1,4 @@
-.. _tag_methodlist:
+.. _tag_xensesdkmethodlist:
 
 ********************
 使用XenseSDK API

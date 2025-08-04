@@ -1,0 +1,145 @@
+/* 步骤块容器 - 基础样式 */
+.step-block {
+  margin: 1.8rem 0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  line-height: 1.7;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 顶部装饰条 */
+.step-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4285f4 0%, #34a853 100%);
+}
+
+/* 步骤标题 */
+.step-block .step-title {
+  margin: 0 0 1.2rem 0;
+  padding-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #202124;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+}
+
+.step-block .step-title::before {
+  content: "📝";
+  margin-right: 0.7rem;
+  font-size: 1.3rem;
+}
+
+/* 步骤列表基础样式：关闭全局计数器 */
+.step-block ol,
+.step-block ul {
+  margin: 0 0 1rem 0;
+  padding-left: 2rem; /* 恢复默认列表缩进，可按需调整 */
+  list-style-type: decimal; /* 普通步骤用默认编号（1. 2. 3.） */
+}
+
+/* 【关键】仅给 .init-list 开启自定义计数器 */
+.init-list {
+  list-style-type: none; /* 隐藏默认编号 */
+  counter-reset: init-counter; /* 初始化子步骤计数器 */
+}
+.init-list li::before {
+  content: counter(init-counter);
+  counter-increment: init-counter;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background-color: #f1f7fe;
+  color: #4285f4;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dbeafe;
+  margin-left: -3.2rem; /* 调整编号位置，适配父级缩进 */
+}
+
+/* 重点内容样式 */
+.step-block .highlight {
+  color: #1967d2;
+  font-weight: 500;
+  padding: 0 2px;
+}
+
+/* 嵌套表格适配 */
+.step-block .list-table {
+  margin: 1rem 0 1rem 1rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.step-block .list-table td,
+.step-block .list-table th {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.step-block .list-table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #202124;
+}
+
+.step-block .list-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 嵌套提示块适配 */
+.step-block .admonition {
+  margin: 1rem 0 1rem 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* 嵌套note适配 */
+.step-block .note {
+  margin: 1rem 0 1rem 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* 代码块适配 */
+.step-block code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  background-color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .step-block {
+    padding: 1.2rem;
+  }
+  
+  .step-block li {
+    padding-left: 2.8rem;
+  }
+  
+  .step-block .list-table,
+  .step-block .admonition,
+  .step-block .note {
+    margin-left: 0;
+  }
+}
