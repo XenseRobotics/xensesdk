@@ -9,15 +9,8 @@
 
     .. note::
 
-        1.请先确保夹爪正确连接PC,如未连接请参考
+        请先确保夹爪正确连接PC,如未连接请参考
         `GripperSDK <./pre_configuration.html>`_。
-
-        2.需要开启夹爪的服务,可使用以下命令开启:
-
-        .. code-block:: python
-
-            python /home/Tronlong/xense_workspace/xensegripper/xensegripper/__main__.py -m
-
 
 .. container:: step-block
 

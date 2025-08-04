@@ -20,10 +20,10 @@ selectSensorInfo 方法
         - 说明
       * - ``Sensor.OutputType.Rectify``
         - Optional[np.ndarray]
-        - 校正图像，shape=(700, 400, 3)，RGB 格式
+        - 校正图像，shape=(700, 400, 3)，BGR 格式
       * - ``Sensor.OutputType.Difference``
         - Optional[np.ndarray]
-        - 差分图像，shape=(700, 400, 3)，RGB 格式
+        - 差分图像，shape=(700, 400, 3)，BGR 格式
       * - ``Sensor.OutputType.Depth``
         - Optional[np.ndarray]
         - 深度图像，shape=(700, 400)，单位为毫米（mm）
@@ -36,6 +36,9 @@ selectSensorInfo 方法
       * - ``Sensor.OutputType.ForceResultant``
         - Optional[np.ndarray]
         - 六维合力，shape=(6,)
+      * - ``Sensor.OutputType.Marker2D``
+        - Optional[np.ndarray]
+        - 六维合力，shape=(6,)   
       * - ``Sensor.OutputType.Mesh3D``
         - Optional[np.ndarray]
         - 当前帧 3D 网格，shape=(35, 20, 3)

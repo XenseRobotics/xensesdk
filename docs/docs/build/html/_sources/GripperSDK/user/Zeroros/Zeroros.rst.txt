@@ -15,16 +15,6 @@ Zeroros
 
     在开启夹爪正确连接并开启服务后,可在终端使用 ``zeroros_cli`` 命令查看。
 
-
-
-    .. list-table::
-        :width: 30
-        :header-rows: 1
-
-        * - 主目录
-        
-        * - :ref:`命令文档 <tag_zeroroslist>`
-
     .. toctree::
         :maxdepth: 3
         :hidden:

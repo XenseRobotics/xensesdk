@@ -36,4 +36,7 @@ create 方法
     如果不清楚夹爪的MAC地址,可以使用 ``zeroros_cli`` 工具进行查询,具体请参考
     `Zeroros使用文档 <../../../Zeroros/Zeroros.html>`_。
 
+.. note::
+    
+    长时间不连接传感器(10mins),传感器会进入休眠模式,下一次启动会需要更长的时间。
             

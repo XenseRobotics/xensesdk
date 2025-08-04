@@ -43,7 +43,7 @@ create方法
 
 .. tabs::
 
-    .. tab:: 示例 1：通过 SN 码开启传感器
+    .. tab:: 示例 1:通过 SN 码开启传感器
 
         .. code-block:: python
 
@@ -55,7 +55,7 @@ create方法
             # 使用完毕后释放资源
             sensor.release()
 
-    .. tab:: 示例 2：通过相机编号开启传感器
+    .. tab:: 示例 2:通过相机编号开启传感器
 
         .. code-block:: python
 
@@ -67,7 +67,7 @@ create方法
             # 使用完毕后释放资源
             sensor.release()
 
-    .. tab:: 示例 3：打开存储的离线数据
+    .. tab:: 示例 3:打开存储的离线数据
 
         .. code-block:: python
 
@@ -79,7 +79,7 @@ create方法
             # 使用完毕后释放资源
             sensor.release()
 
-    .. tab:: 示例 4：连接远程算力板上的传感器
+    .. tab:: 示例 4:连接远程算力板上的传感器
 
         .. code-block:: python
 

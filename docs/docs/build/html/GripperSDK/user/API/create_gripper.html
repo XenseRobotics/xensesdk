@@ -9,7 +9,7 @@
   <title>create 方法 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=a19de9bc" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=f0a164dd" />
       <link rel="stylesheet" type="text/css" href="../../../_static/rst-tips.css?v=1dd3dd68" />
       <link rel="stylesheet" type="text/css" href="../../../_static/rst-note.css?v=423ff88c" />
       <link rel="stylesheet" type="text/css" href="../../../_static/container_step.css?v=626adea8" />
@@ -52,23 +52,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/XenseStudio.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">GripperSDK预配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">硬件连接与网络配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation.html">安装GripperSDK</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">如何使用GripperSDK?</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">create 方法</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.create"><code class="docutils literal notranslate"><span class="pre">XenseGripper.create()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">示例代码</a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">create 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_position.html">set_position方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="open_gripper.html">open_gripper 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_gripper_status.html">get_gripper_status 方法</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../Zeroros/Zeroros.html">Zeroros</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Zeroros/Zeroros.html">Zeroros</a></li>
 </ul>
 
         </div>
@@ -135,6 +131,10 @@
 <p class="admonition-title">tips</p>
 <p>如果不清楚夹爪的MAC地址,可以使用 <code class="docutils literal notranslate"><span class="pre">zeroros_cli</span></code> 工具进行查询,具体请参考
 <a class="reference external" href="../../../Zeroros/Zeroros.html">Zeroros使用文档</a>。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>长时间不连接传感器(10mins),传感器会进入休眠模式,下一次启动会需要更长的时间。</p>
 </div>
 </section>
 </section>

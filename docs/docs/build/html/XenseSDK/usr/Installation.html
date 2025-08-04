@@ -10,7 +10,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=a19de9bc" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f0a164dd" />
       <link rel="stylesheet" type="text/css" href="../../_static/rst-tips.css?v=1dd3dd68" />
       <link rel="stylesheet" type="text/css" href="../../_static/rst-note.css?v=423ff88c" />
       <link rel="stylesheet" type="text/css" href="../../_static/container_step.css?v=626adea8" />
@@ -63,7 +63,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../GripperSDK/GripperSDK.html">GripperSDK</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Zeroros/Zeroros.html">Zeroros</a></li>
 </ul>
 
         </div>
@@ -100,13 +99,15 @@
 <p><strong>步骤 1:</strong> 准备 Python 开发环境</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>推荐使用 Anaconda，并使用 Python 版本 3.9.19。</p>
+<p>推荐使用 Anaconda,并使用 Python 版本 3.9或者3.10。</p>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 进入 Xense SDK 目录</span>
 <span class="nb">cd</span><span class="w"> </span>xensesdk
 
 <span class="c1"># 创建并激活虚拟环境</span>
-conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>xenseenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9.19
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>xenseenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+<span class="c1">#or conda create -n xenseenv python=3.10</span>
+
 conda<span class="w"> </span>activate<span class="w"> </span>xenseenv
 </pre></div>
 </div>

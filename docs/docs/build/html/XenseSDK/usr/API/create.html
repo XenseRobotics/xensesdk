@@ -10,7 +10,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=a19de9bc" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=f0a164dd" />
       <link rel="stylesheet" type="text/css" href="../../../_static/rst-tips.css?v=1dd3dd68" />
       <link rel="stylesheet" type="text/css" href="../../../_static/rst-note.css?v=423ff88c" />
       <link rel="stylesheet" type="text/css" href="../../../_static/container_step.css?v=626adea8" />
@@ -56,11 +56,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Introduction.html">什么是XenseSDK？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation.html">安装XenseSDK</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../methodList.html">使用XenseSDK API</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">create方法</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#xensesdk.Sensor.create"><code class="docutils literal notranslate"><span class="pre">Sensor.create()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">示例代码</a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">create方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="selectSensorInfo.html">selectSensorInfo 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="startSaveSensorInfo.html">startSaveSensorInfo 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stopSaveSensorInfo.html">stopSaveSensorInfo 方法</a></li>
@@ -138,7 +134,7 @@
 <section id="id1">
 <h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">示例 1：通过 SN 码开启传感器</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">示例 2：通过相机编号开启传感器</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">示例 3：打开存储的离线数据</button><button aria-controls="panel-0-0-3" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-3" name="0-3" role="tab" tabindex="-1">示例 4：连接远程算力板上的传感器</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sensor</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">示例 1:通过 SN 码开启传感器</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">示例 2:通过相机编号开启传感器</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">示例 3:打开存储的离线数据</button><button aria-controls="panel-0-0-3" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-3" name="0-3" role="tab" tabindex="-1">示例 4:连接远程算力板上的传感器</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sensor</span>
 
 <span class="c1"># 使用传感器序列号（SN）创建实例</span>
 <span class="n">sensor</span> <span class="o">=</span> <span class="n">Sensor</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;OP000064&#39;</span><span class="p">)</span>

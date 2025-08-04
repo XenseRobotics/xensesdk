@@ -11,7 +11,7 @@
 
 .. note:: 
 
-    推荐使用 Anaconda，并使用 Python 版本 3.9.19。
+    推荐使用 Anaconda,并使用 Python 版本 3.9或者3.10。
 
 .. code-block:: bash
     
@@ -19,7 +19,9 @@
     cd xensesdk
 
     # 创建并激活虚拟环境
-    conda create -n xenseenv python=3.9.19
+    conda create -n xenseenv python=3.9
+    #or conda create -n xenseenv python=3.10
+
     conda activate xenseenv
 
 

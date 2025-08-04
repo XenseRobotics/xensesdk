@@ -9,8 +9,7 @@
   <title>安装GripperSDK &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=a19de9bc" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f0a164dd" />
       <link rel="stylesheet" type="text/css" href="../../_static/rst-tips.css?v=1dd3dd68" />
       <link rel="stylesheet" type="text/css" href="../../_static/rst-note.css?v=423ff88c" />
       <link rel="stylesheet" type="text/css" href="../../_static/container_step.css?v=626adea8" />
@@ -21,13 +20,12 @@
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../_static/doctools.js?v=9a2dae69"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../../_static/tabs.js?v=3030b3cb"></script>
       <script src="../../_static/custom.js?v=68f4a4f9"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="如何使用GripperSDK?" href="methodlist.html" />
-    <link rel="prev" title="GripperSDK预配置" href="pre_configuration.html" /> 
+    <link rel="prev" title="硬件连接与网络配置" href="pre_configuration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,15 +52,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../XenseStudio/XenseStudio.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pre_configuration.html">GripperSDK预配置</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">安装GripperSDK</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">安装指南</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">安装GripperSDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="methodlist.html">如何使用GripperSDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Zeroros/Zeroros.html">Zeroros</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Zeroros/Zeroros.html">Zeroros</a></li>
 </ul>
 
         </div>
@@ -94,59 +89,50 @@
              
   <section id="grippersdk">
 <span id="tag-gripperinstallation"></span><h1>安装GripperSDK<a class="headerlink" href="#grippersdk" title="Link to this heading"></a></h1>
-<section id="id1">
-<h2>安装指南<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<div class="step-block docutils container">
+<style>
+.custom-h2 {
+    font-size: 1.5em !important; /* 更大的字号 */
+    font-weight: 700 !important;
+    color: #2c3e50 !important; /* 深色更有质感 */
+    border-bottom: 1px solid #fffdfdff !important; /* 更粗的下边框 */
+    padding-bottom: 10px !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.8em !important;
+    font-family: "Microsoft YaHei", sans-serif !important; /* 换成更适配的中文字体 */
+    text-shadow: 0 2px 3px rgba(0,0,0,0.1); /* 增加文字阴影 */
+    background: linear-gradient(to right, #3498db, #9b59b6); /* 背景渐变（可选） */
+    -webkit-background-clip: text;
+    color: transparent; /* 文字渐变效果（需配合背景渐变） */
+}
+</style><div class="custom-h2">安装指南</div><div class="step-block docutils container">
 <p><strong>步骤 1:</strong> 准备 Python 开发环境</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>推荐使用 Anaconda,并使用 Python 版本 3.9.19。</p>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 进入 Xense SDK 目录</span>
-<span class="nb">cd</span><span class="w"> </span>xensesdk
-
-<span class="c1"># 创建并激活虚拟环境</span>
-conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>xenseenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9.19
-conda<span class="w"> </span>activate<span class="w"> </span>xenseenv
-</pre></div>
-</div>
+<dl class="simple">
+<dt>请参考</dt><dd><p><a class="reference external" href="../../XenseSDK//usr/Installation">XenseSDk</a> 中的 Python 开发环境准备。</p>
+</dd>
+</dl>
 </div>
 <div class="step-block docutils container">
-<p><strong>步骤 2:</strong> 安装 CUDA 工具包和 cuDNN
-SDK 支持 CUDA Toolkit 11.8 和 cuDNN 8.9.2.26</p>
-<p>根据您的环境，选择以下安装方式：</p>
-<div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">选项 1: 通过 Conda 直接安装</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">选项 2: 从本地 Conda 环境包安装</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>搜索所需版本：</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>search<span class="w"> </span>cudnn
-conda<span class="w"> </span>search<span class="w"> </span>cudatoolkit
-</pre></div>
-</div>
-<p>安装所需版本：</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">cudnn</span><span class="o">==</span><span class="m">8</span>.9.2.26<span class="w"> </span><span class="nv">cudatoolkit</span><span class="o">==</span><span class="m">11</span>.8.0
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 安装 CUDA Toolkit 和 cuDNN</span>
-conda<span class="w"> </span>install<span class="w"> </span>--use-local<span class="w"> </span>cudatoolkit-11.8.0-hd77b12b_0.conda
-conda<span class="w"> </span>install<span class="w"> </span>--use-local<span class="w"> </span>cudnn-8.9.2.26-cuda11_0.conda
-</pre></div>
-</div>
-</div></div>
+<p><strong>步骤 2:</strong> 安装 CUDA 工具包和 cuDNN</p>
+<dl class="simple">
+<dt>请参考</dt><dd><p><a class="reference external" href="../../XenseSDK//usr/Installation">XenseSDk</a> 中的 CUDA 工具包和 cuDNN 安装 。</p>
+</dd>
+</dl>
 </div>
 <div class="step-block docutils container">
-<p><strong>步骤 3:</strong> 安装 GripperSDK 包
+<p><strong>步骤 3:</strong> 安装 SDK 包
 将 SDK 包安装到您的环境中：</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>xensegripper
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>xensesdk
+pip<span class="w"> </span>install<span class="w"> </span>xensegripper
 </pre></div>
 </div>
 </div>
-</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pre_configuration.html" class="btn btn-neutral float-left" title="GripperSDK预配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pre_configuration.html" class="btn btn-neutral float-left" title="硬件连接与网络配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="methodlist.html" class="btn btn-neutral float-right" title="如何使用GripperSDK?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

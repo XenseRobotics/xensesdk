@@ -3,72 +3,53 @@
 安装GripperSDK
 ===================
 
-安装指南
--------------
+.. raw:: html
+
+    <style>
+    .custom-h2 {
+        font-size: 1.5em !important; /* 更大的字号 */
+        font-weight: 700 !important;
+        color: #2c3e50 !important; /* 深色更有质感 */
+        border-bottom: 1px solid #fffdfdff !important; /* 更粗的下边框 */
+        padding-bottom: 10px !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 0.8em !important;
+        font-family: "Microsoft YaHei", sans-serif !important; /* 换成更适配的中文字体 */
+        text-shadow: 0 2px 3px rgba(0,0,0,0.1); /* 增加文字阴影 */
+        background: linear-gradient(to right, #3498db, #9b59b6); /* 背景渐变（可选） */
+        -webkit-background-clip: text;
+        color: transparent; /* 文字渐变效果（需配合背景渐变） */
+    }
+    </style>
+
+.. raw:: html
+
+    <div class="custom-h2">安装指南</div>
 
 .. container:: step-block
 
     **步骤 1:** 准备 Python 开发环境
 
-    .. note:: 
-
-        推荐使用 Anaconda,并使用 Python 版本 3.9或3.10。
-
-    .. code-block:: bash
-        
-        # 进入 Xense SDK 目录
-        cd xensesdk
-
-        # 创建并激活虚拟环境
-        conda create -n xenseenv python=3.9.19
-        conda activate xenseenv
+    请参考
+     `XenseSDk <../../XenseSDK//usr/Installation>`_ 中的 Python 开发环境准备。
 
 
 
 .. container:: step-block
 
     **步骤 2:** 安装 CUDA 工具包和 cuDNN
-    SDK 支持 CUDA Toolkit 11.8 和 cuDNN 8.9.2.26
-
-    根据您的环境，选择以下安装方式：
-
-    .. tabs:: 
-
-        .. tab::
-
-            
-            选项 1: 通过 Conda 直接安装
-
-            搜索所需版本：
-
-            .. code-block:: bash
-
-                conda search cudnn
-                conda search cudatoolkit
-
-            安装所需版本：
-
-            .. code-block:: bash
-
-                conda install cudnn==8.9.2.26 cudatoolkit==11.8.0
-        
-        .. tab::
-
-            选项 2: 从本地 Conda 环境包安装
-
-            .. code-block:: bash
-
-                # 安装 CUDA Toolkit 和 cuDNN
-                conda install --use-local cudatoolkit-11.8.0-hd77b12b_0.conda
-                conda install --use-local cudnn-8.9.2.26-cuda11_0.conda
+    
+    请参考
+     `XenseSDk <../../XenseSDK//usr/Installation>`_ 中的 CUDA 工具包和 cuDNN 安装 。        
 
 .. container:: step-block
 
-    **步骤 3:** 安装 GripperSDK 包
+    **步骤 3:** 安装 SDK 包
     将 SDK 包安装到您的环境中：
 
     .. code-block:: bash
-
+        
+        pip install xensesdk
         pip install xensegripper
 
 
