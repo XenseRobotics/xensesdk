@@ -12,7 +12,7 @@
 
     .. note:: 
 
-        推荐使用 Anaconda,并使用 Python 版本 3.9.19。
+        推荐使用 Anaconda,并使用 Python 版本 3.9或3.10。
 
     .. code-block:: bash
         
