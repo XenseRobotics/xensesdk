@@ -6,6 +6,7 @@ xense
    <!DOCTYPE html>
    <html lang="zh-CN">
    <head>
+      <!-- 保留原头部配置（Tailwind、字体等） -->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>SDK导航中心</title>
@@ -54,7 +55,15 @@ xense
                   backdrop-filter: blur(10px);
                   -webkit-backdrop-filter: blur(10px);
                }
-         }
+               /* 新增：强制按钮容器不换行 */
+               .btn-container {
+                  @apply flex flex-nowrap items-center justify-center gap-4 md:gap-6 w-full overflow-x-auto py-4;
+               }
+               /* 新增：限制按钮最大宽度 */
+               .btn-custom {
+                  @apply w-36 h-36 md:w-48 md:h-48;
+               }
+            }
       </style>
       
       <!-- 引入Google字体 -->
@@ -64,7 +73,7 @@ xense
    </head>
 
    <body class="min-h-screen bg-gradient-to-br from-dark to-slate-800 text-light overflow-x-hidden">
-      <!-- 背景动画元素 -->
+      <!-- 背景动画元素（不变） -->
       <div class="fixed inset-0 z-0 overflow-hidden">
          <div class="absolute -top-40 -left-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
          <div class="absolute top-1/3 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
@@ -73,55 +82,56 @@ xense
 
       <!-- 页面内容 -->
       <div class="relative z-10 container mx-auto px-4 py-16 md:py-24 flex flex-col items-center justify-center min-h-screen">
-         <!-- 标题区域 -->
+         <!-- 标题区域（不变） -->
          <header class="text-center mb-16 md:mb-24">
                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-display font-bold leading-tight mb-4">
                   <span class="bg-gradient-to-r from-primary to-accent text-gradient">千觉机器人</span> 
-                  <span class="block md:inline"></span>
                </h1>
                <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
                   探索我们的软件开发工具包，轻松集成强大功能到您的应用程序中
                </p>
          </header>
 
-         <!-- XenseStudio -->
-               <a href="https://xense.readthedocs.io/en/latest/XenseStudio/Introduction.html " target="_blank" class="btn-hover w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-6 shadow-2xl border border-purple-500/30 group">
-                  <div class="w-16 h-16 mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
-                     <i class="fa fa-desktop text-white text-2xl"></i>
-                  </div>
-                  <h2 class="text-2xl md:text-3xl font-bold mb-2 text-white">XenseStudio</h2>
-                  <p class="text-center text-white/80 text-sm">XenseStudio使用文档</p>
-                  <span class="mt-4 inline-block bg-white/20 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
-                     查看文档 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-                  </span>
-               </a>
+         <!-- 按钮容器：新增 btn-container 类，强制一行显示 -->
+         <div class="btn-container">
+            <!-- XenseStudio 按钮：使用 btn-custom 控制尺寸 -->
+            <a href="https://xense.readthedocs.io/en/latest/XenseStudio/Introduction.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-purple-500/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
+                  <i class="fa fa-desktop text-white text-xl"></i>
+               </div>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseStudio</h2>
+               <p class="text-center text-white/80 text-xs">使用文档</p>
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               </span>
+            </a>
 
-               <!-- XenseSDK按钮 -->
-               <a href="https://xense.readthedocs.io/en/latest/XenseSDK/XenseSDK.html" target="_blank" class="btn-hover w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-primary to-blue-700 flex flex-col items-center justify-center p-6 shadow-2xl border border-primary/30 group">
-                  <div class="w-16 h-16 mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
-                     <i class="fa fa-microchip text-white text-2xl"></i>
-                  </div>
-                  <h2 class="text-2xl md:text-3xl font-bold mb-2 text-white">XenseSDK</h2>
-                  <p class="text-center text-white/80 text-sm">XenseSDK开发工具包说明</p>
-                  <span class="mt-4 inline-block bg-white/20 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
-                     查看文档 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-                  </span>
-               </a>
+            <!-- XenseSDK按钮：使用 btn-custom 控制尺寸 -->
+            <a href="https://xense.readthedocs.io/en/latest/XenseSDK/XenseSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-primary to-blue-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-primary/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
+                  <i class="fa fa-microchip text-white text-xl"></i>
+               </div>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseSDK</h2>
+               <p class="text-center text-white/80 text-xs">开发工具包</p>
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               </span>
+            </a>
 
-               <!-- GripperSDK按钮 -->
-               <a href="https://xense.readthedocs.io/en/latest/GripperSDK/GripperSDK.html" target="_blank" class="btn-hover w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-secondary to-emerald-700 flex flex-col items-center justify-center p-6 shadow-2xl border border-secondary/30 group">
-                  <div class="w-16 h-16 mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:-rotate-12">
-                     <i class="fa fa-cogs text-white text-2xl"></i>
-                  </div>
-                  <h2 class="text-2xl md:text-3xl font-bold mb-2 text-white">GripperSDK</h2>
-                  <p class="text-center text-white/80 text-sm">GripperSDK开发工具包说明</p>
-                  <span class="mt-4 inline-block bg-white/20 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
-                     查看文档 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-                  </span>
-               </a>
+            <!-- GripperSDK按钮：使用 btn-custom 控制尺寸 -->
+            <a href="https://xense.readthedocs.io/en/latest/GripperSDK/GripperSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-secondary to-emerald-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-secondary/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:-rotate-12">
+                  <i class="fa fa-cogs text-white text-xl"></i>
+               </div>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">GripperSDK</h2>
+               <p class="text-center text-white/80 text-xs">开发工具包</p>
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               </span>
+            </a>
          </div>
 
-         <!-- 特性介绍 -->
+         <!-- 特性介绍（不变） -->
          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 w-full max-w-5xl">
                <div class="bg-glass rounded-xl p-6 border border-white/10 hover:border-primary/50 transition-colors duration-300">
                   <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
@@ -148,31 +158,16 @@ xense
                </div>
          </div>
 
-         <!-- 页脚 -->
+         <!-- 页脚（不变） -->
          <footer class="mt-20 text-center text-slate-400 text-sm">
                <p>© 2025 千觉机器人科技(上海)有限公司 | 版权所有</p>
          </footer>
       </div>
 
-      <!-- 交互脚本 -->
+      <!-- 交互脚本（不变） -->
       <script>
-         // 自定义按钮点击效果
-         document.getElementById('customBtn').addEventListener('click', function() {
-               // 添加点击动画
-               this.classList.add('scale-90');
-               setTimeout(() => {
-                  this.classList.remove('scale-90');
-                  
-                  // 显示模态框或执行其他操作
-                  alert('自定义功能按钮被点击！您可以在这里实现特定功能。');
-                  
-                  // 您可以在这里添加更多自定义功能
-               }, 200);
-         });
-
          // 页面加载动画
          document.addEventListener('DOMContentLoaded', () => {
-               // 添加元素入场动画
                const elements = document.querySelectorAll('header, .btn-hover, .grid > div');
                elements.forEach((el, index) => {
                   el.style.opacity = '0';
