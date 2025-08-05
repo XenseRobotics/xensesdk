@@ -31,3 +31,21 @@ XenseStudio 专为XenseRobotics系列触觉传感器设计，提供了强大的�
 目标读者
 -----------------
 Xense Studio 软件使用者，包括用户、测试人员、质量保证人员（QA）、以及安全人员。
+
+
+.. toctree::
+   :maxdepth: 3
+   :caption: 目录
+   :hidden:
+
+   user/Software_Introduction
+
+   user/System_Requirments
+
+   user/Installation_and_Setup
+
+   user/User_Interface_and_Interaction
+   
+   user/Troubleshooting
+   
+   user/Contact_Information

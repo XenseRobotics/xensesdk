@@ -85,7 +85,7 @@ xense
          </header>
 
          <!-- XenseStudio -->
-               <a href="https://xense.readthedocs.io/en/latest/XenseStudio/XenseStudio.html " target="_blank" class="btn-hover w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-6 shadow-2xl border border-purple-500/30 group">
+               <a href="https://xense.readthedocs.io/en/latest/XenseStudio/Introduction.html " target="_blank" class="btn-hover w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-6 shadow-2xl border border-purple-500/30 group">
                   <div class="w-16 h-16 mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
                      <i class="fa fa-desktop text-white text-2xl"></i>
                   </div>
@@ -198,7 +198,7 @@ xense
    :caption: 主目录
    :hidden:
 
-   XenseStudio/XenseStudio
+   XenseStudio/Introduction
 
    XenseSDK/XenseSDK
 
