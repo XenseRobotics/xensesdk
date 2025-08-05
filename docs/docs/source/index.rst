@@ -1,6 +1,3 @@
-xense
-========
-
 .. raw:: html
 
    <!DOCTYPE html>
@@ -9,7 +6,7 @@ xense
       <!-- 保留原头部配置（Tailwind、字体等） -->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>SDK导航中心</title>
+      <title>Xense</title>
       <script src="https://cdn.tailwindcss.com"></script>
       <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
       
