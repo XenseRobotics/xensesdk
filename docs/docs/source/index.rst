@@ -59,20 +59,24 @@
                .btn-custom {
                   @apply w-36 h-36 md:w-48 md:h-48;
                }
-               /* 新增：隐藏底部特定元素的样式 */
-               /* 假设“Next”按钮和底部版权有特定类名或结构，这里模拟处理 */
-               /* 实际根据生成的页面结构调整选择器，比如下面只是示例 */
-               .next-button-class {
+               /* 关键修改：针对Sphinx RTD主题的底部元素进行精准隐藏 */
+               .rst-footer-buttons,  /* 隐藏Next/Previous按钮容器 */
+               .wy-nav-content footer,  /* 隐藏默认页脚 */
+               .relbar-bottom,  /* 隐藏底部导航条 */
+               .rst-content .section:last-child  /* 隐藏可能的额外底部内容 */
+               {
                   display: none !important;
-               }
-               .built-with-sphinx {
-                  display: none !important;
+                  visibility: hidden !important;
+                  height: 0 !important;
+                  margin: 0 !important;
+                  padding: 0 !important;
                }
                /* 自定义页脚样式 */
                .custom-footer {
                   text-align: center;
                   padding: 20px 0;
                   color: #999;
+                  margin-top: 40px;
                }
          }
       </style>
@@ -84,7 +88,7 @@
    </head>
 
    <body class="min-h-screen bg-gradient-to-br from-dark to-slate-800 text-light overflow-x-hidden">
-      <!-- 背景动画元素（不变） -->
+      <!-- 背景动画元素 -->
       <div class="fixed inset-0 z-0 overflow-hidden">
          <div class="absolute -top-40 -left-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
          <div class="absolute top-1/3 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
@@ -93,7 +97,7 @@
 
       <!-- 页面内容 -->
       <div class="relative z-10 container mx-auto px-4 py-16 md:py-24 flex flex-col items-center justify-center min-h-screen">
-         <!-- 标题区域（不变） -->
+         <!-- 标题区域 -->
          <header class="text-center mb-16 md:mb-24">
                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-display font-bold leading-tight mb-4">
                   <span class="bg-gradient-to-r from-primary to-accent text-gradient">千觉机器人</span> 
@@ -103,9 +107,9 @@
                </p>
          </header>
 
-         <!-- 按钮容器：新增 btn-container 类，强制一行显示 -->
+         <!-- 按钮容器 -->
          <div class="btn-container">
-               <!-- XenseStudio 按钮：使用 btn-custom 控制尺寸 -->
+               <!-- XenseStudio 按钮 -->
                <a href="https://xense.readthedocs.io/en/latest/XenseStudio/Introduction.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-purple-500/30 group">
                   <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
                      <i class="fa fa-desktop text-white text-xl"></i>
@@ -117,7 +121,7 @@
                   </span>
                </a>
 
-               <!-- XenseSDK按钮：使用 btn-custom 控制尺寸 -->
+               <!-- XenseSDK按钮 -->
                <a href="https://xense.readthedocs.io/en/latest/XenseSDK/XenseSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-primary to-blue-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-primary/30 group">
                   <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
                      <i class="fa fa-microchip text-white text-xl"></i>
@@ -129,7 +133,7 @@
                   </span>
                </a>
 
-               <!-- GripperSDK按钮：使用 btn-custom 控制尺寸 -->
+               <!-- GripperSDK按钮 -->
                <a href="https://xense.readthedocs.io/en/latest/GripperSDK/GripperSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-secondary to-emerald-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-secondary/30 group">
                   <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:-rotate-12">
                      <i class="fa fa-cogs text-white text-xl"></i>
@@ -142,7 +146,7 @@
                </a>
          </div>
 
-         <!-- 特性介绍（不变） -->
+         <!-- 特性介绍 -->
          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 w-full max-w-5xl">
                <div class="bg-glass rounded-xl p-6 border border-white/10 hover:border-primary/50 transition-colors duration-300">
                   <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
@@ -169,16 +173,17 @@
                </div>
          </div>
 
-         <!-- 自定义页脚，替换原有底部内容 -->
+         <!-- 自定义页脚 -->
          <div class="custom-footer">
                <p>© 2025 千觉机器人科技(上海)有限公司 | 版权所有</p>
          </div>
       </div>
 
-      <!-- 交互脚本（不变） -->
+      <!-- 交互脚本 -->
       <script>
-         // 页面加载动画
+         // 页面加载后执行隐藏操作，确保覆盖动态生成的元素
          document.addEventListener('DOMContentLoaded', () => {
+               // 页面加载动画
                const elements = document.querySelectorAll('header, .btn-hover, .grid > div');
                elements.forEach((el, index) => {
                   el.style.opacity = '0';
@@ -190,10 +195,31 @@
                      el.style.transform = 'translateY(0)';
                   }, 100 + (index * 100));
                });
+
+               // 强制隐藏底部不需要的元素，针对动态生成的内容
+               const selectors = [
+                  '.rst-footer-buttons',
+                  '.wy-nav-content footer',
+                  '.relbar-bottom',
+                  '.rst-content .section:last-child',
+                  '.next-button',
+                  '.prev-button',
+                  '.built-with-sphinx'
+               ];
+               
+               selectors.forEach(selector => {
+                  const elements = document.querySelectorAll(selector);
+                  elements.forEach(el => {
+                     el.style.display = 'none !important';
+                     el.style.visibility = 'hidden !important';
+                     el.style.height = '0 !important';
+                  });
+               });
          });
       </script>
    </body>
    </html>
+
 
 
 
