@@ -5,10 +5,9 @@
    <!DOCTYPE html>
    <html lang="zh-CN">
    <head>
-      <!-- 保留原头部配置（Tailwind、字体等） -->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Xense</title>
+      <title>千觉机器人 SDK 导航中心</title> 
       <script src="https://cdn.tailwindcss.com"></script>
       <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
       
@@ -54,15 +53,28 @@
                   backdrop-filter: blur(10px);
                   -webkit-backdrop-filter: blur(10px);
                }
-               /* 新增：强制按钮容器不换行 */
                .btn-container {
                   @apply flex flex-nowrap items-center justify-center gap-4 md:gap-6 w-full overflow-x-auto py-4;
                }
-               /* 新增：限制按钮最大宽度 */
                .btn-custom {
                   @apply w-36 h-36 md:w-48 md:h-48;
                }
-            }
+               /* 新增：隐藏底部特定元素的样式 */
+               /* 假设“Next”按钮和底部版权有特定类名或结构，这里模拟处理 */
+               /* 实际根据生成的页面结构调整选择器，比如下面只是示例 */
+               .next-button-class {
+                  display: none !important;
+               }
+               .built-with-sphinx {
+                  display: none !important;
+               }
+               /* 自定义页脚样式 */
+               .custom-footer {
+                  text-align: center;
+                  padding: 20px 0;
+                  color: #999;
+               }
+         }
       </style>
       
       <!-- 引入Google字体 -->
@@ -93,41 +105,41 @@
 
          <!-- 按钮容器：新增 btn-container 类，强制一行显示 -->
          <div class="btn-container">
-            <!-- XenseStudio 按钮：使用 btn-custom 控制尺寸 -->
-            <a href="https://xense.readthedocs.io/en/latest/XenseStudio/Introduction.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-purple-500/30 group">
-               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
-                  <i class="fa fa-desktop text-white text-xl"></i>
-               </div>
-               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseStudio</h2>
-               <p class="text-center text-white/80 text-xs">使用文档</p>
-               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
-                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-               </span>
-            </a>
+               <!-- XenseStudio 按钮：使用 btn-custom 控制尺寸 -->
+               <a href="https://xense.readthedocs.io/en/latest/XenseStudio/Introduction.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-purple-500/30 group">
+                  <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
+                     <i class="fa fa-desktop text-white text-xl"></i>
+                  </div>
+                  <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseStudio</h2>
+                  <p class="text-center text-white/80 text-xs">使用文档</p>
+                  <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                     查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+                  </span>
+               </a>
 
-            <!-- XenseSDK按钮：使用 btn-custom 控制尺寸 -->
-            <a href="https://xense.readthedocs.io/en/latest/XenseSDK/XenseSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-primary to-blue-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-primary/30 group">
-               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
-                  <i class="fa fa-microchip text-white text-xl"></i>
-               </div>
-               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseSDK</h2>
-               <p class="text-center text-white/80 text-xs">开发工具包</p>
-               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
-                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-               </span>
-            </a>
+               <!-- XenseSDK按钮：使用 btn-custom 控制尺寸 -->
+               <a href="https://xense.readthedocs.io/en/latest/XenseSDK/XenseSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-primary to-blue-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-primary/30 group">
+                  <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
+                     <i class="fa fa-microchip text-white text-xl"></i>
+                  </div>
+                  <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseSDK</h2>
+                  <p class="text-center text-white/80 text-xs">开发工具包</p>
+                  <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                     查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+                  </span>
+               </a>
 
-            <!-- GripperSDK按钮：使用 btn-custom 控制尺寸 -->
-            <a href="https://xense.readthedocs.io/en/latest/GripperSDK/GripperSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-secondary to-emerald-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-secondary/30 group">
-               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:-rotate-12">
-                  <i class="fa fa-cogs text-white text-xl"></i>
-               </div>
-               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">GripperSDK</h2>
-               <p class="text-center text-white/80 text-xs">开发工具包</p>
-               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
-                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-               </span>
-            </a>
+               <!-- GripperSDK按钮：使用 btn-custom 控制尺寸 -->
+               <a href="https://xense.readthedocs.io/en/latest/GripperSDK/GripperSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-secondary to-emerald-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-secondary/30 group">
+                  <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:-rotate-12">
+                     <i class="fa fa-cogs text-white text-xl"></i>
+                  </div>
+                  <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">GripperSDK</h2>
+                  <p class="text-center text-white/80 text-xs">开发工具包</p>
+                  <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                     查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+                  </span>
+               </a>
          </div>
 
          <!-- 特性介绍（不变） -->
@@ -157,10 +169,10 @@
                </div>
          </div>
 
-         <!-- 页脚（不变） -->
-         <footer class="mt-20 text-center text-slate-400 text-sm">
+         <!-- 自定义页脚，替换原有底部内容 -->
+         <div class="custom-footer">
                <p>© 2025 千觉机器人科技(上海)有限公司 | 版权所有</p>
-         </footer>
+         </div>
       </div>
 
       <!-- 交互脚本（不变） -->
