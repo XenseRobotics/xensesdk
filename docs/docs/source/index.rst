@@ -1,3 +1,5 @@
+.. title:: Xense
+
 .. raw:: html
 
    <!DOCTYPE html>
