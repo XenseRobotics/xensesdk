@@ -33,9 +33,9 @@
 
         * - :ref:`scanSerialNumber 方法 <tag_scanSerialNumber>`
         
-        * - :ref:`tag_exportRuntimeConfig 方法 <tag_exportruntimeconfig>`
+        * - :ref:`exportRuntimeConfig 方法 <tag_exportruntimeconfig>`
         
-        * - :ref:`tag_createSolver 方法 <tag_createsolver>`
+        * - :ref:`createSolver 方法 <tag_createsolver>`
 
 .. toctree:: 
     :maxdepth: 1
