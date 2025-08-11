@@ -17,12 +17,13 @@ XenseStudio_: XenseStudio使用文档
 
 XenseSDK_: XenseSDK开发工具包说明
 
+GripperSDK_:GripperSDK开发工具包说明
 
 
 
 .. _XenseStudio: /XenseStudio/XenseStudio.rst
 .. _XenseSDK: /XenseSDK/XenseSDK.rst
-
+.. _GripperSDK: /GripperSDK/GripperSDK.rst
 
 
 |
@@ -36,6 +37,6 @@ XenseSDK_: XenseSDK开发工具包说明
 
    XenseSDK/XenseSDK
 
-
+   GripperSDK/GripperSDK
 
 

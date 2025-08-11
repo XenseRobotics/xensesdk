@@ -32,10 +32,6 @@
         * - :ref:`calibrateSensor 方法 <tag_calibrateSensor>`
 
         * - :ref:`scanSerialNumber 方法 <tag_scanSerialNumber>`
-        
-        * - :ref:`exportRuntimeConfig 方法 <tag_exportruntimeconfig>`
-        
-        * - :ref:`createSolver 方法 <tag_createsolver>`
 
 .. toctree:: 
     :maxdepth: 1
@@ -52,5 +48,3 @@
     API/call_service
     API/calibrateSensor
     API/scanSerialNumber
-    API/exportRuntimeConfig
-    API/createSlover

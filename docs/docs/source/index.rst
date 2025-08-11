@@ -35,7 +35,7 @@
       <style type="text/tailwindcss">
          @layer utilities {
                .content-auto {
-                  content-visibility: auto; 
+                  content-visibility: auto;
                }
                .text-shadow {
                   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -234,6 +234,7 @@
 
    XenseSDK/XenseSDK
 
+   GripperSDK/GripperSDK
 
 
 

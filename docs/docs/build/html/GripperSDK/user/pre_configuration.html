@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>硬件连接与网络配置 &mdash; xense  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/tabs.js?v=3030b3cb"></script>
+      <script src="../../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="安装GripperSDK" href="Installation.html" />
+    <link rel="prev" title="GripperSDK" href="../GripperSDK.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../XenseStudio/XenseStudio.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../GripperSDK.html">GripperSDK</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methodlist.html">如何使用GripperSDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Zeroros/Zeroros.html">Zeroros</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../GripperSDK.html">GripperSDK</a></li>
+      <li class="breadcrumb-item active">硬件连接与网络配置</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tag-gripperpre-configuration">
+<span id="id1"></span><h1>硬件连接与网络配置<a class="headerlink" href="#tag-gripperpre-configuration" title="Link to this heading"></a></h1>
+<p>将服务器端与上位机连接于同一局域网内,使得二者可以进行通信。</p>
+<style>
+.custom-h2 {
+    font-size: 1.5em !important; /* 更大的字号 */
+    font-weight: 700 !important;
+    color: #2c3e50 !important; /* 深色更有质感 */
+    border-bottom: 1px solid #fffdfdff !important; /* 更粗的下边框 */
+    padding-bottom: 10px !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.8em !important;
+    font-family: "Microsoft YaHei", sans-serif !important; /* 换成更适配的中文字体 */
+    text-shadow: 0 2px 3px rgba(0,0,0,0.1); /* 增加文字阴影 */
+    background: linear-gradient(to right, #3498db, #9b59b6); /* 背景渐变（可选） */
+    -webkit-background-clip: text;
+    color: transparent; /* 文字渐变效果（需配合背景渐变） */
+}
+</style><div class="custom-h2">方法一:使用交换机</div><div class="step-block docutils container">
+<p>此时夹爪的IP地址使用 <code class="docutils literal notranslate"><span class="pre">dhcp</span></code> 自动获取,后续需利用 <a class="reference external" href="./Zeroros/usr/Zeroros.html">zeroros_cli</a> 进行扫描。</p>
+</div>
+<div class="custom-h2">方法二:直连电脑网口</div><div class="step-block docutils container">
+<p><strong>步骤 1:</strong> 配置PC的以太网</p>
+<p>此时夹爪为静态 IP <code class="docutils literal notranslate"><span class="pre">192.168.99.2</span></code> ,电脑端需要在和夹爪同一网段内设置自身 IP (打开网络设置 -&gt; 有线设置 -&gt; IPv4)。
+设置参考如下:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21.4%" />
+<col style="width: 28.6%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数项</p></th>
+<th class="head"><p>示例/固定值</p></th>
+<th class="head"><p>配置说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IP 地址</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">192.168.99.10</span></code></p></td>
+<td><p>格式为 <code class="docutils literal notranslate"><span class="pre">192.168.99.X</span></code> (<code class="docutils literal notranslate"><span class="pre">X</span></code> 的取值范围为 1-254,避开夹爪 IP )</p></td>
+</tr>
+<tr class="row-odd"><td><p>子网掩码</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code></p></td>
+<td><p>固定配置，无需变动</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="step-block docutils container">
+<p><strong>步骤 2:</strong> 连接以太网</p>
+<blockquote>
+<div><p>使用以太网线将PC的以太网接口与夹爪设备的网口直接连接,确保PC端网线接口牢固插入</p>
+</div></blockquote>
+</div>
+<div class="step-block docutils container">
+<p><strong>步骤 3:</strong> 连接夹爪设备电源</p>
+<blockquote>
+<div><p>1.将夹爪设备的电源适配器插曲市电插座</p>
+<p>2.等待夹爪完成初始化：</p>
+<ul class="simple">
+<li><p>观察到状态灯常亮</p></li>
+<li><p>听到夹爪的复位声或观察到夹爪的机械复位</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="step-block docutils container">
+<p><strong>步骤 4:</strong> 测试网络连通性</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>打开PC的命令提示符(Windows系统:按下 <code class="docutils literal notranslate"><span class="pre">Win+R</span></code> ，输入 <code class="docutils literal notranslate"><span class="pre">cmd</span></code> 后回车;Linux:打开终端)。</p></li>
+<li><p>在命令行中输入以下命令并回车：</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ping<span class="w"> </span><span class="m">192</span>.168.99.2
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>结果判断:</p></li>
+</ol>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">网络连通成功</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">连接超时</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>若显示 <strong>“Reply from 192.168.99.2”</strong> 等类似信息,可直接继续后续操作。</p>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>若显示 <strong>“Request timed out”</strong> ,请依次排查以下项:</p>
+<ul class="simple">
+<li><p>以太网IP配置是否正确(重新核对步骤 1)</p></li>
+<li><p>以太网线是否松动或损坏</p></li>
+<li><p>夹爪设备是否已完成初始化（状态灯是否常亮）</p></li>
+</ul>
+</div></div>
+</div></blockquote>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../GripperSDK.html" class="btn btn-neutral float-left" title="GripperSDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Installation.html" class="btn btn-neutral float-right" title="安装GripperSDK" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, 千觉机器人科技(上海)有限公司.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
