@@ -1,5 +1,7 @@
 # Xense SDK 文档
 
+**如有使用问题，请添加微信 qjrobot9966 来交流**
+
 SDK开发文档和软件操作手册更新至： https://xensedoc.readthedocs.io/en/latest/
 
 ## 概述
@@ -274,3 +276,4 @@ Could not load the Qt platform plugin "xcb" in "" even though it was found. This
 sudo apt-get update
 sudo apt-get install libxcb-cursor0
 ```
+
