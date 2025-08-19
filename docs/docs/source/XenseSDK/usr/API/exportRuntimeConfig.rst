@@ -10,19 +10,19 @@ exportRuntimeConfig 方法
 
          将当前传感器的运行时配置导出到指定目录。
 
-    :param save_dir: 配置文件保存目录，默认为当前目录。
-    :type save_dir: Union[str,Path], 可选
+        :param save_dir: 配置文件保存目录，默认为当前目录。
+        :type save_dir: Union[str,Path], 可选
 
-    :param binary: 是否返回二进制加密数据而非保存到文件，默认为 False。
-    :type binary: bool, 可选
+        :param binary: 是否返回二进制加密数据而非保存到文件，默认为 False。
+        :type binary: bool, 可选
 
-    :return: None
+        :return: None
 
-    :raises RuntimeError: 远程连接模式下导出配置失败时抛出。
+        :raises RuntimeError: 远程连接模式下导出配置失败时抛出。
 
-    :note:
+        :note:
 
-        保存的文件名格式为 "runtime_<序列号>"
+            保存的文件名格式为 "runtime_<序列号>"。
 
 示例方法
 -----------------
