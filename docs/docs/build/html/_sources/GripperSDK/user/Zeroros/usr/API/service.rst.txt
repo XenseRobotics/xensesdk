@@ -1,87 +1,69 @@
 .. _tag_service:
 
-测试Service
+Service调用
 ==============
 
 .. container:: step-block
 
-    当要对特定Service服务查询时,可使用如下命令: 
+    当要对特定Service服务调用时,可使用如下命令: 
 
     .. tabs::
 
-        .. tab:: Sensor对应服务
+        .. tab:: 调用Sensor服务
 
             .. code-block:: python
 
-                zeroros_cli -azeroros_cli service --name OG000266 --cmd get_img
-                
-                #zeroros_cli service --name {service_name} --cmd {action_name}
+                ezros service -n OG000285 -c get_img
 
-
-        .. tab:: Gripper对应服务
+        .. tab:: 调用Gripper服务
 
             .. code-block:: python
 
-                zeroros_cli service --name gripper_9a14e81bb832 --cmd control_gripper_pos:=10,80,27
-                
-                #zeroros_cli service --name {service_name} --cmd {action_name}:={args}
+                ezros service -n gripper_d672f584b17a -c set_led_color:=red
+
+    以下为打印信息:
 
     .. tabs::
 
-        .. tab:: get_img服务 成功
-
-            .. code-block:: python
-            
-                Calling service 'OG000266' with command 'get_img' and arguments []
-                {'success': True, 'ret': array([[[229, 135, 100],
-                        [232, 136, 101],
-                        [232, 137, 100],
-                        ...,
-                        [221, 145,  89],
-                        [222, 144, 106],
-                        [213, 128,  94]],
-
-                    [[225, 134,  98],
-                        [228, 137, 101],
-                        [232, 137, 100],
-                        ...,
-                        [220, 144,  92],
-                        [217, 139, 104],
-                        [219, 136, 107]],
-
-                    ...,
-
-                    [[194, 119,  66],
-                        [195, 116,  69],
-                        [200, 119,  73],
-                        ...,
-                        [197, 139,  45],
-                        [197, 137,  54],
-                        [196, 134,  63]]], dtype=uint8)}
-
-        .. tab:: get_img服务 失败
-
-            .. code-block:: python
-                
-                ValueError: Service OG000266 not found.
-
-        .. tab:: control_gripper_pos服务 成功
+        .. tab:: 调用Sensor服务
 
             .. code-block:: python
 
-                Calling service 'gripper_9a14e81bb832' with command 'control_gripper_pos' and arguments [10, 80, 27]
-                {'success': True, 'ret': {'success': True}}
+                调用服务: OG000285
+                动作: get_img
+                参数: []
+                ----------------------------------------
+                响应:  [[[227 156  83]
+                [230 151  85]
+                [229 149  86]
+                ...
+                [201 110 112]
+                [110  45  36]
+                [ 74  44  34]]
 
-        .. tab:: control_gripper_pos服务 失败
+                [[225 154  82]
+                [228 150  85]
+                [228 149  86]
+                ...
+                [225 131 137]
+                [114  44  36]
+                [ 75  44  31]]
+
+        .. tab:: 调用Gripper服务
 
             .. code-block:: python
 
-                ValueError: Service gripper_9a14e81bb832 not found.
+                调用服务: gripper_d672f584b17a
+                动作: set_led_color
+                参数: ['red']
+                ----------------------------------------
+                ...
 
 .. admonition:: tips
     :class: tip
 
-    ``--name/-n`` 指定服务器名称, ``--cmd/-c`` 指定aciton名称,如果anciton包含参数,使用 ``:=`` 连接参数,多个参数使用 ``,`` 分隔。
+    service       子命令,表明本次操作是调用某个服务;
 
-    上述指令的参数参考
-    `zeroros_cli -a <./all_info.html>`_ 的打印信息。
+    --name/-n     必选参数,指定要调用的Service名称;
+
+    --call/-c     必须参数,指定要调用的服务动作及参数，格式为 “动作名:= 参数”

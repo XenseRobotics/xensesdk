@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>测试Service &mdash; xense  documentation</title>
+  <title>Service调用 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/tabs.css?v=a5c4661c" />
@@ -26,8 +26,8 @@
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="测试Topic" href="echo.html" />
-    <link rel="prev" title="查看zeroros服务信息" href="all_info.html" /> 
+    <link rel="next" title="跨域通信" href="vis.html" />
+    <link rel="prev" title="监听Topic" href="echo.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,14 +51,14 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../../../XenseStudio/XenseStudio.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../../GripperSDK.html">GripperSDK</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">硬件连接与网络配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Installation.html">安装GripperSDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../methodlist.html">如何使用GripperSDK?</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../Zeroros.html">Zeroros</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../method.html">如何使用Zeroros_cli调试工具?</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../Zeroros.html">EzROS</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../zerorosmethod.html">如何使用EzROS调试工具?</a></li>
 </ul>
 </li>
 </ul>
@@ -80,9 +80,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../../GripperSDK.html">GripperSDK</a></li>
-          <li class="breadcrumb-item"><a href="../../Zeroros.html">Zeroros</a></li>
-          <li class="breadcrumb-item"><a href="../method.html">如何使用Zeroros_cli调试工具?</a></li>
-      <li class="breadcrumb-item active">测试Service</li>
+          <li class="breadcrumb-item"><a href="../../Zeroros.html">EzROS</a></li>
+          <li class="breadcrumb-item"><a href="../zerorosmethod.html">如何使用EzROS调试工具?</a></li>
+      <li class="breadcrumb-item active">Service调用</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -95,67 +95,54 @@
            <div itemprop="articleBody">
              
   <section id="service">
-<span id="tag-service"></span><h1>测试Service<a class="headerlink" href="#service" title="Link to this heading"></a></h1>
+<span id="tag-service"></span><h1>Service调用<a class="headerlink" href="#service" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
-<p>当要对特定Service服务查询时,可使用如下命令:</p>
+<p>当要对特定Service服务调用时,可使用如下命令:</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Sensor对应服务</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Gripper对应服务</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">zeroros_cli</span> <span class="o">-</span><span class="n">azeroros_cli</span> <span class="n">service</span> <span class="o">--</span><span class="n">name</span> <span class="n">OG000266</span> <span class="o">--</span><span class="n">cmd</span> <span class="n">get_img</span>
-
-<span class="c1">#zeroros_cli service --name {service_name} --cmd {action_name}</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">调用Sensor服务</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">调用Gripper服务</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ezros</span> <span class="n">service</span> <span class="o">-</span><span class="n">n</span> <span class="n">OG000285</span> <span class="o">-</span><span class="n">c</span> <span class="n">get_img</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">zeroros_cli</span> <span class="n">service</span> <span class="o">--</span><span class="n">name</span> <span class="n">gripper_9a14e81bb832</span> <span class="o">--</span><span class="n">cmd</span> <span class="n">control_gripper_pos</span><span class="o">:=</span><span class="mi">10</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">27</span>
-
-<span class="c1">#zeroros_cli service --name {service_name} --cmd {action_name}:={args}</span>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ezros</span> <span class="n">service</span> <span class="o">-</span><span class="n">n</span> <span class="n">gripper_d672f584b17a</span> <span class="o">-</span><span class="n">c</span> <span class="n">set_led_color</span><span class="o">:=</span><span class="n">red</span>
 </pre></div>
 </div>
 </div></div>
+<p>以下为打印信息:</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">get_img服务 成功</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">get_img服务 失败</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1">control_gripper_pos服务 成功</button><button aria-controls="panel-1-1-3" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-3" name="1-3" role="tab" tabindex="-1">control_gripper_pos服务 失败</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Calling</span> <span class="n">service</span> <span class="s1">&#39;OG000266&#39;</span> <span class="k">with</span> <span class="n">command</span> <span class="s1">&#39;get_img&#39;</span> <span class="ow">and</span> <span class="n">arguments</span> <span class="p">[]</span>
-<span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;ret&#39;</span><span class="p">:</span> <span class="n">array</span><span class="p">([[[</span><span class="mi">229</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">232</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">101</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">232</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
-        <span class="o">...</span><span class="p">,</span>
-        <span class="p">[</span><span class="mi">221</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span>  <span class="mi">89</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">222</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">106</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">213</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span>  <span class="mi">94</span><span class="p">]],</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">调用Sensor服务</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">调用Gripper服务</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">调用服务</span><span class="p">:</span> <span class="n">OG000285</span>
+<span class="n">动作</span><span class="p">:</span> <span class="n">get_img</span>
+<span class="n">参数</span><span class="p">:</span> <span class="p">[]</span>
+<span class="o">----------------------------------------</span>
+<span class="n">响应</span><span class="p">:</span>  <span class="p">[[[</span><span class="mi">227</span> <span class="mi">156</span>  <span class="mi">83</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">230</span> <span class="mi">151</span>  <span class="mi">85</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">229</span> <span class="mi">149</span>  <span class="mi">86</span><span class="p">]</span>
+<span class="o">...</span>
+<span class="p">[</span><span class="mi">201</span> <span class="mi">110</span> <span class="mi">112</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">110</span>  <span class="mi">45</span>  <span class="mi">36</span><span class="p">]</span>
+<span class="p">[</span> <span class="mi">74</span>  <span class="mi">44</span>  <span class="mi">34</span><span class="p">]]</span>
 
-    <span class="p">[[</span><span class="mi">225</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span>  <span class="mi">98</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">228</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">101</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">232</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
-        <span class="o">...</span><span class="p">,</span>
-        <span class="p">[</span><span class="mi">220</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span>  <span class="mi">92</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">217</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="mi">104</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">219</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">107</span><span class="p">]],</span>
-
-    <span class="o">...</span><span class="p">,</span>
-
-    <span class="p">[[</span><span class="mi">194</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span>  <span class="mi">66</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">195</span><span class="p">,</span> <span class="mi">116</span><span class="p">,</span>  <span class="mi">69</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span>  <span class="mi">73</span><span class="p">],</span>
-        <span class="o">...</span><span class="p">,</span>
-        <span class="p">[</span><span class="mi">197</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span>  <span class="mi">45</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">197</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span>  <span class="mi">54</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">196</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span>  <span class="mi">63</span><span class="p">]]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">uint8</span><span class="p">)}</span>
+<span class="p">[[</span><span class="mi">225</span> <span class="mi">154</span>  <span class="mi">82</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">228</span> <span class="mi">150</span>  <span class="mi">85</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">228</span> <span class="mi">149</span>  <span class="mi">86</span><span class="p">]</span>
+<span class="o">...</span>
+<span class="p">[</span><span class="mi">225</span> <span class="mi">131</span> <span class="mi">137</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">114</span>  <span class="mi">44</span>  <span class="mi">36</span><span class="p">]</span>
+<span class="p">[</span> <span class="mi">75</span>  <span class="mi">44</span>  <span class="mi">31</span><span class="p">]]</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="n">Service</span> <span class="n">OG000266</span> <span class="ow">not</span> <span class="n">found</span><span class="o">.</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-1-1-2" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-2" name="1-2" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Calling</span> <span class="n">service</span> <span class="s1">&#39;gripper_9a14e81bb832&#39;</span> <span class="k">with</span> <span class="n">command</span> <span class="s1">&#39;control_gripper_pos&#39;</span> <span class="ow">and</span> <span class="n">arguments</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">27</span><span class="p">]</span>
-<span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;ret&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}}</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-1-1-3" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-3" name="1-3" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="n">Service</span> <span class="n">gripper_9a14e81bb832</span> <span class="ow">not</span> <span class="n">found</span><span class="o">.</span>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">调用服务</span><span class="p">:</span> <span class="n">gripper_d672f584b17a</span>
+<span class="n">动作</span><span class="p">:</span> <span class="n">set_led_color</span>
+<span class="n">参数</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">]</span>
+<span class="o">----------------------------------------</span>
+<span class="o">...</span>
 </pre></div>
 </div>
 </div></div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">tips</p>
-<p><code class="docutils literal notranslate"><span class="pre">--name/-n</span></code> 指定服务器名称, <code class="docutils literal notranslate"><span class="pre">--cmd/-c</span></code> 指定aciton名称,如果anciton包含参数,使用 <code class="docutils literal notranslate"><span class="pre">:=</span></code> 连接参数,多个参数使用 <code class="docutils literal notranslate"><span class="pre">,</span></code> 分隔。</p>
-<p>上述指令的参数参考
-<a class="reference external" href="./all_info.html">zeroros_cli -a</a> 的打印信息。</p>
+<p>service       子命令,表明本次操作是调用某个服务;</p>
+<p>–name/-n     必选参数,指定要调用的Service名称;</p>
+<p>–call/-c     必须参数,指定要调用的服务动作及参数，格式为 “动作名:= 参数”</p>
 </div>
 </section>
 
@@ -163,8 +150,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="all_info.html" class="btn btn-neutral float-left" title="查看zeroros服务信息" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="echo.html" class="btn btn-neutral float-right" title="测试Topic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="echo.html" class="btn btn-neutral float-left" title="监听Topic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="vis.html" class="btn btn-neutral float-right" title="跨域通信" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

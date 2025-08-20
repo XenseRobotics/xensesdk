@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; xense  documentation</title>
+  <title>Xense &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=f0a164dd" />
@@ -24,7 +24,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="XenseStudio" href="XenseStudio/XenseStudio.html" /> 
+    <link rel="next" title="XenseStudio" href="XenseStudio/Introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,7 +48,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="XenseStudio/XenseStudio.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="GripperSDK/GripperSDK.html">GripperSDK</a></li>
 </ul>
@@ -67,7 +67,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+      <li class="breadcrumb-item active">Xense</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -84,7 +84,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>SDK导航中心</title>
+   <title>千觉机器人 SDK 导航中心</title>
    <script src="https://cdn.tailwindcss.com"></script>
    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -130,6 +130,31 @@
                backdrop-filter: blur(10px);
                -webkit-backdrop-filter: blur(10px);
             }
+            .btn-container {
+               @apply flex flex-nowrap items-center justify-center gap-4 md:gap-6 w-full overflow-x-auto py-4;
+            }
+            .btn-custom {
+               @apply w-36 h-36 md:w-48 md:h-48;
+            }
+            /* 关键修改：针对Sphinx RTD主题的底部元素进行精准隐藏 */
+            .rst-footer-buttons,  /* 隐藏Next/Previous按钮容器 */
+            .wy-nav-content footer,  /* 隐藏默认页脚 */
+            .relbar-bottom,  /* 隐藏底部导航条 */
+            .rst-content .section:last-child  /* 隐藏可能的额外底部内容 */
+            {
+               display: none !important;
+               visibility: hidden !important;
+               height: 0 !important;
+               margin: 0 !important;
+               padding: 0 !important;
+            }
+            /* 自定义页脚样式 */
+            .custom-footer {
+               text-align: center;
+               padding: 20px 0;
+               color: #999;
+               margin-top: 40px;
+            }
       }
    </style>
 
@@ -153,7 +178,6 @@
       <header class="text-center mb-16 md:mb-24">
             <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-display font-bold leading-tight mb-4">
                <span class="bg-gradient-to-r from-primary to-accent text-gradient">千觉机器人</span>
-               <span class="block md:inline"></span>
             </h1>
             <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
                探索我们的软件开发工具包，轻松集成强大功能到您的应用程序中
@@ -161,43 +185,40 @@
       </header>
 
       <!-- 按钮容器 -->
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 w-full max-w-5xl">
-            <!-- 自定义图片按钮 -->
-            <button id="customBtn" class="btn-hover group relative w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-               <!-- 替换为您指定的图片 -->
-               <img src="https://github.com/XenseRobotics/xensesdk/tree/docs/docs/docs/source/XenseSDK/usr/images/studio.png"
-                     alt="自定义SDK功能按钮"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-               <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-80"></div>
-               <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-                  <span class="block text-white font-semibold text-lg">XenseStudio使用文档</span>
-                  <span class="inline-block mt-1 text-sm text-slate-200 bg-dark/50 px-2 py-1 rounded-full">
-                     查看文档 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-                  </span>
+      <div class="btn-container">
+            <!-- XenseStudio 按钮 -->
+            <a href="https://xense.readthedocs.io/en/latest/XenseStudio/Introduction.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-purple-500/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
+                  <i class="fa fa-desktop text-white text-xl"></i>
                </div>
-            </button>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseStudio</h2>
+               <p class="text-center text-white/80 text-xs">使用文档</p>
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               </span>
+            </a>
 
             <!-- XenseSDK按钮 -->
-            <a href="https://xensesdk.readthedocs.io/" target="_blank" class="btn-hover w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-primary to-blue-700 flex flex-col items-center justify-center p-6 shadow-2xl border border-primary/30 group">
-               <div class="w-16 h-16 mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
-                  <i class="fa fa-microchip text-white text-2xl"></i>
+            <a href="https://xense.readthedocs.io/en/latest/XenseSDK/XenseSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-primary to-blue-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-primary/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
+                  <i class="fa fa-microchip text-white text-xl"></i>
                </div>
-               <h2 class="text-2xl md:text-3xl font-bold mb-2 text-white">XenseSDK</h2>
-               <p class="text-center text-white/80 text-sm">XenseSDK开发工具包说明</p>
-               <span class="mt-4 inline-block bg-white/20 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
-                  查看文档 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseSDK</h2>
+               <p class="text-center text-white/80 text-xs">开发工具包</p>
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
                </span>
             </a>
 
             <!-- GripperSDK按钮 -->
-            <a href="https://grippersdk.readthedocs.io/" target="_blank" class="btn-hover w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-secondary to-emerald-700 flex flex-col items-center justify-center p-6 shadow-2xl border border-secondary/30 group">
-               <div class="w-16 h-16 mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:-rotate-12">
-                  <i class="fa fa-cogs text-white text-2xl"></i>
+            <a href="https://xense.readthedocs.io/en/latest/GripperSDK/GripperSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-secondary to-emerald-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-secondary/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:-rotate-12">
+                  <i class="fa fa-cogs text-white text-xl"></i>
                </div>
-               <h2 class="text-2xl md:text-3xl font-bold mb-2 text-white">GripperSDK</h2>
-               <p class="text-center text-white/80 text-sm">GripperSDK开发工具包说明</p>
-               <span class="mt-4 inline-block bg-white/20 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
-                  查看文档 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">GripperSDK</h2>
+               <p class="text-center text-white/80 text-xs">开发工具包</p>
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
                </span>
             </a>
       </div>
@@ -229,31 +250,17 @@
             </div>
       </div>
 
-      <!-- 页脚 -->
-      <footer class="mt-20 text-center text-slate-400 text-sm">
-            <p>© 2023 SDK开发中心 | 版权所有</p>
-      </footer>
+      <!-- 自定义页脚 -->
+      <div class="custom-footer">
+            <p>© 2025 千觉机器人科技(上海)有限公司 | 版权所有</p>
+      </div>
    </div>
 
    <!-- 交互脚本 -->
    <script>
-      // 自定义按钮点击效果
-      document.getElementById('customBtn').addEventListener('click', function() {
-            // 添加点击动画
-            this.classList.add('scale-90');
-            setTimeout(() => {
-               this.classList.remove('scale-90');
-
-               // 显示模态框或执行其他操作
-               alert('自定义功能按钮被点击！您可以在这里实现特定功能。');
-
-               // 您可以在这里添加更多自定义功能
-            }, 200);
-      });
-
-      // 页面加载动画
+      // 页面加载后执行隐藏操作，确保覆盖动态生成的元素
       document.addEventListener('DOMContentLoaded', () => {
-            // 添加元素入场动画
+            // 页面加载动画
             const elements = document.querySelectorAll('header, .btn-hover, .grid > div');
             elements.forEach((el, index) => {
                el.style.opacity = '0';
@@ -264,6 +271,26 @@
                   el.style.opacity = '1';
                   el.style.transform = 'translateY(0)';
                }, 100 + (index * 100));
+            });
+
+            // 强制隐藏底部不需要的元素，针对动态生成的内容
+            const selectors = [
+               '.rst-footer-buttons',
+               '.wy-nav-content footer',
+               '.relbar-bottom',
+               '.rst-content .section:last-child',
+               '.next-button',
+               '.prev-button',
+               '.built-with-sphinx'
+            ];
+
+            selectors.forEach(selector => {
+               const elements = document.querySelectorAll(selector);
+               elements.forEach(el => {
+                  el.style.display = 'none !important';
+                  el.style.visibility = 'hidden !important';
+                  el.style.height = '0 !important';
+               });
             });
       });
    </script>
@@ -278,7 +305,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="XenseStudio/XenseStudio.html" class="btn btn-neutral float-right" title="XenseStudio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="XenseStudio/Introduction.html" class="btn btn-neutral float-right" title="XenseStudio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

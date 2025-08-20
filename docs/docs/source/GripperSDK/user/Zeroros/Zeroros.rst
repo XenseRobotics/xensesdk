@@ -1,6 +1,6 @@
 .. _tag_zeroros:
 
-Zeroros
+EzROS
 =========
 
 .. note::
@@ -11,16 +11,17 @@ Zeroros
 .. container:: step-block
 
     `XenseSDK <../../../XenseSDK/XenseSDK.html>`_
-    内置了cli工具 ``zeroros_cli`` ,可用于快速测试算力板服务的项功能,该命令可以在安装XenseSDK(version≥1.x.x)以后使用。
+    内置了cli工具 ``ezros`` ,可用于快速测试算力板服务的项功能,该命令可以在安装XenseSDK以后使用。
 
-    在开启夹爪正确连接并开启服务后,可在终端使用 ``zeroros_cli`` 命令查看。
+    在开启夹爪正确连接并开启服务后,可在终端使用 ``ezros`` 命令查看。
 
     .. toctree::
         :maxdepth: 3
         :hidden:
         :caption: 目录
 
-        usr/method
+        usr/zerorosmethod
+        
 .. admonition:: tips
     :class: tip
 
@@ -28,4 +29,4 @@ Zeroros
     `GripperSDK <../pre_configuration.html>`_。
 
     2.夹爪的如何启用核心和服务,请参考
-    `GripperSDK <../methodlist.html>`_。
+    `Grippern SDK <../methodlist.html>`_。

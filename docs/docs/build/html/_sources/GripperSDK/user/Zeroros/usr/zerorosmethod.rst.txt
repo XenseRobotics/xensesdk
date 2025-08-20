@@ -1,6 +1,6 @@
 .. _tag_zeroroslist:
 
-如何使用ezros调试工具?
+如何使用EzROS调试工具?
 ================================
 
 .. container:: step-block
@@ -47,25 +47,23 @@
 
         * - 命令目录
          
-        * - :ref:`查看Zeroros服务信息 <tag_all_info>`
-         
-        * - :ref:`查看核心服务 <tag_vis>`
+        * - :ref:`查看EzROS服务信息 <tag_all_info>`
         
-        * - :ref:`测试服务 <tag_service>` 
+        * - :ref:`监控话题 <tag_topic>` 
+        
+        * - :ref:`调用服务 <tag_service>` 
 
-        * - :ref:`测试话题 <tag_topic>`
-    
+        * - :ref:`跨域通信 <tag_vis>`
+         
 .. toctree::
     :maxdepth: 1
     :hidden:
     :caption: 目录
     
-    
-    API/vis
-
     API/all_info
-
-    API/service
 
     API/echo
 
+    API/service
+    
+    API/vis

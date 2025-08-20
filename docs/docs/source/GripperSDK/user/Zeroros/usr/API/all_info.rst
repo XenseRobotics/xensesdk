@@ -1,109 +1,61 @@
 .. _tag_all_info:
 
-查看zeroros服务信息
+查看ezros服务信息
 ===================================
 
 .. container:: step-block
 
-    如果我们想要查看zeroros服务信息,可通过以下命令来实现:
+    如果我们想要查看ezros所有节点、话题和服务,可通过以下命令来实现:
 
-    .. tabs::
+    .. code-block:: python
 
-        .. tab:: 不指定IP
+        ezros -a
 
-            .. code-block:: python
-
-                zeroros_cli -a
-
-                #或者zeroros_cli --all_info.
-
-        .. tab:: 指定IP
-
-            .. code-block:: python
-
-                zeroros_cli -i 192.168.99.2 -a
-
-                #或者zeroros_cli --master_ip {master_ip} -a
-    
+        #或者ezros --all
     
     以下为打印信息：
 
-    .. tabs::
+    .. code-block:: python
 
-        .. tab:: 不指定IP 成功
+        ================================================================================
+        EzROS 网络节点信息
+        ================================================================================
+        1. Node: OG000249 (udp/192.168.1.127:55480)
+        Topics:
+            - OG000249
+        Services:
+            - OG000249: [reset_fetch_types, get_img, check_is_alive, terminate_node, calibrate]
 
-            .. code-block:: python
+        2. Node: OG000285 (udp/192.168.1.127:50015)
+        Topics:
+            - OG000285
+        Services:
+            - OG000285: [get_img, reset_fetch_types, check_is_alive, terminate_node, calibrate]
 
-                === All Information ===
-                Node: OG000266
-                - IP: 192.168.99.2
-                - Services:
-                    * OG000266 : [...]
-                - Topics:
-                    * OG000266
+        3. Node: gripper_d672f584b17a (udp/192.168.1.127:46730)
+        Topics:
+            - gripper_d672f584b17a
+        Services:
+            - gripper_d672f584b17a: [set_led_color, restart_control_subscriber]
 
-                Node: gripper_9a14e81bb832
-                - IP: 192.168.99.2
-                - Services:
-                    * gripper_9a14e81bb832 : ['control_gripper_pos']
-                - Topics:
-                    * gripper_9a14e81bb832
+        4. Node: gripper_d672f584b17a* (udp/192.168.1.63:55100)
+        Topics:
+            - gripper_control_d672f584b17a
 
-                Node: Master
-                - IP: 192.168.99.2:11411
-                - Services:
-                    * MasterService : [...]
+        5. Node: master_d672f584b17a (udp/192.168.1.127:42042)
+        Services:
+            - master_d672f584b17a: [kill_gripper, launch_sensor, check_sensor_online, reboot, scan_gripper_sn, scan_sensor_sn, kill_sensor, check_gripper_online, launch_gripper]
 
-        .. tab:: 不指定IP 失败
-
-            .. code-block:: python
-
-                INFO:root:No master found via broadcast, using default master IP.
-
-                WARNING:Node-169.254.224.187-12260-0:Failed to send message to 169.254.224.187:11411, retrying 0...
-
-
-                === All Information ===
-
-        .. tab:: 指定IP 成功
-
-            .. code-block:: python
-
-                === All Information ===
-                Node: OG000266
-                - IP: 192.168.99.2
-                - Services:
-                    * OG000266 : ['get_img',...]
-                - Topics:
-                    * OG000266
-
-                Node: gripper_9a14e81bb832
-                - IP: 192.168.99.2
-                - Services:
-                    * gripper_9a14e81bb832 : ['control_gripper_pos']
-                - Topics:
-                    * gripper_9a14e81bb832
-
-                Node: Master
-                - IP: 192.168.99.2:11411
-                - Services:
-                    * MasterService : [...]
-
-        .. tab:: 指定IP 失败
-
-            .. code-block:: python
-
-                WARNING:Node-169.254.224.187-18964-0:Failed to send message to 192.168.99.2:11411, retrying 0...
-
-
-                === All Information ===
+        6. Node: service_server_example (udp/192.168.1.60:57441)
+        Services:
+            - math_service: [stats, multiply, add, block_time]
 
 .. admonition:: tips
     :class: tip
 
-    用例中虽然有指定IP,但是和不指定IP的成功打印信息相同:
+    --all/-a	全局参数，用于触发 “全量信息展示” 功能
     
-    因为用例背景仅连接了一个夹爪,且如果查询服务不指定IP,则默认使用扫描到的第一个节点。
+
 
 
         

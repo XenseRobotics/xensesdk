@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zeroros &mdash; xense  documentation</title>
+  <title>EzROS &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=f0a164dd" />
@@ -24,7 +24,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="如何使用Zeroros_cli调试工具?" href="usr/method.html" />
+    <link rel="next" title="如何使用EzROS调试工具?" href="usr/zerorosmethod.html" />
     <link rel="prev" title="get_gripper_status 方法" href="../API/get_gripper_status.html" /> 
 </head>
 
@@ -49,14 +49,14 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/XenseStudio.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../GripperSDK.html">GripperSDK</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">硬件连接与网络配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation.html">安装GripperSDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../methodlist.html">如何使用GripperSDK?</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Zeroros</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="usr/method.html">如何使用Zeroros_cli调试工具?</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">EzROS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usr/zerorosmethod.html">如何使用EzROS调试工具?</a></li>
 </ul>
 </li>
 </ul>
@@ -78,7 +78,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../GripperSDK.html">GripperSDK</a></li>
-      <li class="breadcrumb-item active">Zeroros</li>
+      <li class="breadcrumb-item active">EzROS</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -90,8 +90,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="zeroros">
-<span id="tag-zeroros"></span><h1>Zeroros<a class="headerlink" href="#zeroros" title="Link to this heading"></a></h1>
+  <section id="ezros">
+<span id="tag-zeroros"></span><h1>EzROS<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>在阅读本文前,请确保已经安装了XenseSDK到您的环境,如未安装请先详读
@@ -99,8 +99,8 @@
 </div>
 <div class="step-block docutils container">
 <p><a class="reference external" href="../../../XenseSDK/XenseSDK.html">XenseSDK</a>
-内置了cli工具 <code class="docutils literal notranslate"><span class="pre">zeroros_cli</span></code> ,可用于快速测试算力板服务的项功能,该命令可以在安装XenseSDK(version≥1.x.x)以后使用。</p>
-<p>在开启夹爪正确连接并开启服务后,可在终端使用 <code class="docutils literal notranslate"><span class="pre">zeroros_cli</span></code> 命令查看。</p>
+内置了cli工具 <code class="docutils literal notranslate"><span class="pre">ezros</span></code> ,可用于快速测试算力板服务的项功能,该命令可以在安装XenseSDK以后使用。</p>
+<p>在开启夹爪正确连接并开启服务后,可在终端使用 <code class="docutils literal notranslate"><span class="pre">ezros</span></code> 命令查看。</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -109,7 +109,7 @@
 <p>1.夹爪如何正确连接，请参考
 <a class="reference external" href="../pre_configuration.html">GripperSDK</a>。</p>
 <p>2.夹爪的如何启用核心和服务,请参考
-<a class="reference external" href="../methodlist.html">GripperSDK</a>。</p>
+<a class="reference external" href="../methodlist.html">Grippern SDK</a>。</p>
 </div>
 </section>
 
@@ -118,7 +118,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../API/get_gripper_status.html" class="btn btn-neutral float-left" title="get_gripper_status 方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="usr/method.html" class="btn btn-neutral float-right" title="如何使用Zeroros_cli调试工具?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="usr/zerorosmethod.html" class="btn btn-neutral float-right" title="如何使用EzROS调试工具?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
