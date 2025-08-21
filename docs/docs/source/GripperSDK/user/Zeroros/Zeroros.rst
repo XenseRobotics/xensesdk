@@ -1,4 +1,4 @@
-.. _tag_zeroros:
+.. _tag_ezros:
 
 EzROS
 =========

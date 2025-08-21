@@ -43,7 +43,7 @@ GripperSDK
         * - 休眠模式
           - 若传感器 10 min 未被使用，自动关闭传感器以降低功耗，仅保留主服务节点持续运行，保障基础服务不中断。  
         * - CLI 调试工具
-          - 通过 ``zeroros_cli`` 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。  
+          - 通过 ``EzROS`` 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。  
 
 .. raw:: html
 
@@ -73,7 +73,7 @@ GripperSDK
         
         * - :ref:`API文档 <tag_Grippermethodlist>`
         
-        * - :ref:`Zeroros调试工具 <tag_zeroros>` 
+        * - :ref:`EzROS调试工具 <tag_ezros>` 
 
 .. toctree::
    :maxdepth: 3
