@@ -26,7 +26,6 @@
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="跨域通信" href="vis.html" />
     <link rel="prev" title="监听Topic" href="echo.html" /> 
 </head>
 
@@ -102,7 +101,7 @@
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">调用Sensor服务</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">调用Gripper服务</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ezros</span> <span class="n">service</span> <span class="o">-</span><span class="n">n</span> <span class="n">OG000285</span> <span class="o">-</span><span class="n">c</span> <span class="n">get_img</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ezros</span> <span class="n">service</span> <span class="o">-</span><span class="n">n</span> <span class="n">gripper_d672f584b17a</span> <span class="o">-</span><span class="n">c</span> <span class="n">set_led_color</span><span class="o">:=</span><span class="n">red</span>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ezros</span> <span class="n">service</span> <span class="o">-</span><span class="n">n</span> <span class="n">gripper_d672f584b17a</span> <span class="o">-</span><span class="n">c</span> <span class="n">set_led_color</span><span class="o">:=</span><span class="mf">255.0.0</span>
 </pre></div>
 </div>
 </div></div>
@@ -131,7 +130,7 @@
 </div>
 </div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">调用服务</span><span class="p">:</span> <span class="n">gripper_d672f584b17a</span>
 <span class="n">动作</span><span class="p">:</span> <span class="n">set_led_color</span>
-<span class="n">参数</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">]</span>
+<span class="n">参数</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;255.0.0&#39;</span><span class="p">]</span>
 <span class="o">----------------------------------------</span>
 <span class="o">...</span>
 </pre></div>
@@ -151,7 +150,6 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="echo.html" class="btn btn-neutral float-left" title="监听Topic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="vis.html" class="btn btn-neutral float-right" title="跨域通信" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

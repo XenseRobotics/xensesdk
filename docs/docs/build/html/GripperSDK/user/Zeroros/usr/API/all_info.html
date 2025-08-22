@@ -9,6 +9,7 @@
   <title>查看ezros服务信息 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/tabs.css?v=a5c4661c" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=f0a164dd" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/rst-tips.css?v=1dd3dd68" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/rst-note.css?v=423ff88c" />
@@ -20,6 +21,7 @@
       <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
       <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../../_static/tabs.js?v=3030b3cb"></script>
       <script src="../../../../../_static/custom.js?v=68f4a4f9"></script>
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
@@ -96,13 +98,21 @@
 <span id="tag-all-info"></span><h1>查看ezros服务信息<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <p>如果我们想要查看ezros所有节点、话题和服务,可通过以下命令来实现:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ezros</span> <span class="o">-</span><span class="n">a</span>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">查看所有节点信息</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">过滤节点信息</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ezros</span> <span class="o">-</span><span class="n">a</span>
 
 <span class="c1">#或者ezros --all</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ezros</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">f</span> <span class="n">gripper</span>
+
+<span class="c1">#或者ezros --all --filter gripper</span>
+</pre></div>
+</div>
+</div></div>
 <p>以下为打印信息：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">================================================================================</span>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">查看所有节点信息</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">过滤节点信息</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">================================================================================</span>
 <span class="n">EzROS</span> <span class="n">网络节点信息</span>
 <span class="o">================================================================================</span>
 <span class="mf">1.</span> <span class="n">Node</span><span class="p">:</span> <span class="n">OG000249</span> <span class="p">(</span><span class="n">udp</span><span class="o">/</span><span class="mf">192.168.1.127</span><span class="p">:</span><span class="mi">55480</span><span class="p">)</span>
@@ -136,10 +146,26 @@
     <span class="o">-</span> <span class="n">math_service</span><span class="p">:</span> <span class="p">[</span><span class="n">stats</span><span class="p">,</span> <span class="n">multiply</span><span class="p">,</span> <span class="n">add</span><span class="p">,</span> <span class="n">block_time</span><span class="p">]</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">================================================================================</span>
+<span class="n">EzROS</span> <span class="n">网络节点信息</span>
+<span class="o">================================================================================</span>
+<span class="mf">1.</span> <span class="n">Node</span><span class="p">:</span> <span class="n">gripper_d672f584b17a</span> <span class="p">(</span><span class="n">udp</span><span class="o">/</span><span class="mf">192.168.1.127</span><span class="p">:</span><span class="mi">46730</span><span class="p">)</span>
+<span class="n">Topics</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">gripper_d672f584b17a</span>
+<span class="n">Services</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">gripper_d672f584b17a</span><span class="p">:</span> <span class="p">[</span><span class="n">set_led_color</span><span class="p">,</span> <span class="n">restart_control_subscriber</span><span class="p">]</span>
+
+<span class="mf">2.</span> <span class="n">Node</span><span class="p">:</span> <span class="n">gripper_d672f584b17a</span><span class="o">*</span> <span class="p">(</span><span class="n">udp</span><span class="o">/</span><span class="mf">192.168.1.63</span><span class="p">:</span><span class="mi">55100</span><span class="p">)</span>
+<span class="n">Topics</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">gripper_control_d672f584b17a</span>
+</pre></div>
+</div>
+</div></div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">tips</p>
-<p>–all/-a    全局参数，用于触发 “全量信息展示” 功能</p>
+<p>–all/-a    全局参数，用于触发 “全量信息展示” 功能
+–filter/-f 全局参数，用于过滤节点名，默认匹配所有节点</p>
 </div>
 </section>
 

@@ -33,7 +33,7 @@ GripperSDK
         * - 功能模块
           - 说明
         * - 夹爪控制
-          - 支持以 500 Hz 频率接收夹爪数据，同时可对夹爪运动进行精准控制。  
+          - 支持以 200 Hz 频率接收夹爪数据，同时可对夹爪运动进行精准控制。  
         * - 传感器控制
           - 提供传感器启动、关闭操作接口，支持读取传感器实时数据，满足不同场景下的数据采集需求。  
         * - 服务联网自启动
@@ -48,15 +48,6 @@ GripperSDK
 .. raw:: html
 
     <div class="custom-h2">系统架构</div>
-
-.. container:: step-block
-
-    .. figure:: ./images/whiteboard_exported_image.png
-        :align: center
-        :alt: SDK 系统架构图
-    
-  Master 作为核心节点,通过 ZeorRos 与 PC 通信,向下管理 Gripper Node(夹爪节点 )、
-  N * Sensor Node(若干传感器节点 ),实现数据与控制指令的分发、汇聚。
 
 .. raw:: html
 

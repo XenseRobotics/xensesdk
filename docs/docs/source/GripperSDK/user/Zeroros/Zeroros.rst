@@ -29,4 +29,4 @@ EzROS
     `GripperSDK <../pre_configuration.html>`_。
 
     2.夹爪的如何启用核心和服务,请参考
-    `Grippern SDK <../methodlist.html>`_。
+    `Gripper SDK <../methodlist.html>`_。

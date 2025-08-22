@@ -30,7 +30,7 @@
 
 .. container:: step-block
 
-    此时夹爪的IP地址使用 ``dhcp`` 自动获取,后续需利用 `zeroros_cli <./Zeroros/usr/Zeroros.html>`_ 进行扫描。
+    此时夹爪的IP地址使用 ``dhcp`` 自动获取,后续需利用 `EzROS <./Zeroros/usr/Zeroros.html>`_ 进行扫描。
 
 .. raw:: html
 

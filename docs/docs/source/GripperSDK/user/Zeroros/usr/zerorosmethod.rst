@@ -55,7 +55,6 @@
         
         * - :ref:`调用服务 <tag_service>` 
 
-        * - :ref:`跨域通信 <tag_vis>`
          
 .. toctree::
     :maxdepth: 1
@@ -68,4 +67,3 @@
 
     API/service
     
-    API/vis

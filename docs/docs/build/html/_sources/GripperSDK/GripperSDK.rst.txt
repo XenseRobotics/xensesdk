@@ -33,7 +33,7 @@ GripperSDK
         * - 功能模块
           - 说明
         * - 夹爪控制
-          - 支持以 500 Hz 频率接收夹爪数据，同时可对夹爪运动进行精准控制。  
+          - 支持以 200 Hz 频率接收夹爪数据，同时可对夹爪运动进行精准控制。  
         * - 传感器控制
           - 提供传感器启动、关闭操作接口，支持读取传感器实时数据，满足不同场景下的数据采集需求。  
         * - 服务联网自启动
@@ -43,20 +43,11 @@ GripperSDK
         * - 休眠模式
           - 若传感器 10 min 未被使用，自动关闭传感器以降低功耗，仅保留主服务节点持续运行，保障基础服务不中断。  
         * - CLI 调试工具
-          - 通过 ``zeroros_cli`` 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。  
+          - 通过 ``EzROS`` 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。  
 
 .. raw:: html
 
     <div class="custom-h2">系统架构</div>
-
-.. container:: step-block
-
-    .. figure:: ./images/whiteboard_exported_image.png
-        :align: center
-        :alt: SDK 系统架构图
-    
-  Master 作为核心节点,通过 ZeorRos 与 PC 通信,向下管理 Gripper Node(夹爪节点 )、
-  N * Sensor Node(若干传感器节点 ),实现数据与控制指令的分发、汇聚。
 
 .. raw:: html
 
@@ -73,7 +64,7 @@ GripperSDK
         
         * - :ref:`API文档 <tag_Grippermethodlist>`
         
-        * - :ref:`Zeroros调试工具 <tag_zeroros>` 
+        * - :ref:`EzROS调试工具 <tag_ezros>` 
 
 .. toctree::
    :maxdepth: 3

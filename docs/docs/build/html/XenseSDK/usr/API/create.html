@@ -120,7 +120,7 @@
 <li><p><strong>api</strong> (<em>Enum</em><em>, </em><em>可选</em>) – 相机 API 类型（如 OpenCV 后端），用于指定相机访问方式。</p></li>
 <li><p><strong>check_serial</strong> (<em>bool</em><em>, </em><em>可选</em>) – 是否检查传感器序列号。</p></li>
 <li><p><strong>rectify_size</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>可选</em>) – 校正图像尺寸（宽, 高）。</p></li>
-<li><p><strong>ip_address</strong> (<em>str</em><em>, </em><em>可选</em>) – 远程连接使用的相机 IP 地址。</p></li>
+<li><p><strong>mac_address</strong> (<em>str</em><em>, </em><em>可选</em>) – 远程连接使用的相机 MAC 地址。</p></li>
 <li><p><strong>video_path</strong> (<em>str</em><em>, </em><em>可选</em>) – 离线模拟的视频路径。</p></li>
 </ul>
 </dd>
@@ -179,6 +179,13 @@
 </pre></div>
 </div>
 </div></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">tips</p>
+<blockquote>
+<div><p>该方法的 mac_address 参数兼容设备 IP 地址，如何获取设备 MAC 可参考
+<a class="reference external" href="../../../GripperSDK/user/Zeroros/Zeroros.html">EzROS</a>。</p>
+</div></blockquote>
 </div>
 </section>
 </section>

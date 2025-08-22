@@ -19,7 +19,7 @@ Service调用
 
             .. code-block:: python
 
-                ezros service -n gripper_d672f584b17a -c set_led_color:=red
+                ezros service -n gripper_d672f584b17a -c set_led_color:=255.0.0
 
     以下为打印信息:
 
@@ -55,7 +55,7 @@ Service调用
 
                 调用服务: gripper_d672f584b17a
                 动作: set_led_color
-                参数: ['red']
+                参数: ['255.0.0']
                 ----------------------------------------
                 ...
 

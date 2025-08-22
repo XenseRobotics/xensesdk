@@ -28,8 +28,8 @@ create方法
         :param rectify_size: 校正图像尺寸（宽, 高）。
         :type rectify_size: tuple[int, int], 可选
         
-        :param ip_address: 远程连接使用的相机 IP 地址。
-        :type ip_address: str, 可选
+        :param mac_address: 远程连接使用的相机 MAC 地址。
+        :type mac_address: str, 可选
         
         :param video_path: 离线模拟的视频路径。
         :type video_path: str, 可选
@@ -94,3 +94,9 @@ create方法
 
                 # 使用完毕后释放资源
                 sensor.release()
+
+.. admonition:: tips
+    :class: tip
+
+        该方法的 mac_address 参数兼容设备 IP 地址，如何获取设备 MAC 可参考
+        `EzROS <../../../GripperSDK/user/Zeroros/Zeroros.html>`_。
