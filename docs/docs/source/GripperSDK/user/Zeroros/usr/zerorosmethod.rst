@@ -30,6 +30,8 @@
         -a, --all                   显示所有节点信息
         -t TIMEOUT, --timeout TIMEOUT
                                     扫描超时时间(秒)，默认2秒
+        -f FILTER, --filter FILTER
+                                    过滤包含指定字符串的节点名，默认匹配所有节点
 
         commands:
         {service,topic}             命令
