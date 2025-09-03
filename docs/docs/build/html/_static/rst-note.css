@@ -1,0 +1,64 @@
+/* 基础Note样式 - 与其他提示块区分开 */
+div.note {
+  margin: 1.8rem 0;
+  padding: 1.4rem 1.6rem;
+  border-radius: 8px;
+  background-color: #edf2fa;
+  border: 1px solid #c9d8e9;
+  box-shadow: 0 3px 6px rgba(108, 117, 125, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Note标题样式 */
+div.note p:first-child {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #2c5282;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 标题前的装饰元素 */
+div.note p:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: #3182ce;
+  margin-right: 0.7rem;
+}
+
+/* Note内容样式 */
+div.note p:not(:first-child) {
+  margin: 0.6rem 0 0 1.5rem; /* 左侧缩进与标题图标对齐 */
+  line-height: 1.7;
+  color: #2d3748;
+}
+
+/* Note内部嵌套提示块时的样式调整 */
+div.note .admonition {
+  margin: 1rem 0 0 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Note中的代码样式 */
+div.note code {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #2c5282;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  div.note {
+    padding: 1.2rem 1rem;
+  }
+  
+  div.note p:first-child {
+    font-size: 1.1rem;
+  }
+}
