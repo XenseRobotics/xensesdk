@@ -32,6 +32,14 @@
 
         * - :ref:`get_gripper_status 方法 <tag_Gripper_get_gripper_status_>`
 
+        * - :ref:`set_position_sync 方法 <tag_set_position_sync_>`
+
+        * - :ref:`set_speed 方法 <tag_set_speed_>`
+        
+        * - :ref:`set_control_param方法 <tag_set_control_param_>`
+
+        * - :ref:`set_led_color方法 <tag_set_led_color_>`
+
     .. toctree:: 
         :maxdepth: 1
         :hidden:
@@ -42,5 +50,10 @@
         API/open_gripper
         API/close_gripper
         API/get_gripper_status
+        API/set_position_sync
+        API/set_speed
+        API/set_control_param
+        API/set_led_color
+        
 
 

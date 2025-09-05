@@ -77,4 +77,5 @@ GripperSDK
 
    user/methodlist
    
-   user/Zeroros/Zeroros
+   user/EzROS/EzROS
+  
