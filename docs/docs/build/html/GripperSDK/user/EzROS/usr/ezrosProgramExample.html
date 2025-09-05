@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EzROS编程示例 &mdash; xense  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="相关API接口" href="ezrosmethodList.html" />
+    <link rel="prev" title="快速安装" href="ezrosInstallation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../GripperSDK.html">GripperSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../methodlist.html">如何使用GripperSDK?</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../EzROS.html">EzROS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ezrosIntroduction.html">什么是EzROS?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ezrosInstallation.html">快速安装</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">EzROS编程示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ezrosmethodList.html">相关API接口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ezros_repo_example.html">更多命令行工具与示例程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../GripperSDK.html">GripperSDK</a></li>
+          <li class="breadcrumb-item"><a href="../EzROS.html">EzROS</a></li>
+      <li class="breadcrumb-item active">EzROS编程示例</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ezros">
+<span id="tag-ezrosprogramexample"></span><h1>EzROS编程示例<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>1. 话题通信（发布/订阅）<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<div class="step-block docutils container">
+<p>发布者示例:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ezros</span>
+
+<span class="n">ezros</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">node</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;publisher&quot;</span><span class="p">)</span>
+<span class="n">pub</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">ezros</span><span class="o">.</span><span class="n">StringMessage</span><span class="p">,</span> <span class="s2">&quot;chatter&quot;</span><span class="p">)</span>
+<span class="n">rate</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">create_rate</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">ezros</span><span class="o">.</span><span class="n">ok</span><span class="p">():</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">StringMessage</span><span class="p">()</span>
+    <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello, EzROS! </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;发布: </span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">rate</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>订阅者示例:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ezros</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;收到消息: </span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">ezros</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">node</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;subscriber&quot;</span><span class="p">)</span>
+<span class="n">sub</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_subscriber</span><span class="p">(</span><span class="n">ezros</span><span class="o">.</span><span class="n">StringMessage</span><span class="p">,</span> <span class="s2">&quot;chatter&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+<span class="n">ezros</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>2. 服务通信（请求/响应）<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<div class="step-block docutils container">
+<p>服务端示例:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ezros</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add_callback</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">ezros</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">node</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;add_server&quot;</span><span class="p">)</span>
+<span class="n">service</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_service</span><span class="p">(</span><span class="s2">&quot;math_service&quot;</span><span class="p">)</span>
+<span class="n">service</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="n">add_callback</span><span class="p">)</span>
+<span class="n">ezros</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>客户端示例:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ezros</span>
+
+<span class="n">ezros</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">node</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;add_client&quot;</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="s2">&quot;math_service&quot;</span><span class="p">)</span>
+
+<span class="c1"># 方法1: 使用 call 方法</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
+
+<span class="c1"># 方法2: 使用魔法方法（推荐）</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;计算结果: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;服务调用失败&quot;</span><span class="p">)</span>
+
+<span class="c1"># 或者使用全局便捷函数</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">call_service</span><span class="p">(</span><span class="s2">&quot;math_service&quot;</span><span class="p">,</span> <span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>3. 复杂数据传输<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<div class="step-block docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ezros</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="c1"># 发布复杂数据</span>
+<span class="n">complex_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">(),</span>
+    <span class="s2">&quot;sensor_array&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+    <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sensor_id&quot;</span><span class="p">:</span> <span class="s2">&quot;cam_01&quot;</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">msg</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">BytesMessage</span><span class="p">(</span><span class="n">complex_data</span><span class="p">)</span>
+<span class="n">pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="c1"># 订阅复杂数据</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">complex_callback</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;时间戳: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;数组形状: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sensor_array&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>4. 消息类型<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<div class="step-block docutils container">
+<p>EzROS 提供了多种内置消息类型：</p>
+<p>StringMessage: 字符串消息</p>
+<p>BytesMessage: 字节流消息（支持复杂数据和压缩）</p>
+<p>IntMessage: 整数消息</p>
+<p>FloatMessage: 浮点数消息</p>
+<p>BoolMessage: 布尔消息</p>
+<p>BytesMessage 支持自动序列化复杂数据和多种压缩算法：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 基本用法</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;numbers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]}</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">BytesMessage</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># 指定压缩算法</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">BytesMessage</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;lz4&#39;</span><span class="p">)</span>
+<span class="c1"># 获取数据</span>
+<span class="n">recovered_data</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ezrosInstallation.html" class="btn btn-neutral float-left" title="快速安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ezrosmethodList.html" class="btn btn-neutral float-right" title="相关API接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, 千觉机器人科技(上海)有限公司.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

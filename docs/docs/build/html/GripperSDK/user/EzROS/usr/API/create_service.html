@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>create_service方法 &mdash; xense  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="create_client方法" href="create_client.html" />
+    <link rel="prev" title="create_subscriber方法" href="create_subscriber.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../GripperSDK.html">GripperSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../methodlist.html">如何使用GripperSDK?</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../EzROS.html">EzROS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ezrosIntroduction.html">什么是EzROS?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ezrosInstallation.html">快速安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ezrosProgramExample.html">EzROS编程示例</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ezrosmethodList.html">相关API接口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ezros_repo_example.html">更多命令行工具与示例程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../GripperSDK.html">GripperSDK</a></li>
+          <li class="breadcrumb-item"><a href="../../EzROS.html">EzROS</a></li>
+          <li class="breadcrumb-item"><a href="../ezrosmethodList.html">相关API接口</a></li>
+      <li class="breadcrumb-item active">create_service方法</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-service">
+<span id="tag-create-service"></span><h1>create_service方法<a class="headerlink" href="#create-service" title="Link to this heading"></a></h1>
+<div class="step-block docutils container">
+<dl class="py method">
+<dt class="sig sig-object py" id="ezros.Node.create_service">
+<span class="sig-prename descclassname"><span class="pre">Node.</span></span><span class="sig-name descname"><span class="pre">create_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ServiceServer</span></span></span><a class="headerlink" href="#ezros.Node.create_service" title="Link to this definition"></a></dt>
+<dd><p>在当前节点上创建一个服务端，用于提供指定名称的服务并处理客户端请求。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – 服务名称(字符串),需符合ROS服务命名规范;
+建议使用斜杠分隔的层次结构(如”robot/calculate”),
+客户端需通过相同名称调用服务。</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>新创建的服务端对象，需通过其`register_callback()`方法注册具体动作的处理函数。</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ezros.ServiceServer</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<section id="id1">
+<h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<div class="step-block docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ezros</span>
+
+<span class="c1"># 定义加法服务的回调函数</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_callback</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="c1"># 创建节点</span>
+<span class="n">node</span> <span class="o">=</span> <span class="n">ezros</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;math_service_node&quot;</span><span class="p">)</span>
+
+<span class="c1"># 创建名为&quot;math_service&quot;的服务端</span>
+<span class="n">service</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_service</span><span class="p">(</span><span class="s2">&quot;math_service&quot;</span><span class="p">)</span>
+
+<span class="c1"># 为服务注册&quot;add&quot;动作的处理回调</span>
+<span class="n">service</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="n">add_callback</span><span class="p">)</span>
+
+<span class="n">ezros</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>  <span class="c1"># 启动节点事件循环，等待客户端调用</span>
+<span class="n">node</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="create_subscriber.html" class="btn btn-neutral float-left" title="create_subscriber方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="create_client.html" class="btn btn-neutral float-right" title="create_client方法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, 千觉机器人科技(上海)有限公司.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EzROS编程接口 &mdash; xense  documentation</title>
+  <title>相关API接口 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=f0a164dd" />
@@ -24,8 +24,8 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="更多命令行工具与示例程序" href="ezros_repo_example.html" />
-    <link rel="prev" title="快速安装" href="ezrosInstallation.html" /> 
+    <link rel="next" title="create_rate方法" href="API/create_rate.html" />
+    <link rel="prev" title="EzROS编程示例" href="ezrosProgramExample.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,7 +58,8 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../EzROS.html">EzROS</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ezrosIntroduction.html">什么是EzROS?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ezrosInstallation.html">快速安装</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">EzROS编程接口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ezrosProgramExample.html">EzROS编程示例</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">相关API接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ezros_repo_example.html">更多命令行工具与示例程序</a></li>
 </ul>
 </li>
@@ -82,7 +83,7 @@
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../GripperSDK.html">GripperSDK</a></li>
           <li class="breadcrumb-item"><a href="../EzROS.html">EzROS</a></li>
-      <li class="breadcrumb-item active">EzROS编程接口</li>
+      <li class="breadcrumb-item active">相关API接口</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -94,10 +95,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ezros">
-<span id="tag-ezrosmethodlist"></span><h1>EzROS编程接口<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
+  <section id="api">
+<span id="tag-ezrosmethodlist"></span><h1>相关API接口<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
-<p>本模块介绍了EzROS的编程接口,包含话题通信的发布与订阅实现、服务通信的请求与响应方式、复杂数据的传输处理以及多种内置消息类型(尤其是支持压缩的BytesMessage)的使用。</p>
+<p>本模块介绍了EzROS相关的API接口,包含话题通信的发布与订阅实现、服务通信的请求与响应方式、复杂数据的传输处理以及多种内置消息类型(尤其是支持压缩的BytesMessage)的使用。</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100.0%" />
@@ -111,12 +112,32 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="API/call_service.html#tag-call-service"><span class="std std-ref">call_service 方法</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="API/BytesMessage.html#tag-bytesmessage"><span class="std std-ref">BytesMessage 方法</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="API/get_data.html#tag-get-data"><span class="std std-ref">get_data 方法</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="API/get_data.html#tag-get-data"><span class="std std-ref">get_data 方法</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/wait_for_condition.html#tag-wait-for-condition"><span class="std std-ref">wait_for_condition 方法</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="API/create_publisher.html#tag-create-publisher"><span class="std std-ref">create_publisher 方法</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/create_subscriber.html#tag-create-subscriber"><span class="std std-ref">create_subscriber 方法</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="API/create_service.html#tag-create-service"><span class="std std-ref">create_service 方法</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/create_client.html#tag-create-client"><span class="std std-ref">create_client 方法</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="API/create_timer.html#tag-create-timer"><span class="std std-ref">create_timer 方法</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/service_is_ready.html#tag-service-is-ready"><span class="std std-ref">service_is_ready 方法</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="API/wait_for_service.html#tag-wait-for-service"><span class="std std-ref">wait_for_service 方法</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/shutdown.html#tag-shutdown"><span class="std std-ref">shutdown 方法</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="API/register_callback.html#tag-register-callback"><span class="std std-ref">register_callback 方法</span></a></p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -124,8 +145,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ezrosInstallation.html" class="btn btn-neutral float-left" title="快速安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ezros_repo_example.html" class="btn btn-neutral float-right" title="更多命令行工具与示例程序" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ezrosProgramExample.html" class="btn btn-neutral float-left" title="EzROS编程示例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="API/create_rate.html" class="btn btn-neutral float-right" title="create_rate方法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

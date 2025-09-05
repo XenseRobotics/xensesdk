@@ -12,10 +12,12 @@ EzROS
    * - :ref:`简介 <tag_ezrosintroduction>`
   
    * - :ref:`安装指南 <tag_ezrosinstallation>`
-   
-   * - :ref:`编程接口 <tag_ezrosmethodlist>` 
 
-   * - :ref:`代码示例 <tag_ezros_repo_example>`
+   * - :ref:`EzROS编程 <tag_ezrosprogramexample>`
+   
+   * - :ref:`参考API <tag_ezrosmethodlist>` 
+
+   * - :ref:`命令行工具与示例 <tag_ezros_repo_example>`
   
 .. toctree::
    :maxdepth: 2
@@ -25,6 +27,8 @@ EzROS
    usr/ezrosIntroduction
 
    usr/ezrosInstallation
+
+   usr/ezrosProgramExample
 
    usr/ezrosmethodList
 

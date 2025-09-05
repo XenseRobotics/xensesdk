@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wait_for_condition方法 &mdash; xense  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="create_publisher方法" href="create_publisher.html" />
+    <link rel="prev" title="get_data方法" href="get_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../GripperSDK.html">GripperSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../methodlist.html">如何使用GripperSDK?</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../EzROS.html">EzROS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ezrosIntroduction.html">什么是EzROS?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ezrosInstallation.html">快速安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ezrosProgramExample.html">EzROS编程示例</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ezrosmethodList.html">相关API接口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ezros_repo_example.html">更多命令行工具与示例程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../GripperSDK.html">GripperSDK</a></li>
+          <li class="breadcrumb-item"><a href="../../EzROS.html">EzROS</a></li>
+          <li class="breadcrumb-item"><a href="../ezrosmethodList.html">相关API接口</a></li>
+      <li class="breadcrumb-item active">wait_for_condition方法</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wait-for-condition">
+<span id="tag-wait-for-condition"></span><h1>wait_for_condition方法<a class="headerlink" href="#wait-for-condition" title="Link to this heading"></a></h1>
+<div class="step-block docutils container">
+<dl class="py method">
+<dt class="sig sig-object py" id="ezros.ezros.wait_for_condition">
+<span class="sig-prename descclassname"><span class="pre">ezros.</span></span><span class="sig-name descname"><span class="pre">wait_for_condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ezros.ezros.wait_for_condition" title="Link to this definition"></a></dt>
+<dd><p>周期性检查回调函数返回值，阻塞等待条件满足或超时退出，用于流程同步控制。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback</strong> (<em>Callable</em><em>[</em><em>[</em><em>]</em><em>, </em><em>bool</em><em>]</em>) – 条件判断回调函数,需返回布尔值(True/False);
+当返回True时表示条件满足,将立即退出等待。</p></li>
+<li><p><strong>timeout</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – 最大等待时间（单位：秒）；
+若为None(默认),则无限期等待直到条件满足;
+若设定数值，超过该时间后将强制退出。</p></li>
+<li><p><strong>interval</strong> (<em>float</em><em>, </em><em>optional</em>) – 条件检查的时间间隔(单位:秒),默认0.5秒；
+表示每间隔指定时间调用一次回调函数进行条件判断。</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>若条件满足则返回True,若超时则返回False。</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Note<span class="colon">:</span></dt>
+<dd class="field-even"><p>回调函数应避免包含耗时操作，以免影响检查周期的准确性；
+需在ezros.init()初始化后使用，依赖框架的时间管理机制。</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="get_data.html" class="btn btn-neutral float-left" title="get_data方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="create_publisher.html" class="btn btn-neutral float-right" title="create_publisher方法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, 千觉机器人科技(上海)有限公司.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
