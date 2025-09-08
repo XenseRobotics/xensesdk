@@ -3,7 +3,6 @@
 ********************
 相关API接口
 ********************
-
 .. container:: step-block
 
     本模块介绍了EzROS相关的API接口,包含话题通信的发布与订阅实现、服务通信的请求与响应方式、复杂数据的传输处理以及多种内置消息类型(尤其是支持压缩的BytesMessage)的使用。
@@ -39,9 +38,6 @@
         * - :ref:`shutdown 方法 <tag_shutdown_>`
 
         * - :ref:`register_callback 方法 <tag_register_callback_>`
-
-
-        
 
 .. toctree:: 
     :maxdepth: 1
