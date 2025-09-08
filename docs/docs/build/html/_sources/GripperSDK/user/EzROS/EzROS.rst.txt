@@ -1,7 +1,7 @@
 .. _tag_ezros:  
 
 EzROS
-============
+==============
 
 .. list-table::
    :width: 30

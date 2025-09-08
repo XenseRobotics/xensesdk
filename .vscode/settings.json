@@ -1,3 +1,50 @@
 {
-    "iis.configDir": ""
+    "iis.configDir": "",
+    "restructuredtext.pythonPath": "C:\\Users\\yangte\\softwares\\conda\\envs\\doc\\python.exe",
+    "restructuredtext.confPath": "${workspaceFolder}",
+    // "editor.tokenColorCustomizations": {
+    //     "textMateRules": [
+    //         {
+    //             "scope": "markup.heading",
+    //             "settings": {
+    //                 "foreground": "#f78c6c",
+    //                 "fontStyle": "bold"
+    //             }
+    //         },
+    //         {
+    //             "scope": "markup.bold",
+    //             "settings": {
+    //                 "foreground": "#c3e88d",
+    //                 "fontStyle": "bold"
+    //             }
+    //         },
+    //         {
+    //             "scope": "markup.italic",
+    //             "settings": {
+    //                 "foreground": "#82aaff",
+    //                 "fontStyle": "italic"
+    //             }
+    //         },
+    //         {
+    //             "scope": "markup.underline",
+    //             "settings": {
+    //                 "foreground": "#ffcb6b",
+    //                 "fontStyle": "underline"
+    //             }
+    //         },
+    //         {
+    //             "scope": "markup.fenced_code.block",
+    //             "settings": {
+    //                 "foreground": "#89ddff"
+    //             }
+    //         },
+    //         {
+    //             "scope": "markup.quote",
+    //             "settings": {
+    //                 "foreground": "#ff5370",
+    //                 "fontStyle": "italic"
+    //             }
+    //         }
+    //     ]
+    // }
 }
