@@ -30,11 +30,6 @@ create 方法
         # 使用 MAC 地址创建连接的夹爪实例
         gripper = XenseGripper.create(mac_addr="9a14e81bb832")
 
-.. admonition:: tips
-   :class: tip
-
-   如果不清楚夹爪的MAC地址,可以使用 ``ezros`` 工具进行查询,具体请参考 `EzROS命令行工具 <../../GripperSDK/usr/EzROS/usr/ezros_example.html>`。
-   
    
 .. admonition:: tips
    :class: tip
