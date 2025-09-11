@@ -20,7 +20,7 @@ close_gripper 方法
 
     .. code-block:: python
 
-        from xensesdk import XenseGripper
+        from xensegripper import XenseGripper
         import time
 
         # 创建夹爪实例

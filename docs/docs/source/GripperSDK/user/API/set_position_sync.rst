@@ -49,7 +49,7 @@ set_position_sync方法
 
     .. code-block:: python
 
-        from xensesdk import XenseGripper
+        from xensegripper import XenseGripper
 
         # 创建夹爪实例
         gripper = XenseGripper.create("9a14e81bb832")

@@ -1,6 +1,6 @@
 .. _tag_Grippermethodlist:
 
-如何使用GripperSDK?
+使用GripperSDK API
 =========================
 
 .. container:: step-block

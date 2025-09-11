@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>如何使用EzROS命令行工具? &mdash; xense  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../GripperSDK.html">GripperSDK</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">如何使用EzROS命令行工具?</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ezros">
+<span id="tag-ezros-example"></span><h1>如何使用EzROS命令行工具?<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
+<div class="step-block docutils container">
+<p>1、初次使用可以通过以下命令来快速了解 ezros 的功能。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-h
+<span class="c1"># 或者 ezros --help</span>
+</pre></div>
+</div>
+<p>终端打印如下信息：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: ezros [-h] [-d DOMAIN_ID] [-q] [-a] [-t TIMEOUT] [-f FILTER] {service,topic} ...
+
+EzROS CLI - 简单的网络工具
+
+positional arguments:
+  {service,topic}       命令
+    service             调用服务
+    topic               监听话题
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DOMAIN_ID, --domain-id DOMAIN_ID
+                        DDS域ID
+  -q, --quiet           静默模式
+  -a, --all             显示所有节点信息
+  -t TIMEOUT, --timeout TIMEOUT
+                        扫描超时时间(秒),默认2秒
+  -f FILTER, --filter FILTER
+                        过滤包含指定字符串的节点名，默认匹配所有节点
+</pre></div>
+</div>
+</div>
+<div class="step-block docutils container">
+<p>2、当要对特定 Topic 查询时，可以使用如下命令，以监听 Gripper 为例：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>topic<span class="w"> </span>-e<span class="w"> </span>gripper_d672f584b17a<span class="w">  </span>-t<span class="w"> </span><span class="m">30</span>
+</pre></div>
+</div>
+<p>终端输出示例：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>监听话题: gripper_d672f584b17a
+持续时间: 30 秒
+按 Ctrl+C 停止
+============================================================
+成功订阅话题 gripper_d672f584b17a (类型: BytesMessage)
+开始监听话题 gripper_d672f584b17a...
+
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.99, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.99, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.01, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
+</pre></div>
+</div>
+</div>
+<div class="step-block docutils container">
+<p>3、当要对特定 Service 服务调用时，可使用如下命令，以调用 Gripper 服务为例：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>service<span class="w"> </span>-n<span class="w"> </span>gripper_d672f584b17a<span class="w"> </span>-c<span class="w"> </span>set_led_color:<span class="o">=</span>red
+</pre></div>
+</div>
+<p>终端输出示例：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>调用服务: gripper_d672f584b17a
+动作: set_led_color
+参数: [&#39;red&#39;]
+----------------------------------------
+调用失败: 无响应
+</pre></div>
+</div>
+</div>
+<div class="step-block docutils container">
+<p>4、<cite>-a</cite> 参数，显示所有节点信息，终端打印如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a
+</pre></div>
+</div>
+<p>终端输出示例：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>扫描网络中... (预计 2 秒)
+[███████████████████████████░░░] 90%
+================================================================================
+EzROS 网络节点信息
+================================================================================
+1. Node: gripper_d672f584b17a (udp/192.168.1.127:46067)
+  Topics:
+    - gripper_d672f584b17a
+  Services:
+    - gripper_d672f584b17a: [set_led_color, restart_control_subscriber]
+
+2. Node: master_d672f584b17a (udp/192.168.1.127:59477)
+  Services:
+    - master_d672f584b17a: [scan_sensor_sn, kill_sensor, launch_camera, launch_gripper, list_camera, reboot, kill_camera, launch_sensor, kill_gripper]
+</pre></div>
+</div>
+<p>其中 master 节点后的 “d672f584b17a” 字符串代表 MAC 地址，可以根据这个地址来创建 gripper 夹爪实例：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
+
+<span class="n">gripper</span> <span class="o">=</span> <span class="n">XenseGripper</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;d672f584b17a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="step-block docutils container">
+<p>5、<cite>-f</cite> 参数，过滤包含指定字符串的节点名，以匹配 master 节点为例：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;master&quot;</span>
+</pre></div>
+</div>
+<p>终端输出示例：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>扫描网络中... (预计 2 秒)
+[███████████████████████████░░░] 90%
+================================================================================
+EzROS 网络节点信息
+================================================================================
+1. Node: master_d672f584b17a (udp/192.168.1.127:59477)
+  Services:
+    - master_d672f584b17a: [kill_sensor, list_camera, launch_sensor, launch_gripper, kill_camera, scan_sensor_sn, reboot, launch_camera, kill_gripper]
+</pre></div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, 千觉机器人科技(上海)有限公司.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

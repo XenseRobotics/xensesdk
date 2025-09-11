@@ -4,33 +4,18 @@ EzROS
 ==============
 
 .. list-table::
-   :width: 30
-   :header-rows: 1
+   :widths: 100
+   :header-rows: 1 
 
-   * - :ref:`简介 <tag_ezrosintroduction>`
+   * - 命令行工具
+   * - :ref:`RzROS命令行工具的使用 <tag_ezros_example>` 
 
-   * - :ref:`安装指南 <tag_ezrosinstallation>`
 
-   * - :ref:`EzROS编程 <tag_ezrosprogramexample>`
 
-   * - :ref:`参考API <tag_ezrosmethodlist>` 
-
-   * - :ref:`命令行工具与示例 <tag_ezros_repo_example>`
-  
 .. toctree::
    :maxdepth: 2
    :caption: 目录
    :hidden:
-   
-   usr/ezrosIntroduction
-
-   usr/ezrosInstallation
-
-   usr/ezrosProgramExample
-
-   usr/ezrosmethodList
-
-   usr/ezros_repo_example
 
 
-
+   usr/ezros_example
