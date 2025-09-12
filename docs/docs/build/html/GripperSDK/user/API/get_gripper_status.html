@@ -18,7 +18,7 @@
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../../../_static/custom.js?v=68f4a4f9"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -59,11 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="set_position.html">set_position方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="open_gripper.html">open_gripper 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper 方法</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">get_gripper_status 方法</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.get_gripper_status"><code class="docutils literal notranslate"><span class="pre">XenseGripper.get_gripper_status()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">示例代码</a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">get_gripper_status 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_position_sync.html">set_position_sync方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_speed.html">set_speed方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param方法</a></li>
@@ -109,11 +105,15 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.get_gripper_status">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">get_gripper_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.get_gripper_status" title="Link to this definition"></a></dt>
-<dd><p>获取夹爪当前的状态信息。</p>
-<p>该方法通过读取夹爪客户端的缓冲区数据，返回包含夹爪状态的字典（如位置、速度、力等实时信息）。</p>
+<dd><p>获取夹爪当前的状态信息（包括运行参数和设备状态）。</p>
+<p>该方法用于读取夹爪的实时工作数据，返回包含关键运行参数的字典，可用于监控夹爪的当前状态。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>夹爪当前状态的字典，具体键值根据实际缓冲区数据定义。</p>
+<dd class="field-odd"><p>夹爪当前状态的字典，包含以下键值：
+- position: 当前位置 (单位: mm)
+- velocity: 当前速度 (单位: mm/s)
+- force: 当前输出力 (单位: N)
+- temperature: 电机温度（单位：℃）</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>dict</p>
@@ -122,56 +122,6 @@
 </dd></dl>
 
 </div>
-<section id="id1">
-<h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<div class="step-block docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">get_status_continuously</span><span class="p">(</span><span class="n">gripper</span><span class="p">,</span> <span class="n">stop_event</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;持续获取夹爪状态的线程函数&quot;&quot;&quot;</span>
-    <span class="k">while</span> <span class="ow">not</span> <span class="n">stop_event</span><span class="o">.</span><span class="n">is_set</span><span class="p">():</span>  <span class="c1"># 当停止事件未触发时持续运行</span>
-        <span class="n">status</span> <span class="o">=</span> <span class="n">gripper</span><span class="o">.</span><span class="n">get_gripper_status</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;当前夹爪状态: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 每秒获取一次</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="c1"># 创建夹爪实例</span>
-    <span class="n">gripper</span> <span class="o">=</span> <span class="n">XenseGripper</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;9a14e81bb832&quot;</span><span class="p">)</span>
-
-    <span class="c1"># 创建停止事件（用于控制线程退出）</span>
-    <span class="n">stop_event</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
-
-    <span class="c1"># 创建并启动状态获取线程</span>
-    <span class="n">status_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span>
-        <span class="n">target</span><span class="o">=</span><span class="n">get_status_continuously</span><span class="p">,</span>
-        <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">gripper</span><span class="p">,</span> <span class="n">stop_event</span><span class="p">),</span>
-        <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span>  <span class="c1"># 主线程退出时自动结束子线程</span>
-    <span class="p">)</span>
-    <span class="n">status_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># 打开夹爪（与状态获取并行执行）</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;开始打开夹爪...&quot;</span><span class="p">)</span>
-        <span class="n">gripper</span><span class="o">.</span><span class="n">open_gripper</span><span class="p">()</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 等待打开完成</span>
-
-        <span class="c1"># 关闭夹爪（与状态获取并行执行）</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;开始关闭夹爪...&quot;</span><span class="p">)</span>
-        <span class="n">gripper</span><span class="o">.</span><span class="n">close_gripper</span><span class="p">()</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 等待关闭完成</span>
-
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="c1"># 触发停止事件，结束状态获取线程</span>
-        <span class="n">stop_event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
-        <span class="c1"># 等待线程安全退出</span>
-        <span class="n">status_thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;程序结束&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</section>
 </section>
 
 

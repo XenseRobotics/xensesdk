@@ -18,7 +18,7 @@
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../../../_static/custom.js?v=68f4a4f9"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -60,11 +60,7 @@
 <li class="toctree-l3"><a class="reference internal" href="open_gripper.html">open_gripper 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_gripper_status.html">get_gripper_status 方法</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">set_position_sync方法</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.set_position_sync"><code class="docutils literal notranslate"><span class="pre">XenseGripper.set_position_sync()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">示例代码</a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">set_position_sync方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_speed.html">set_speed方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_led_color.html">set_led_color方法</a></li>
@@ -109,18 +105,18 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.set_position_sync">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">set_position_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">80.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poll_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.set_position_sync" title="Link to this definition"></a></dt>
-<dd><p>同步位置控制 (阻塞直到到达目标位置)</p>
+<dd><p>同步位置控制 (将夹爪移动到目标位置，并阻塞直到到达目标位置或超时)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>position</strong> (<em>float</em>) – 夹爪的目标位置，单位为毫米(mm)。
 必须在 (0, 85) 范围内。
-0 mm 表示完全打开,85 mm 表示完全闭合。</p></li>
+0 mm 表示完全打开, 85 mm 表示完全闭合。</p></li>
 <li><p><strong>vmax</strong> (<em>float</em>) – 最大运动速度，单位为毫米/秒(mm/s)。
 必须在 (0, 350) 范围内。
 默认值为 80 mm/s。</p></li>
 <li><p><strong>fmax</strong> (<em>float</em>) – 最大输出力，单位为牛顿(N)。
-必须在 (0, 40) 范围内。
+必须在 (0, 60) 范围内。
 默认值为 27 N。</p></li>
 <li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>可选</em>) – 判定运动完成的位置误差容忍度，单位为毫米(mm)。
 默认值为 0.01 mm。</p></li>
@@ -134,7 +130,7 @@
 <dd class="field-even"><p><strong>ValueError</strong> – 当任何输入参数超出其允许的物理限制范围时触发。</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>若夹爪在超时时间内到达目标位置（在允许的误差范围内），则返回 True,否则返回 False。</p>
+<dd class="field-odd"><p>若夹爪在超时时间内到达目标位置（在允许的误差范围内），则返回 True, 否则返回 False。</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>bool</p>
@@ -153,22 +149,19 @@
 
 <span class="c1"># 同步设置夹爪位置为 30mm，使用默认参数</span>
 <span class="n">success</span> <span class="o">=</span> <span class="n">gripper</span><span class="o">.</span><span class="n">set_position_sync</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;位置设置成功: </span><span class="si">{</span><span class="n">success</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="c1"># 同步设置夹爪位置为 50mm，指定参数</span>
+<span class="c1"># 同步设置夹爪位置为 70mm，指定参数（符合最新范围）</span>
 <span class="n">success</span> <span class="o">=</span> <span class="n">gripper</span><span class="o">.</span><span class="n">set_position_sync</span><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-    <span class="n">vmax</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span>
+    <span class="n">position</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span>          <span class="c1"># 在 (0, 85) 范围内</span>
+    <span class="n">vmax</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span>             <span class="c1"># 在 (0, 350) 范围内（高于原示例，体现新上限）</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>              <span class="c1"># 在 (0, 60) 范围内（高于原示例，体现新上限）</span>
     <span class="n">tolerance</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span>
-    <span class="n">timeout</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span>
-    <span class="n">poll_interval</span><span class="o">=</span><span class="mf">0.03</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mf">8.0</span><span class="p">,</span>
+    <span class="n">poll_interval</span><span class="o">=</span><span class="mf">0.04</span>
 <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;位置设置成功: </span><span class="si">{</span><span class="n">success</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># 错误示例：位置超出范围</span>
+<span class="c1"># 错误示例：力参数超出范围（体现最新上限60N）</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">gripper</span><span class="o">.</span><span class="n">set_position_sync</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>  <span class="c1"># 90mm 超过最大 85mm 限制</span>
+    <span class="n">gripper</span><span class="o">.</span><span class="n">set_position_sync</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="mi">70</span><span class="p">)</span>  <span class="c1"># 70N 超过最大 60N 限制</span>
 <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>

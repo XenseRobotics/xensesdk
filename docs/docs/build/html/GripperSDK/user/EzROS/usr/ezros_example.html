@@ -18,12 +18,14 @@
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../../../../_static/custom.js?v=68f4a4f9"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../../search.html" /> 
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="查看ezros服务信息" href="API/all_info.html" />
+    <link rel="prev" title="EzROS" href="../EzROS.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,10 +48,22 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../GripperSDK.html">GripperSDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../GripperSDK.html">GripperSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../methodlist.html">使用GripperSDK API</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../EzROS.html">EzROS</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">如何使用EzROS命令行工具?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/all_info.html">查看ezros服务信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/echo.html">监控话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/service.html">Service调用</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -66,6 +80,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../GripperSDK.html">GripperSDK</a></li>
+          <li class="breadcrumb-item"><a href="../EzROS.html">EzROS</a></li>
       <li class="breadcrumb-item active">如何使用EzROS命令行工具?</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
@@ -80,8 +96,8 @@
              
   <section id="ezros">
 <span id="tag-ezros-example"></span><h1>如何使用EzROS命令行工具?<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
-<div class="step-block docutils container">
-<p>1、初次使用可以通过以下命令来快速了解 ezros 的功能。</p>
+<div class="ezros-tool-guide docutils container">
+<p>初次使用可以通过以下命令来快速了解 ezros 的功能。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-h
 <span class="c1"># 或者 ezros --help</span>
 </pre></div>
@@ -108,102 +124,28 @@ optional arguments:
                         过滤包含指定字符串的节点名，默认匹配所有节点
 </pre></div>
 </div>
-</div>
-<div class="step-block docutils container">
-<p>2、当要对特定 Topic 查询时，可以使用如下命令，以监听 Gripper 为例：</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>topic<span class="w"> </span>-e<span class="w"> </span>gripper_d672f584b17a<span class="w">  </span>-t<span class="w"> </span><span class="m">30</span>
-</pre></div>
-</div>
-<p>终端输出示例：</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>监听话题: gripper_d672f584b17a
-持续时间: 30 秒
-按 Ctrl+C 停止
-============================================================
-成功订阅话题 gripper_d672f584b17a (类型: BytesMessage)
-开始监听话题 gripper_d672f584b17a...
-
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.99, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.99, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.01, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-[15:36:20] [gripper_d672f584b17a]: {&#39;position&#39;: 59.0, &#39;velocity&#39;: 0.0, &#39;force&#39;: -2.94, &#39;temperature&#39;: 42}
-</pre></div>
+<div class="ezros-cmd-catalog-section docutils container">
+<p>更多详细用法请见目录 EzROS 中的调试命令</p>
+<div class="command-catalog docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="API/all_info.html#tag-all-info"><span class="std std-ref">查看EzROS服务信息</span></a></p></li>
+<li><p><a class="reference internal" href="API/echo.html#tag-echo"><span class="std std-ref">监控话题</span></a></p></li>
+<li><p><a class="reference internal" href="API/service.html#tag-service"><span class="std std-ref">调用服务</span></a></p></li>
+</ul>
 </div>
 </div>
-<div class="step-block docutils container">
-<p>3、当要对特定 Service 服务调用时，可使用如下命令，以调用 Gripper 服务为例：</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>service<span class="w"> </span>-n<span class="w"> </span>gripper_d672f584b17a<span class="w"> </span>-c<span class="w"> </span>set_led_color:<span class="o">=</span>red
-</pre></div>
 </div>
-<p>终端输出示例：</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>调用服务: gripper_d672f584b17a
-动作: set_led_color
-参数: [&#39;red&#39;]
-----------------------------------------
-调用失败: 无响应
-</pre></div>
-</div>
-</div>
-<div class="step-block docutils container">
-<p>4、<cite>-a</cite> 参数，显示所有节点信息，终端打印如下：</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a
-</pre></div>
-</div>
-<p>终端输出示例：</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>扫描网络中... (预计 2 秒)
-[███████████████████████████░░░] 90%
-================================================================================
-EzROS 网络节点信息
-================================================================================
-1. Node: gripper_d672f584b17a (udp/192.168.1.127:46067)
-  Topics:
-    - gripper_d672f584b17a
-  Services:
-    - gripper_d672f584b17a: [set_led_color, restart_control_subscriber]
-
-2. Node: master_d672f584b17a (udp/192.168.1.127:59477)
-  Services:
-    - master_d672f584b17a: [scan_sensor_sn, kill_sensor, launch_camera, launch_gripper, list_camera, reboot, kill_camera, launch_sensor, kill_gripper]
-</pre></div>
-</div>
-<p>其中 master 节点后的 “d672f584b17a” 字符串代表 MAC 地址，可以根据这个地址来创建 gripper 夹爪实例：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
-
-<span class="n">gripper</span> <span class="o">=</span> <span class="n">XenseGripper</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;d672f584b17a&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="step-block docutils container">
-<p>5、<cite>-f</cite> 参数，过滤包含指定字符串的节点名，以匹配 master 节点为例：</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;master&quot;</span>
-</pre></div>
-</div>
-<p>终端输出示例：</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>扫描网络中... (预计 2 秒)
-[███████████████████████████░░░] 90%
-================================================================================
-EzROS 网络节点信息
-================================================================================
-1. Node: master_d672f584b17a (udp/192.168.1.127:59477)
-  Services:
-    - master_d672f584b17a: [kill_sensor, list_camera, launch_sensor, launch_gripper, kill_camera, scan_sensor_sn, reboot, launch_camera, kill_gripper]
-</pre></div>
-</div>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../EzROS.html" class="btn btn-neutral float-left" title="EzROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="API/all_info.html" class="btn btn-neutral float-right" title="查看ezros服务信息" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

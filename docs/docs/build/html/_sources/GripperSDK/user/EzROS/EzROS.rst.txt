@@ -9,7 +9,9 @@ EzROS
 
    * - 命令行工具
    * - :ref:`RzROS命令行工具的使用 <tag_ezros_example>` 
-
+   * - :ref:`查看EzROS服务信息 <tag_all_info>`
+   * - :ref:`监控话题 <tag_echo>`
+   * - :ref:`调用服务 <tag_service>`
 
 
 .. toctree::
@@ -17,5 +19,7 @@ EzROS
    :caption: 目录
    :hidden:
 
-
    usr/ezros_example
+   usr/API/all_info
+   usr/API/echo
+   usr/API/service

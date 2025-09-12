@@ -10,7 +10,7 @@ create 方法
 
         创建一个 XenseGripper 实例
 
-        :param mac_addr: 提供正确的 mac 通信地址。
+        :param mac_addr: 提供正确的 mac 通信地址, MAC地址查询方式请看: :doc:`../EzROS/usr/ezros_example`。
         :type mac_addr: str, 可选
         
         :return: 实现 `Gripper` 接口的夹爪实例。
@@ -34,9 +34,8 @@ create 方法
 .. admonition:: tips
    :class: tip
 
-   如果不清楚夹爪的MAC地址,可以使用 ``ezros`` 工具进行查询,具体请参考 :doc:`../EzROS/usr/ezros_example`。
+   如果不清楚夹爪的MAC地址,可以使用 ``ezros`` 工具进行查询, 具体请参考 :doc:`../EzROS/usr/ezros_example`。
 
-.. note::
-    
-    长时间不连接传感器(10mins),传感器会进入休眠模式,下一次启动会需要更长的时间。
+
+
             

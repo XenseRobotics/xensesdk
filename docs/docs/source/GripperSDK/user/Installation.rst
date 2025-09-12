@@ -3,54 +3,66 @@
 安装GripperSDK
 ===================
 
+安装指南
+
 .. raw:: html
 
     <style>
-    .custom-h2 {
-        font-size: 1.5em !important; /* 更大的字号 */
+    /* 步骤标题样式（外显，无边框） */
+    .step-title {
+        font-size: 1.3em !important;
         font-weight: 700 !important;
-        color: #2c3e50 !important; /* 深色更有质感 */
-        border-bottom: 1px solid #fffdfdff !important; /* 更粗的下边框 */
-        padding-bottom: 10px !important;
-        margin-top: 1.5em !important;
-        margin-bottom: 0.8em !important;
-        font-family: "Microsoft YaHei", sans-serif !important; /* 换成更适配的中文字体 */
-        text-shadow: 0 2px 3px rgba(0,0,0,0.1); /* 增加文字阴影 */
-        background: linear-gradient(to right, #3498db, #9b59b6); /* 背景渐变（可选） */
-        -webkit-background-clip: text;
-        color: transparent; /* 文字渐变效果（需配合背景渐变） */
+        color: #2c3e50 !important;
+        margin-top: 1.8em !important;
+        margin-bottom: 0.5em !important;
+        font-family: "Microsoft YaHei", sans-serif !important;
+    }
+    
+    /* 步骤内容容器（带边框） */
+    .step-content {
+        border: 1px solid #ddd !important;
+        border-radius: 6px !important;
+        padding: 15px 20px !important;
+        background-color: #f9f9f9 !important;
+        margin-bottom: 1em !important;
+    }
+
+    /* 自定义代码块样式 - 蓝色字体 */
+    .step-content .highlight pre {
+        color: #2980b9 !important; /* 蓝色字体 */
+        font-weight: 500 !important; /* 略微加粗 */
+        background-color: #f0f7ff !important; /* 浅蓝色背景衬托 */
+        padding: 10px 15px !important;
+        border-radius: 4px !important;
+        border: 1px solid #bed6e3 !important; /* 浅蓝色边框 */
     }
     </style>
 
+
 .. raw:: html
 
-    <div class="custom-h2">安装指南</div>
+    <div class="step-title">步骤 1: 准备 Python 开发环境</div>
 
-.. container:: step-block
-
-    **步骤 1:** 准备 Python 开发环境
+.. container:: step-content
 
     请参考
      `XenseSDK <../../XenseSDK/usr/Installation.html>`_ 中的 Python 开发环境准备。
 
 
+.. raw:: html
 
-.. container:: step-block
+    <div class="step-title">步骤 2: 安装 SDK 包</div>
 
-    **步骤 2:** 安装 CUDA 工具包和 cuDNN
-    
-    请参考
-     `XenseSDK <../../XenseSDK/usr/Installation.html>`_ 中的 CUDA 工具包和 cuDNN 安装 。        
+.. container:: step-content
 
-.. container:: step-block
-
-    **步骤 3:** 安装 SDK 包
     将 SDK 包安装到您的环境中：
 
     .. code-block:: bash
         
-        pip install xensesdk
         pip install xensegripper
 
+.. admonition:: tips
+   :class: tip
 
-    
+   更多版本的 SDK 请在 `Github官方网站 <https://github.com/XenseRobotics/xensesdk/releases>`_ 获取。
+

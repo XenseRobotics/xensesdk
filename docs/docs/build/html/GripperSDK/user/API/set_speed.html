@@ -18,7 +18,7 @@
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../../../_static/custom.js?v=68f4a4f9"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -61,11 +61,7 @@
 <li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_gripper_status.html">get_gripper_status 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_position_sync.html">set_position_sync方法</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">set_speed方法</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.set_speed"><code class="docutils literal notranslate"><span class="pre">XenseGripper.set_speed()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">示例代码</a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">set_speed方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_led_color.html">set_led_color方法</a></li>
 </ul>
@@ -108,13 +104,18 @@
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.set_speed">
-<span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">set_speed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.set_speed" title="Link to this definition"></a></dt>
-<dd><p>设置夹爪的运动速度。</p>
+<span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">set_speed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.set_speed" title="Link to this definition"></a></dt>
+<dd><p>速度闭环控制（设置夹爪的运动速度）。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>speed</strong> (<em>float</em>) – 夹爪的目标速度，单位为毫米 / 秒 (mm/s)。
-正值表示闭合方向运动,负值表示打开方向运动,0 表示停止。
-速度绝对值必须在 (0,350) 范围内。</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>velocity</strong> (<em>float</em>) – 夹爪的目标速度，单位为毫米/秒 (mm/s)。
+正值表示闭合方向运动, 负值表示打开方向运动, 0 表示停止。
+速度绝对值必须在 (0, 440) 范围内。</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em>, </em><em>可选</em>) – 最大推力，单位为牛顿 (N)。
+必须在 [0, 60] 范围内。
+默认值为 27 N。</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -123,19 +124,22 @@
 <section id="id1">
 <h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
 
 <span class="c1"># 创建夹爪实例</span>
 <span class="n">gripper</span> <span class="o">=</span> <span class="n">XenseGripper</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;9a14e81bb832&quot;</span><span class="p">)</span>
 
-<span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>   <span class="c1"># 设置速度 50 mm/s</span>
+<span class="c1"># 设置速度 50mm/s</span>
+<span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="c1"># 停止</span>
+<span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 停止</span>
 
-<span class="c1"># 手动模式切换</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">enable_mode</span><span class="p">(</span><span class="n">XenseGripper</span><span class="o">.</span><span class="n">ControlMode</span><span class="o">.</span><span class="n">SPEED</span><span class="p">)</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">disable_mode</span><span class="p">()</span>  <span class="c1"># 自动停止并恢复原模式</span>
+<span class="c1"># 错误示例：速度超出 440mm/s 限制</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>  <span class="c1"># 500mm/s 超过最大 440mm/s 限制</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
