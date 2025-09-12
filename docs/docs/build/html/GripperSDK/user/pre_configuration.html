@@ -129,7 +129,7 @@
 </ol>
 </div>
 <div class="step-title">步骤 2: 连接网络</div><div class="step-content docutils container">
-<div class="method-title">方法一: 使用交换机</div><p>此时夹爪的IP地址使用 <code class="docutils literal notranslate"><span class="pre">dhcp</span></code> 自动获取，后续需利用 <a class="reference external" href="./EzROS/usr/ezros_example.html">EzROS</a> 进行扫描。</p>
+<div class="method-title">方法一: 使用交换机</div><p>将夹爪与计算机分别接入交换机的不同网口并确保网络通路, 此时夹爪的IP地址使用 <code class="docutils literal notranslate"><span class="pre">dhcp</span></code> 自动获取，后续需利用 <a class="reference external" href="./EzROS/usr/ezros_example.html">ezros</a> 进行扫描。</p>
 <div class="method-title">方法二: 直连电脑网口</div><p>此时夹爪为静态 IP <code class="docutils literal notranslate"><span class="pre">192.168.99.2</span></code>，电脑端需要在和夹爪同一网段内设置自身 IP(打开网络设置 -&gt; 有线设置 -&gt; IPv4)。
 设置参考如下:</p>
 <table class="docutils align-default">
@@ -147,7 +147,7 @@
 <tbody>
 <tr class="row-even"><td><p>IP 地址</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">192.168.99.10</span></code></p></td>
-<td><p>格式为 <code class="docutils literal notranslate"><span class="pre">192.168.99.X``(``X</span></code> 的取值范围为 1-254, 避开夹爪 IP)</p></td>
+<td><p>格式为 <code class="docutils literal notranslate"><span class="pre">192.168.99.X</span></code>, (X 的取值范围为 1-254, 避开夹爪 IP)</p></td>
 </tr>
 <tr class="row-odd"><td><p>子网掩码</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code></p></td>

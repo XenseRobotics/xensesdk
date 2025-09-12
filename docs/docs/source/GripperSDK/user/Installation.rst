@@ -3,8 +3,6 @@
 安装GripperSDK
 ===================
 
-安装指南
-
 .. raw:: html
 
     <style>
@@ -45,17 +43,14 @@
 
 .. container:: step-content
 
-    请参考
-     `XenseSDK <../../XenseSDK/usr/Installation.html>`_ 中的 Python 开发环境准备。
+    GripperSDK 依赖 XenseSDK, 因此需要安装 Python 开发环境, 请参考 `XenseSDK <../../XenseSDK/usr/Installation.html>`_ Python开发环境准备。
 
 
 .. raw:: html
 
-    <div class="step-title">步骤 2: 安装 SDK 包</div>
+    <div class="step-title">步骤 2: 安装 GripperSDK 包</div>
 
 .. container:: step-content
-
-    将 SDK 包安装到您的环境中：
 
     .. code-block:: bash
         
@@ -64,5 +59,5 @@
 .. admonition:: tips
    :class: tip
 
-   更多版本的 SDK 请在 `Github官方网站 <https://github.com/XenseRobotics/xensesdk/releases>`_ 获取。
+   最新版本的 GripperSDK 请在 `Github官方网站 <https://github.com/XenseRobotics/xensesdk/releases>`_ 获取。
 

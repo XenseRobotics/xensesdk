@@ -40,6 +40,8 @@
 
         * - :ref:`set_led_color方法 <tag_set_led_color_>`
 
+        * - :ref:`mode方法 <tag_mode_>`
+
     .. toctree:: 
         :maxdepth: 1
         :hidden:
@@ -54,6 +56,7 @@
         API/set_speed
         API/set_control_param
         API/set_led_color
+        API/mode
         
 
 

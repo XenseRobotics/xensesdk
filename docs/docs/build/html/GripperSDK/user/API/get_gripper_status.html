@@ -64,6 +64,7 @@
 <li class="toctree-l3"><a class="reference internal" href="set_speed.html">set_speed方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_led_color.html">set_led_color方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mode.html">mode 方法</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../EzROS/EzROS.html">EzROS</a></li>
@@ -105,15 +106,17 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.get_gripper_status">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">get_gripper_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.get_gripper_status" title="Link to this definition"></a></dt>
-<dd><p>获取夹爪当前的状态信息（包括运行参数和设备状态）。</p>
-<p>该方法用于读取夹爪的实时工作数据，返回包含关键运行参数的字典，可用于监控夹爪的当前状态。</p>
+<dd><p>获取夹爪当前的状态信息（包括运行参数和设备状态），用于读取夹爪的实时工作数据，返回包含关键运行参数的字典，可用于监控夹爪的当前状态。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>夹爪当前状态的字典，包含以下键值：
-- position: 当前位置 (单位: mm)
-- velocity: 当前速度 (单位: mm/s)
-- force: 当前输出力 (单位: N)
-- temperature: 电机温度（单位：℃）</p>
+<dd class="field-odd"><p><p>夹爪当前状态的字典，包含以下键值：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code>: 当前位置 (单位: mm)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">velocity</span></code>: 当前速度 (单位: mm/s)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">force</span></code>: 当前输出力 (单位: N)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temperature</span></code>: 电机温度（单位：℃）</p></li>
+</ul>
+</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>dict</p>
