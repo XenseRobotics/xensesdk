@@ -66,6 +66,8 @@ GripperSDK
         
         * - :ref:`EzROS调试工具 <tag_ezros>` 
 
+        * - :ref:`Gui使用指南 <tag_guiUseGuide>` 
+
 .. toctree::
    :maxdepth: 3
    :caption: 目录
@@ -79,3 +81,4 @@ GripperSDK
    
    user/EzROS/EzROS
   
+   user/GuiUseGuide/GuiUseGuide

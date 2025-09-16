@@ -1,4 +1,4 @@
-.. _tag_system_requirements:
+.. _tag_system_requirement:
 
 二、系统要求
 ============

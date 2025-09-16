@@ -10,12 +10,11 @@
 提供XenseStudio.exe安装程序。双击以后，按照提示操作。安装完毕后将在桌面显示其快捷方式：Xense Studio。
 
 **Linux平台**
-提供安装程序xensegui.deb，使用sudo命令进行安装：
+提供安装程序xensestudio.deb，使用sudo命令进行安装：
 
 .. code-block:: bash
 
-    sudo dpkg -i /path/to/your/xensegui0.2.10.deb
-
+    sudo dpkg -i /path/to/your/XenseStudio_v1.1.4.deb
 .. raw:: html
 
     <div class="download-button-container" style="text-align: center; margin: 2em 0;">
@@ -55,6 +54,6 @@
     :alt: 软件初始设置
     :align: center
     :scale: 100%
-    :name: initial_setup
+    :name: _xs-initial_setup
 
     图 1 软件初始设置

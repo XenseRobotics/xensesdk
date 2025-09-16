@@ -1,6 +1,6 @@
 .. _tag_ezros_example:
 
-如何使用EzROS命令行工具?
+使用EzROS命令行工具
 ========================
 
 .. container:: ezros-tool-guide
@@ -38,7 +38,7 @@
 
     .. container:: ezros-cmd-catalog-section
 
-        更多详细用法请见目录 EzROS 中的调试命令
+        更多详细用法请见目录 EzROS 中的调试命令:
 
         .. container:: command-catalog
 

@@ -10,7 +10,7 @@
     :alt: 数采控制区
     :align: center
     :scale: 100%
-    :name: sensor_selection
+    :name: _xs-sensor_selection
 
     图 1 数采控制区
 
@@ -20,7 +20,7 @@
     :alt: 设备选择区
     :align: center
     :scale: 100%
-    :name: device_selection
+    :name: _xs-device_selection
 
     图 2 设备选择区
 
@@ -226,7 +226,7 @@
     :alt: 工具栏
     :align: center
     :scale: 100%
-    :name: toolbar
+    :name: _xs-toolbar
 
     图 7 工具栏
 

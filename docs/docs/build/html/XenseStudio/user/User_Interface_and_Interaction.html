@@ -18,7 +18,7 @@
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../../_static/custom.js?v=68f4a4f9"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -51,10 +51,15 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../Introduction.html">XenseStudio</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Software_Introduction.html">一、软件简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="System_Requirments.html">二、系统要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="System_Requirment.html">二、系统要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation_and_Setup.html">三、安装与设置</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">四、界面与交互</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">1、 选择传感器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1、 选择传感器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">传感器状态提示</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">感知模态配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">视图切换</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#id6">2、 打开数据流</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id7">3、 工具栏</a></li>
 </ul>
@@ -98,20 +103,20 @@
 <span id="id1"></span><h1>四、界面与交互<a class="headerlink" href="#tag-user-interface-and-interaction" title="Link to this heading"></a></h1>
 <section id="id2">
 <h2>1、 选择传感器<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
-<figure class="align-center" id="sensor-selection">
+<figure class="align-center" id="xs-sensor-selection">
 <a class="reference internal image-reference" href="../../_images/Data_or_Record_control_area.png"><img alt="数采控制区" src="../../_images/Data_or_Record_control_area.png" style="width: 315.0px; height: 60.0px;" />
 </a>
 <figcaption>
-<p><span class="caption-text">图 1 数采控制区</span><a class="headerlink" href="#sensor-selection" title="Link to this image"></a></p>
+<p><span class="caption-text">图 1 数采控制区</span><a class="headerlink" href="#xs-sensor-selection" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>当前数采控制区的“选择传感器”选项下，可实时监测传感器多模态感知信息，且支持对传感器反馈信息进行录制，以便后期“打开数据流”进行回溯，复盘，分析。</p>
 <blockquote>
-<div><figure class="align-center" id="device-selection">
+<div><figure class="align-center" id="xs-device-selection">
 <a class="reference internal image-reference" href="../../_images/elements_selection_area.png"><img alt="设备选择区" src="../../_images/elements_selection_area.png" style="width: 417.0px; height: 45.0px;" />
 </a>
 <figcaption>
-<p><span class="caption-text">图 2 设备选择区</span><a class="headerlink" href="#device-selection" title="Link to this image"></a></p>
+<p><span class="caption-text">图 2 设备选择区</span><a class="headerlink" href="#xs-device-selection" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -120,10 +125,10 @@
 从已检测到的传感器列表快速切换至目标传感器，并将其采集信息显示在可视化区域中。</p>
 <section id="id3">
 <h3>传感器状态提示<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
-<p><a class="reference internal" href="../../_images/online_icon.png"><img alt="在线图标" class="align-middle" src="../../_images/online_icon.png" style="width: 16px; height: 16px;" /></a> :表示设备已上线</p>
-<p><a class="reference internal" href="../../_images/offline_icon.png"><img alt="离线图标" class="align-middle" src="../../_images/offline_icon.png" style="width: 16px; height: 16px;" /></a> :表示设备已离线</p>
-<p><a class="reference internal" href="../../_images/error_icon.png"><img alt="错误图标" class="align-middle" src="../../_images/error_icon.png" style="width: 16px; height: 16px;" /></a> :表示传感器异常，鼠标悬浮会显示异常信息（传感器config文件读取失败）。</p>
-<p>拔掉/插入传感器后，需要点击 <a class="reference internal" href="../../_images/resetup.png"><img alt="重新扫描图标" class="align-middle" src="../../_images/resetup.png" style="width: 64px; height: 16px;" /></a> ，重新扫描传感器。</p>
+<p><a class="reference internal" href="../../_images/online_icon1.png"><img alt="在线图标" class="align-middle" src="../../_images/online_icon1.png" style="width: 16px; height: 16px;" /></a> :表示设备已上线</p>
+<p><a class="reference internal" href="../../_images/offline_icon1.png"><img alt="离线图标" class="align-middle" src="../../_images/offline_icon1.png" style="width: 16px; height: 16px;" /></a> :表示设备已离线</p>
+<p><a class="reference internal" href="../../_images/error_icon1.png"><img alt="错误图标" class="align-middle" src="../../_images/error_icon1.png" style="width: 16px; height: 16px;" /></a> :表示传感器异常，鼠标悬浮会显示异常信息（传感器config文件读取失败）。</p>
+<p>拔掉/插入传感器后，需要点击 <a class="reference internal" href="../../_images/resetup1.png"><img alt="重新扫描图标" class="align-middle" src="../../_images/resetup1.png" style="width: 64px; height: 16px;" /></a> ，重新扫描传感器。</p>
 </section>
 <section id="id4">
 <h3>感知模态配置<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
@@ -201,18 +206,18 @@
 </section>
 <section id="id7">
 <h2>3、 工具栏<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
-<figure class="align-center" id="toolbar">
-<a class="reference internal image-reference" href="../../_images/toolbar.png"><img alt="工具栏" src="../../_images/toolbar.png" style="width: 417.0px; height: 93.0px;" />
+<figure class="align-center" id="xs-toolbar">
+<a class="reference internal image-reference" href="../../_images/toolbar1.png"><img alt="工具栏" src="../../_images/toolbar1.png" style="width: 417.0px; height: 93.0px;" />
 </a>
 <figcaption>
-<p><span class="caption-text">图 7 工具栏</span><a class="headerlink" href="#toolbar" title="Link to this image"></a></p>
+<p><span class="caption-text">图 7 工具栏</span><a class="headerlink" href="#xs-toolbar" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="../../_images/theme_switch.png"><img alt="主题切换按钮" class="align-middle" src="../../_images/theme_switch.png" style="width: 16px; height: 16px;" /></a> 主题切换：点击可选择界面主题</p>
-<p><a class="reference internal" href="../../_images/help.png"><img alt="帮助按钮" class="align-middle" src="../../_images/help.png" style="width: 16px; height: 16px;" /></a> 帮助：打开帮助文档、常见问题解答</p>
-<p><a class="reference internal" href="../../_images/about.png"><img alt="关于按钮" class="align-middle" src="../../_images/about.png" style="width: 16px; height: 16px;" /></a> 关于：展示应用信息</p>
-<p><a class="reference internal" href="../../_images/minimization.png"><img alt="最小化按钮" class="align-middle" src="../../_images/minimization.png" style="width: 16px; height: 16px;" /></a> 最小化：将应用最小化至后台</p>
-<p><a class="reference internal" href="../../_images/exit.png"><img alt="退出按钮" class="align-middle" src="../../_images/exit.png" style="width: 16px; height: 16px;" /></a> 退出：关闭当前应用</p>
+<p><a class="reference internal" href="../../_images/theme_switch1.png"><img alt="主题切换按钮" class="align-middle" src="../../_images/theme_switch1.png" style="width: 16px; height: 16px;" /></a> 主题切换：点击可选择界面主题</p>
+<p><a class="reference internal" href="../../_images/help1.png"><img alt="帮助按钮" class="align-middle" src="../../_images/help1.png" style="width: 16px; height: 16px;" /></a> 帮助：打开帮助文档、常见问题解答</p>
+<p><a class="reference internal" href="../../_images/about1.png"><img alt="关于按钮" class="align-middle" src="../../_images/about1.png" style="width: 16px; height: 16px;" /></a> 关于：展示应用信息</p>
+<p><a class="reference internal" href="../../_images/minimization1.png"><img alt="最小化按钮" class="align-middle" src="../../_images/minimization1.png" style="width: 16px; height: 16px;" /></a> 最小化：将应用最小化至后台</p>
+<p><a class="reference internal" href="../../_images/exit1.png"><img alt="退出按钮" class="align-middle" src="../../_images/exit1.png" style="width: 16px; height: 16px;" /></a> 退出：关闭当前应用</p>
 </section>
 </section>
 

@@ -11,7 +11,7 @@ XenseStudio
    * - :ref:`软件简介<tag_software_introduction>`
 
 
-   * - :ref:`系统要求<tag_system_requirements>`
+   * - :ref:`系统要求<tag_system_requirement>`
 
 
    * - :ref:`安装与设置<tag_installation_and_setup>`
@@ -32,7 +32,7 @@ XenseStudio
 
    user/Software_Introduction
 
-   user/System_Requirments
+   user/System_Requirment
 
    user/Installation_and_Setup
 
