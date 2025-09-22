@@ -75,6 +75,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Hardware/Hardware.html">Hardware</a></li>
 </ul>
 
         </div>
@@ -131,21 +132,68 @@
 <h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">threading</span><span class="w"> </span><span class="kn">import</span> <span class="n">Thread</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">pynput</span><span class="w"> </span><span class="kn">import</span> <span class="n">keyboard</span>
+
 <span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
 
-<span class="c1"># 创建夹爪实例</span>
+
+<span class="n">CLOSE</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">BREAK</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">on_press</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">global</span> <span class="n">CLOSE</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">Key</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">CLOSE</span><span class="p">:</span>
+                <span class="n">CLOSE</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;开始打开&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">CLOSE</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;开始关闭&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">Key</span><span class="o">.</span><span class="n">esc</span><span class="p">:</span>
+            <span class="k">global</span> <span class="n">BREAK</span>
+            <span class="n">BREAK</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;退出程序&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">data_fetch</span><span class="p">():</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">gripper</span><span class="o">.</span><span class="n">get_gripper_status</span><span class="p">()</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+
+
+<span class="n">listener</span> <span class="o">=</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="n">on_press</span><span class="o">=</span><span class="n">on_press</span><span class="p">)</span>
+<span class="n">listener</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
 <span class="n">gripper</span> <span class="o">=</span> <span class="n">XenseGripper</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;9a14e81bb832&quot;</span><span class="p">)</span>
+<span class="n">data_fetch_thread</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">data_fetch</span><span class="p">,</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">data_fetch_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-<span class="c1"># 设置速度 50mm/s</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 停止</span>
-
-<span class="c1"># 错误示例：速度超出 440mm/s 限制</span>
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>  <span class="c1"># 500mm/s 超过最大 440mm/s 限制</span>
-<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="c1"># 下列方法二选一</span>
+<span class="c1"># with gripper.mode(XenseGripper.ControlMode.SAFE) as gripper:</span>
+<span class="c1">#     while True:</span>
+<span class="c1">#         if not CLOSE:</span>
+<span class="c1">#             # print(&quot;正在打开&quot;)</span>
+<span class="c1">#             gripper.set_position(80)</span>
+<span class="c1">#         else:</span>
+<span class="c1">#             # print(&quot;正在关闭&quot;)</span>
+<span class="c1">#             gripper.set_position(0)</span>
+<span class="c1">#             pass</span>
+<span class="c1">#         time.sleep(0.05)</span>
+<span class="k">with</span> <span class="n">gripper</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">XenseGripper</span><span class="o">.</span><span class="n">ControlMode</span><span class="o">.</span><span class="n">SPEED</span><span class="p">)</span> <span class="k">as</span> <span class="n">gripper</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">CLOSE</span><span class="p">:</span>
+            <span class="c1"># print(&quot;正在打开&quot;)</span>
+            <span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># print(&quot;正在关闭&quot;)</span>
+            <span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

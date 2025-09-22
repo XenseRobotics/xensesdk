@@ -27,22 +27,71 @@ set_speed方法
 
     .. code-block:: python
 
-        import time
+        import time 
+        from threading import Thread
+
+        from pynput import keyboard
+
         from xensegripper import XenseGripper
 
-        # 创建夹爪实例
+
+        CLOSE = False
+        BREAK = False
+
+        def on_press(key):
+            try:
+                global CLOSE
+                if key == keyboard.Key.space:
+                    if CLOSE:
+                        CLOSE = False
+                        print("开始打开")
+                    else:
+                        CLOSE = True
+                        print("开始关闭")
+                if key == keyboard.Key.esc:
+                    global BREAK
+                    BREAK = True
+                    print("退出程序")
+                    return False
+
+            except AttributeError:
+                pass
+
+        def data_fetch():
+            while True:
+                status = gripper.get_gripper_status()
+                time.sleep(0.05)
+
+
+        listener = keyboard.Listener(on_press=on_press)
+        listener.start()  
+
         gripper = XenseGripper.create("9a14e81bb832")
+        data_fetch_thread = Thread(target=data_fetch, daemon=True)
+        data_fetch_thread.start()   
 
-        # 设置速度 50mm/s
-        gripper.set_speed(50)
-        time.sleep(2)
-        gripper.set_speed(0)  # 停止
+        # 下列方法二选一
+        # with gripper.mode(XenseGripper.ControlMode.SAFE) as gripper:
+        #     while True:
+        #         if not CLOSE:  
+        #             # print("正在打开")
+        #             gripper.set_position(80)
+        #         else:
+        #             # print("正在关闭")
+        #             gripper.set_position(0) 
+        #             pass
+        #         time.sleep(0.05)       
+        with gripper.mode(XenseGripper.ControlMode.SPEED) as gripper:
+            while True:
+                if not CLOSE:  
+                    # print("正在打开")
+                    gripper.set_speed(40)
+                else:
+                    # print("正在关闭")
+                    gripper.set_speed(-40) 
+                time.sleep(0.05)
 
-        # 错误示例：速度超出 440mm/s 限制
-        try:
-            gripper.set_speed(500)  # 500mm/s 超过最大 440mm/s 限制
-        except ValueError as e:
-            print(e)
+
 
 
 

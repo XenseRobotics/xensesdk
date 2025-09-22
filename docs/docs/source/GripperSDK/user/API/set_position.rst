@@ -35,19 +35,37 @@ set_position方法
 
     .. code-block:: python
 
+        import time 
+        from threading import Thread
+
         from xensegripper import XenseGripper
 
-        # 创建夹爪实例
-        gripper = XenseGripper.create("9a14e81bb832")
 
-        # 设置夹爪位置为 40mm
-        gripper.set_position(40)
+        def data_fetch():
+            while True:
+                status = gripper.get_gripper_status()
+                if isinstance(status, dict):
+                    info_str = "\rGripper Status: {"
+                    for key, value in status.items():
+                        info_str += f"{key}:{value:+8.4f}, "
+                    info_str += "}"
+                    print(info_str, end="", flush=True)
+                time.sleep(0.05)
 
-        # 设置夹爪位置为 60mm，指定速度 100mm/s 和力 30N
-        gripper.set_position(60, vmax=100, fmax=30)
+        if __name__=="__main__":
 
-        # 错误示例：位置超出范围（会触发 ValueError）
-        try:
-            gripper.set_position(90)  # 90mm 超过最大 85mm 限制
-        except ValueError as e:
-            print(e)
+            gripper = XenseGripper.create("d672f584b17a")
+            data_fetch_thread = Thread(target=data_fetch, daemon=True)
+            data_fetch_thread.start()
+
+            flag = True
+            while True:
+                if flag:
+                    gripper.set_position(80, 80, 20)
+                    flag = not flag
+                else:
+                    gripper.set_position(10, 80, 20)
+                    flag = not flag
+                time.sleep(1)
+
+

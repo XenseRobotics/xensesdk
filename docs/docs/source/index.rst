@@ -107,44 +107,57 @@
                </p>
          </header>
 
-         <!-- 按钮容器 -->
-         <div class="btn-container">
-               <!-- XenseStudio 按钮 -->
-               <a href="https://xense.readthedocs.io/en/latest/XenseStudio/Introduction.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-purple-500/30 group">
-                  <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
-                     <i class="fa fa-desktop text-white text-xl"></i>
-                  </div>
-                  <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseStudio</h2>
-                  <p class="text-center text-white/80 text-xs">使用文档</p>
-                  <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
-                     查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-                  </span>
-               </a>
+         <!-- 按钮容器：改为 Grid 布局，2行2列，居中对齐 -->
+         <div class="grid grid-cols-2 gap-6 md:gap-8 justify-items-center w-full max-w-4xl">
+            <!-- XenseStudio 按钮 -->
+            <a href="https://xense.readthedocs.io/en/latest/XenseStudio/Introduction.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-purple-500/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
+                  <i class="fa fa-desktop text-white text-xl"></i>
+               </div>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseStudio</h2>
+               <p class="text-center text-white/80 text-xs">使用文档</p>
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               </span>
+            </a>
 
-               <!-- XenseSDK按钮 -->
-               <a href="https://xense.readthedocs.io/en/latest/XenseSDK/XenseSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-primary to-blue-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-primary/30 group">
-                  <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
-                     <i class="fa fa-microchip text-white text-xl"></i>
-                  </div>
-                  <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseSDK</h2>
-                  <p class="text-center text-white/80 text-xs">开发工具包</p>
-                  <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
-                     查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-                  </span>
-               </a>
+            <!-- XenseSDK 按钮 -->
+            <a href="https://xense.readthedocs.io/en/latest/XenseSDK/XenseSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-primary to-blue-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-primary/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
+                  <i class="fa fa-microchip text-white text-xl"></i>
+               </div>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">XenseSDK</h2>
+               <p class="text-center text-white/80 text-xs">开发工具包</p>
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               </span>
+            </a>
 
-               <!-- GripperSDK按钮 -->
-               <a href="https://xense.readthedocs.io/en/latest/GripperSDK/GripperSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-secondary to-emerald-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-secondary/30 group">
-                  <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:-rotate-12">
-                     <i class="fa fa-cogs text-white text-xl"></i>
-                  </div>
-                  <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">GripperSDK</h2>
-                  <p class="text-center text-white/80 text-xs">开发工具包</p>
-                  <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
-                     查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
-                  </span>
-               </a>
+            <!-- GripperSDK 按钮 -->
+            <a href="https://xense.readthedocs.io/en/latest/GripperSDK/GripperSDK.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-secondary to-emerald-700 flex flex-col items-center justify-center p-4 shadow-2xl border border-secondary/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:-rotate-12">
+                  <i class="fa fa-cogs text-white text-xl"></i>
+               </div>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">GripperSDK</h2>
+               <p class="text-center text-white/80 text-xs">开发工具包</p>
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               </span>
+            </a>
+
+            <!-- Hardware 按钮 -->
+            <a href="https://xense.readthedocs.io/en/latest/Hardware/Hardware.html" target="_blank" class="btn-hover btn-custom rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex flex-col items-center justify-center p-4 shadow-2xl border border-amber-500/30 group">
+               <div class="w-12 h-12 mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-12">
+                  <i class="fa fa-microchip text-white text-xl"></i> 
+               </div>
+               <h2 class="text-xl md:text-2xl font-bold mb-1 text-white">Hardware</h2>
+               <p class="text-center text-white/80 text-xs">硬件文档</p> 
+               <span class="mt-2 inline-block bg-white/20 text-white text-xs px-2 py-0.5 rounded-full backdrop-blur-sm">
+                  查看 <i class="fa fa-external-link ml-1 group-hover:translate-x-1 transition-transform"></i>
+               </span>
+            </a>
          </div>
+
 
          <!-- 特性介绍 -->
          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 w-full max-w-5xl">
@@ -235,6 +248,8 @@
    XenseSDK/XenseSDK
 
    GripperSDK/GripperSDK
+
+   Hardware/Hardware
 
 
 

@@ -99,4 +99,4 @@ create方法
     :class: tip
 
         该方法的 mac_address 参数兼容设备 IP 地址，如何获取设备 MAC 可参考
-        `EzROS <../../../GripperSDK/user/Zeroros/Zeroros.html>`_。
+        `EzROS <../../../../GripperSDK/user/EzROS/ezros_example.html>`_。

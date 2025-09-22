@@ -13,7 +13,9 @@ author = 'IRonman'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx_tabs.tabs']
+extensions = ['sphinx_tabs.tabs',
+              'sphinxcontrib.video'
+              ]
 
 
 
@@ -30,6 +32,12 @@ html_theme_options = {
     'navigation_depth': 4
 }
 html_static_path = ['_static']
+html_extra_path = [
+    'Hardware/images'  # 假设 images 目录在 source/Hardware/ 下
+]
+
+
+
 html_css_files = ['custom.css','rst-tips.css','rst-note.css','container_step.css']
 html_js_files = ['custom.js']
 html_context = {
@@ -46,4 +54,7 @@ gettext_uuid = True  # optional.
 
 # EPUB options
 epub_show_urls = 'footnote'
+
+
+
 
