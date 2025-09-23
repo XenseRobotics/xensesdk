@@ -90,12 +90,12 @@ STEP5：如图5，安装钣金并拧紧螺丝，步骤与STEP1相反。
 
    
 3、更换柔性替换件的演示视频
------------------------------
+---------------------------
 
 .. raw:: html
 
     <video width="640" height="360" controls>
-        <!-- 替换为视频在你电脑中的绝对路径 -->
-        <source src="/home/xense/projects/doc/xensesdk/docs/docs/source/Hardware/images/shiping_h264.mp4" type="video/mp4">
-        视频无法播放，请下载：<a href="/home/xense/projects/doc/xensesdk/docs/docs/source/Hardware/images/shiping_h264.mp4">点击下载</a>
+        <source src="../../_static/shiping_h264.mp4" type="video/mp4">
+        您的浏览器不支持视频播放，请检查视频格式或更新浏览器。
     </video>
+

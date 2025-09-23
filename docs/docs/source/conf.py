@@ -33,10 +33,10 @@ html_theme_options = {
 }
 html_static_path = ['_static']
 html_extra_path = [
-    'Hardware/images'  # 假设 images 目录在 source/Hardware/ 下
+    'Hardware/images'  
 ]
 
-
+html_extra_path = ['Hardware/images']
 
 html_css_files = ['custom.css','rst-tips.css','rst-note.css','container_step.css']
 html_js_files = ['custom.js']
