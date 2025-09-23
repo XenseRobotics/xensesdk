@@ -87,6 +87,16 @@
 
     使用以太网线将PC的以太网接口与夹爪设备的网口直接连接, 确保PC端网线接口牢固插入。
 
+    .. admonition:: tips
+        :class: tip
+
+        在使用sdk时，如果上位机既有线连接了夹爪，又连接了wifi，请在程序开头配置多网卡发现：
+
+        .. code-block:: python
+
+            from xensesdk import setup_multi_net_interface
+
+            setup_multi_net_interface()
 
 .. raw:: html
 

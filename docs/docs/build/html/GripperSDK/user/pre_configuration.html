@@ -158,6 +158,15 @@
 </tbody>
 </table>
 <p>使用以太网线将PC的以太网接口与夹爪设备的网口直接连接, 确保PC端网线接口牢固插入。</p>
+<div class="tip admonition">
+<p class="admonition-title">tips</p>
+<p>在使用sdk时，如果上位机既有线连接了夹爪，又连接了wifi，请在程序开头配置多网卡发现：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup_multi_net_interface</span>
+
+<span class="n">setup_multi_net_interface</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="step-title">步骤 3: 测试网络连通性</div><div class="step-content docutils container">
 <ol class="arabic">
