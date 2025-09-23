@@ -9,17 +9,31 @@
 .. figure:: ../images/WS_chuan.png
     :alt: 软件初始设置
     :align: center
-    :scale: 100%
+    :width: 400px
     :name: _hd-chuan
+    :class: preserve-aspect-ratio
 
     图 1
 
+.. raw:: html
+
+    <style>
+        /* 强制制强制图片比例保持原始比例 */
+        .preserve-aspect-ratio img {
+            max-width: 100%;    /* 最大宽度不超过容器 */
+            height: auto !important;  /* 强制高度自适应，!important覆盖默认样式 */
+            object-fit: contain;      /* 保持比例，不裁剪 */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 
 .. figure:: ../images/WS_chuan2.png
     :alt: 软件初始设置
     :align: center
-    :scale: 100%
+    :width: 400px
     :name: _hd-chuan2
+    :class: preserve-aspect-ratio
 
     图 2
 
@@ -58,8 +72,9 @@
 .. figure:: ../images/OS_chuan.png
     :alt: 软件初始设置
     :align: center
-    :scale: 100%
+    :width: 400px
     :name: _hd-OS_chuan
+    :class: preserve-aspect-ratio
 
     图 3
 
@@ -67,8 +82,9 @@
 .. figure:: ../images/OS_chuan2.png
     :alt: 软件初始设置
     :align: center
-    :scale: 100%
+    :width: 400px
     :name: _hd-OS_chuan2
+    :class: preserve-aspect-ratio
 
     图 4
 

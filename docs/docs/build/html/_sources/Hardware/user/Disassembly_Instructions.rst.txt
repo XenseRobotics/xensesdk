@@ -12,8 +12,21 @@ b. 小扳手/电动螺丝刀(M2批头)*1
 .. figure:: ../images/tools.png
    :alt: 数采控制区
    :align: center
-   :scale: 100%
    :name: _hd-sensor_selection
+   :class: preserve-aspect-ratio 
+
+.. raw:: html
+
+    <style>
+        /* 强制制强制图片比例保持原始比例 */
+        .preserve-aspect-ratio img {
+            max-width: 100%;    /* 最大宽度不超过容器 */
+            height: auto !important;  /* 强制高度自适应，!important覆盖默认样式 */
+            object-fit: contain;      /* 保持比例，不裁剪 */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 
 
 2、 柔性替换件更换说明
@@ -26,6 +39,7 @@ STEP1：如图1，用小扳手拧下传感器钣金上的2颗M2螺丝，并取�
     :align: center
     :scale: 100%
     :name: _hd-step1
+    :class: preserve-aspect-ratio 
 
     图 1
 
@@ -36,6 +50,7 @@ STEP2：如图2，借助小扳手轻轻撬开卡扣，将柔性替换件撬起�
     :align: center
     :scale: 100%
     :name: _hd-step2
+    :class: preserve-aspect-ratio 
 
     图 2
 
@@ -46,6 +61,7 @@ STEP3：如图3，检查替换件光学面和传感器内部镜片。如有灰�
     :align: center
     :scale: 100%
     :name: _hd-step3
+    :class: preserve-aspect-ratio 
 
     图 3
 
@@ -56,6 +72,7 @@ STEP4：如图4，更换替换件。请严格遵循一至四的顺序操作，�
     :align: center
     :scale: 100%
     :name: _hd-step4
+    :class: preserve-aspect-ratio 
 
     图 4
 
@@ -66,6 +83,7 @@ STEP5：如图5，安装钣金并拧紧螺丝，步骤与STEP1相反。
     :align: center
     :scale: 100%
     :name: _hd-step5
+    :class: preserve-aspect-ratio 
 
     图 5
 
@@ -79,5 +97,5 @@ STEP5：如图5，安装钣金并拧紧螺丝，步骤与STEP1相反。
     <video width="640" height="360" controls>
         <!-- 替换为视频在你电脑中的绝对路径 -->
         <source src="/home/xense/projects/doc/xensesdk/docs/docs/source/Hardware/images/shiping_h264.mp4" type="video/mp4">
-        视频无法播放，请下载：<a href="/home/xense/.../shiping_h264.mp4">点击下载</a>
+        视频无法播放，请下载：<a href="/home/xense/projects/doc/xensesdk/docs/docs/source/Hardware/images/shiping_h264.mp4">点击下载</a>
     </video>

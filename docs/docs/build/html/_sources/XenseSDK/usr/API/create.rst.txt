@@ -98,5 +98,5 @@ create方法
 .. admonition:: tips
     :class: tip
 
-        该方法的 mac_address 参数兼容设备 IP 地址，如何获取设备 MAC 可参考
-        `EzROS <../../../../GripperSDK/user/EzROS/ezros_example.html>`_。
+        示例 4中的 mac_address 参数兼容设备 IP 地址，如何获取设备 MAC 可参考
+        `EzROS </home/xense/projects/doc/xensesdk/docs/docs/source//GripperSDK/user/EzROS/ezros_example.html>`_。
