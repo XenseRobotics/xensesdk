@@ -32,9 +32,9 @@ html_theme_options = {
     'navigation_depth': 4
 }
 html_static_path = ['_static']
-html_extra_path = [
-    'Hardware/images'  
-]
+# html_extra_path = [
+#     'Hardware/images'  
+# ]
 
 html_extra_path = ['Hardware/images']
 
