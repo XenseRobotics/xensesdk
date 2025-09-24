@@ -17,10 +17,6 @@
 
         * - :ref:`selectSensorInfo 方法 <tagselect_sensor_info_method>`
 
-        * - :ref:`startSaveSensorInfo 方法 <tagstart_save_sensor_info_method>`
-
-        * - :ref:`stopSaveSensorInfo 方法 <tagstop_save_sensor_info_method>`
-
         * - :ref:`getCameraID 方法 <tagget_camera_id_method>`
 
         * - :ref:`resetReferenceImage 方法 <tagreset_reference_image_method>`
@@ -44,8 +40,6 @@
 
     API/create
     API/selectSensorInfo
-    API/startSaveSensorInfo
-    API/stopSaveSensorInfo
     API/getCameraID
     API/resetReferenceImage
     API/release
