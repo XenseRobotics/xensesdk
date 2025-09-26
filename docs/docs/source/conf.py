@@ -32,9 +32,13 @@ html_theme_options = {
     'navigation_depth': 4
 }
 html_static_path = ['_static']
-# html_extra_path = [
-#     'Hardware/images'  
-# ]
+
+# 在 HTML 输出中添加自定义 HTTP 头
+html_extra_headers = [
+    '<FilesMatch "\.stp$">',
+    '  Header set Content-Disposition "attachment"',
+    '</FilesMatch>',
+]
 
 html_extra_path = ['Hardware/images']
 
