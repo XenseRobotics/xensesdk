@@ -27,7 +27,20 @@ conda activate xenseenv
 
 ---
 
-### 步骤 2: 安装 CUDA 工具包和 cuDNN
+### 步骤 2: 安装 Xense SDK 包
+
+将 SDK 包安装到您的环境中：
+```bash
+pip install xensesdk 
+```
+或:
+```bash
+pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl # (对于定制软件包)
+```
+
+---
+
+### 步骤 3: 安装 CUDA 工具包和 cuDNN
 
 SDK 需要 onnxruntime_gpu， 以及配套的cudnn、 cudatoolkit。根据您的环境，选择以下安装方式：
 
@@ -56,19 +69,6 @@ SDK 需要 onnxruntime_gpu， 以及配套的cudnn、 cudatoolkit。根据您的
    ```bash
    conda install cudnn==8.9.2.26 cudatoolkit==11.8.0
    ```
-
----
-
-### 步骤 3: 安装 Xense SDK 包
-
-将 SDK 包安装到您的环境中：
-```bash
-pip install xensesdk 
-```
-或:
-```bash
-pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl # (对于定制软件包)
-```
 
 ---
 
@@ -283,6 +283,7 @@ Could not load the Qt platform plugin "xcb" in "" even though it was found. This
 sudo apt-get update
 sudo apt-get install libxcb-cursor0
 ```
+
 
 
 
