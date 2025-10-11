@@ -29,16 +29,23 @@ conda activate xenseenv
 
 ### 步骤 2: 安装 CUDA 工具包和 cuDNN
 
-SDK 支持 **CUDA Toolkit 11.8** 和 **cuDNN 8.9.2.26**。根据您的环境，选择以下安装方式：
+SDK 需要 onnxruntime_gpu， 以及配套的cudnn、 cudatoolkit。根据您的环境，选择以下安装方式：
 
-#### 选项 1: 从本地 Conda 环境包安装
+#### 选项 1: onnxruntime_gpu>1.18.0
 
-```bash
-conda install --use-local cudatoolkit-11.8.0-hd77b12b_0.conda
-conda install --use-local cudnn-8.9.2.26-cuda11_0.conda
-```
+1. 安装所需版本
+   ```bash
+   # 这个例子使用cuda12.9
+   conda install nvidia/label/cuda-12.9.0::cuda-toolkit nvidia::cudnn
+   ```
+2. 将cuda的路径加入环境变量 ‘LD_LIBRARY_PATH‘
+   ```bash
+   # linux里可以运行如下命令
+   export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$CONDA_PREFIX/lib64 #（临时）
+   mkdir -p $CONDA_PREFIX/etc/conda/activate.d && echo 'export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$CONDA_PREFIX/lib64:$LD_LIBRARY_PATH' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh #（永久）
+   ```
 
-#### 选项 2: 通过 Conda 直接安装
+#### 选项 2: onnxruntime_gpu==1.18.0
 
 1. 搜索所需版本：
    ```bash
@@ -276,4 +283,5 @@ Could not load the Qt platform plugin "xcb" in "" even though it was found. This
 sudo apt-get update
 sudo apt-get install libxcb-cursor0
 ```
+
 
