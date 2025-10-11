@@ -31,7 +31,7 @@ conda activate xenseenv
 
 将 SDK 包安装到您的环境中：
 ```bash
-pip install xensesdk 
+pip install xensesdk -i https://repo.huaweicloud.com/repository/pypi/simple/
 ```
 或:
 ```bash
@@ -283,6 +283,7 @@ Could not load the Qt platform plugin "xcb" in "" even though it was found. This
 sudo apt-get update
 sudo apt-get install libxcb-cursor0
 ```
+
 
 
 
