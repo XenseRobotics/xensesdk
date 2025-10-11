@@ -31,7 +31,7 @@ conda activate xenseenv
 
 SDK 需要 onnxruntime_gpu， 以及配套的cudnn、 cudatoolkit。根据您的环境，选择以下安装方式：
 
-#### 选项 1: onnxruntime_gpu>1.18.0
+#### 选项 1: onnxruntime_gpu>1.18.0 
 
 1. 安装所需版本
    ```bash
@@ -45,7 +45,7 @@ SDK 需要 onnxruntime_gpu， 以及配套的cudnn、 cudatoolkit。根据您的
    mkdir -p $CONDA_PREFIX/etc/conda/activate.d && echo 'export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$CONDA_PREFIX/lib64:$LD_LIBRARY_PATH' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh #（永久）
    ```
 
-#### 选项 2: onnxruntime_gpu==1.18.0
+#### 选项 2: onnxruntime_gpu==1.18.0 (50系列显卡不可用)
 
 1. 搜索所需版本：
    ```bash
@@ -283,5 +283,6 @@ Could not load the Qt platform plugin "xcb" in "" even though it was found. This
 sudo apt-get update
 sudo apt-get install libxcb-cursor0
 ```
+
 
 
