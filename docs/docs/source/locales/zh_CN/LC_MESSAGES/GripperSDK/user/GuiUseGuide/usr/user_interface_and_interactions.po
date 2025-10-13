@@ -1,0 +1,294 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:4
+#: dc8cea113f82413b9bfb910de656af71
+msgid "四、界面与交互"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:7
+#: 650c205234844b60b8e20da291817207
+msgid "1、 选择夹爪IP"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:9
+#: 0b8121aa881f42589bda60a920152410
+msgid "Gripper IP Selection Area"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:15
+#: cb72ca680f3c4405bf569afb822686ac
+msgid "图 1 夹爪IP选择区"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:17
+#: b471bfb88caa468bbd09b02b097e1f4a
+msgid "当前夹爪IP选择区的“更改”选项下，可选择在局域网内所有的夹爪IP，实现对不同IP夹爪的连接。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:21
+#: 24513696d4fd4e5abf61769748ddb1b5
+msgid "传感器状态提示"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:47
+#: a2e6e99d772a4d3cb20814ae54f37d9d
+msgid "|online_icon| :表示设备已上线"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:23
+#: b638e19b4511489bab8f654264c0405e
+msgid "Online Icon"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:49
+#: bd9d49d9cf564097b0ce489c95c62383
+msgid "|offline_icon| :表示设备已离线"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:29
+#: 00b3b239ce854991a9b68acfc1149f2f
+msgid "Offline Icon"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:51
+#: 833d372cfb67413db022731ba3d655e4
+msgid "|error_icon| :表示传感器异常，鼠标悬浮会显示异常信息（传感器config文件读取失败）。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:35
+#: 99ea3e465b64402497a323d1551ce4b6
+msgid "Error Icon"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:53
+#: 1669c69fafbf4e08b18807b1e15a2c41
+msgid "拔掉/插入夹爪后，需要点击 |resetup| ，重新连接扫描传感器。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:41
+#: 4a6c5c2689204eb1bcd0188e4066288e
+msgid "Rescan Icon"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:58
+#: bdf306c6b40241838658ab13f1d7bdd0
+msgid "触觉信息显示"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:60
+#: d0768cd047f74ecebc4283d2037424e6
+msgid "Tactile Information Display"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:66
+#: 21cfbbf88585460ca322bc9ea54cdb51
+msgid "图 2 触觉信息显示"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:70
+#: 0b4a51bbe05f4649a6f72716196a7a9e
+msgid "夹爪传感器可感知触觉并生成对应图像，同时能实时显示多维度的力数据，助力对夹爪的状态与受力情况进行精准监测和控制。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:78
+#: cd1626bf25f94ebda220c3dd0906bb02
+msgid ""
+"触觉图像信息失真时，或遇到传感器数据滞留时，在空载情况下点击正下方 |calibration_button| 校准按钮， "
+"可以重新校准传感器，以刷新显示。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:72
+#: e6f9880c403043358c4da70badc06d7a
+msgid "Calibration Button"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:84
+#: 79c5e0800ff94f81ae1949dce3f9747f
+msgid "2、 夹爪传感器配置区"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:86
+#: f773fac4ef384c98bd98407d41f0515b
+msgid "Gripper Configuration Area"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:92
+#: 8f444b69130e468fa771ba430d4c9f75
+msgid "图 3 夹爪配置区"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:119
+#: a11c2498c984419c8d07dc155ded4241
+msgid "|target| 移动目标位置：点击后传感器可移动到目标位置"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:94
+#: 8d37170b2e63483e85c3043fce8e9ac5
+msgid "Switch Target Position"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:121
+#: 75aa0772ab754272860234ac0338e153
+msgid "|vmax| 设置传感器最大速度：可以调节传感器移动的速度"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:100
+#: bd9c39657fb94f9dadf86e955dac81aa
+msgid "Set Maximum Speed"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:123
+#: 27371cd01ca646b6bbf616569c2d34c4
+msgid "|fmax| 设置传感器最大接触力：可以调节传感器与物体的接触力大小"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:106
+#: 7d7df02f07a440fb96457040abd7b866
+msgid "Set Maximum Contact Force"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:125
+#: 6f9aa9cc2e704da18bea9cc5f37ccdb8
+msgid "|set_color| 设置夹爪状态灯的颜色：点击颜色按钮，可以设置状态灯的颜色"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:112
+#: 7f43910b2ff84f1d9c2e03c992ae2380
+msgid "Set Status Light Color"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:130
+#: 395dabbf79a94f70a40e13152879b761
+msgid "3、 工具栏"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:132
+#: 03555fe17ddb4a67b213127793bb1812
+msgid "Toolbar"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:138
+#: 6b90c4ca804d4479b2fa6c1bc225a2a6
+msgid "图 4 工具栏"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:170
+#: e1a6b27cea344d42a48f33bd7c4b025f
+msgid "|theme_switch| 主题切换：点击可选择界面主题"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:140
+#: b2a9a869d7ac46f0bdddff0a49e91984
+msgid "Theme Switch Button"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:172
+#: 33029f5af35b44689b4f345e26d86f50
+msgid "|help| 帮助：打开帮助文档、常见问题解答"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:146
+#: 7ef35db25cd4479598cd44c7b75f0505
+msgid "Help Button"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:174
+#: 736214197c1a44e895c17d014593377a
+msgid "|about| 关于：展示应用信息"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:152
+#: d867c03f00f149d4b3e50cd0519f2d38
+msgid "About Button"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:176
+#: 3f95645bf5cc4ccbba651ccf028e45d6
+msgid "|minimization| 最小化：将应用最小化至后台"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:158
+#: 6c98fe5724944100bbe8afb702461379
+msgid "Minimize Button"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:178
+#: 44dd20c1a67d4ebebfda0bd95ab1154d
+msgid "|exit| 退出：关闭当前应用"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/user_interface_and_interactions.rst:164
+#: afe97a5e6f4c44b6a751e806a9589621
+msgid "Exit Button"
+msgstr ""
+
+#~ msgid "夹爪IP选择区"
+#~ msgstr ""
+
+#~ msgid "在线图标"
+#~ msgstr ""
+
+#~ msgid "离线图标"
+#~ msgstr ""
+
+#~ msgid "错误图标"
+#~ msgstr ""
+
+#~ msgid "重新扫描图标"
+#~ msgstr ""
+
+#~ msgid "校准按钮"
+#~ msgstr ""
+
+#~ msgid "夹爪配置区"
+#~ msgstr ""
+
+#~ msgid "切换目标位置"
+#~ msgstr ""
+
+#~ msgid "设置最大速度"
+#~ msgstr ""
+
+#~ msgid "设置最大接触力"
+#~ msgstr ""
+
+#~ msgid "设置状态灯颜色"
+#~ msgstr ""
+
+#~ msgid "工具栏"
+#~ msgstr ""
+
+#~ msgid "主题切换按钮"
+#~ msgstr ""
+
+#~ msgid "帮助按钮"
+#~ msgstr ""
+
+#~ msgid "关于按钮"
+#~ msgstr ""
+
+#~ msgid "最小化按钮"
+#~ msgstr ""
+
+#~ msgid "退出按钮"
+#~ msgstr ""
+

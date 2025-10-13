@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/Hardware/user/three_model.rst:4
+#: e94f8f739fc1459fa0d9e375acfafb75
+msgid "二、触觉传感器金属外壳三维模型"
+msgstr ""
+
+#: ../../source/Hardware/user/three_model.rst:7
+#: e32207f291d641b38d1c60be92eb9adf
+msgid "1、 WS传感器外部尺寸"
+msgstr ""
+
+#: ../../source/Hardware/user/three_model.rst:9
+#: ../../source/Hardware/user/three_model.rst:31
+#: ../../source/Hardware/user/three_model.rst:69
+#: ../../source/Hardware/user/three_model.rst:79
+#: fcaf99c40839417f909893a99e34cf23
+#: 1838644e8dab4514ae633cd3fbd5f19d
+#: 7d36dcd36f60443c81475c45b39b8cb7
+#: dff47a866d5443bc9f6168a3c4d014c2
+msgid "Software Initial Setup"
+msgstr ""
+
+#: ../../source/Hardware/user/three_model.rst:16
+#: a36792d5fe2b4ae7a10111758782e55b
+msgid "图 1"
+msgstr ""
+
+#: ../../source/Hardware/user/three_model.rst:38
+#: e0b5150f7a2a4665883452072097a714
+msgid "图 2"
+msgstr ""
+
+#: ../../source/Hardware/user/three_model.rst:67
+#: cdb951c80b6e43b783e9514ac329b25b
+msgid "2、 OS传感器外部尺寸"
+msgstr ""
+
+#: ../../source/Hardware/user/three_model.rst:76
+#: bb886f2db9094ef496823d08b5e8d06a
+msgid "图 3"
+msgstr ""
+
+#: ../../source/Hardware/user/three_model.rst:86
+#: e73aee51ad164506aa5e694fbf831702
+msgid "图 4"
+msgstr ""

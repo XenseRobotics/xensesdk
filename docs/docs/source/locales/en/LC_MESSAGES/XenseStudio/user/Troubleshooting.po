@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:4
+#: ad174d9bca9f4841afd957b20b601d64
+msgid "五、故障排查"
+msgstr "V. Troubleshooting"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:8
+#: 1751626e30514ff9ac41d3bec8d26294
+msgid "1、 初始化时打印"
+msgstr "1. Printing During Initialization"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:10
+#: ../../source/XenseStudio/user/Troubleshooting.rst:21
+#: ../../source/XenseStudio/user/Troubleshooting.rst:49
+#: 7ad1898a5a4149d6ab69716ba434e603 7c3cee4df132426885e3fac714be075c
+#: 94668741eaec48f9a8bf6ff7568c7707
+msgid "问题描述："
+msgstr "Problem Description:"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:12
+#: afffeb61e11a4b85938cf9141a21066b
+msgid "安装后的初次启动加载会比较慢"
+msgstr "The first startup and loading after installation will be relatively slow"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:14
+#: ../../source/XenseStudio/user/Troubleshooting.rst:35
+#: ../../source/XenseStudio/user/Troubleshooting.rst:61
+#: 406fca923da14b369e26e63437e0ab71 7514d7a6fd0d444a997b631fde7b2710
+#: e4be0ca80dd948c4b4372aa901a0ba07
+msgid "解决方案："
+msgstr "Solution:"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:16
+#: abe1f483634a46f6a7e8361a6c84b6e4
+msgid "初始化时，第一次需要加载所有组件并缓存，后续可正常使用"
+msgstr "During initialization, all components need to be loaded and cached for the first time; normal use is possible afterward"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:19
+#: e5ac9669785e4dcca195a6f0a5ed478f
+msgid "2、 显卡驱动"
+msgstr "2. Graphics Card Driver"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:23
+#: a9100eb092614edf90b37235341a3de4
+msgid "如果不插传感器能启动,但插传感器无法启动，且命令行有如下类似报错或输出"
+msgstr "The software can start without connecting the sensor, but fails to start when the sensor is connected, and the command line shows similar error reports or outputs as follows"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:25
+#: ../../source/XenseStudio/user/Troubleshooting.rst:51
+#: 1c85af64e6ca4f5eb28ab7b4fb4212b3 532275f1984e46108be9678740de4dc0
+msgid "命令行输出"
+msgstr "Command Line Output"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:37
+#: 42d3123db28240f98e854d8b98758d90
+msgid "大概率是显卡驱动问题, 先安装适配的显卡驱动 (如果显卡是nvidia显卡的话)检查如下命令是否正常输出,如果不正常的话，先安装适配的显卡驱动。"
+msgstr "It is most likely a graphics card driver issue. First, install a compatible graphics card driver (if the graphics card is an NVIDIA card). Check if the following command outputs normally; if not, install a compatible graphics card driver first."
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:41
+#: ../../source/XenseStudio/user/Troubleshooting.rst:63
+#: 02592ea1dbff4d359cfd62ae7fc23e26 4dcc496252c04e8580b191e4e12ccc31
+msgid "命令行输入"
+msgstr "Command Line Input"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:47
+#: 884249a816cb4ce7a51aa4c2c375705e
+msgid "3、 报错处理"
+msgstr "3. Error Handling"

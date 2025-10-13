@@ -37,18 +37,16 @@
     </style>
 
 
-.. raw:: html
-
-    <div class="step-title">步骤 1: 准备 Python 开发环境</div>
+.. rubric:: 步骤 1: 准备 Python 开发环境
+   :class: step-title
 
 .. container:: step-content
 
     GripperSDK 依赖 XenseSDK, 因此需要安装 Python 开发环境, 请参考 `XenseSDK <../../XenseSDK/usr/Installation.html>`_ Python开发环境准备。
 
 
-.. raw:: html
-
-    <div class="step-title">步骤 2: 安装 GripperSDK 包</div>
+.. rubric:: 步骤 2: 安装 GripperSDK 包
+   :class: step-title
 
 .. container:: step-content
 

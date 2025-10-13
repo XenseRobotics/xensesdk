@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/API/close_gripper.rst:4
+#: 805002299abb445782f468e827d70bea
+msgid "close_gripper 方法"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/close_gripper.rst:11
+#: bc998cf6122249cd95a2c689b48e2778
+msgid "关闭夹爪（将夹爪位置设置为关闭状态）。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/close_gripper.rst:13
+#: 31b0bd36a2e34fbd91b91fb0f6208865
+msgid "该方法通过调用 :meth:`~XenseGripper.set_position` 实现。"
+msgstr ""
+

@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/API/set_control_param.rst:5
+#: ec65a286a5dd494db9782fcec15cf991
+msgid "set_control_param方法"
+msgstr "set_control_param Method"
+
+#: ../../source/GripperSDK/user/API/set_control_param.rst:12
+#: 3dbe716c1c7e4e30b41fab1fcfb65c14
+msgid "设置 SAFE 模式下的控制器参数(PID 控制参数)。"
+msgstr "Set the controller parameters (PID control parameters) in SAFE mode."
+
+#: ../../source/GripperSDK/user/API/set_control_param.rst
+#: 4c5e64a12c5e43a7a2e92791fb41a105
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/GripperSDK/user/API/set_control_param.rst:14
+#: 0eefa897ffc34abfb15cc508bdb2901c
+msgid "目标力参数，可选参数。"
+msgstr "Target force parameter, optional parameter."
+
+#: ../../source/GripperSDK/user/API/set_control_param.rst:17
+#: 04b5e9622c1b4542a7c04a2cef90211e
+msgid "PID 控制器的比例系数(Kp), 可选参数。"
+msgstr "Proportional gain (Kp) of the PID controller, optional parameter."
+
+#: ../../source/GripperSDK/user/API/set_control_param.rst:20
+#: 276a3b195d8c4588b4fece21272b05e6
+msgid "PID 控制器的积分系(Ki), 可选参数。"
+msgstr "Integral gain (Ki) of the PID controller, optional parameter."
+
+#: ../../source/GripperSDK/user/API/set_control_param.rst:23
+#: 055ced0946d14dee9decb4fe93449a46
+msgid "PID 控制器的微分系数(Kd), 可选参数。"
+msgstr "Derivative gain (Kd) of the PID controller, optional parameter."

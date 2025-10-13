@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/XenseSDK/usr/methodList.rst:14
+#: ../../source/XenseSDK/usr/methodList.rst:36
+#: 
+#: a1f29f8d544d41b5846c8646bd040f7c
+msgid "API目录"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:5
+#: a7b83530eb2e4ea2977d99c4dd9192c0
+msgid "使用XenseSDK API"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:8
+#: 8105236164214eff945222c106bd6d3a
+msgid "本文件提供了用于处理传感器图像的各类方法，包含深度图生成、差异图计算、标记检测以及传感器数据的综合聚合。"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:16
+#: 6488632f045f4afab0b3823eaaa010ec
+msgid ":ref:`create 方法 <tagcreate_method>`"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:18
+#: 7f60902ccd6345489228796680febca1
+msgid ":ref:`selectSensorInfo 方法 <tagselect_sensor_info_method>`"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:20
+#: 3f330d82c1d74b6b8ba24e41f80a12a3
+msgid ":ref:`getCameraID 方法 <tagget_camera_id_method>`"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:22
+#: 343fcb96a58c4e51ad87643530a055c2
+msgid ":ref:`resetReferenceImage 方法 <tagreset_reference_image_method>`"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:24
+#: 0bd3a66f54f4458b9f370be201e66fb3
+msgid ":ref:`release 方法 <tagrelease_method>`"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:26
+#: e99ee64abea1403fbf908a84af40ec75
+msgid ":ref:`call_service 方法 <tag_call_service>`"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:28
+#: 5f55a66d94ce44ef825f3fdc8c600b6f
+msgid ":ref:`calibrateSensor 方法 <tag_calibrateSensor>`"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:30
+#: 44e395809e9443a4b6969c31058b7fec
+msgid ":ref:`scanSerialNumber 方法 <tag_scanSerialNumber>`"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:32
+#: 4ce7abedb6124796ae5f1daac5db9a93
+msgid ":ref:`createSolver 方法 <tag_createSolver>`"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/methodList.rst:34
+#: 01d577b2bbac49cca2997db5c52fccbd
+msgid ":ref:`exportRuntimeConfig 方法 <tag_exportRuntimeConfig>`"
+msgstr ""

@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/EzROS/EzROS.rst:17
+msgid "目录"
+msgstr "Table of Contents"
+
+#: ../../source/GripperSDK/user/EzROS/EzROS.rst:4
+#: ebeb31ff62ac45369dfcdcee3759aed6
+msgid "EzROS"
+msgstr "EzROS"
+
+#: ../../source/GripperSDK/user/EzROS/EzROS.rst:10
+#: 84d88c06550448399f1a0dc9625ef295
+msgid "命令行工具"
+msgstr "Command Line Tools"
+
+#: ../../source/GripperSDK/user/EzROS/EzROS.rst:11
+#: 7adb42dfcb6a42cd8bf90abdec3c9463
+msgid ":ref:`EzROS命令行工具的使用 <tag_ezros_example>`"
+msgstr ":ref:`Usage of EzROS Command Line Tool <tag_ezros_example>`"
+
+#: ../../source/GripperSDK/user/EzROS/EzROS.rst:12
+#: c45dac0c48f543a69578247b55e87b5d
+msgid ":ref:`查看EzROS服务信息 <tag_all_info>`"
+msgstr ":ref:`View EzROS Service Information <tag_all_info>`"
+
+#: ../../source/GripperSDK/user/EzROS/EzROS.rst:13
+#: d357f329af284c29b10a9ed60c248f65
+msgid ":ref:`监控话题 <tag_echo>`"
+msgstr ":ref:`Monitor Topic <tag_echo>`"
+
+#: ../../source/GripperSDK/user/EzROS/EzROS.rst:14
+#: b440491f5ffe4963a3e856ed5dd25f2b
+msgid ":ref:`调用服务 <tag_service>`"
+msgstr ":ref:`Call Service <tag_service>`"

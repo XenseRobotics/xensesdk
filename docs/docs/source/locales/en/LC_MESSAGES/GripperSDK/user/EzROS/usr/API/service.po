@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:4
+#: 6dc3152c99ee492da94068afcaa5e57d
+msgid "Service调用"
+msgstr "Service Call"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:8
+#: ee6d089e19a94e81a9af82171b1d99f9
+msgid "当要对特定Service服务调用时, 可使用如下命令："
+msgstr "When you need to call a specific Service, you can use the following commands:"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:11
+#: 7bdf3a27b0544543adda8f1be4464773
+msgid "调用Sensor服务"
+msgstr "Call Sensor Service"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:16
+#: e8e937560c95442ca3f4fff5b63b0eb7
+msgid "调用Gripper服务"
+msgstr "Call Gripper Service"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:21
+#: 45d5564bebe449d89ad87e114784b8d2
+msgid "以下为打印信息："
+msgstr "The following is the printed information:"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:24
+#: 1e363633b4ed4ab585515072a24f0042
+msgid "Sensor服务调用输出"
+msgstr "Sensor Service Call Output"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:47
+#: 372416222f414f08bbf154c39cb499d1
+msgid "Gripper服务调用输出"
+msgstr "Gripper Service Call Output"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:55
+#: 919acc5851584d95a3687eef7278a97e
+msgid "tips"
+msgstr "Tips"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:58
+#: c8c8ffcd32f94da091ae9bf93988ebde
+msgid "`service` 子命令，表明本次操作是调用某个服务；"
+msgstr "The `service` subcommand indicates that this operation is to call a specific service;"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:59
+#: 71631976071d49469a6489c053a0b0a6
+msgid "`--name/-n` 必选参数，指定要调用的 Service 名称；"
+msgstr "The `--name/-n` mandatory parameter specifies the name of the Service to be called;"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/service.rst:60
+#: 8c212a63ca144dd1a181b1a7835c7eef
+msgid "`--call/-c` 必须参数，指定要调用的服务动作及参数，格式为 “动作名:= 参数”。"
+msgstr "The `--call/-c` mandatory parameter specifies the service action and parameters to be called, in the format of \"action_name:= parameter\"."

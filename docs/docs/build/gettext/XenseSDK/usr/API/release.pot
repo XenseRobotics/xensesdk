@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/XenseSDK/usr/API/release.rst:4
+#: c6ce197306624f119382cd8a573a4d8a
+msgid "release 方法"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/API/release.rst:11
+#: 3155e82eabd241a2b4c522d04a340bc1
+msgid "释放资源，关闭传感器"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/API/release.rst:0
+#: cfad9ea344964bd480994b4eda41960a
+msgid "Returns"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/API/release.rst:13
+#: 3655e0e9c20247a68cdfe972b186c51b
+msgid "None"
+msgstr ""

@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/GripperSDK/GripperSDK.rst:68
+#: 
+msgid "目录"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:2
+#: 04b756f913894b2f85699c6c99164ffe
+msgid "GripperSDK"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:33
+#: 8e07c0c1227f431db2f86edfb7068fb0
+msgid "功能模块"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:34
+#: a94f8778f8a14023acbae8fb3097eb9a
+msgid "说明"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:35
+#: 3edae74b7d904149a1b323d95f52e5ae
+msgid "夹爪控制"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:36
+#: 912baecf5f4c448abc93fb45b921d06e
+msgid "支持以 200 Hz 频率接收夹爪数据，同时可对夹爪运动进行精准控制。"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:37
+#: 6c268151dacf4f4097b0df5177b2a52f
+msgid "传感器控制"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:38
+#: fd7b0414858e48a49eac1a74a55dfe1d
+msgid "提供传感器启动、关闭操作接口，支持读取传感器实时数据，满足不同场景下的数据采集需求。"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:39
+#: 0f968721a60c4d5bbb2619aaccf89183
+msgid "服务联网自启动"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:40
+#: 9ab59ec7c8724afab960fc389bb15fe1
+msgid "无论设备是直连电脑，还是通过交换机接入网络，实现 “即插即用” 。"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:41
+#: b1a0860bad11416896b3861368f333ee
+msgid "服务自动发现"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:42
+#: 2d7bb8ad9de642fba0e5a3224db12d56
+msgid "SDK 可自动扫描可连接的服务节点，简化人工配置流程，提升系统部署效率。"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:43
+#: 128933c21da64f9ebaf2fff4fa3ae1f1
+msgid "休眠模式"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:44
+#: ce1aee82efc74892a5040f829189a084
+msgid "若传感器 10 min 未被使用，自动关闭传感器以降低功耗，仅保留主服务节点持续运行，保障基础服务不中断。"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:45
+#: 994d981efe6242b19338e134c20bcf98
+msgid "CLI 调试工具"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:46
+#: 986c2bd8d71246c3b0334980d1717730
+msgid "通过 ``EzROS`` 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:58
+#: 3c866523e74e4734bc3a19e4c7b0bec8
+msgid ":ref:`硬件连接与网络配置 <tag_Gripperpre_configuration>`"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:60
+#: c3b921f5bd1b4a369ca773ccd1a31fc3
+msgid ":ref:`安装指南 <tag_Gripperinstallation>`"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:62
+#: 6e0ade5c07a24b96935c591cf3a1af7d
+msgid ":ref:`API文档 <tag_Grippermethodlist>`"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:64
+#: 4b765ecb8f4e4b1fae0fb3daed6f54ee
+msgid ":ref:`EzROS调试工具 <tag_ezros>`"
+msgstr ""
+
+#: ../../source/GripperSDK/GripperSDK.rst:66
+#: f73f60cd08394a14901cd043f75f04c4
+msgid ":ref:`Gui使用指南 <tag_guiUseGuide>`"
+msgstr ""

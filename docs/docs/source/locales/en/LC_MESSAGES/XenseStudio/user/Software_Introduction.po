@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:4
+#: fefbbdc186214ca08952e8bf0032acee
+msgid "一、软件简介"
+msgstr "I. Software Overview"
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:7
+#: 34058036f98246d59aebb56396821035
+msgid "1、兼容多种传感器：支持曲面传感器、平面传感器、指尖传感器，满足不同场景下的触觉感知需求。"
+msgstr "1、Multi-sensor Compatibility: Supports curved surface sensors, planar sensors, and fingertip sensors to meet tactile sensing needs in various scenarios."
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:9
+#: 3a0c042cdb3f48f8becac46db23ba124
+msgid "2、跨架构/跨平台支持：兼容x86和ARM架构，支持Linux和Windows操作系统，提供SDK，确保在不同硬件和软件环境下的无缝适配。"
+msgstr "2、 Cross-architecture/Cross-platform Support: Compatible with x86 and ARM architectures, supports Linux and Windows operating systems, and provides an SDK to ensure seamless adaptation in different hardware and software environments."
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:11
+#: 47f8edeffeac4c0b83ec1761e5a19353
+msgid "3、集成多模态感知算法：精准解算切向滑移、表面形貌和分布式六维力，为复杂触觉分析提供全面数据支持。"
+msgstr "3、 Integrated Multimodal Perception Algorithms: Accurately calculates tangential slip, surface topography, and distributed six-dimensional force, providing comprehensive data support for complex tactile analysis."
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:13
+#: 5501543ccbc54249a6b53069f3aa0a9f
+msgid "4、丰富可视化功能：提供三维、二维、数字孪生等多种可视化方式，帮助用户直观理解触觉数据。"
+msgstr "4、 Rich Visualization Functions: Offers multiple visualization methods such as 3D, 2D, and digital twin to help users intuitively understand tactile data."
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:15
+#: c7f1757611424f2f80fd1ac3de69638b
+msgid "5、数据采集和分析：支持录制传感信号，便于用户进行二次分析，挖掘数据的深层次价值。"
+msgstr "5、 Data Collection and Analysis: Supports recording of sensing signals, facilitating users to conduct secondary analysis and explore the in-depth value of data."

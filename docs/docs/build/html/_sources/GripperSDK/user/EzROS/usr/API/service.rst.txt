@@ -7,21 +7,26 @@ Service调用
 
     当要对特定Service服务调用时, 可使用如下命令：
 
-    .. tabs::
-        .. tab:: 调用Sensor服务
+    .. tab-set::
+
+        .. tab-item:: 调用Sensor服务
+
             .. code-block:: bash
 
                 ezros service -n OG000285 -c get_img
 
-        .. tab:: 调用Gripper服务
+        .. tab-item:: 调用Gripper服务
+
             .. code-block:: bash
 
                 ezros service -n gripper_d672f584b17a -c set_led_color:=255,0,0
 
     以下为打印信息：
 
-    .. tabs::
-        .. tab:: Sensor服务调用输出
+    .. tab-set::
+
+        .. tab-item:: Sensor服务调用输出
+
             .. code-block:: text
 
                 调用服务: OG000285
@@ -44,7 +49,8 @@ Service调用
                 [114  44  36]
                 [ 75  44  31]]]
 
-        .. tab:: Gripper服务调用输出
+        .. tab-item:: Gripper服务调用输出
+            
             .. code-block:: text
 
                 调用服务: gripper_d672f584b17a

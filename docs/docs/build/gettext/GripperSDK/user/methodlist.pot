@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/GripperSDK/user/methodlist.rst:23
+#: ../../source/GripperSDK/user/methodlist.rst:45
+#: 
+#: ec2c7a59f8bd4c4aba5368c17d88e775
+msgid "API目录"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:4
+#: b7f33bb5131845ce9e4df43755a4d709
+msgid "使用GripperSDK API"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:8
+#: 23d2cd54e06e46c69e4d5a5eb1c043b4
+msgid "在使用GripperSDK之前,请先确保:"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:12
+#: 02ea5873af6f47c6822e89e758f5ed2b
+msgid "请先确保夹爪正确连接PC,如未连接请参考 `GripperSDK <./pre_configuration.html>`_。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:17
+#: 66c046481c9145a9b0643e0bdb31001d
+msgid "GripperSDK更多使用方法请参考"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:25
+#: 7029817124574b58ab683416519aa90d
+msgid ":ref:`create 方法 <tag_Grippercreate_>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:27
+#: fc12a2c982634774a2b1b926957b22a0
+msgid ":ref:`set_position 方法 <tag_set_position_>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:29
+#: 86a3f699ae8d46c3836fa62f5049a0e5
+msgid ":ref:`open_gripper 方法 <tag_Gripper_open_gripper_>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:31
+#: 675e12c60f1f4470954739af0dec04ae
+msgid ":ref:`close_gripper 方法 <tag_Gripper_close_gripper_>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:33
+#: 5f7adbf7dd6847d6a78fc72e8a729657
+msgid ":ref:`get_gripper_status 方法 <tag_Gripper_get_gripper_status_>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:35
+#: ee2a37eaa77e449b9b6a3c1a2d030ee7
+msgid ":ref:`set_position_sync 方法 <tag_set_position_sync_>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:37
+#: 2c8bb479f86941c6bd563b7b8d0e5253
+msgid ":ref:`set_speed 方法 <tag_set_speed_>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:39
+#: 28eabcb2fb6b4e51b43a091fa3889771
+msgid ":ref:`set_control_param方法 <tag_set_control_param_>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:41
+#: 521f76a5a0ba4dcbb226b71a01e42047
+msgid ":ref:`set_led_color方法 <tag_set_led_color_>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/methodlist.rst:43
+#: 0b27c588fca54933af05c4d728efa923
+msgid ":ref:`mode方法 <tag_mode_>`"
+msgstr ""

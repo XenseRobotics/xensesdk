@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/GripperSDK/user/API/get_gripper_status.rst:4
+#: 8b4b53c5203d4634a613e2029b23acfa
+msgid "get_gripper_status 方法"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/get_gripper_status.rst:11
+#: 55869695268e40d088b35074a7781c08
+msgid "获取夹爪当前的状态信息（包括运行参数和设备状态），用于读取夹爪的实时工作数据，返回包含关键运行参数的字典，可用于监控夹爪的当前状态。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/get_gripper_status.rst:0
+#: c0aef36cbc4141b095bfbcb155f7d97c
+msgid "Returns"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/get_gripper_status.rst:13
+#: 82618876c1d941bdac5e7333b2321a60
+msgid "夹爪当前状态的字典，包含以下键值：  - ``position``: 当前位置 (单位: mm) - ``velocity``: 当前速度 (单位: mm/s) - ``force``: 当前输出力 (单位: N) - ``temperature``: 电机温度（单位：℃）"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/get_gripper_status.rst:0
+#: 013b58e5f7b34596ba0844b6d8d7ea69
+msgid "Return type"
+msgstr ""

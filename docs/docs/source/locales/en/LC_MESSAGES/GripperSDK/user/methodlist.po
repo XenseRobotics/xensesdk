@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/methodlist.rst:23
+#: ../../source/GripperSDK/user/methodlist.rst:45
+#: 2331ba9ce89f4490b294a41c94ff66fb
+msgid "API目录"
+msgstr "API Directory"
+
+#: ../../source/GripperSDK/user/methodlist.rst:4
+#: d57f3a3301074e18a95a99dd832c2ce5
+msgid "使用GripperSDK API"
+msgstr "Using GripperSDK API"
+
+#: ../../source/GripperSDK/user/methodlist.rst:8
+#: 1ff4bb33be5c42a2be00243ab31b2262
+msgid "在使用GripperSDK之前,请先确保:"
+msgstr "Before using GripperSDK, please ensure that:"
+
+#: ../../source/GripperSDK/user/methodlist.rst:12
+#: 83f0a357936e41f8a7a40f97d69a55ac
+msgid "请先确保夹爪正确连接PC,如未连接请参考 `GripperSDK <./pre_configuration.html>`_。"
+msgstr "Please ensure the gripper is correctly connected to the PC. If not connected, refer to `GripperSDK <./pre_configuration.html>`_."
+
+#: ../../source/GripperSDK/user/methodlist.rst:17
+#: 1a1388459d7f4175a05175706acda69f
+msgid "GripperSDK更多使用方法请参考"
+msgstr "For more usage methods of GripperSDK, please refer to"
+
+#: ../../source/GripperSDK/user/methodlist.rst:25
+#: 8271fc75686c46df949ac4e3b2ad8b40
+msgid ":ref:`create 方法 <tag_Grippercreate_>`"
+msgstr ":ref:`create Method <tag_Grippercreate_>`"
+
+#: ../../source/GripperSDK/user/methodlist.rst:27
+#: cd6f4ef06b8c478c930b7decb261d2c1
+msgid ":ref:`set_position 方法 <tag_set_position_>`"
+msgstr ":ref:`set_position Method <tag_set_position_>`"
+
+#: ../../source/GripperSDK/user/methodlist.rst:29
+#: d2e6dafc1ac8480fac1be02aa315a49f
+msgid ":ref:`open_gripper 方法 <tag_Gripper_open_gripper_>`"
+msgstr ":ref:`open_gripper Method <tag_Gripper_open_gripper_>`"
+
+#: ../../source/GripperSDK/user/methodlist.rst:31
+#: 329185281c6b44f48e0f1638248dabe8
+msgid ":ref:`close_gripper 方法 <tag_Gripper_close_gripper_>`"
+msgstr ":ref:`close_gripper Method <tag_Gripper_close_gripper_>`"
+
+#: ../../source/GripperSDK/user/methodlist.rst:33
+#: 10f35bb344a44e068acafcdad729c7e4
+msgid ":ref:`get_gripper_status 方法 <tag_Gripper_get_gripper_status_>`"
+msgstr ":ref:`get_gripper_status Method <tag_Gripper_get_gripper_status_>`"
+
+#: ../../source/GripperSDK/user/methodlist.rst:35
+#: 47dac5a62c94411faecb60ab760c81cf
+msgid ":ref:`set_position_sync 方法 <tag_set_position_sync_>`"
+msgstr ":ref:`set_position_sync Method <tag_set_position_sync_>`"
+
+#: ../../source/GripperSDK/user/methodlist.rst:37
+#: cd0e2309941b4812b9a3da6abab46e15
+msgid ":ref:`set_speed 方法 <tag_set_speed_>`"
+msgstr ":ref:`set_speed Method <tag_set_speed_>`"
+
+#: ../../source/GripperSDK/user/methodlist.rst:39
+#: 17a5399d12544cafa12165cc69df81bf
+msgid ":ref:`set_control_param方法 <tag_set_control_param_>`"
+msgstr ":ref:`set_control_param Method <tag_set_control_param_>`"
+
+#: ../../source/GripperSDK/user/methodlist.rst:41
+#: 3c1ea419c799482cb77b8ae446c8e2c9
+msgid ":ref:`set_led_color方法 <tag_set_led_color_>`"
+msgstr ":ref:`set_led_color Method <tag_set_led_color_>`"
+
+#: ../../source/GripperSDK/user/methodlist.rst:43
+#: 240f20d25257467dba3ade9bc74115f0
+msgid ":ref:`mode方法 <tag_mode_>`"
+msgstr ":ref:`mode Method <tag_mode_>`"
+

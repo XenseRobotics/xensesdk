@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:4
+#: c4a1008a753c4e2286a434eedc2f0f6a
+msgid "selectSensorInfo 方法"
+msgstr "selectSensorInfo Method"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:11
+#: 86a78b14ac8042538cdb08da3d6bca22
+msgid "获取指定类型的传感器数据，返回数量和顺序与输入参数一致。"
+msgstr "Obtain specified types of sensor data; the number and order of returns are consistent with the input parameters."
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst
+#: 9003e279f2e048e09774a2266630949a
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:13
+#: 052c42c139674389aef74577b030d200
+msgid "任意数量的 ``Sensor.OutputType`` 枚举，用于指定需要获取的数据类型。支持的枚举值及对应数据如下："
+msgstr "Any number of ``Sensor.OutputType`` enums, used to specify the types of data to obtain. The supported enum values and corresponding data are as follows:"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:16
+#: ae99f93c6c504b3caee7e27dd2f28ce2
+msgid "支持的数据类型及说明"
+msgstr "Supported Data Types and Descriptions"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:20
+#: 1f67967ec93842db89cc1e85e055e217
+msgid "枚举值"
+msgstr "Enum Value"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:21
+#: 8abe3e94c7a74fc2a2e4a65849377f2d
+msgid "数据类型"
+msgstr "Data Type"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:22
+#: c67723310373474b9197c0f76203f559
+msgid "说明"
+msgstr "Description"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:23
+#: f179614f20a94a5a856acfb28abf3c03
+msgid "``Sensor.OutputType.Rectify``"
+msgstr "``Sensor.OutputType.Rectify``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:24
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:27
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:30
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:33
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:36
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:39
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:42
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:45
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:48
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:51
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:54
+#: 3c9dedace32540c2841c2fa02114e32c 57e67b6a49a242ff97ca6de49181689e
+#: 766db9c1ac2c4e6ca23208d323cf2d4a 85a43fe21e6646f7bcdfa2a5740eabb6
+#: 9fe691a224a14c9dbc953c2c732809c8 a53f063a83b9488c820533b72ab24b81
+#: ac4d9e43e0324e5b98f19641806a8680 aeea52103e6b4852837e3cd148d9d43a
+#: ba4540fe543e4f289d144fce3a8f10b4 d2ec08b616114de5970805bc70025821
+#: ecffc99a41fb4c2c876fb24f106b7f18
+msgid "Optional[np.ndarray]"
+msgstr "Optional[np.ndarray]"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:25
+#: 4226021df44b499792965f64d9cc26e6
+msgid "校正图像,shape=(700, 400, 3),BGR 格式"
+msgstr "Rectified image, shape=(700, 400, 3), BGR format"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:26
+#: f78541fde5474eedbe9c0ee6b33f9e21
+msgid "``Sensor.OutputType.Difference``"
+msgstr "``Sensor.OutputType.Difference``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:28
+#: 174a6248b65549bc9aa7619e6bc73273
+msgid "差分图像,shape=(700, 400, 3),BGR 格式"
+msgstr "Difference image, shape=(700, 400, 3), BGR format"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:29
+#: 8f560edcc50d48b69b36e40859e67623
+msgid "``Sensor.OutputType.Depth``"
+msgstr "``Sensor.OutputType.Depth``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:31
+#: e1a90d1d17304514903cac20c7405b9e
+msgid "深度图像,shape=(700, 400)，单位为毫米(mm)"
+msgstr "Depth image, shape=(700, 400), unit in millimeters (mm)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:32
+#: 77158372e06b49e49eaafffcd8341944
+msgid "``Sensor.OutputType.Force``"
+msgstr "``Sensor.OutputType.Force``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:34
+#: 1afd471446c7478da6f0e9956ad02264
+msgid "三维力分布,shape=(35, 20, 3)"
+msgstr "3D force distribution, shape=(35, 20, 3)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:35
+#: 397db283d3234d29b5d473e86287ebf0
+msgid "``Sensor.OutputType.ForceNorm``"
+msgstr "``Sensor.OutputType.ForceNorm``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:37
+#: 2ae7136880834c31b491ff3f247a8704
+msgid "法向力分量,shape=(35, 20, 3)"
+msgstr "Normal force component, shape=(35, 20, 3)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:38
+#: b105b0529efb4b808749ede39726549e
+msgid "``Sensor.OutputType.ForceResultant``"
+msgstr "``Sensor.OutputType.ForceResultant``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:40
+#: 53c2ca5e718847b09f94e3aeb3d5a9d3
+msgid "六维合力,shape=(6,)"
+msgstr "6-dimensional resultant force, shape=(6,)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:41
+#: c925648047cd468a86a1bfd6233277f2
+msgid "``Sensor.OutputType.Marker2D``"
+msgstr "``Sensor.OutputType.Marker2D``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:43
+#: 1debd53bc3ed4cd8906fdf3a77989a95
+msgid "切向位移,shape=(35,20,2)"
+msgstr "Tangential displacement, shape=(35, 20, 2)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:44
+#: 3506ea3431754678a1fdba67f5b0bd6f
+msgid "``Sensor.OutputType.Mesh3D``"
+msgstr "``Sensor.OutputType.Mesh3D``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:46
+#: aebefbb74b8545e9863387ab422e7d35
+msgid "当前帧 3D 网格,shape=(35, 20, 3)"
+msgstr "Current frame 3D mesh, shape=(35, 20, 3)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:47
+#: d7f25f08de9a4e1486fbc31857cb110b
+msgid "``Sensor.OutputType.Mesh3DInit``"
+msgstr "``Sensor.OutputType.Mesh3DInit``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:49
+#: 76750108a6514aeba47ac3c1cd393651
+msgid "初始 3D 网格,shape=(35, 20, 3)"
+msgstr "Initial 3D mesh, shape=(35, 20, 3)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:50
+#: 16e3fc091ddc41db80d406d096892fdc
+msgid "``Sensor.OutputType.Mesh3DFlow``"
+msgstr "``Sensor.OutputType.Mesh3DFlow``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:52
+#: b05ff09eaac8466b89721face0413d48
+msgid "网格形变向量，shape=(35, 20, 3)"
+msgstr "Mesh deformation vector, shape=(35, 20, 3)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:53
+#: e437790378354a0484420666a0c50bca
+msgid "``Sensor.OutputType.TimeStamp``"
+msgstr "``Sensor.OutputType.TimeStamp``"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:55
+#: 13896931bcef4695988f3713d0b095cb
+msgid "传感器时间戳，shape=(35, 20, 3)"
+msgstr "Sensor timestamp, shape=(35, 20, 3)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst
+#: 84ad9fbfed4f47ee8a289b2324447b87
+msgid "Returns"
+msgstr "Returns"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:57
+#: 9095d3fedf46476fb64f32d2b7429750
+msgid "所请求的传感器数据，返回数量和顺序与输入参数一致。"
+msgstr "The requested sensor data; the number and order of returns are consistent with the input parameters."
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst
+#: d5c072a1284245a3a9aee3463138ad4d
+msgid "Return type"
+msgstr "Return type"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:58
+#: ca336a1ddd6d41b894e7975f676219b8
+msgid "与输入参数对应的 ``np.ndarray`` 或 ``None`` (数据未获取到时)"
+msgstr "``np.ndarray`` or ``None`` corresponding to the input parameters (when data is not obtained)"
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:62
+#: c79702e743c84efa8ad728015ffad6cd
+msgid "如果需要同时获取多种类型的数据，请按照例程中的形式用同一次函数调用获取，这样可以保证所有数据来自于同一帧，并且计算速度是最优化的"
+msgstr "If you need to obtain multiple types of data at the same time, use a single function call in the form shown in the routine. This ensures all data comes from the same frame and the calculation speed is optimized."
+
+#: ../../source/XenseSDK/usr/API/selectSensorInfo.rst:66
+#: 0c9091576c98463fa0bda5962f7bb2f8
+msgid "示例代码"
+msgstr "Example Code"

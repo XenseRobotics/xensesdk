@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/XenseSDK/XenseSDK.rst:18
+#: 
+msgid "目录"
+msgstr ""
+
+#: ../../source/XenseSDK/XenseSDK.rst:2
+#: edd9c3e2abb54cbc9fb52dd39a158667
+msgid "XenseSDK"
+msgstr ""
+
+#: ../../source/XenseSDK/XenseSDK.rst:8
+#: d92632516ff74ac098ca4ea357ce603e
+msgid "主目录"
+msgstr ""
+
+#: ../../source/XenseSDK/XenseSDK.rst:10
+#: de72c634ca4c4248a740b9d2acd05514
+msgid ":ref:`简介 <tag_xensesdkintroduction>`"
+msgstr ""
+
+#: ../../source/XenseSDK/XenseSDK.rst:12
+#: cd7d87a418ff417088f7c9e7ed8b5d70
+msgid ":ref:`安装指南 <tag_xensesdkinstallation>`"
+msgstr ""
+
+#: ../../source/XenseSDK/XenseSDK.rst:14
+#: a46fafcf9a514bfeab69d392840faf1a
+msgid ":ref:`API文档 <tag_xensesdkmethodlist>`"
+msgstr ""
+
+#: ../../source/XenseSDK/XenseSDK.rst:16
+#: 01af8cbcb7094dc9a5925c18de100ea9
+msgid ":ref:`代码示例 <tag_repo_example>`"
+msgstr ""

@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst:4
+#: 61cbb5ddb7624d8ca8945b0508e6057e
+msgid "call_service 方法"
+msgstr "call_service Method"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst:10
+#: 6ae06e3b25ae4e7392e56fa052a2fd84
+msgid "调用算力板上的服务。"
+msgstr "Call the service on the computing board."
+
+#: ../../source/XenseSDK/usr/API/call_service.rst
+#: 10cbf19d14e34f5f8d5094778c888abb
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst:12
+#: af2ab4a24a33454588929e08179ab47e
+msgid "算力板 IP 地址，例如: ``192.168.99.2``"
+msgstr "IP address of the computing board, e.g.: ``192.168.99.2``"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst:14
+#: a88f0b98d5e74cb0bcc96a2112fc250e
+msgid "服务名称"
+msgstr "Service name"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst:16
+#: f7be05debc2844a6915a0c12ba7f0550
+msgid "服务支持的 action 名称"
+msgstr "Action name supported by the service"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst:18
+#: b0d84cb0885649d38e9c39ec974edbdd
+msgid "传递给服务的可变参数"
+msgstr "Variable parameters passed to the service"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst:19
+#: 1d867dd40ab64e4eb242dbd860ad422d
+msgid "传递给服务的关键字参数"
+msgstr "Keyword parameters passed to the service"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst
+#: 313157d135e34e82bf233561926aea04 bf570b5183d548449ca5ee83929f62c2
+msgid "Returns"
+msgstr "Returns"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst:20
+#: 3d06b9efafca4aeabc52297b96b7afd1
+msgid "包含调用结果的字典"
+msgstr "A dictionary containing the call result"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst
+#: 211181776b86482aa01fea45a47009b6
+msgid "Return type"
+msgstr "Return type"
+
+#: ../../source/XenseSDK/usr/API/call_service.rst:22
+#: 8282b8e811764f33b372067043383d57
+#, python-brace-format
+msgid ""
+"字典结构为: ``{\"success\": True, \"ret\": ret}``，其中： - ``success``: "
+"布尔值，表示调用是否成功 - ``ret``: 服务返回的具体结果数据"
+msgstr ""
+"The dictionary structure is: ``{\"success\": True, \"ret\": ret}``, where: - ``success``: "
+"Boolean value indicating whether the call is successful - ``ret``: Specific result data returned by the service"

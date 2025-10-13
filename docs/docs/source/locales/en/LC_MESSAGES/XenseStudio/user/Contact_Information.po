@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:4
+#: f89a2f2bd84649a88de9ce0b8f80a4b0
+msgid "六、联系方式"
+msgstr "VI. Contact Information"
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:7
+#: 514213b2f40c461ba4d8fd41c495b1da
+msgid "1、 技术支持信息"
+msgstr "1. Technical Support Information"
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:9
+#: fbda3df33cdb411f9e945056d5fe186a
+msgid "如果您在使用Xense Studio过程中遇到任何技术问题或需要获得帮助，请通过以下方式与我们的技术支持团队联系："
+msgstr "If you encounter any technical issues or need assistance while using Xense Studio, please contact our technical support team through the following methods:"
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:11
+#: de8c3d45e3ae4895823331cb5ec25707
+msgid "服务时间：周一至周五 9:00 - 18:00。"
+msgstr "Service Hours: Monday to Friday, 9:00 - 18:00."
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:13
+#: 9c9c68d177024d68b73c4dd2f16bc409
+msgid "电子邮件：contactus@xenserobotics.com。"
+msgstr "Email: contactus@xenserobotics.com."
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:15
+#: 25035aa1a97142569649dde3faa54920
+msgid "在线支持：访问我们的客服支持页面，获取在线聊天或提交支持请求的选项。"
+msgstr "Online Support: Visit our customer service support page to access options for online chat or submitting a support request."
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:17
+#: a48e00fa2e504b2ca26609326c4f93b1
+msgid "用户文档：请查看我们的用户手册，以获取详细的故障排除指南和使用技巧。"
+msgstr "User Documentation: Please refer to our user manual for detailed troubleshooting guides and usage tips."
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:20
+#: 41b89b08349248f4922f71a93de90f38
+msgid "2、 反馈渠道"
+msgstr "2. Feedback Channels"
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:21
+#: 9ac0d074589c45929f3e6a3cc06f59f6
+msgid "我们非常重视用户的反馈，您的意见将帮助我们不断改进Xense Studio。您可以通过电子邮件向我们提供反馈："
+msgstr "We highly value user feedback, and your opinions will help us continuously improve Xense Studio. You can provide feedback to us via email:"
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:23
+#: 7bd8730bf1b24763a13bd054388f2974
+msgid ""
+"请发送您的反馈至 contactus@xenserobotics.com，确保在邮件标题中注明“反馈”字样，以便我们迅速处理。 "
+"感谢您对千觉机器人及Xense Studio的支持和关注，我们期待与您保持联系！"
+msgstr ""
+"Please send your feedback to contactus@xenserobotics.com, and ensure that you include the word \"Feedback\" in the email subject line for us to process it promptly. "
+"Thank you for your support and attention to Qianjue Robotics and Xense Studio; we look forward to staying in touch with you!"

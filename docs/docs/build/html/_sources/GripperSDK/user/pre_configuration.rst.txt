@@ -40,9 +40,8 @@
     </style>
 
 
-.. raw:: html
-
-    <div class="step-title">步骤 1: 连接夹爪设备电源</div>
+.. rubric:: 步骤 1: 连接夹爪设备电源
+   :class: step-title  
 
 .. container:: step-content
 
@@ -50,22 +49,19 @@
     2. 等待夹爪完成初始化，观察到状态灯先闪烁后常亮。
 
 
-.. raw:: html
-
-    <div class="step-title">步骤 2: 连接网络</div>
+.. rubric:: 步骤 2: 连接网络
+   :class: step-title
 
 .. container:: step-content
 
-    .. raw:: html
-
-        <div class="method-title">方法一: 使用交换机</div>
+    .. rubric:: 方法一: 使用交换机
+       :class: method-title  
 
     将夹爪与计算机分别接入交换机的不同网口并确保网络通路, 此时夹爪的IP地址使用 ``dhcp`` 自动获取，后续需利用 `ezros <./EzROS/usr/ezros_example.html>`_ 进行扫描。
 
 
-    .. raw:: html
-
-        <div class="method-title">方法二: 直连电脑网口</div>
+    .. rubric:: 方法二: 直连电脑网口
+       :class: method-title
 
     此时夹爪为静态 IP ``192.168.99.2``，电脑端需要在和夹爪同一网段内设置自身 IP(打开网络设置 -> 有线设置 -> IPv4)。
     设置参考如下:
@@ -98,9 +94,9 @@
 
             setup_multi_net_interface()
 
-.. raw:: html
 
-    <div class="step-title">步骤 3: 测试网络连通性</div>
+.. rubric:: 步骤 3: 测试网络连通性
+   :class: step-title
 
 .. container:: step-content
 
@@ -113,13 +109,13 @@
 
     3. 结果判断:
    
-        .. tabs::
+        .. tab-set::
 
-            .. tab:: 网络连通成功
+            .. tab-item:: 网络连通成功
                 
                 若显示 **"Reply from 192.168.99.2"** 等类似信息，可直接继续后续操作。
 
-            .. tab:: 连接超时
+            .. tab-item:: 连接超时
 
                 若显示 **"Request timed out"**，请依次排查以下项：
 

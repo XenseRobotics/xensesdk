@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/API/set_position.rst:4
+#: 6617491a4d614376a457d0d6a3469dd4
+msgid "set_position方法"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_position.rst:11
+#: d0e3327461aa473d85c903fc25f2e600
+msgid "设置夹爪的目标位置。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_position.rst
+#: d05dce376273445b8e083b5e5aea1450
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_position.rst:13
+#: 676124dc0f4641c281a8f4473b49dc75
+msgid "夹爪的目标位置，单位为毫米(mm)。 必须在 (0, 85) 范围内。 85 mm 表示完全打开, 0 mm 表示完全闭合。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_position.rst:18
+#: 082a3d2eb6014d3ba5180311543da3b4
+msgid "最大运动速度，单位为毫米/秒(mm/s)。 必须在 (0, 350) 范围内。 默认值为 80 mm/s。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_position.rst:23
+#: 60e8c311970e4a5aa466b8811143337e
+msgid "最大输出力，单位为牛顿(N)。 必须在 (0, 60) 范围内。 默认值为 27 N。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_position.rst
+#: 6088b77ab97b41c6bd21ec69cdf767fb
+msgid "Raises"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_position.rst:28
+#: fb1230f146c94ef8bf6496e295ddda85
+msgid "当任何输入参数超出其允许的物理限制范围时触发。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_position.rst:32
+#: 9415d629db834656a03abc0f1fa9313e
+msgid "示例代码"
+msgstr ""
+

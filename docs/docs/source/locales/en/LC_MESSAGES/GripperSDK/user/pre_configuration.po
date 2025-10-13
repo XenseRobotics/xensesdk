@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:4
+#: 7054146a086845b8be9833cc452253b5
+msgid "硬件连接与网络配置"
+msgstr "Hardware Connection and Network Configuration"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:6
+#: 83c538787c004d6db88c273140ac0038
+msgid "将服务器端与上位机连接于同一局域网内，使得二者可以进行通信。"
+msgstr "Connect the server and the host computer to the same local area network (LAN) to enable communication between them."
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:45
+msgid "步骤 1: 连接夹爪设备电源"
+msgstr "Step1: Connect the gripper device to power"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:49
+#: 4506d9c7ab114ce094f641a9e354324a
+msgid "将夹爪设备的电源适配器插入市电插座。"
+msgstr "Plug the power adapter of the gripper device into a mains power socket."
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:50
+#: fef0a8b910d346c58fd852d8f45c9bf8
+msgid "等待夹爪完成初始化，观察到状态灯先闪烁后常亮。"
+msgstr "Wait for the gripper to complete initialization, and observe that the status light first flashes and then stays on steadily."
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:55
+msgid "步骤 2: 连接网络"
+msgstr "Step 2: Connect to the network"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:61
+msgid "方法一: 使用交换机"
+msgstr "Method 1: Use a switch"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:63
+#: 22e32a165e2e469f86646a0af70bed7a
+msgid ""
+"将夹爪与计算机分别接入交换机的不同网口并确保网络通路, 此时夹爪的IP地址使用 ``dhcp`` 自动获取，后续需利用 `ezros "
+"<./EzROS/usr/ezros_example.html>`_ 进行扫描。"
+msgstr ""
+"Connect the gripper and the computer to different network ports of the switch respectively and ensure network connectivity. At this time, the gripper's IP address is automatically obtained using ``dhcp``; later, you need to use `ezros <./EzROS/usr/ezros_example.html>`_ for scanning."
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:68
+msgid "方法二: 直连电脑网口"
+msgstr "Method 2: Directly connect to the computer's network port"
+
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:70
+#: 38da8ed224184793b6224e296c2942d1
+msgid ""
+"此时夹爪为静态 IP ``192.168.99.2``，电脑端需要在和夹爪同一网段内设置自身 IP(打开网络设置 -> 有线设置 -> "
+"IPv4)。 设置参考如下:"
+msgstr ""
+"At this time, the gripper uses a static IP ``192.168.99.2``. The computer needs to set its own IP in the same network segment as the gripper (open Network Settings -> Wired Settings -> IPv4). The reference settings are as follows:"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:77
+#: 3e9ab17cda4f4374a042369f484d0d09
+msgid "参数项"
+msgstr "Parameter Item"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:78
+#: f3efeda657b642a59e652f55a1c558ea
+msgid "示例/固定值"
+msgstr "Example/Fixed Value"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:79
+#: cee68b4ea47e4b1883ddb04e7e9d65f6
+msgid "配置说明"
+msgstr "Configuration Description"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:81
+#: 3d361a3e3baf449c8f12e675bd77dd31
+msgid "IP 地址"
+msgstr "IP Address"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:82
+#: 0b5d3d276ea84f1bb157599e07814152
+msgid "``192.168.99.10``"
+msgstr "``192.168.99.10``"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:83
+#: ab07db6463d24d5abd9eb5207347f2ce
+msgid "格式为 ``192.168.99.X``, (x的取值范围为 1-254, 避开夹爪 IP)"
+msgstr "Format: ``192.168.99.X`` (X ranges from 1 to 254, excluding the gripper's IP)"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:84
+#: 36ea0b6c8cf442eda260683d821b2227
+msgid "子网掩码"
+msgstr "Subnet Mask"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:85
+#: f1829229737948a998197461245ba986
+msgid "``255.255.255.0``"
+msgstr "``255.255.255.0``"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:86
+#: fc1c6b89ab88431bbc6f168edd1c3fc1
+msgid "固定配置，无需变动"
+msgstr "Fixed configuration, no changes needed"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:88
+#: c647da42b383421b9bf90760a06704a4
+msgid "使用以太网线将PC的以太网接口与夹爪设备的网口直接连接, 确保PC端网线接口牢固插入。"
+msgstr "Use an Ethernet cable to directly connect the Ethernet port of the PC to the network port of the gripper device, and ensure the Ethernet cable is firmly plugged into the PC's port."
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:90
+#: cad42ef63d9f4fdb9803af86692bfc07
+msgid "tips"
+msgstr "Tips"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:93
+#: 62f4af70af9b4f66ac9854154d86afd3
+msgid "在使用sdk时，如果上位机既有线连接了夹爪，又连接了wifi，请在程序开头配置多网卡发现："
+msgstr "When using the SDK, if the host computer is both wired to the gripper and connected to WiFi, configure multi-network card discovery at the beginning of the program:"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:103
+msgid "步骤 3: 测试网络连通性"
+msgstr "Step 3: Test network connectivity"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:107
+#: 975bc6cd19994dfa80e0d742df959388
+msgid "打开PC的命令提示符 (Windows系统: 按下 ``Win+R``，输入 ``cmd`` 后回车; Linux: 打开终端)。"
+msgstr "Open the PC's command prompt (Windows: press ``Win+R``, enter ``cmd`` and press Enter; Linux: open the terminal)."
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:108
+#: e36c98166cc141d4a370f0d80320efdd
+msgid "在命令行中输入以下命令并回车："
+msgstr "Enter the following command in the command line and press Enter:"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:114
+#: 9f1b3091b467438e8d2544091616aa47
+msgid "结果判断:"
+msgstr "Result Judgment:"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:118
+#: 6b2a4b4acb264d0b887a6024ff35bb6f
+msgid "网络连通成功"
+msgstr "Network Connection Successful"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:120
+#: bbcd99e178d045b8b148d6367b06dbe3
+msgid "若显示 **\"Reply from 192.168.99.2\"** 等类似信息，可直接继续后续操作。"
+msgstr "If a message similar to **\"Reply from 192.168.99.2\"** is displayed, you can directly proceed with the subsequent operations."
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:122
+#: 8022a5c8d1e64462a8aa4fee685f7a2a
+msgid "连接超时"
+msgstr "Connection Timeout"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:124
+#: a487ecf786fd44f6b8aeabe916be7c0d
+msgid "若显示 **\"Request timed out\"**，请依次排查以下项："
+msgstr "If **\"Request timed out\"** is displayed, troubleshoot the following items in order:"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:126
+#: 5d91bfa38b2744a6b40a99d5a95ed877
+msgid "以太网IP配置是否正确 (重新核对步骤 2)"
+msgstr "Whether the Ethernet IP configuration is correct (recheck Step 2)"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:127
+#: d9534918d4a846229d3a5cc944891873
+msgid "以太网线是否松动或损坏"
+msgstr "Whether the Ethernet cable is loose or damaged"
+
+#: ../../source/GripperSDK/user/pre_configuration.rst:128
+#: 836dd1cac0ea4a95a2652add3f212ad9
+msgid "夹爪设备是否已完成初始化（状态灯是否常亮）"
+msgstr "Whether the gripper device has completed initialization (whether the status light is on steadily)"
+

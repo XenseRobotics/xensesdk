@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/API/mode.rst:4 fe6f7e77b5814329972b7957af9462f1
+msgid "mode 方法"
+msgstr "mode Method"
+
+#: ../../source/GripperSDK/user/API/mode.rst:6 cd98ea7e610b46e49b200e9a470f39a2
+msgid ""
+"XenseGripper 支持三种控制模式，可通过 ``mode`` 方法（上下文管理器）或 "
+"``enable_mode``/``disable_mode`` 方法切换："
+msgstr ""
+"XenseGripper supports three control modes, which can be switched via the ``mode`` method (context manager) or the "
+"``enable_mode``/``disable_mode`` methods:"
+
+#: ../../source/GripperSDK/user/API/mode.rst:8 0a7156d9523e4e8eb5f460f88daaeef6
+msgid "**POSITION**: 位置控制模式 (默认)，精确控制夹爪到达指定位置"
+msgstr "**POSITION**: Position control mode (default), precisely controls the gripper to reach the specified position"
+
+#: ../../source/GripperSDK/user/API/mode.rst:9 b55840fcaafa4e5387a0efe9826177e0
+msgid "**SPEED**: 速度控制模式，按设定速度驱动夹爪运动"
+msgstr "**SPEED**: Speed control mode, drives the gripper to move at the set speed"
+
+#: ../../source/GripperSDK/user/API/mode.rst:10
+#: 829aaec752274c56b3e4ed5cb7d468e7
+msgid "**SAFE**: 安全控制模式 (需要传感器)，结合力反馈实现安全操作"
+msgstr "**SAFE**: Safe control mode (sensor required), realizes safe operation with force feedback"
+
+#: ../../source/GripperSDK/user/API/mode.rst:18
+#: 332904162f2b4ccf86966cbd50114c71
+msgid ""
+"上下文管理器，用于临时切换夹爪控制模式，退出上下文时自动恢复原模式（推荐使用）。 通过 with "
+"语句使用该方法，可确保模式在代码块执行完毕后自动重置，避免模式残留导致的异常。"
+msgstr ""
+"A context manager used to temporarily switch the gripper control mode; the original mode is automatically restored when exiting the context (recommended). Use this method with the with "
+"statement to ensure the mode is automatically reset after the code block is executed, avoiding exceptions caused by residual modes."
+
+#: ../../source/GripperSDK/user/API/mode.rst 8cf2c877b7e8469e8fb2ab6102f7a72a
+#: e9b8cc495e1940c382242ca7005975b0
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/GripperSDK/user/API/mode.rst:21
+#: 08a902936fd54b2fb8cbb166e597831a
+msgid ""
+"控制模式枚举值 ``XenseGripper.ControlMode.POSITION``: 位置控制模式 "
+"``XenseGripper.ControlMode.SPEED``: 速度控制模式 "
+"``XenseGripper.ControlMode.SAFE``: 安全控制模式"
+msgstr ""
+"Control mode enumeration values: ``XenseGripper.ControlMode.POSITION``: Position control mode "
+"``XenseGripper.ControlMode.SPEED``: Speed control mode "
+"``XenseGripper.ControlMode.SAFE``: Safe control mode"
+
+#: ../../source/GripperSDK/user/API/mode.rst:26
+#: 3c45bcd5934e4483a0d75c358c3721b4
+msgid "传感器序列号（仅安全模式需要，默认使用第一个扫描到的传感器）"
+msgstr "Sensor serial number (required only for safe mode; the first scanned sensor is used by default)"
+
+#: ../../source/GripperSDK/user/API/mode.rst 1bfaecb193ab4aef97e359f297906ed3
+#: 2b96cf647a9644b4a96e46b134c67749 6c42fcca97de481c945d1bf7af8f40c7
+msgid "Returns"
+msgstr "Returns"
+
+#: ../../source/GripperSDK/user/API/mode.rst:29
+#: 09af88de7c424c59a104e3b66b297aad
+msgid "上下文管理器对象，用于 with 语句块中临时切换模式"
+msgstr "Context manager object, used to temporarily switch modes in the with statement block"
+
+#: ../../source/GripperSDK/user/API/mode.rst 3297bfdc548f4b4582cc689153e34419
+#: 38f2fad9b7264afb99a979c4bffef6f9 5dece3f9c9ba49baa3ffd56e7c619786
+msgid "Return type"
+msgstr "Return type"
+
+#: ../../source/GripperSDK/user/API/mode.rst:36
+#: d9d4c5e58e294985969aff017a07c7dd
+msgid "手动启用指定的控制模式"
+msgstr "Manually enable the specified control mode"
+
+#: ../../source/GripperSDK/user/API/mode.rst:38
+#: 3b6c021eaa4a4678bcd8381d7b7e66a8
+msgid "控制模式枚举值（同 mode 方法）"
+msgstr "Control mode enumeration values (same as the mode method)"
+
+#: ../../source/GripperSDK/user/API/mode.rst:40
+#: e18469e09c2c464e84153652e97d7a95
+msgid "传感器序列号（仅安全模式需要）"
+msgstr "Sensor serial number (required only for safe mode)"
+
+#: ../../source/GripperSDK/user/API/mode.rst:42
+#: ../../source/GripperSDK/user/API/mode.rst:51
+#: 5bea731410f441f79a795a713ebe4529 f800af37e83647ac8798339225088e74
+msgid "操作是否成功"
+msgstr "Whether the operation is successful"
+
+#: ../../source/GripperSDK/user/API/mode.rst:49
+#: 36ab2bbd568d476895d26412cf6eda88
+msgid "手动禁用当前控制模式，自动恢复到默认模式并停止动作"
+msgstr "Manually disable the current control mode, automatically restore to the default mode and stop the action"
+
+#: ../../source/GripperSDK/user/API/mode.rst:56
+#: 4ecb343cceb84e20a752478cbd7d2011
+msgid "示例代码"
+msgstr "Example Code"
+
+#: ../../source/GripperSDK/user/API/mode.rst:60
+#: c06b48bfc73547bc82a0802acb1ec5ca
+msgid "位置控制模式（默认模式，无需手动切换）"
+msgstr "Position control mode (default mode, no manual switching required)"
+
+#: ../../source/GripperSDK/user/API/mode.rst:70
+#: 47411d7128fc446285692f6ae1f85b1b
+msgid "速度控制模式"
+msgstr "Speed Control Mode"
+
+#: ../../source/GripperSDK/user/API/mode.rst:86
+#: 4e753ddbfcd24d4a834bd4faff1d7060
+msgid "安全控制模式 (需要传感器)"
+msgstr "Safe Control Mode (Sensor Required)"

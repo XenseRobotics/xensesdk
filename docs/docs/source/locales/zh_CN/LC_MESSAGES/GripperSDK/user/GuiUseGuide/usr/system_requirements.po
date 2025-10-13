@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:4
+#: 0a2dacd9d1ee48209aa058f5d9310016
+msgid "二、系统要求"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:7
+#: 45ed5a4e1a7a49c682652c71683e0b98
+msgid "1、 硬件要求"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:8
+#: 19be190ae24f4432bb89f617e6895ca7
+msgid "要顺利运行 Xense Gripper，用户的计算机系统需满足以下硬件要求："
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:10
+#: 59ed4c752f7e4499a11353b45089ae36
+msgid "**处理器** 至少需配备双核处理器，推荐使用四核或更高性能的处理器（如 Intel i5、AMD Ryzen 5 或以上）。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:13
+#: 6ce2fe1cae37416da65da8f0138cd443
+msgid "**内存** 最低要求为 16GB RAM，推荐使用 32GB RAM 或更高，以确保更好的性能。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:16
+#: 8153f2649f7e48968958e6244f362b21
+msgid "**存储** 需要至少 3GB 的可用硬盘空间用于安装软件及其依赖文件。推荐使用固态硬盘（SSD）以提高数据读写速度。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:19
+#: 79d791155efd4f8d98c007fb062f9ecd
+msgid "**显卡** 最低支持集成显卡，推荐使用英伟达显卡，加速数据处理。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:22
+#: 963e5b60dae643f580584e280e6487a2
+msgid "**显示器分辨率** 推荐 1920x1080 或更高分辨率以获得更好的用户体验。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:25
+#: 411200f649fa46598bba7483fa78912d
+msgid "**其他硬件** 建议配置网络，以方便在线获取更新的软件包，也方便与软件厂商在线沟通。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:29
+#: 9e68db95f1e04429b7a1b80748e80bab
+msgid "2、 软件系统"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:30
+#: f48214ea8a5d41ffabed2cd34f0409f7
+msgid "要顺利运行 Xense Gripper，用户的计算机系统需满足以下软件要求："
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:32
+#: 1d3a288e3a514cfe8f1caaa09d33c5e5
+msgid "**操作系统** Windows 10 或更高版本（64 位）。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:35
+#: 45b34a66b5674273a95d9df112e83b49
+msgid "Linux（Ubuntu 20.04 或更高版本，需 64 位支持）。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/system_requirements.rst:37
+#: d1f6082d77a342cc9ecf60a35a875ae9
+msgid "**依赖库** 如果配置了英伟达显卡，需要安装英伟达显卡驱动。"
+msgstr ""
+

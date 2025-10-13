@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/API/open_gripper.rst:4
+#: 6cc28c5a89334378afec1ef1ba7dedc4
+msgid "open_gripper 方法"
+msgstr "open_gripper Method"
+
+#: ../../source/GripperSDK/user/API/open_gripper.rst:11
+#: be4e66d479f94d8b967b50757da31315
+msgid "打开夹爪（将夹爪位置设置为完全打开状态）。"
+msgstr "Open the gripper (set the gripper position to the fully open state)."
+
+#: ../../source/GripperSDK/user/API/open_gripper.rst:13
+#: 24ca71c4314a495287812068a26c7ef6
+msgid "该方法通过调用 :meth:`~XenseGripper.set_position` 实现。"
+msgstr "This method is implemented by calling :meth:`~XenseGripper.set_position`."

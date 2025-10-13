@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/installation_and_setups.rst:4
+#: ce45ca98137d4d258a3fc45c44abd035
+msgid "三、安装与设置"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/installation_and_setups.rst:7
+#: b22f5230c3da4beca26e0faa228d5e4e
+msgid "1、 安装步骤"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/installation_and_setups.rst:9
+#: cd08349aee1e4948a825f9100a2e0c00
+msgid ""
+"**Windows平台** 提供XenseGripper.exe安装程序。双击以后，按照提示操作。安装完毕后将在桌面显示其快捷方式：Xense "
+"Gripper。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/installation_and_setups.rst:12
+#: d769619316c44713856f7430520a21e0
+msgid "**Linux平台** 提供安装程序xensegripper.deb，使用sudo命令进行安装："
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/installation_and_setups.rst:51
+#: 3bc5171eb88a4262ac9e30ea5401e388
+msgid "2、 初始配置"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/installation_and_setups.rst:52
+#: 4bdba17b346f4d47ab0bab5ba3ada2eb
+msgid "程序启动以后软件显示界面如图1所示："
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/installation_and_setups.rst:54
+#: 0a29615df2f84427b351e79a7031665a
+msgid "Software Initial Setup"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/usr/installation_and_setups.rst:60
+#: 2e398ec0e79c466a9c1afbc838f07753
+msgid "图 1 软件初始设置"
+msgstr ""
+
+#~ msgid "软件初始设置"
+#~ msgstr ""
+

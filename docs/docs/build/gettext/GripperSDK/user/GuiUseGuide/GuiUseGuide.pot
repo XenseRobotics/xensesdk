@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/GripperSDK/user/GuiUseGuide/GuiUseGuide.rst:29
+#: 
+msgid "目录"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/GuiUseGuide.rst:4
+#: bdceedd191ef4a9a9c8515a99b3fdca9
+msgid "Gui使用指南"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/GuiUseGuide.rst:10
+#: 7dc3aed8d36844c4aa4292bcb4807038
+msgid "主目录"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/GuiUseGuide.rst:12
+#: 8fc4986c018b418b86664d737a7157fa
+msgid ":ref:`软件简介<tag_software_introductions>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/GuiUseGuide.rst:15
+#: 9e92cf17ac844b618846f40410856a1f
+msgid ":ref:`系统要求<tag_system_requirements>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/GuiUseGuide.rst:18
+#: d086942a375f4ccfa0568f998b933c09
+msgid ":ref:`安装与设置<tag_installation_and_setups>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/GuiUseGuide.rst:21
+#: 4a45b3d5f4a14bacb138996aadc4c2f3
+msgid ":ref:`界面与交互<tag_user_interface_and_interactions>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/GuiUseGuide.rst:24
+#: dfd373346e8c4d20ac852fbedf1e93f0
+msgid ":ref:`故障排查<tag_troubleshootings>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/GuiUseGuide/GuiUseGuide.rst:27
+#: 7b6ac5539258444683fb2cb70a3a5830
+msgid ":ref:`联系方式<tag_contact_informations>`"
+msgstr ""

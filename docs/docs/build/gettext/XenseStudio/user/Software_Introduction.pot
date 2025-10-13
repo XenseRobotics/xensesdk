@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:4
+#: c1d2e681ef2a4d5088436b3cf798b13f
+msgid "一、软件简介"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:7
+#: 74c3cfc98ef04979bae5af197af53086
+msgid "1、兼容多种传感器：支持曲面传感器、平面传感器、指尖传感器，满足不同场景下的触觉感知需求。"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:9
+#: a6bc64ebcf7a4e7d8761d1137687d37b
+msgid "2、跨架构/跨平台支持：兼容x86和ARM架构，支持Linux和Windows操作系统，提供SDK，确保在不同硬件和软件环境下的无缝适配。"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:11
+#: 5dbe4492f11846dbb69666fcf76152c4
+msgid "3、集成多模态感知算法：精准解算切向滑移、表面形貌和分布式六维力，为复杂触觉分析提供全面数据支持。"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:13
+#: 80257a04ccaf49e7aa2685fb805ec306
+msgid "4、丰富可视化功能：提供三维、二维、数字孪生等多种可视化方式，帮助用户直观理解触觉数据。"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Software_Introduction.rst:15
+#: f58fb07818444585ab70d3b76d8a1788
+msgid "5、数据采集和分析：支持录制传感信号，便于用户进行二次分析，挖掘数据的深层次价值。"
+msgstr ""

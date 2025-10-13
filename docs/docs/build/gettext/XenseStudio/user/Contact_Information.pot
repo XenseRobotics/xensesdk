@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:4
+#: 390abbfd8066466c9521384ae7dba7c3
+msgid "六、联系方式"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:7
+#: 4c13189e5b434383b5a8a5ea7c1aed74
+msgid "1、 技术支持信息"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:9
+#: 08e11f9d102d48d8ba8188cb1e8b3718
+msgid "如果您在使用Xense Studio过程中遇到任何技术问题或需要获得帮助，请通过以下方式与我们的技术支持团队联系："
+msgstr ""
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:11
+#: 327cfdc94be746c895fd6bf7d7474b8d
+msgid "服务时间：周一至周五 9:00 - 18:00。"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:13
+#: ea2ebd9f40c4479eb8d2f34655c4f667
+msgid "电子邮件：contactus@xenserobotics.com。"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:15
+#: e9aeb90d05d44496b04bcd634229cc14
+msgid "在线支持：访问我们的客服支持页面，获取在线聊天或提交支持请求的选项。"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:17
+#: 83273d88ab894d35a0648ede1db6cc39
+msgid "用户文档：请查看我们的用户手册，以获取详细的故障排除指南和使用技巧。"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:20
+#: 9c4c7c6567a64b37baae5bd70aacecd8
+msgid "2、 反馈渠道"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:21
+#: 7590516d41084d40b20aafa42c6f38b8
+msgid "我们非常重视用户的反馈，您的意见将帮助我们不断改进Xense Studio。您可以通过电子邮件向我们提供反馈："
+msgstr ""
+
+#: ../../source/XenseStudio/user/Contact_Information.rst:23
+#: d8d48ca149ef4c398de43243fddcddd1
+msgid "请发送您的反馈至 contactus@xenserobotics.com，确保在邮件标题中注明“反馈”字样，以便我们迅速处理。 感谢您对千觉机器人及Xense Studio的支持和关注，我们期待与您保持联系！"
+msgstr ""

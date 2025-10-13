@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst:4
+#: ccf687c745d14c09a556f269f6f6c2d7
+msgid "create 方法"
+msgstr "create Method"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst:11
+#: f8b6261095dd4ce287488d2ced1a27b3
+msgid "创建一个 XenseGripper 实例"
+msgstr "Create an XenseGripper instance"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst
+#: 77b0a5d8ab7944b09ddbcdbca902bdd7
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst:13
+#: 09f56f6a5e664a7196679c3c10a79ac4
+msgid "提供正确的 mac 通信地址, MAC地址查询方式请看: `ezros <../EzROS/usr/ezros_example.html>`_ 。"
+msgstr "Provide the correct MAC communication address. For how to query the MAC address, see: `ezros <../EzROS/usr/ezros_example.html>`_ ."
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst
+#: b09ee8e3c10749e7b7fc59f48f757f4a
+msgid "Returns"
+msgstr "Returns"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst:16
+#: c4f3982293224504baa80fa6d5c91dab
+msgid "实现 `Gripper` 接口的夹爪实例。"
+msgstr "A gripper instance that implements the `Gripper` interface."
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst
+#: 41da673456524356a0a993b64f467200
+msgid "Return type"
+msgstr "Return type"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst:17
+#: 4b21a3c40cf94360b821e7ea8576bc23
+msgid ":class:`XenseTCPGripper`"
+msgstr ":class:`XenseTCPGripper`"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst:20
+#: 2f6d99347a3e4c8d80b822a7a9645362
+msgid "示例代码"
+msgstr "Example Code"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst:24
+#: 0601f1f2175e4fac939a5ea86337f598
+msgid "通过 MAC 地址连接夹爪"
+msgstr "Connect to the gripper via MAC address"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst:34
+#: 2364ee69ab824ec1a028e5970205c4b4
+msgid "tips"
+msgstr "Tips"
+
+#: ../../source/GripperSDK/user/API/create_gripper.rst:37
+#: 5245e41f22064fdcb31caa8efb62e2f0
+msgid ""
+"如果不清楚夹爪的MAC地址,可以使用 ``ezros`` 工具进行查询, 具体请参考 "
+":doc:`../EzROS/usr/ezros_example`。"
+msgstr ""
+"If you are unsure of the gripper's MAC address, you can use the ``ezros`` tool to query it. For details, please refer to "
+":doc:`../EzROS/usr/ezros_example`."

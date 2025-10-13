@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/XenseSDK/usr/API/scanSerialNumber.rst:4
+#: d180c47e907c42f981848ae12dee1dca
+msgid "scanSerialNumber 方法"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/API/scanSerialNumber.rst:12
+#: debe7ca30eef405da779539c247d19e5
+msgid "扫描并返回当前设备上所有已连接的传感器信息。"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/API/scanSerialNumber.rst:14
+#: 15596c54b359418d92ee62e9934baba7
+msgid "该方法会检测系统中已连接的传感器设备，返回其序列号与对应的相机 ID 映射关系，方便后续通过序列号创建传感器实例。"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/API/scanSerialNumber.rst:0
+#: af2496bc090a487f8072a7f1a9b8ae7b
+msgid "Returns"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/API/scanSerialNumber.rst:16
+#: 6f350de9af3943c5ab8c4353833f9f4c
+msgid "包含所有已连接传感器的字典，键为传感器序列号( ``serial_number`` )，值为对应的相机 ID( ``camera_id`` )"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/API/scanSerialNumber.rst:0
+#: 9ed8b224b74a450ab0384136fb296e09
+msgid "Return type"
+msgstr ""

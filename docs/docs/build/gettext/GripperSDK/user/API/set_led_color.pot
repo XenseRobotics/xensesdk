@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/GripperSDK/user/API/set_led_color.rst:5
+#: c7b11110b4f14448a4007c6aacb052d6
+msgid "set_led_color方法"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_led_color.rst:12
+#: 591f59cb497f490a8ebdce19189a464d
+msgid "设置夹爪的LED灯颜色,通过RGB三色值控制。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_led_color.rst:0
+#: 3c3d7061007949fcaa99386a443f849c
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_led_color.rst:14
+#: 777240d93db741478bc7a7bfa1efcc1c
+msgid "红色通道值,范围为0-255。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_led_color.rst:17
+#: 0fadb750ba804680bc7268dcc7255035
+msgid "绿色通道值,范围为0-255。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_led_color.rst:20
+#: 0e1438bb00c240e687b49281a4a2b781
+msgid "蓝色通道值,范围为0-255。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_led_color.rst:0
+#: 41795cea0d7f4c3eb635a91f7fcf890d
+msgid "Raises"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_led_color.rst:23
+#: 9d077d3d53264d4588726920c42145fa
+msgid "当任何颜色通道值超出0-255范围时触发。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/API/set_led_color.rst:26
+#: 3df1bffb6001436cb7ca3de7463c49c7
+msgid "示例代码"
+msgstr ""

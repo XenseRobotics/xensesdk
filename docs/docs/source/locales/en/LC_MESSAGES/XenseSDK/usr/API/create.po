@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/XenseSDK/usr/API/create.rst:4 a8d326c0ff134769a3b502e7a6f9532e
+msgid "create方法"
+msgstr "create Method"
+
+#: ../../source/XenseSDK/usr/API/create.rst:11 210769c858a64c22b2b1c3323313be86
+msgid "创建一个传感器实例，使用完成后请调用 :meth:`~Sensor.release` 释放资源。"
+msgstr "Create a sensor instance; after use, call :meth:`~Sensor.release` to release resources."
+
+#: ../../source/XenseSDK/usr/API/create.rst 3f609a2c7e5b4ed7aa2ac56919505c9e
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/XenseSDK/usr/API/create.rst:13 270fd4759413455aa6c3725fa6f5357b
+msgid "传感器 ID、序列号或视频路径。默认为 0。"
+msgstr "Sensor ID, serial number, or video path. Defaults to 0."
+
+#: ../../source/XenseSDK/usr/API/create.rst:16 fd2937d5d2c54bc38ffa6993fb867097
+msgid "是否使用 GPU 进行推理。"
+msgstr "Whether to use GPU for inference."
+
+#: ../../source/XenseSDK/usr/API/create.rst:19 63f2f357dd4c4eadbdaf560d7827c900
+msgid "配置文件路径或目录。若为目录，需包含与传感器序列号同名的标定文件。"
+msgstr "Configuration file path or directory. If it is a directory, it must contain a calibration file with the same name as the sensor serial number."
+
+#: ../../source/XenseSDK/usr/API/create.rst:22 4e42b7dfbc8d45559f4c6486994f5132
+msgid "相机 API 类型（如 OpenCV 后端），用于指定相机访问方式。"
+msgstr "Camera API type (e.g., OpenCV backend), used to specify the camera access method."
+
+#: ../../source/XenseSDK/usr/API/create.rst:25 a7ec6ec2d1a94736ba253412b74538f3
+msgid "是否检查传感器序列号。"
+msgstr "Whether to check the sensor serial number."
+
+#: ../../source/XenseSDK/usr/API/create.rst:28 98cb8786ec3849e1956dcdb02686fd9c
+msgid "校正图像尺寸（宽, 高）。"
+msgstr "Corrected image size (width, height)."
+
+#: ../../source/XenseSDK/usr/API/create.rst:31 72fef3456514498b88c1a9c93167b4cc
+msgid "远程连接使用的相机 MAC 地址。"
+msgstr "Camera MAC address used for remote connection."
+
+#: ../../source/XenseSDK/usr/API/create.rst:34 6e071fbf598746e48765ce83064249af
+msgid "离线模拟的视频路径。"
+msgstr "Video path for offline simulation."
+
+#: ../../source/XenseSDK/usr/API/create.rst 100b83ca053b499fa48d46254262c69b
+msgid "Returns"
+msgstr "Returns"
+
+#: ../../source/XenseSDK/usr/API/create.rst:37 6737c3f6e8ce490b862d42b665b9a1a4
+msgid "传感器实例，用于后续数据采集和处理。"
+msgstr "A sensor instance for subsequent data collection and processing."
+
+#: ../../source/XenseSDK/usr/API/create.rst 8bbf82c8ea76404192b9ed18981d0fa5
+msgid "Return type"
+msgstr "Return type"
+
+#: ../../source/XenseSDK/usr/API/create.rst:38 89c7cf8c2db848b8b7c00c9d1cb983ba
+msgid ":class:`Sensor`"
+msgstr ":class:`Sensor`"
+
+#: ../../source/XenseSDK/usr/API/create.rst:42 534ecacbf7cb4dce970fb800cc0fdb2f
+msgid "使用完毕后务必调用 :meth:`~Sensor.release` 释放系统资源。"
+msgstr "Be sure to call :meth:`~Sensor.release` to release system resources after use."
+
+#: ../../source/XenseSDK/usr/API/create.rst:45 aa994dfb9e84450390da82b5a27c9d48
+msgid "示例代码"
+msgstr "Example Code"
+
+#: ../../source/XenseSDK/usr/API/create.rst:50 d04f091459b24e96b3caf26fd0c54ba6
+msgid "示例 1:通过 SN 码开启传感器"
+msgstr "Example 1: Start the sensor via SN code"
+
+#: ../../source/XenseSDK/usr/API/create.rst:62 1bc18a06a432471785040d90864e9c28
+msgid "示例 2:通过相机编号开启传感器"
+msgstr "Example 2: Start the sensor via camera ID"
+
+#: ../../source/XenseSDK/usr/API/create.rst:74 a86d8f6b7a29444dad26c532fac7fe2c
+msgid "示例 3:打开存储的离线数据"
+msgstr "Example 3: Open stored offline data"
+
+#: ../../source/XenseSDK/usr/API/create.rst:86 febbb2c1d66440f496e6aab3cbf7d2a2
+msgid "示例 4:连接远程算力板上的传感器"
+msgstr "Example 4: Connect to the sensor on the remote computing board"
+
+#: ../../source/XenseSDK/usr/API/create.rst:98 16b38a4d5b914d47809353c8a605df82
+msgid "tips"
+msgstr "Tips"
+
+#: ../../source/XenseSDK/usr/API/create.rst:101
+#: 0fe077f8990948aa8e911f83cdce4f84
+msgid ""
+"示例 4中的 mac_address 参数兼容设备 IP 地址，如何获取设备 MAC 可参考 `EzROS "
+"</home/xense/projects/doc/xensesdk/docs/docs/source//GripperSDK/user/EzROS/ezros_example.html>`_。"
+msgstr ""
+"The mac_address parameter in Example 4 is compatible with the device IP address. For how to obtain the device MAC, refer to `EzROS "
+"</home/xense/projects/doc/xensesdk/docs/docs/source//GripperSDK/user/EzROS/ezros_example.html>`_."

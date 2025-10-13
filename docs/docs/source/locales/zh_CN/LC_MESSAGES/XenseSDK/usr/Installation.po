@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 16:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/XenseSDK/usr/Installation.rst:5
+#: 772a26f84c454658aba2cf4c8b43c2dd
+msgid "安装XenseSDK"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst:8
+#: e195256c6f394e028c90fea1450a89a8
+msgid "安装指南"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst:11
+#: 9fc60a6655644d00a4e11659d67c4eda
+msgid "**步骤 1:** 准备 Python 开发环境"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst:28
+#: 181c6760851740b48f4b0708eded51c4
+msgid "推荐使用 Anaconda,并使用 Python 版本 3.9或者3.10。"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst:32
+#: 5ea7387d95784368b59bdee0ca5e4cc6
+msgid "**步骤 2:** 安装 CUDA 工具包和 cuDNN"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst:34
+#: d3ec3324a27e4039a7f33d63e7ad32d9
+msgid "SDK 需要 onnxruntime_gpu，以及配套的 cudnn、cudatoolkit。根据您的环境，选择以下安装方式："
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst 1f9294c32fbe477784a39ea8e2ebcb1c
+msgid "选项 1：onnxruntime_gpu>1.18.0"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst:40
+#: ../../source/XenseSDK/usr/Installation.rst:64
+#: 70f9293cbffb45869d692c35bc857bb7
+msgid "安装所需版本："
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst:47
+#: c1b935aec1054ddc832082ed16703fdf
+msgid "将 cuda 的路径加入环境变量 ‘LD_LIBRARY_PATH‘："
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst e0a574210be943ceb77e5221db3a149d
+msgid "选项 2: onnxruntime_gpu==1.18.0 (50 系列显卡不可用)"
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst:57
+#: 6e8b3e9052504314ac0a95feddd0dc4a
+msgid "搜索所需版本："
+msgstr ""
+
+#: ../../source/XenseSDK/usr/Installation.rst:73
+#: 9a63bd39e62543a790b3374bb3a0d1f1
+msgid "**步骤 3:** 安装 Xense SDK 包 将 SDK 包安装到您的环境中:"
+msgstr ""
+
+#~ msgid "**步骤 2:** 安装 CUDA 工具包和 cuDNN SDK 支持 CUDA Toolkit 11.8 和 cuDNN 8.9.2.26"
+#~ msgstr ""
+
+#~ msgid "根据您的环境，选择以下安装方式:"
+#~ msgstr ""
+
+#~ msgid "选项 1: 通过 Conda 直接安装"
+#~ msgstr ""
+
+#~ msgid "选项 2: 从本地 Conda 环境包安装"
+#~ msgstr ""
+

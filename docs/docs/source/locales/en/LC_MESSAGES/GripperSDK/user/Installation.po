@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/Installation.rst:4
+#: 9c304b26d5594f4ea2b31eb8c05e8cbc
+msgid "安装GripperSDK"
+msgstr "Installing GripperSDK"
+
+#: ../../source/GripperSDK/user/Installation.rst:42
+msgid "步骤 1: 准备 Python 开发环境"
+msgstr "Step 1: Prepare Python Development Environment"
+
+#: ../../source/GripperSDK/user/Installation.rst:46
+#: 2a27ac75716f40c7865088cf30b0b37a
+msgid ""
+"GripperSDK 依赖 XenseSDK, 因此需要安装 Python 开发环境, 请参考 `XenseSDK "
+"<../../XenseSDK/usr/Installation.html>`_ Python开发环境准备。"
+msgstr ""
+"GripperSDK depends on XenseSDK, so a Python development environment needs to be installed. Please refer to `XenseSDK "
+"<../../XenseSDK/usr/Installation.html>`_ for Python development environment preparation."
+
+#: ../../source/GripperSDK/user/Installation.rst:51
+msgid "步骤 2: 安装 GripperSDK 包"
+msgstr "Step 2: Install GripperSDK Package"
+
+#: ../../source/GripperSDK/user/Installation.rst:59
+#: 46d077514d1d438d9ddb1516e4ab7254
+msgid "tips"
+msgstr "Tips"
+
+#: ../../source/GripperSDK/user/Installation.rst:62
+#: be25266943e946309c89f2bf25a9294f
+msgid ""
+"最新版本的 GripperSDK 请在 `Github官方网站 "
+"<https://github.com/XenseRobotics/xensesdk/releases>`_ 获取。"
+msgstr ""
+"The latest version of GripperSDK can be obtained from the `official Github website "
+"<https://github.com/XenseRobotics/xensesdk/releases>`_."

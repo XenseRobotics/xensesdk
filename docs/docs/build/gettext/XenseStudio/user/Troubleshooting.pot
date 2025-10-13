@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:4
+#: 318be6f5b1a84c63ba319b2fe5a5d7e9
+msgid "五、故障排查"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:8
+#: 75ec86961ef242d9b2f61e4da18e6515
+msgid "1、 初始化时打印"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:10
+#: ../../source/XenseStudio/user/Troubleshooting.rst:21
+#: ../../source/XenseStudio/user/Troubleshooting.rst:49
+#: db43574037694ce49be119c56586eb9b
+#: 59ae6e84b0614fba90c9f757f6533a44
+#: 84aa23bc497b4634ab8aac4334542358
+msgid "问题描述："
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:12
+#: 0ba99ace2eeb4639a6ae0eae824a118c
+msgid "安装后的初次启动加载会比较慢"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:14
+#: ../../source/XenseStudio/user/Troubleshooting.rst:35
+#: ../../source/XenseStudio/user/Troubleshooting.rst:61
+#: 89ff871012cb48d584680a65cc391dcc
+#: af10f3f3b8ae45018707d6d93487b8e9
+#: 0cddfa1908de489bafe621dec63ae292
+msgid "解决方案："
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:16
+#: c697d2fd4c5843f0bb2b99a8b326ca27
+msgid "初始化时，第一次需要加载所有组件并缓存，后续可正常使用"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:19
+#: 28845fb097ab4e438952b0eaaa777c6c
+msgid "2、 显卡驱动"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:23
+#: 5d6ac0d144484f949b631f2a32e71938
+msgid "如果不插传感器能启动,但插传感器无法启动，且命令行有如下类似报错或输出"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:25
+#: ../../source/XenseStudio/user/Troubleshooting.rst:51
+#: 444b2e38ac5b4af6ad9194441cda0393
+#: 3502893eb53b4a5cbcc95862a6740d11
+msgid "命令行输出"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:37
+#: 90ebd86b59ad4c31888d27df954a93b4
+msgid "大概率是显卡驱动问题, 先安装适配的显卡驱动 (如果显卡是nvidia显卡的话)检查如下命令是否正常输出,如果不正常的话，先安装适配的显卡驱动。"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:41
+#: ../../source/XenseStudio/user/Troubleshooting.rst:63
+#: 5d03f9f4ed274bbf8102b9c6840976dd
+#: 857c8b32bf5c4506962b349571cecd7d
+msgid "命令行输入"
+msgstr ""
+
+#: ../../source/XenseStudio/user/Troubleshooting.rst:47
+#: 5f1ea40703b945c39fe5f070b2259ccf
+msgid "3、 报错处理"
+msgstr ""

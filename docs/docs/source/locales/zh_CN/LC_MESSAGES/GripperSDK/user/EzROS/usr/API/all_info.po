@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:4
+#: c97b2a9fd28c4159bebec2b4b6b1c6ee
+msgid "查看ezros服务信息"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:8
+#: 7522202a1e94421f96675a04c24e7dc8
+msgid "EzROS 支持通过全局参数组合，实现“全量信息展示”或“指定节点过滤展示”，以下分场景说明具体用法："
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:10
+#: c01c1d8208164e4999172e1449ad8367
+msgid "**场景1: 查看所有节点、话题和服务（全量信息）** 通过 ``-a/--all`` 参数触发全量扫描，展示网络中所有节点的完整信息："
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:18
+#: bac7c9cb9be04c4e89f1e7d01953376d
+msgid "终端打印如下信息："
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:38
+#: 184c75ee76af401c9e1d9d12cc605ec0
+msgid ""
+"**场景2: 过滤查看指定节点（仅展示含目标字符串的节点）** 结合 ``-a/--all`` 和 ``-f/--filter`` "
+"参数，仅展示节点名包含指定字符串的信息（如仅看“gripper”相关节点）："
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:45
+#: 3e7457b62b8a406e832b7d8a3bcb63a6
+msgid "终端打印如下信息(仅保留含“gripper”的节点):"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:61
+#: c658e431b03d43e89cb794989879f9ad
+msgid "两种场景中，节点名后的 “d672f584b17a” 字符串均代表设备 MAC 地址，可用于创建 gripper 夹爪实例："
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:70
+#: c34e473758554c94b2517db5ba60e657
+msgid "tips"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:73
+#: b0f5536bea3c4478b4609553e55f106e
+msgid "``-a/--all``: 全局参数，用于触发“全量信息展示”功能，扫描并显示所有节点信息。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/API/all_info.rst:74
+#: 4598fa526fee4950a47e869445501f02
+msgid ""
+"``-f/--filter``: 全局参数，需与 ``-a`` 搭配使用，用于过滤包含指定字符串的节点名（默认匹配所有节点），例如 ``ezros"
+" -a -f master`` 可仅显示名称包含“master”的节点信息。"
+msgstr ""
+

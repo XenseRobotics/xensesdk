@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-13 10:33+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:4
+#: 467aa1a82c2d479395ea2cd49122a3e3
+msgid "一、柔性替换件拆装说明"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:7
+#: 2fc529149c14437f9ef6734794aa1d66
+msgid "1、工具清单"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:9
+#: 29de1392816040cbaa21feeb3c9adc8d
+msgid "柔性替换件×1"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:10
+#: 1f51db089ff84fc5ac689560dd3bb51c
+msgid "小扳手/电动螺丝刀(M2批头)×1"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:12
+#: 134a29c6e7bc4a069e011585c27a037d
+msgid "数采控制区"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:33
+#: 177c98c1b8944ffba75b9680cf04f93b
+msgid "2、 柔性替换件更换说明"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:35
+#: a0807fcbe34e46b9bf695ff23f7dbfcb
+msgid "STEP1：如图1，用小扳手拧下传感器钣金上的2颗M2螺丝，并取下钣金件。"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:37
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:48
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:59
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:70
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:81
+#: f38c58dd9a16456a9ac7945c6d5736ca
+#: 80d128a3b8fd4cce9a8334a9647c82f7
+#: 37a1f0ff2cf54a39bd047e53f96a4cc9
+#: 79b75dbc96a64643a5540392aa514c97
+#: 945b0b4b67b44c85898f193dfea71d91
+msgid "软件初始设置"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:44
+#: 9a424c54e38f4d5f81cab5a46fc20d28
+msgid "图 1"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:46
+#: 250934d35d27417e82ec9edf71122131
+msgid "STEP2：如图2，借助小扳手轻轻撬开卡扣，将柔性替换件撬起取下。"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:55
+#: 77d9e6f756e7484f824dbb3d16dbb0b7
+msgid "图 2"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:57
+#: f69ea6b3d5bd435cb1c3f0ec6a35a595
+msgid "STEP3：如图3，检查替换件光学面和传感器内部镜片。如有灰尘，请先使用吹气清除灰尘再以专用擦镜布轻轻擦拭，避免刮伤表面。"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:66
+#: 58b6b598a61e4771aa1685596f7425fe
+msgid "图 3"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:68
+#: 89cc27ca26e54b88930bef1f90fee74e
+msgid "STEP4：如图4，更换替换件。请严格遵循一至四的顺序操作，错误的顺序可能导致传感器内部元件永久性损坏！"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:77
+#: e122c586143049f18785a76eb05d5d05
+msgid "图 4"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:79
+#: 8cf2c6af4d774b0984f2ebe3eb6f62c5
+msgid "STEP5：如图5，安装钣金并拧紧螺丝，步骤与STEP1相反。"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:88
+#: 37c8347f0b604d4ab0927bf2bf78057f
+msgid "图 5"
+msgstr ""
+
+#: ../../source/Hardware/user/Disassembly_Instructions.rst:93
+#: 72ba593f88b24b10bbfc37c3aaf7d3fd
+msgid "3、更换柔性替换件的演示视频"
+msgstr ""

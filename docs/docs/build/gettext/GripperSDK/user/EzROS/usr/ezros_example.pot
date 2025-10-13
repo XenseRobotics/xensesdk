@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, 千觉机器人科技(上海)有限公司
+# This file is distributed under the same license as the xense package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xense \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/GripperSDK/user/EzROS/usr/ezros_example.rst:49
+#: 
+msgid "目录"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/ezros_example.rst:4
+#: db6d4ce580dc48129143a6714c36a4ad
+msgid "使用EzROS命令行工具"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/ezros_example.rst:8
+#: 0efa8a1185ad467db16f8f21056e7d41
+msgid "初次使用可以通过以下命令来快速了解 ezros 的功能。"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/ezros_example.rst:15
+#: ba75661ea8a94125a561c243d361d2bf
+msgid "终端打印如下信息："
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/ezros_example.rst:41
+#: 9db0b5bdeb314c7eb1af9978a25432e0
+msgid "更多详细用法请见目录 EzROS 中的调试命令:"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/ezros_example.rst:45
+#: 4e09a4f4da304905b9d08cc2d98b3b6b
+msgid ":ref:`查看EzROS服务信息 <tag_all_info>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/ezros_example.rst:46
+#: 0aef1de1a5124d64ab3a34818783c423
+msgid ":ref:`监控话题 <tag_echo>`"
+msgstr ""
+
+#: ../../source/GripperSDK/user/EzROS/usr/ezros_example.rst:47
+#: 4e99a86d85b04aa4bcb3b5b937fe7d2b
+msgid ":ref:`调用服务 <tag_service>`"
+msgstr ""

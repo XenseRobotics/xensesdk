@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Install XenseSDK &mdash; xense  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Using XenseSDK API" href="methodList.html" />
+    <link rel="prev" title="What is XenseSDK?" href="Introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../XenseStudio/Introduction.html">XenseStudio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../XenseSDK.html">XenseSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html">What is XenseSDK?</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Install XenseSDK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Installation Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="methodList.html">Using XenseSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repo_example.html">More Code Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../GripperSDK/GripperSDK.html">GripperSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Hardware/Hardware.html">Hardware</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../XenseSDK.html">XenseSDK</a></li>
+      <li class="breadcrumb-item active">Install XenseSDK</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="xensesdk">
+<span id="tag-xensesdkinstallation"></span><h1>Install XenseSDK<a class="headerlink" href="#xensesdk" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>Installation Guide<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<div class="step-block docutils container">
+<p><strong>Step 1:</strong> Prepare the Python Development Environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 进入 Xense SDK 目录</span>
+<span class="nb">cd</span><span class="w"> </span>xensesdk
+
+<span class="c1"># 创建并激活虚拟环境</span>
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>xenseenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+<span class="c1">#or conda create -n xenseenv python=3.10</span>
+
+conda<span class="w"> </span>activate<span class="w"> </span>xenseenv
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended to use Anaconda with Python version 3.9 or 3.10.</p>
+</div>
+<div class="step-block docutils container">
+<p><strong>Step 2:</strong> Install CUDA Toolkit and cuDNN</p>
+<p>The SDK requires onnxruntime_gpu, along with配套的 cudnn and cudatoolkit. Select the following installation method based on your environment:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Option 1: onnxruntime_gpu&gt;1.18.0</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p>Install the required version:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 这个例子使用 cuda12.9</span>
+conda<span class="w"> </span>install<span class="w"> </span>nvidia/label/cuda-12.9.0::cuda-toolkit<span class="w"> </span>nvidia::cudnn
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Add the CUDA path to the environment variable ‘LD_LIBRARY_PATH’:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># linux 里可以运行如下命令</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$CONDA_PREFIX</span>/lib:<span class="nv">$CONDA_PREFIX</span>/lib64<span class="w"> </span><span class="c1">#（临时）</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$CONDA_PREFIX</span>/etc/conda/activate.d<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$CONDA_PREFIX/lib64:$LD_LIBRARY_PATH&#39;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$CONDA_PREFIX</span>/etc/conda/activate.d/env_vars.sh<span class="w"> </span><span class="c1">#（永久）</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Option 2: onnxruntime_gpu==1.18.0 (Not available for 50 series graphics cards)</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p>Search for the required version:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>search<span class="w"> </span>cudnn
+conda<span class="w"> </span>search<span class="w"> </span>cudatoolkit
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Install the required version:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">cudnn</span><span class="o">==</span><span class="m">8</span>.9.2.26<span class="w"> </span><span class="nv">cudatoolkit</span><span class="o">==</span><span class="m">11</span>.8.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="step-block docutils container">
+<p><strong>Step 3:</strong> Install the Xense SDK Package (install the SDK package into your environment):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 如果是从本地目录安装</span>
+pip<span class="w"> </span>install<span class="w"> </span>xensesdk-0.1.0-cp39-cp39-win_amd64.whl<span class="w"> </span><span class="c1"># (对于定制软件包)</span>
+<span class="c1"># 或者从 PyPI 安装</span>
+pip<span class="w"> </span>install<span class="w"> </span>xensesdk<span class="w"> </span>-i<span class="w"> </span>https://repo.huaweicloud.com/repository/pypi/simple/
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Introduction.html" class="btn btn-neutral float-left" title="What is XenseSDK?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="methodList.html" class="btn btn-neutral float-right" title="Using XenseSDK API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, 千觉机器人科技(上海)有限公司.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

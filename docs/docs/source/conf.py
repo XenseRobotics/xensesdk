@@ -14,7 +14,8 @@ author = 'IRonman'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['sphinx_tabs.tabs',
-              'sphinxcontrib.video'
+              'sphinxcontrib.video',
+              'sphinx_design',
               ]
 
 
@@ -50,9 +51,9 @@ html_context = {
     'conf_py_path': "",   # 清空配置文件路径，避免自动拼接
 }
 
-# multi-language docs
+
 language = 'en'
-locale_dirs = ['../locales/']   # path is example but recommended.
+locale_dirs = ['locales']   # path is example but recommended.
 gettext_compact = False  # optional.
 gettext_uuid = True  # optional.
 

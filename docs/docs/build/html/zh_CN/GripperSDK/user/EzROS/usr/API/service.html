@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service调用 &mdash; xense  文档</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=7d86a446"></script>
+      <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../../_static/translations.js?v=beaddf03"></script>
+      <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../../../../../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../../../search.html" />
+    <link rel="next" title="Gui使用指南" href="../../../GuiUseGuide/GuiUseGuide.html" />
+    <link rel="prev" title="监控话题" href="echo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../GripperSDK.html">GripperSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../methodlist.html">使用GripperSDK API</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../EzROS.html">EzROS</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../ezros_example.html">使用EzROS命令行工具</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="all_info.html">查看ezros服务信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="echo.html">监控话题</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Service调用</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="all_info.html">查看ezros服务信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="echo.html">监控话题</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Service调用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Hardware/Hardware.html">Hardware</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../GripperSDK.html">GripperSDK</a></li>
+          <li class="breadcrumb-item"><a href="../../EzROS.html">EzROS</a></li>
+          <li class="breadcrumb-item"><a href="../ezros_example.html">使用EzROS命令行工具</a></li>
+      <li class="breadcrumb-item active">Service调用</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="service">
+<span id="tag-service"></span><h1>Service调用<a class="headerlink" href="#service" title="Link to this heading"></a></h1>
+<div class="step-block docutils container">
+<p>当要对特定Service服务调用时, 可使用如下命令：</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+调用Sensor服务</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>service<span class="w"> </span>-n<span class="w"> </span>OG000285<span class="w"> </span>-c<span class="w"> </span>get_img
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+调用Gripper服务</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>service<span class="w"> </span>-n<span class="w"> </span>gripper_d672f584b17a<span class="w"> </span>-c<span class="w"> </span>set_led_color:<span class="o">=</span><span class="m">255</span>,0,0
+</pre></div>
+</div>
+</div>
+</div>
+<p>以下为打印信息：</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Sensor服务调用输出</label><div class="sd-tab-content docutils">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>调用服务: OG000285
+动作: get_img
+参数: []
+----------------------------------------
+响应:  [[[227 156  83]
+[230 151  85]
+[229 149  86]
+...
+[201 110 112]
+[110  45  36]
+[ 74  44  34]]
+
+[[225 154  82]
+[228 150  85]
+[228 149  86]
+...
+[225 131 137]
+[114  44  36]
+[ 75  44  31]]]
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Gripper服务调用输出</label><div class="sd-tab-content docutils">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>调用服务: gripper_d672f584b17a
+动作: set_led_color
+参数: [255, 0, 0]
+----------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">tips</p>
+<ul class="simple">
+<li><p><cite>service</cite> 子命令，表明本次操作是调用某个服务；</p></li>
+<li><p><cite>–name/-n</cite> 必选参数，指定要调用的 Service 名称；</p></li>
+<li><p><cite>–call/-c</cite> 必须参数，指定要调用的服务动作及参数，格式为 “动作名:= 参数”。</p></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="echo.html" class="btn btn-neutral float-left" title="监控话题" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../../../GuiUseGuide/GuiUseGuide.html" class="btn btn-neutral float-right" title="Gui使用指南" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2025, 千觉机器人科技(上海)有限公司。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

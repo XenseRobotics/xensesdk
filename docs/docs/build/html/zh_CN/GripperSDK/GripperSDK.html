@@ -1,0 +1,195 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GripperSDK &mdash; xense  文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7d86a446"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=beaddf03"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="硬件连接与网络配置" href="user/pre_configuration.html" />
+    <link rel="prev" title="更多代码示例" href="../XenseSDK/usr/repo_example.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../XenseStudio/Introduction.html">XenseStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../XenseSDK/XenseSDK.html">XenseSDK</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GripperSDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/methodlist.html">使用GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/EzROS/EzROS.html">EzROS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Hardware/Hardware.html">Hardware</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">GripperSDK</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="grippersdk">
+<h1>GripperSDK<a class="headerlink" href="#grippersdk" title="Link to this heading"></a></h1>
+<style>
+.custom-h2 {
+    font-size: 1.5em !important; /* 更大的字号 */
+    font-weight: 700 !important;
+    color: #2c3e50 !important; /* 深色更有质感 */
+    border-bottom: 1px solid #fffdfdff !important; /* 更粗的下边框 */
+    padding-bottom: 10px !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.8em !important;
+    font-family: "Microsoft YaHei", sans-serif !important; /* 换成更适配的中文字体 */
+    text-shadow: 0 2px 3px rgba(0,0,0,0.1); /* 增加文字阴影 */
+    background: linear-gradient(to right, #3498db, #9b59b6); /* 背景渐变（可选） */
+    -webkit-background-clip: text;
+    color: transparent; /* 文字渐变效果（需配合背景渐变） */
+}
+</style><div class="custom-h2">核心功能</div><div class="step-block docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>功能模块</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>夹爪控制</p></td>
+<td><p>支持以 200 Hz 频率接收夹爪数据，同时可对夹爪运动进行精准控制。</p></td>
+</tr>
+<tr class="row-odd"><td><p>传感器控制</p></td>
+<td><p>提供传感器启动、关闭操作接口，支持读取传感器实时数据，满足不同场景下的数据采集需求。</p></td>
+</tr>
+<tr class="row-even"><td><p>服务联网自启动</p></td>
+<td><p>无论设备是直连电脑，还是通过交换机接入网络，实现 “即插即用” 。</p></td>
+</tr>
+<tr class="row-odd"><td><p>服务自动发现</p></td>
+<td><p>SDK 可自动扫描可连接的服务节点，简化人工配置流程，提升系统部署效率。</p></td>
+</tr>
+<tr class="row-even"><td><p>休眠模式</p></td>
+<td><p>若传感器 10 min 未被使用，自动关闭传感器以降低功耗，仅保留主服务节点持续运行，保障基础服务不中断。</p></td>
+</tr>
+<tr class="row-odd"><td><p>CLI 调试工具</p></td>
+<td><p>通过 <code class="docutils literal notranslate"><span class="pre">EzROS</span></code> 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="custom-h2">主目录</div><div class="step-block docutils container">
+<table class="docutils align-default" style="width: 30">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="user/pre_configuration.html#tag-gripperpre-configuration"><span class="std std-ref">硬件连接与网络配置</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="user/Installation.html#tag-gripperinstallation"><span class="std std-ref">安装指南</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="user/methodlist.html#tag-grippermethodlist"><span class="std std-ref">API文档</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="user/EzROS/EzROS.html#tag-ezros"><span class="std std-ref">EzROS调试工具</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="user/GuiUseGuide/GuiUseGuide.html#tag-guiuseguide"><span class="std std-ref">Gui使用指南</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../XenseSDK/usr/repo_example.html" class="btn btn-neutral float-left" title="更多代码示例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="user/pre_configuration.html" class="btn btn-neutral float-right" title="硬件连接与网络配置" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2025, 千觉机器人科技(上海)有限公司。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

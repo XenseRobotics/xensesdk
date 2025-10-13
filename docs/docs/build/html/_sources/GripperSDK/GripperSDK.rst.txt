@@ -45,9 +45,6 @@ GripperSDK
         * - CLI 调试工具
           - 通过 ``EzROS`` 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。  
 
-.. raw:: html
-
-    <div class="custom-h2">系统架构</div>
 
 .. raw:: html
 

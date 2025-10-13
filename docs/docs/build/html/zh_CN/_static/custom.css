@@ -1,0 +1,164 @@
+/* 基础布局 - 自适应宽度 */
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* 左侧图像区域 - 根据内容自适应宽度 */
+.perception-image {
+    flex: 0 0 auto; /* 不扩展、不收缩，宽度由内容决定 */
+    max-width: 12%; /* 限制最大宽度占比，防止过大 */
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.perception-image img {
+    max-width: 100%; /* 图片最大宽度不超过容器 */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 右侧选项区域 - 填充剩余空间 */
+.perception-options {
+    flex: 1 1 auto; /* 可扩展、可收缩，填充剩余空间 */
+    min-width: 0; /* 允许内容溢出时收缩 */
+}
+
+/* 选项行样式 */
+.option-row {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s; /* 所有属性都添加过渡效果 */
+}
+
+.option-row:hover {
+    background-color: #f8f9fa;
+    transform: translateX(2px); /* 轻微右移，增强交互感 */
+}
+/* 图注样式：居中显示在布局下方 */
+.caption {
+    text-align: center;
+    margin-top: 0.01em;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+    color: #000;
+}
+
+/* 右侧图片布局 */
+.right-figure {
+    float: right; /* 图片向右浮动 */
+    margin-left: 1em; /* 图片左侧与文本的间距 */
+    margin-bottom: 1em; /* 图片底部与文本的间距 */
+    max-width: 100%; /* 图片最大宽度 */
+}
+
+/* 确保图片下方的内容正确换行 */
+.right-figure + * {
+    clear: both;
+}
+
+.right-figure + p,
+.right-figure + .content-paragraph {
+    text-indent: 2em;
+}
+
+/* 调整文本容器的布局 */
+.content-paragraph {
+    overflow: hidden;
+}
+/* 多图网格容器 */
+.grid-figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2列网格 */
+    gap: 15px;  /* 图片间距 */
+    max-width: 80%;  /* 整体宽度 */
+    margin: 0 auto 2em;  /* 居中，底部留白 */
+}
+
+/* 图注样式 */
+.grid-figure p:last-child {  /* 选中容器内最后一个段落作为图注 */
+    grid-column: span 2;  /* 图注跨两列 */
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #000;  /* 黑色图注 */
+}
+
+/* 确保图片自适应 */
+.grid-figure img {
+    width: 100%;
+    height: auto;
+    display: block;  /* 去除图片底部间隙 */
+}
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .perception-image {
+        max-width: 100%; /* 小屏幕下图片撑满宽度 */
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .option-row {
+        margin-bottom: 8px;
+        padding: 6px 10px;
+    }
+}
+
+/* 确保所有层级的导航菜单保持展开状态 */
+.wy-menu-vertical li.toctree-l1 > ul,
+.wy-menu-vertical li.toctree-l2 > ul,
+.wy-menu-vertical li.toctree-l3 > ul {
+    display: block !important;
+}
+
+/* 隐藏折叠/展开按钮 */
+.toctree-expand {
+    display: none !important;
+}
+
+.example-banner {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 状态标签样式 */
+.rubric.success {
+  color: #28a745;
+  border-bottom: 2px solid #28a745;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  /* 添加成功状态的背景色，可根据需求调整 */
+  background-color: #d4edda; 
+}
+
+.rubric.error {
+  color: #dc3545;
+  border-bottom: 2px solid #dc3545;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  /* 添加错误状态的背景色，可根据需求调整 */
+  background-color: #f8d7da; 
+}
+
+.rubric.success,
+.rubric.error {
+  /* 固定高度（根据需求调整） */
+  height: 40px; 
+   /* 让文字垂直居中 */
+  line-height: 40px;
+  padding: 0 10px; /* 仅保留水平内边距 */
+}
+
+
