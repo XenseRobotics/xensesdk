@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using the EzROS Command Line Tool &mdash; xense  documentation</title>
+  <title>使用EzROS命令行工具 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,7 +26,7 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="View EzROS Service Information" href="API/all_info.html" />
+    <link rel="next" title="查看ezros服务信息" href="API/all_info.html" />
     <link rel="prev" title="EzROS" href="../EzROS.html" /> 
 </head>
 
@@ -49,27 +49,28 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Installation.html">Installing GripperSDK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../methodlist.html">Using GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../methodlist.html">使用GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../connect_sensor.html">传感器连接</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../EzROS.html">EzROS</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Using the EzROS Command Line Tool</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="API/all_info.html">View EzROS Service Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="API/echo.html">Monitor Topic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="API/service.html">Service Call</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">使用EzROS命令行工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/all_info.html">查看ezros服务信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/echo.html">监控话题</a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/service.html">Service调用</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="API/all_info.html">View EzROS Service Information</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/echo.html">Monitor Topic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/service.html">Service Call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/all_info.html">查看ezros服务信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/echo.html">监控话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/service.html">Service调用</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../Hardware/Hardware.html">Hardware</a></li>
@@ -91,7 +92,7 @@
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../GripperSDK.html">GripperSDK</a></li>
           <li class="breadcrumb-item"><a href="../EzROS.html">EzROS</a></li>
-      <li class="breadcrumb-item active">Using the EzROS Command Line Tool</li>
+      <li class="breadcrumb-item active">使用EzROS命令行工具</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -104,14 +105,14 @@
            <div itemprop="articleBody">
              
   <section id="ezros">
-<span id="tag-ezros-example"></span><h1>Using the EzROS Command Line Tool<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
+<span id="tag-ezros-example"></span><h1>使用EzROS命令行工具<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
 <div class="ezros-tool-guide docutils container">
-<p>For first-time use, you can quickly learn about the functions of ezros through the following commands.</p>
+<p>初次使用可以通过以下命令来快速了解 ezros 的功能。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-h
 <span class="c1"># 或者 ezros --help</span>
 </pre></div>
 </div>
-<p>The terminal prints the following information:</p>
+<p>终端打印如下信息：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: ezros [-h] [-d DOMAIN_ID] [-q] [-a] [-t TIMEOUT] [-f FILTER] {service,topic} ...
 
 EzROS CLI - 简单的网络工具
@@ -134,12 +135,12 @@ optional arguments:
 </pre></div>
 </div>
 <div class="ezros-cmd-catalog-section docutils container">
-<p>For more detailed usage, please refer to the debugging commands in the EzROS directory:</p>
+<p>更多详细用法请见目录 EzROS 中的调试命令:</p>
 <div class="command-catalog docutils container">
 <ul class="simple">
-<li><p><a class="reference internal" href="API/all_info.html#tag-all-info"><span class="std std-ref">View EzROS Service Information</span></a></p></li>
-<li><p><a class="reference internal" href="API/echo.html#tag-echo"><span class="std std-ref">Monitor Topic</span></a></p></li>
-<li><p><a class="reference internal" href="API/service.html#tag-service"><span class="std std-ref">Call Service</span></a></p></li>
+<li><p><a class="reference internal" href="API/all_info.html#tag-all-info"><span class="std std-ref">查看EzROS服务信息</span></a></p></li>
+<li><p><a class="reference internal" href="API/echo.html#tag-echo"><span class="std std-ref">监控话题</span></a></p></li>
+<li><p><a class="reference internal" href="API/service.html#tag-service"><span class="std std-ref">调用服务</span></a></p></li>
 </ul>
 </div>
 </div>
@@ -153,7 +154,7 @@ optional arguments:
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../EzROS.html" class="btn btn-neutral float-left" title="EzROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="API/all_info.html" class="btn btn-neutral float-right" title="View EzROS Service Information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="API/all_info.html" class="btn btn-neutral float-right" title="查看ezros服务信息" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

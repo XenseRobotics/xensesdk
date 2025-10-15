@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V. Troubleshooting &mdash; xense  documentation</title>
+  <title>五、故障排查 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,8 +26,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="VI. Contact Information" href="Contact_Information.html" />
-    <link rel="prev" title="IV. User Interface and Interaction" href="User_Interface_and_Interaction.html" /> 
+    <link rel="next" title="六、联系方式" href="Contact_Information.html" />
+    <link rel="prev" title="四、界面与交互" href="User_Interface_and_Interaction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,20 +49,20 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../Introduction.html">XenseStudio</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Software_Introduction.html">I. Software Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="System_Requirment.html">II. System Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Installation_and_Setup.html">III. Installation and Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="User_Interface_and_Interaction.html">IV. User Interface and Interaction</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">V. Troubleshooting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">1. Printing During Initialization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">2. Graphics Card Driver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">3. Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software_Introduction.html">一、软件简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="System_Requirment.html">二、系统要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation_and_Setup.html">三、安装与设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="User_Interface_and_Interaction.html">四、界面与交互</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">五、故障排查</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1、 初始化时打印</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2、 显卡驱动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3、 报错处理</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Contact_Information.html">VI. Contact Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Contact_Information.html">六、联系方式</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
@@ -85,7 +85,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../Introduction.html">XenseStudio</a></li>
-      <li class="breadcrumb-item active">V. Troubleshooting</li>
+      <li class="breadcrumb-item active">五、故障排查</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -98,29 +98,29 @@
            <div itemprop="articleBody">
              
   <section id="tag-troubleshooting">
-<span id="id1"></span><h1>V. Troubleshooting<a class="headerlink" href="#tag-troubleshooting" title="Link to this heading"></a></h1>
+<span id="id1"></span><h1>五、故障排查<a class="headerlink" href="#tag-troubleshooting" title="Link to this heading"></a></h1>
 <section id="id2">
-<h2>1. Printing During Initialization<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>1、 初始化时打印<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <blockquote>
-<div><p>Problem Description:</p>
+<div><p>问题描述：</p>
 <blockquote>
-<div><p>The first startup and loading after installation will be relatively slow</p>
+<div><p>安装后的初次启动加载会比较慢</p>
 </div></blockquote>
-<p>Solution:</p>
+<p>解决方案：</p>
 <blockquote>
-<div><p>During initialization, all components need to be loaded and cached for the first time; normal use is possible afterward</p>
+<div><p>初始化时，第一次需要加载所有组件并缓存，后续可正常使用</p>
 </div></blockquote>
 </div></blockquote>
 </section>
 <section id="id3">
-<h2>2. Graphics Card Driver<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<h2>2、 显卡驱动<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <blockquote>
-<div><p>Problem Description:</p>
+<div><p>问题描述：</p>
 <blockquote>
-<div><p>The software can start without connecting the sensor, but fails to start when the sensor is connected, and the command line shows similar error reports or outputs as follows</p>
+<div><p>如果不插传感器能启动,但插传感器无法启动，且命令行有如下类似报错或输出</p>
 </div></blockquote>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Command Line Output</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">命令行输出</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>段错误已中止<span class="o">(</span>核心已转储<span class="o">)</span>
 <span class="linenos">2</span>Segmentation<span class="w"> </span>Fault
 <span class="linenos">3</span>Init<span class="w"> </span>infer<span class="w"> </span>engine
@@ -128,12 +128,14 @@
 </pre></div>
 </div>
 </div>
-<p>Solution:</p>
+<p>解决方案：</p>
 <blockquote>
-<div><p>It is most likely a graphics card driver issue. First, install a compatible graphics card driver (if the graphics card is an NVIDIA card). Check if the following command outputs normally; if not, install a compatible graphics card driver first.</p>
+<div><p>大概率是显卡驱动问题,
+先安装适配的显卡驱动
+(如果显卡是nvidia显卡的话)检查如下命令是否正常输出,如果不正常的话，先安装适配的显卡驱动。</p>
 </div></blockquote>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">Command Line Input</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">命令行输入</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nvidia-smi
 </pre></div>
 </div>
@@ -141,11 +143,11 @@
 </div></blockquote>
 </section>
 <section id="id4">
-<h2>3. Error Handling<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<h2>3、 报错处理<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
 <blockquote>
-<div><p>Problem Description:</p>
+<div><p>问题描述：</p>
 <div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">Command Line Output</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">命令行输出</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>from<span class="w"> </span><span class="m">6</span>.5.0,<span class="w"> </span>xcb-cursor0<span class="w"> </span>or<span class="w"> </span>libxcb-cursor0<span class="w"> </span>is<span class="w"> </span>needed<span class="w"> </span>to<span class="w"> </span>lload<span class="w"> </span>the<span class="w"> </span>Qt<span class="w"> </span>xcb<span class="w"> </span>platform<span class="w"> </span>plugin.
 <span class="linenos">2</span>Could<span class="w"> </span>not<span class="w"> </span>load<span class="w"> </span>the<span class="w"> </span>Qt<span class="w"> </span>platform<span class="w"> </span>plugin<span class="w"> </span><span class="s2">&quot;xcb&quot;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>even<span class="w"> </span>tkhough<span class="w"> </span>it<span class="w"> </span>was<span class="w"> </span>found.<span class="w"> </span>This
 <span class="linenos">3</span>application<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>start<span class="w"> </span>because<span class="w"> </span>no<span class="w"> </span>Qt<span class="w"> </span>platform<span class="w"> </span>plugiIn<span class="w"> </span>could<span class="w"> </span>be<span class="w"> </span>initialized.
@@ -153,9 +155,9 @@
 </pre></div>
 </div>
 </div>
-<p>Solution:</p>
+<p>解决方案：</p>
 <div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">Command Line Input</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">命令行输入</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 <span class="linenos">2</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libxcb-cursor0
 </pre></div>
@@ -169,8 +171,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="User_Interface_and_Interaction.html" class="btn btn-neutral float-left" title="IV. User Interface and Interaction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Contact_Information.html" class="btn btn-neutral float-right" title="VI. Contact Information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="User_Interface_and_Interaction.html" class="btn btn-neutral float-left" title="四、界面与交互" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Contact_Information.html" class="btn btn-neutral float-right" title="六、联系方式" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

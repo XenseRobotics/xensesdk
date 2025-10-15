@@ -27,15 +27,15 @@ set_position_sync方法
         
         :param tolerance: 判定运动完成的位置误差容忍度，单位为毫米(mm)。
                             默认值为 0.01 mm。
-        :type tolerance: float, 可选
+        :type tolerance: float
 
         :param timeout: 等待目标位置到达的最大时间，单位为秒。
                         默认值为 5.0 秒。
-        :type timeout: float, 可选
+        :type timeout: float
 
         :param poll_interval: 位置检查的时间间隔，单位为秒。
                                 默认值为 0.05 秒。
-        :type poll_interval: float, 可选
+        :type poll_interval: float
         
         :raises ValueError: 当任何输入参数超出其允许的物理限制范围时触发。
 

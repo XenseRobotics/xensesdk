@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installing GripperSDK &mdash; xense  documentation</title>
+  <title>安装GripperSDK &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,8 +26,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Using GripperSDK API" href="methodlist.html" />
-    <link rel="prev" title="Hardware Connection and Network Configuration" href="pre_configuration.html" /> 
+    <link rel="next" title="使用GripperSDK API" href="methodlist.html" />
+    <link rel="prev" title="硬件连接与网络配置" href="pre_configuration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,16 +49,17 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pre_configuration.html">Hardware Connection and Network Configuration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Installing GripperSDK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="methodlist.html">Using GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methodlist.html">使用GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect_sensor.html">传感器连接</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EzROS/EzROS.html">EzROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Hardware/Hardware.html">Hardware</a></li>
@@ -79,7 +80,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../GripperSDK.html">GripperSDK</a></li>
-      <li class="breadcrumb-item active">Installing GripperSDK</li>
+      <li class="breadcrumb-item active">安装GripperSDK</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -92,7 +93,7 @@
            <div itemprop="articleBody">
              
   <section id="grippersdk">
-<span id="tag-gripperinstallation"></span><h1>Installing GripperSDK<a class="headerlink" href="#grippersdk" title="Link to this heading"></a></h1>
+<span id="tag-gripperinstallation"></span><h1>安装GripperSDK<a class="headerlink" href="#grippersdk" title="Link to this heading"></a></h1>
 <style>
 /* 步骤标题样式（外显，无边框） */
 .step-title {
@@ -122,19 +123,19 @@
     border-radius: 4px !important;
     border: 1px solid #bed6e3 !important; /* 浅蓝色边框 */
 }
-</style><p class="step-title rubric">Step 1: Prepare Python Development Environment</p>
+</style><p class="step-title rubric">步骤 1: 准备 Python 开发环境</p>
 <div class="step-content docutils container">
-<p>GripperSDK depends on XenseSDK, so a Python development environment needs to be installed. Please refer to <a class="reference external" href="../../XenseSDK/usr/Installation.html">XenseSDK</a> for Python development environment preparation.</p>
+<p>GripperSDK 依赖 XenseSDK, 因此需要安装 Python 开发环境, 请参考 <a class="reference external" href="../../XenseSDK/usr/Installation.html">XenseSDK</a> Python开发环境准备。</p>
 </div>
-<p class="step-title rubric">Step 2: Install GripperSDK Package</p>
+<p class="step-title rubric">步骤 2: 安装 GripperSDK 包</p>
 <div class="step-content docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>xensegripper
 </pre></div>
 </div>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Tips</p>
-<p>The latest version of GripperSDK can be obtained from the <a class="reference external" href="https://github.com/XenseRobotics/xensesdk/releases">official Github website</a>.</p>
+<p class="admonition-title">tips</p>
+<p>最新版本的 GripperSDK 请在 <a class="reference external" href="https://github.com/XenseRobotics/xensesdk/releases">Github官方网站</a> 获取。</p>
 </div>
 </section>
 
@@ -142,8 +143,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pre_configuration.html" class="btn btn-neutral float-left" title="Hardware Connection and Network Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="methodlist.html" class="btn btn-neutral float-right" title="Using GripperSDK API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pre_configuration.html" class="btn btn-neutral float-left" title="硬件连接与网络配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="methodlist.html" class="btn btn-neutral float-right" title="使用GripperSDK API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

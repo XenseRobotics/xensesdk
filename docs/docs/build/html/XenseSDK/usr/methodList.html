@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using XenseSDK API &mdash; xense  documentation</title>
+  <title>使用XenseSDK API &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,8 +26,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="create Method" href="API/create.html" />
-    <link rel="prev" title="Install XenseSDK" href="Installation.html" /> 
+    <link rel="next" title="create方法" href="API/create.html" />
+    <link rel="prev" title="安装XenseSDK" href="Installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,26 +49,26 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../XenseSDK.html">XenseSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Introduction.html">What is XenseSDK?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Installation.html">Install XenseSDK</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Using XenseSDK API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="API/create.html">create Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/selectSensorInfo.html">selectSensorInfo Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/getCameraID.html">getCameraID Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/resetReferenceImage.html">resetReferenceImage Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/release.html">release Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/call_service.html">call_service Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/calibrateSensor.html">calibrateSensor Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/scanSerialNumber.html">scanSerialNumber Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/createSolver.html">createSolver Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="API/exportRuntimeConfig.html">exportRuntimeConfig Method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html">什么是XenseSDK？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation.html">安装XenseSDK</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">使用XenseSDK API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/create.html">create方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/selectSensorInfo.html">selectSensorInfo 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/getCameraID.html">getCameraID 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/resetReferenceImage.html">resetReferenceImage 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/release.html">release 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/call_service.html">call_service 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/calibrateSensor.html">calibrateSensor 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/scanSerialNumber.html">scanSerialNumber 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/createSolver.html">createSlover 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/exportRuntimeConfig.html">exportRuntimeConfig 方法</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="repo_example.html">More Code Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repo_example.html">更多代码示例</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../GripperSDK/GripperSDK.html">GripperSDK</a></li>
@@ -90,7 +90,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../XenseSDK.html">XenseSDK</a></li>
-      <li class="breadcrumb-item active">Using XenseSDK API</li>
+      <li class="breadcrumb-item active">使用XenseSDK API</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -103,37 +103,37 @@
            <div itemprop="articleBody">
              
   <section id="xensesdk-api">
-<span id="tag-xensesdkmethodlist"></span><h1>Using XenseSDK API<a class="headerlink" href="#xensesdk-api" title="Link to this heading"></a></h1>
+<span id="tag-xensesdkmethodlist"></span><h1>使用XenseSDK API<a class="headerlink" href="#xensesdk-api" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
-<p>This document provides various methods for processing sensor images, including depth map generation, difference map calculation, marker detection, and comprehensive aggregation of sensor data.</p>
+<p>本文件提供了用于处理传感器图像的各类方法，包含深度图生成、差异图计算、标记检测以及传感器数据的综合聚合。</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100.0%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>API Directory</p></th>
+<tr class="row-odd"><th class="head"><p>API目录</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="API/create.html#tagcreate-method"><span class="std std-ref">create Method</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="API/create.html#tagcreate-method"><span class="std std-ref">create 方法</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="API/selectSensorInfo.html#tagselect-sensor-info-method"><span class="std std-ref">selectSensorInfo Method</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/selectSensorInfo.html#tagselect-sensor-info-method"><span class="std std-ref">selectSensorInfo 方法</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="API/getCameraID.html#tagget-camera-id-method"><span class="std std-ref">getCameraID Method</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="API/getCameraID.html#tagget-camera-id-method"><span class="std std-ref">getCameraID 方法</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="API/resetReferenceImage.html#tagreset-reference-image-method"><span class="std std-ref">resetReferenceImage Method</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/resetReferenceImage.html#tagreset-reference-image-method"><span class="std std-ref">resetReferenceImage 方法</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="API/release.html#tagrelease-method"><span class="std std-ref">release Method</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="API/release.html#tagrelease-method"><span class="std std-ref">release 方法</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="API/call_service.html#tag-call-service"><span class="std std-ref">call_service Method</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/call_service.html#tag-call-service"><span class="std std-ref">call_service 方法</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="API/calibrateSensor.html#tag-calibratesensor"><span class="std std-ref">calibrateSensor Method</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="API/calibrateSensor.html#tag-calibratesensor"><span class="std std-ref">calibrateSensor 方法</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="API/scanSerialNumber.html#tag-scanserialnumber"><span class="std std-ref">scanSerialNumber Method</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/scanSerialNumber.html#tag-scanserialnumber"><span class="std std-ref">scanSerialNumber 方法</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="API/createSolver.html#tag-createsolver"><span class="std std-ref">createSolver Method</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="API/createSolver.html#tag-createsolver"><span class="std std-ref">createSolver 方法</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="API/exportRuntimeConfig.html#tag-exportruntimeconfig"><span class="std std-ref">exportRuntimeConfig Method</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="API/exportRuntimeConfig.html#tag-exportruntimeconfig"><span class="std std-ref">exportRuntimeConfig 方法</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -146,8 +146,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Installation.html" class="btn btn-neutral float-left" title="Install XenseSDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="API/create.html" class="btn btn-neutral float-right" title="create Method" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Installation.html" class="btn btn-neutral float-left" title="安装XenseSDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="API/create.html" class="btn btn-neutral float-right" title="create方法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

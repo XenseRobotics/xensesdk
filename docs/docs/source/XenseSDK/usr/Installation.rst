@@ -10,18 +10,17 @@
 
     **步骤 1:** 准备 Python 开发环境
 
-
-
     .. code-block:: bash
-        
+
         # 进入 Xense SDK 目录
         cd xensesdk
 
         # 创建并激活虚拟环境
         conda create -n xenseenv python=3.9
-        #or conda create -n xenseenv python=3.10
-
+        # or conda create -n xenseenv python=3.10
         conda activate xenseenv
+
+
 
 .. note:: 
 

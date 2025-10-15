@@ -18,12 +18,12 @@ set_position方法
         :param vmax: 最大运动速度，单位为毫米/秒(mm/s)。
                         必须在 (0, 350) 范围内。
                         默认值为 80 mm/s。
-        :type vmax: float, 可选
+        :type vmax: float
         
         :param fmax: 最大输出力，单位为牛顿(N)。
                         必须在 (0, 60) 范围内。
                         默认值为 27 N。
-        :type fmax: float, 可选
+        :type fmax: float
         
         :raises ValueError: 当任何输入参数超出其允许的物理限制范围时触发。
 

@@ -11,7 +11,7 @@ create 方法
         创建一个 XenseGripper 实例
 
         :param mac_addr: 提供正确的 mac 通信地址, MAC地址查询方式请看: `ezros <../EzROS/usr/ezros_example.html>`_ 。
-        :type mac_addr: str, 可选
+        :type mac_addr: str
         
         :return: 实现 `Gripper` 接口的夹爪实例。
         :rtype: :class:`XenseTCPGripper`

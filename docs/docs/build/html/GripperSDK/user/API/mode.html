@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mode Method &mdash; xense  documentation</title>
+  <title>mode 方法 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,8 +26,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="EzROS" href="../EzROS/EzROS.html" />
-    <link rel="prev" title="set_led_color Method" href="set_led_color.html" /> 
+    <link rel="next" title="传感器连接" href="../connect_sensor.html" />
+    <link rel="prev" title="set_led_color方法" href="set_led_color.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,34 +49,35 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Installing GripperSDK</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">Using GripperSDK API</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="create_gripper.html">create Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_position.html">set_position Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="open_gripper.html">open_gripper Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="get_gripper_status.html">get_gripper_status Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_position_sync.html">set_position_sync Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_speed.html">set_speed Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_led_color.html">set_led_color Method</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">mode Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">使用GripperSDK API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create_gripper.html">create 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_position.html">set_position方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="open_gripper.html">open_gripper 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_gripper_status.html">get_gripper_status 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_position_sync.html">set_position_sync方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_speed.html">set_speed方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_led_color.html">set_led_color方法</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">mode 方法</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.mode"><code class="docutils literal notranslate"><span class="pre">XenseGripper.mode()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.enable_mode"><code class="docutils literal notranslate"><span class="pre">XenseGripper.enable_mode()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.disable_mode"><code class="docutils literal notranslate"><span class="pre">XenseGripper.disable_mode()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Example Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">示例代码</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../connect_sensor.html">传感器连接</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../EzROS/EzROS.html">EzROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Hardware/Hardware.html">Hardware</a></li>
@@ -97,8 +98,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../GripperSDK.html">GripperSDK</a></li>
-          <li class="breadcrumb-item"><a href="../methodlist.html">Using GripperSDK API</a></li>
-      <li class="breadcrumb-item active">mode Method</li>
+          <li class="breadcrumb-item"><a href="../methodlist.html">使用GripperSDK API</a></li>
+      <li class="breadcrumb-item active">mode 方法</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -111,27 +112,31 @@
            <div itemprop="articleBody">
              
   <section id="mode">
-<span id="tag-mode"></span><h1>mode Method<a class="headerlink" href="#mode" title="Link to this heading"></a></h1>
-<p>XenseGripper supports three control modes, which can be switched via the <code class="docutils literal notranslate"><span class="pre">mode</span></code> method (context manager) or the <code class="docutils literal notranslate"><span class="pre">enable_mode</span></code>/<code class="docutils literal notranslate"><span class="pre">disable_mode</span></code> methods:</p>
+<span id="tag-mode"></span><h1>mode 方法<a class="headerlink" href="#mode" title="Link to this heading"></a></h1>
+<p>XenseGripper 支持三种控制模式，可通过 <code class="docutils literal notranslate"><span class="pre">mode</span></code> 方法（上下文管理器）或 <code class="docutils literal notranslate"><span class="pre">enable_mode</span></code>/<code class="docutils literal notranslate"><span class="pre">disable_mode</span></code> 方法切换：</p>
 <ul class="simple">
-<li><p><strong>POSITION</strong>: Position control mode (default), precisely controls the gripper to reach the specified position</p></li>
-<li><p><strong>SPEED</strong>: Speed control mode, drives the gripper to move at the set speed</p></li>
-<li><p><strong>SAFE</strong>: Safe control mode (sensor required), realizes safe operation with force feedback</p></li>
+<li><p><strong>POSITION</strong>: 位置控制模式 (默认)，精确控制夹爪到达指定位置</p></li>
+<li><p><strong>SPEED</strong>: 速度控制模式，按设定速度驱动夹爪运动</p></li>
+<li><p><strong>SAFE</strong>: 安全控制模式 (需要传感器)，结合力反馈实现安全操作</p></li>
 </ul>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.mode">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.mode" title="Link to this definition"></a></dt>
-<dd><p>A context manager used to temporarily switch the gripper control mode; the original mode is automatically restored when exiting the context (recommended). Use this method with the with statement to ensure the mode is automatically reset after the code block is executed, avoiding exceptions caused by residual modes.</p>
+<dd><p>上下文管理器，用于临时切换夹爪控制模式，退出上下文时自动恢复原模式（推荐使用）。
+通过 with 语句使用该方法，可确保模式在代码块执行完毕后自动重置，避免模式残留导致的异常。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>control_mode</strong> (<em>XenseGripper.ControlMode</em>) – Control mode enumeration values: <code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.POSITION</span></code>: Position control mode <code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.SPEED</span></code>: Speed control mode <code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.SAFE</span></code>: Safe control mode</p></li>
-<li><p><strong>serial_number</strong> (<em>str</em><em>, </em><em>可选</em>) – Sensor serial number (required only for safe mode; the first scanned sensor is used by default)</p></li>
+<li><p><strong>control_mode</strong> (<em>XenseGripper.ControlMode</em>) – 控制模式枚举值
+<code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.POSITION</span></code>: 位置控制模式
+<code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.SPEED</span></code>: 速度控制模式
+<code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.SAFE</span></code>: 安全控制模式</p></li>
+<li><p><strong>serial_number</strong> (<em>str</em>) – 传感器序列号（仅安全模式需要，默认使用第一个扫描到的传感器）</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Context manager object, used to temporarily switch modes in the with statement block</p>
+<dd class="field-even"><p>上下文管理器对象，用于 with 语句块中临时切换模式</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>context manager</p>
@@ -142,16 +147,16 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.enable_mode">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">enable_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.enable_mode" title="Link to this definition"></a></dt>
-<dd><p>Manually enable the specified control mode</p>
+<dd><p>手动启用指定的控制模式</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>control_mode</strong> (<em>XenseGripper.ControlMode</em>) – Control mode enumeration values (same as the mode method)</p></li>
-<li><p><strong>serial_number</strong> (<em>str</em><em>, </em><em>可选</em>) – Sensor serial number (required only for safe mode)</p></li>
+<li><p><strong>control_mode</strong> (<em>XenseGripper.ControlMode</em>) – 控制模式枚举值（同 mode 方法）</p></li>
+<li><p><strong>serial_number</strong> (<em>str</em>) – 传感器序列号（仅安全模式需要）</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Whether the operation is successful</p>
+<dd class="field-even"><p>操作是否成功</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
@@ -162,10 +167,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.disable_mode">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">disable_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.disable_mode" title="Link to this definition"></a></dt>
-<dd><p>Manually disable the current control mode, automatically restore to the default mode and stop the action</p>
+<dd><p>手动禁用当前控制模式，自动恢复到默认模式并停止动作</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Whether the operation is successful</p>
+<dd class="field-odd"><p>操作是否成功</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>bool</p>
@@ -175,10 +180,10 @@
 
 </div>
 <section id="id1">
-<h2>Example Code<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
 <ol class="arabic simple">
-<li><p>Position control mode (default mode, no manual switching required)</p></li>
+<li><p>位置控制模式（默认模式，无需手动切换）</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
 
@@ -187,7 +192,7 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Speed Control Mode</p></li>
+<li><p>速度控制模式</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用上下文管理器 (推荐)</span>
 <span class="k">with</span> <span class="n">gripper</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">XenseGripper</span><span class="o">.</span><span class="n">ControlMode</span><span class="o">.</span><span class="n">SPEED</span><span class="p">):</span>
@@ -202,7 +207,7 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>Safe Control Mode (Sensor Required)</p></li>
+<li><p>安全控制模式 (需要传感器)</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用上下文管理器 (推荐)</span>
 <span class="c1"># 可指定传感器序列号，默认使用扫描到的第一个传感器</span>
@@ -228,8 +233,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="set_led_color.html" class="btn btn-neutral float-left" title="set_led_color Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../EzROS/EzROS.html" class="btn btn-neutral float-right" title="EzROS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="set_led_color.html" class="btn btn-neutral float-left" title="set_led_color方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../connect_sensor.html" class="btn btn-neutral float-right" title="传感器连接" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

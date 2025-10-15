@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Monitor Topic &mdash; xense  documentation</title>
+  <title>监控话题 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,8 +26,8 @@
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="Service Call" href="service.html" />
-    <link rel="prev" title="View EzROS Service Information" href="all_info.html" /> 
+    <link rel="next" title="Service调用" href="service.html" />
+    <link rel="prev" title="查看ezros服务信息" href="all_info.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,27 +49,28 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../Installation.html">Installing GripperSDK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../methodlist.html">Using GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../methodlist.html">使用GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../connect_sensor.html">传感器连接</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../EzROS.html">EzROS</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../ezros_example.html">Using the EzROS Command Line Tool</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="all_info.html">View EzROS Service Information</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Monitor Topic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="service.html">Service Call</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ezros_example.html">使用EzROS命令行工具</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="all_info.html">查看ezros服务信息</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">监控话题</a></li>
+<li class="toctree-l4"><a class="reference internal" href="service.html">Service调用</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="all_info.html">View EzROS Service Information</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Monitor Topic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="service.html">Service Call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="all_info.html">查看ezros服务信息</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">监控话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="service.html">Service调用</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../Hardware/Hardware.html">Hardware</a></li>
@@ -91,8 +92,8 @@
       <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../../GripperSDK.html">GripperSDK</a></li>
           <li class="breadcrumb-item"><a href="../../EzROS.html">EzROS</a></li>
-          <li class="breadcrumb-item"><a href="../ezros_example.html">Using the EzROS Command Line Tool</a></li>
-      <li class="breadcrumb-item active">Monitor Topic</li>
+          <li class="breadcrumb-item"><a href="../ezros_example.html">使用EzROS命令行工具</a></li>
+      <li class="breadcrumb-item active">监控话题</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -105,30 +106,30 @@
            <div itemprop="articleBody">
              
   <section id="tag-echo">
-<span id="id1"></span><h1>Monitor Topic<a class="headerlink" href="#tag-echo" title="Link to this heading"></a></h1>
+<span id="id1"></span><h1>监控话题<a class="headerlink" href="#tag-echo" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
-<p>When you need to query a specific Topic, you can use the following commands:</p>
+<p>当要对特定 Topic 查询时，可使用如下命令：</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Monitor Sensor</label><div class="sd-tab-content docutils">
+监听 Sensor</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>topic<span class="w"> </span>-e<span class="w"> </span>OG000285<span class="w"> </span>-t<span class="w"> </span><span class="m">30</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-Monitor Gripper</label><div class="sd-tab-content docutils">
+监听 Gripper</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>topic<span class="w"> </span>-e<span class="w"> </span>gripper_d672f584b17a<span class="w"> </span>-t<span class="w"> </span><span class="m">30</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The terminal prints the following information:</p>
+<p>终端打印信息如下：</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
-Sensor Monitoring Output</label><div class="sd-tab-content docutils">
+监听 Sensor 输出</label><div class="sd-tab-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>监听话题: OG000285
 持续时间: 30 秒
 按 Ctrl+C 停止
@@ -177,7 +178,7 @@ Sensor Monitoring Output</label><div class="sd-tab-content docutils">
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
-Gripper Monitoring Output</label><div class="sd-tab-content docutils">
+监听 Gripper 输出</label><div class="sd-tab-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>监听话题: gripper_d672f584b17a
 持续时间: 30 秒
 按 Ctrl+C 停止
@@ -208,7 +209,7 @@ Gripper Monitoring Output</label><div class="sd-tab-content docutils">
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-4">
-Failed to Detect Topic</label><div class="sd-tab-content docutils">
+未能检测话题</label><div class="sd-tab-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>监听话题: gripper_d672f584b18a
 持续时间: 30 秒
 按 Ctrl+C 停止
@@ -220,11 +221,11 @@ Failed to Detect Topic</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Tips</p>
+<p class="admonition-title">tips</p>
 <ul class="simple">
-<li><p>The <cite>topic</cite> subcommand indicates that this operation is to access a specific topic;</p></li>
-<li><p>The <cite>–echo/-e</cite> mandatory parameter specifies the name of the Topic to be monitored;</p></li>
-<li><p>The <cite>–timeout/-t</cite> optional parameter specifies the duration of monitoring, with a default of 30 seconds.</p></li>
+<li><p><cite>topic</cite> 子命令，表明本次操作是调用某个话题；</p></li>
+<li><p><cite>–echo/-e</cite> 必选参数，指定要监听的 Topic 名称；</p></li>
+<li><p><cite>–timeout/-t</cite> 可选参数，指定监听的持续时间，默认为 30 秒。</p></li>
 </ul>
 </div>
 </section>
@@ -233,8 +234,8 @@ Failed to Detect Topic</label><div class="sd-tab-content docutils">
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="all_info.html" class="btn btn-neutral float-left" title="View EzROS Service Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="service.html" class="btn btn-neutral float-right" title="Service Call" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="all_info.html" class="btn btn-neutral float-left" title="查看ezros服务信息" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="service.html" class="btn btn-neutral float-right" title="Service调用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

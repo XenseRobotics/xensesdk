@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>View EzROS Service Information &mdash; xense  documentation</title>
+  <title>查看ezros服务信息 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,8 +26,8 @@
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="Monitor Topic" href="echo.html" />
-    <link rel="prev" title="Using the EzROS Command Line Tool" href="../ezros_example.html" /> 
+    <link rel="next" title="监控话题" href="echo.html" />
+    <link rel="prev" title="使用EzROS命令行工具" href="../ezros_example.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,27 +49,28 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../Installation.html">Installing GripperSDK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../methodlist.html">Using GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../methodlist.html">使用GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../connect_sensor.html">传感器连接</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../EzROS.html">EzROS</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../ezros_example.html">Using the EzROS Command Line Tool</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">View EzROS Service Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="echo.html">Monitor Topic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="service.html">Service Call</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ezros_example.html">使用EzROS命令行工具</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">查看ezros服务信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="echo.html">监控话题</a></li>
+<li class="toctree-l4"><a class="reference internal" href="service.html">Service调用</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">View EzROS Service Information</a></li>
-<li class="toctree-l3"><a class="reference internal" href="echo.html">Monitor Topic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="service.html">Service Call</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">查看ezros服务信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="echo.html">监控话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="service.html">Service调用</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../Hardware/Hardware.html">Hardware</a></li>
@@ -91,8 +92,8 @@
       <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../../GripperSDK.html">GripperSDK</a></li>
           <li class="breadcrumb-item"><a href="../../EzROS.html">EzROS</a></li>
-          <li class="breadcrumb-item"><a href="../ezros_example.html">Using the EzROS Command Line Tool</a></li>
-      <li class="breadcrumb-item active">View EzROS Service Information</li>
+          <li class="breadcrumb-item"><a href="../ezros_example.html">使用EzROS命令行工具</a></li>
+      <li class="breadcrumb-item active">查看ezros服务信息</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -105,15 +106,16 @@
            <div itemprop="articleBody">
              
   <section id="ezros">
-<span id="tag-all-info"></span><h1>View EzROS Service Information<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
+<span id="tag-all-info"></span><h1>查看ezros服务信息<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
-<p>EzROS supports combining global parameters to achieve “full information display” or “specified node filtering display”. The specific usage for each scenario is explained below:</p>
-<p><strong>Scenario 1: View All Nodes, Topics, and Services (Full Information)</strong> Trigger a full scan via the <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> parameter to display complete information of all nodes in the network:</p>
+<p>EzROS 支持通过全局参数组合，实现“全量信息展示”或“指定节点过滤展示”，以下分场景说明具体用法：</p>
+<p><strong>场景1: 查看所有节点、话题和服务（全量信息）</strong>
+通过 <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> 参数触发全量扫描，展示网络中所有节点的完整信息：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a
 <span class="c1"># 或者 ezros --all</span>
 </pre></div>
 </div>
-<p>The terminal prints the following information:</p>
+<p>终端打印如下信息：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>扫描网络中... (预计 2 秒)
 [███████████████████████████░░░] 90%
 ================================================================================
@@ -130,11 +132,12 @@ EzROS 网络节点信息
     - master_d672f584b17a: [scan_sensor_sn, kill_sensor, launch_camera, launch_gripper, list_camera, reboot, kill_camera, launch_sensor, kill_gripper]
 </pre></div>
 </div>
-<p><strong>Scenario 2: Filter and View Specified Nodes (Display Only Nodes Containing Target String)</strong> Combine the <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> and <code class="docutils literal notranslate"><span class="pre">-f/--filter</span></code> parameters to display only information of nodes whose names contain the specified string (e.g., view only “gripper”-related nodes):</p>
+<p><strong>场景2: 过滤查看指定节点（仅展示含目标字符串的节点）</strong>
+结合 <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-f/--filter</span></code> 参数，仅展示节点名包含指定字符串的信息（如仅看“gripper”相关节点）：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a<span class="w"> </span>-f<span class="w"> </span>gripper<span class="w">  </span><span class="c1"># 过滤节点名包含&quot;gripper&quot;的信息</span>
 </pre></div>
 </div>
-<p>The terminal prints the following information (only nodes containing “gripper” are retained):</p>
+<p>终端打印如下信息(仅保留含“gripper”的节点):</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>扫描网络中... (预计 2 秒)
 [███████████████████████████░░░] 90%
 ================================================================================
@@ -147,7 +150,7 @@ EzROS 网络节点信息
     - gripper_d672f584b17a: [restart_control_subscriber, set_led_color]
 </pre></div>
 </div>
-<p>In both scenarios, the string “d672f584b17a” after the node name represents the device MAC address, which can be used to create a gripper instance:</p>
+<p>两种场景中，节点名后的 “d672f584b17a” 字符串均代表设备 MAC 地址，可用于创建 gripper 夹爪实例：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
 
 <span class="n">gripper</span> <span class="o">=</span> <span class="n">XenseGripper</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;d672f584b17a&quot;</span><span class="p">)</span>
@@ -155,10 +158,10 @@ EzROS 网络节点信息
 </div>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Tips</p>
+<p class="admonition-title">tips</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">-a/--all</span></code>: A global parameter used to trigger the “full information display” function, which scans and displays information of all nodes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-f/--filter</span></code>: A global parameter that must be used with <code class="docutils literal notranslate"><span class="pre">-a</span></code> to filter node names containing the specified string (matches all nodes by default). For example, <code class="docutils literal notranslate"><span class="pre">ezros</span> <span class="pre">-a</span> <span class="pre">-f</span> <span class="pre">master</span></code> can display only information of nodes whose names contain “master”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-a/--all</span></code>: 全局参数，用于触发“全量信息展示”功能，扫描并显示所有节点信息。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-f/--filter</span></code>: 全局参数，需与 <code class="docutils literal notranslate"><span class="pre">-a</span></code> 搭配使用，用于过滤包含指定字符串的节点名（默认匹配所有节点），例如 <code class="docutils literal notranslate"><span class="pre">ezros</span> <span class="pre">-a</span> <span class="pre">-f</span> <span class="pre">master</span></code> 可仅显示名称包含“master”的节点信息。</p></li>
 </ul>
 </div>
 </section>
@@ -167,8 +170,8 @@ EzROS 网络节点信息
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../ezros_example.html" class="btn btn-neutral float-left" title="Using the EzROS Command Line Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="echo.html" class="btn btn-neutral float-right" title="Monitor Topic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../ezros_example.html" class="btn btn-neutral float-left" title="使用EzROS命令行工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="echo.html" class="btn btn-neutral float-right" title="监控话题" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

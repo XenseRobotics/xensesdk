@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>exportRuntimeConfig Method &mdash; xense  documentation</title>
+  <title>exportRuntimeConfig 方法 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,8 +26,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="More Code Examples" href="../repo_example.html" />
-    <link rel="prev" title="createSolver Method" href="createSolver.html" /> 
+    <link rel="next" title="更多代码示例" href="../repo_example.html" />
+    <link rel="prev" title="createSlover 方法" href="createSolver.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,30 +49,30 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../XenseSDK.html">XenseSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Introduction.html">What is XenseSDK?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Install XenseSDK</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../methodList.html">Using XenseSDK API</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="create.html">create Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="selectSensorInfo.html">selectSensorInfo Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="getCameraID.html">getCameraID Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="resetReferenceImage.html">resetReferenceImage Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html">release Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="call_service.html">call_service Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calibrateSensor.html">calibrateSensor Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scanSerialNumber.html">scanSerialNumber Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="createSolver.html">createSolver Method</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">exportRuntimeConfig Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction.html">什么是XenseSDK？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation.html">安装XenseSDK</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../methodList.html">使用XenseSDK API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create.html">create方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selectSensorInfo.html">selectSensorInfo 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getCameraID.html">getCameraID 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resetReferenceImage.html">resetReferenceImage 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html">release 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call_service.html">call_service 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibrateSensor.html">calibrateSensor 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scanSerialNumber.html">scanSerialNumber 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="createSolver.html">createSlover 方法</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">exportRuntimeConfig 方法</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#xensesdk.Sensor.exportRuntimeConfig"><code class="docutils literal notranslate"><span class="pre">Sensor.exportRuntimeConfig()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Example Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">示例方法</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../repo_example.html">More Code Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../repo_example.html">更多代码示例</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../GripperSDK/GripperSDK.html">GripperSDK</a></li>
@@ -94,8 +94,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../XenseSDK.html">XenseSDK</a></li>
-          <li class="breadcrumb-item"><a href="../methodList.html">Using XenseSDK API</a></li>
-      <li class="breadcrumb-item active">exportRuntimeConfig Method</li>
+          <li class="breadcrumb-item"><a href="../methodList.html">使用XenseSDK API</a></li>
+      <li class="breadcrumb-item active">exportRuntimeConfig 方法</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -108,36 +108,36 @@
            <div itemprop="articleBody">
              
   <section id="exportruntimeconfig">
-<span id="tag-exportruntimeconfig"></span><h1>exportRuntimeConfig Method<a class="headerlink" href="#exportruntimeconfig" title="Link to this heading"></a></h1>
+<span id="tag-exportruntimeconfig"></span><h1>exportRuntimeConfig 方法<a class="headerlink" href="#exportruntimeconfig" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensesdk.Sensor.exportRuntimeConfig">
 <span class="sig-prename descclassname"><span class="pre">Sensor.</span></span><span class="sig-name descname"><span class="pre">exportRuntimeConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensesdk.Sensor.exportRuntimeConfig" title="Link to this definition"></a></dt>
 <dd><blockquote>
-<div><p>Export the runtime configuration of the current sensor to the specified directory.</p>
+<div><p>将当前传感器的运行时配置导出到指定目录。</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>save_dir</strong> (<em>Union</em><em>[</em><em>str</em><em>,</em><em>Path</em><em>]</em><em>, </em><em>可选</em>) – Directory for saving the configuration file; defaults to the current directory.</p></li>
-<li><p><strong>binary</strong> (<em>bool</em><em>, </em><em>可选</em>) – Whether to return binary encrypted data instead of saving it to a file; defaults to False.</p></li>
+<li><p><strong>save_dir</strong> (<em>Union</em><em>[</em><em>str</em><em>,</em><em>Path</em><em>]</em>) – 配置文件保存目录，默认为当前目录。</p></li>
+<li><p><strong>binary</strong> (<em>bool</em>) – 是否返回二进制加密数据而非保存到文件，默认为 False。</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError</strong> – Raised when configuration export fails in remote connection mode.</p>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – 远程连接模式下导出配置失败时抛出。</p>
 </dd>
 <dt class="field-even">Note<span class="colon">:</span></dt>
-<dd class="field-even"><p>The saved file name follows the format “runtime_&lt;serial_number&gt;”.</p>
+<dd class="field-even"><p>保存的文件名格式为 “runtime_&lt;序列号&gt;”。</p>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
 <section id="id1">
-<h2>Example Method<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>示例方法<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="n">SCRIPT_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span>
@@ -212,8 +212,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="createSolver.html" class="btn btn-neutral float-left" title="createSolver Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../repo_example.html" class="btn btn-neutral float-right" title="More Code Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="createSolver.html" class="btn btn-neutral float-left" title="createSlover 方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../repo_example.html" class="btn btn-neutral float-right" title="更多代码示例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

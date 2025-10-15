@@ -24,7 +24,7 @@ XenseGripper 支持三种控制模式，可通过 ``mode`` 方法（上下文管
                               ``XenseGripper.ControlMode.SAFE``: 安全控制模式
         :type control_mode: XenseGripper.ControlMode
         :param serial_number: 传感器序列号（仅安全模式需要，默认使用第一个扫描到的传感器）
-        :type serial_number: str, 可选
+        :type serial_number: str
         
         :return: 上下文管理器对象，用于 with 语句块中临时切换模式
         :rtype: context manager
@@ -38,7 +38,7 @@ XenseGripper 支持三种控制模式，可通过 ``mode`` 方法（上下文管
         :param control_mode: 控制模式枚举值（同 mode 方法）
         :type control_mode: XenseGripper.ControlMode
         :param serial_number: 传感器序列号（仅安全模式需要）
-        :type serial_number: str, 可选
+        :type serial_number: str
         :return: 操作是否成功
         :rtype: bool
 

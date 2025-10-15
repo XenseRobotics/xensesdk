@@ -26,8 +26,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Hardware Connection and Network Configuration" href="user/pre_configuration.html" />
-    <link rel="prev" title="More Code Examples" href="../XenseSDK/usr/repo_example.html" /> 
+    <link rel="next" title="硬件连接与网络配置" href="user/pre_configuration.html" />
+    <link rel="prev" title="更多代码示例" href="../XenseSDK/usr/repo_example.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,16 +49,17 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">GripperSDK</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="user/pre_configuration.html">Hardware Connection and Network Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user/Installation.html">Installing GripperSDK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user/methodlist.html">Using GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/methodlist.html">使用GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/connect_sensor.html">传感器连接</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user/EzROS/EzROS.html">EzROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user/GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Hardware/Hardware.html">Hardware</a></li>
@@ -107,51 +108,55 @@
     -webkit-background-clip: text;
     color: transparent; /* 文字渐变效果（需配合背景渐变） */
 }
-</style><div class="custom-h2">核心功能</div><div class="step-block docutils container">
+</style><p class="step-title rubric">核心功能</p>
+<div class="step-block docutils container">
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 75.0%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Functional Modules</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="head"><p>功能模块</p></th>
+<th class="head"><p>说明</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Gripper Control</p></td>
-<td><p>Supports receiving gripper data at a frequency of 200 Hz, while enabling precise control of gripper movements.</p></td>
+<tr class="row-even"><td><p>夹爪控制</p></td>
+<td><p>支持以 200 Hz 频率接收夹爪数据，同时可对夹爪运动进行精准控制。</p></td>
 </tr>
-<tr class="row-odd"><td><p>Sensor Control</p></td>
-<td><p>Provides interfaces for starting and stopping sensors, supports reading real-time sensor data, and meets data collection requirements in various scenarios.</p></td>
+<tr class="row-odd"><td><p>传感器控制</p></td>
+<td><p>提供传感器启动、关闭操作接口，支持读取传感器实时数据，满足不同场景下的数据采集需求。</p></td>
 </tr>
-<tr class="row-even"><td><p>Service Network Auto-start</p></td>
-<td><p>Enables “plug-and-play” functionality whether the device is directly connected to a computer or accessed via a network switch.</p></td>
+<tr class="row-even"><td><p>服务联网自启动</p></td>
+<td><p>无论设备是直连电脑，还是通过交换机接入网络，实现 “即插即用” 。</p></td>
 </tr>
-<tr class="row-odd"><td><p>Service Auto-discovery</p></td>
-<td><p>The SDK can automatically scan for connectable service nodes, simplifying manual configuration processes and improving system deployment efficiency.</p></td>
+<tr class="row-odd"><td><p>服务自动发现</p></td>
+<td><p>SDK 可自动扫描可连接的服务节点，简化人工配置流程，提升系统部署效率。</p></td>
 </tr>
-<tr class="row-even"><td><p>Sleep Mode</p></td>
-<td><p>If the sensor is unused for 10 minutes, it will automatically turn off to reduce power consumption, while keeping the main service node running continuously to ensure uninterrupted basic services.</p></td>
+<tr class="row-even"><td><p>休眠模式</p></td>
+<td><p>若传感器 10 min 未被使用，自动关闭传感器以降低功耗，仅保留主服务节点持续运行，保障基础服务不中断。</p></td>
 </tr>
-<tr class="row-odd"><td><p>CLI Debugging Tool</p></td>
-<td><p>Through the <code class="docutils literal notranslate"><span class="pre">EzROS</span></code> command-line tool, service status can be quickly tested, facilitating problem troubleshooting during development and operation phases.</p></td>
+<tr class="row-odd"><td><p>CLI 调试工具</p></td>
+<td><p>通过 <code class="docutils literal notranslate"><span class="pre">EzROS</span></code> 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="custom-h2">主目录</div><div class="step-block docutils container">
+<p class="step-title rubric">主目录</p>
+<div class="step-block docutils container">
 <table class="docutils align-default" style="width: 30">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="user/pre_configuration.html#tag-gripperpre-configuration"><span class="std std-ref">Hardware Connection and Network Configuration</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="user/pre_configuration.html#tag-gripperpre-configuration"><span class="std std-ref">硬件连接与网络配置</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="user/Installation.html#tag-gripperinstallation"><span class="std std-ref">Installation Guide</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="user/Installation.html#tag-gripperinstallation"><span class="std std-ref">安装指南</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="user/methodlist.html#tag-grippermethodlist"><span class="std std-ref">API Documentation</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="user/methodlist.html#tag-grippermethodlist"><span class="std std-ref">API文档</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="user/EzROS/EzROS.html#tag-ezros"><span class="std std-ref">EzROS Debugging Tool</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="user/connect_sensor.html#tag-gripperconnect-sensor"><span class="std std-ref">连接传感器</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="user/GuiUseGuide/GuiUseGuide.html#tag-guiuseguide"><span class="std std-ref">GUI User Guide</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="user/EzROS/EzROS.html#tag-ezros"><span class="std std-ref">EzROS调试工具</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="user/GuiUseGuide/GuiUseGuide.html#tag-guiuseguide"><span class="std std-ref">Gui使用指南</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -164,8 +169,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../XenseSDK/usr/repo_example.html" class="btn btn-neutral float-left" title="More Code Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="user/pre_configuration.html" class="btn btn-neutral float-right" title="Hardware Connection and Network Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../XenseSDK/usr/repo_example.html" class="btn btn-neutral float-left" title="更多代码示例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="user/pre_configuration.html" class="btn btn-neutral float-right" title="硬件连接与网络配置" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

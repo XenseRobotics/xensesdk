@@ -18,7 +18,7 @@ set_speed方法
        :param fmax: 最大推力，单位为牛顿 (N)。
                     必须在 [0, 60] 范围内。
                     默认值为 27 N。
-       :type fmax: float, 可选
+       :type fmax: float
 
 
 示例代码

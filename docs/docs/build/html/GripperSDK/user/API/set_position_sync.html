@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>set_position_sync Method &mdash; xense  documentation</title>
+  <title>set_position_sync方法 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,8 +26,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="set_speed Method" href="set_speed.html" />
-    <link rel="prev" title="get_gripper_status Method" href="get_gripper_status.html" /> 
+    <link rel="next" title="set_speed方法" href="set_speed.html" />
+    <link rel="prev" title="get_gripper_status 方法" href="get_gripper_status.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,32 +49,33 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Installing GripperSDK</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">Using GripperSDK API</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="create_gripper.html">create Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_position.html">set_position Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="open_gripper.html">open_gripper Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="get_gripper_status.html">get_gripper_status Method</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">set_position_sync Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">使用GripperSDK API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create_gripper.html">create 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_position.html">set_position方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="open_gripper.html">open_gripper 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_gripper_status.html">get_gripper_status 方法</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">set_position_sync方法</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.set_position_sync"><code class="docutils literal notranslate"><span class="pre">XenseGripper.set_position_sync()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Example Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">示例代码</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="set_speed.html">set_speed Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_led_color.html">set_led_color Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mode.html">mode Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_speed.html">set_speed方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_led_color.html">set_led_color方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mode.html">mode 方法</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../connect_sensor.html">传感器连接</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../EzROS/EzROS.html">EzROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Hardware/Hardware.html">Hardware</a></li>
@@ -95,8 +96,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../GripperSDK.html">GripperSDK</a></li>
-          <li class="breadcrumb-item"><a href="../methodlist.html">Using GripperSDK API</a></li>
-      <li class="breadcrumb-item active">set_position_sync Method</li>
+          <li class="breadcrumb-item"><a href="../methodlist.html">使用GripperSDK API</a></li>
+      <li class="breadcrumb-item active">set_position_sync方法</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -109,28 +110,37 @@
            <div itemprop="articleBody">
              
   <section id="set-position-sync">
-<span id="tag-set-position-sync"></span><h1>set_position_sync Method<a class="headerlink" href="#set-position-sync" title="Link to this heading"></a></h1>
+<span id="tag-set-position-sync"></span><h1>set_position_sync方法<a class="headerlink" href="#set-position-sync" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.set_position_sync">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">set_position_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">80.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poll_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.set_position_sync" title="Link to this definition"></a></dt>
-<dd><p>Synchronous position control (moves the gripper to the target position and blocks until the target position is reached or a timeout occurs)</p>
+<dd><p>同步位置控制 (将夹爪移动到目标位置，并阻塞直到到达目标位置或超时)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>position</strong> (<em>float</em>) – Target position of the gripper, in millimeters (mm). Must be within the range (0, 85). 0 mm means fully open, 85 mm means fully closed.</p></li>
-<li><p><strong>vmax</strong> (<em>float</em>) – Maximum movement speed, in millimeters per second (mm/s). Must be within the range (0, 350). The default value is 80 mm/s.</p></li>
-<li><p><strong>fmax</strong> (<em>float</em>) – Maximum output force, in Newtons (N). Must be within the range (0, 60). The default value is 27 N.</p></li>
-<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>可选</em>) – Position error tolerance for determining movement completion, in millimeters (mm). The default value is 0.01 mm.</p></li>
-<li><p><strong>timeout</strong> (<em>float</em><em>, </em><em>可选</em>) – Maximum time to wait for the target position to be reached, in seconds. The default value is 5.0 seconds.</p></li>
-<li><p><strong>poll_interval</strong> (<em>float</em><em>, </em><em>可选</em>) – Time interval for position checking, in seconds. The default value is 0.05 seconds.</p></li>
+<li><p><strong>position</strong> (<em>float</em>) – 夹爪的目标位置，单位为毫米(mm)。
+必须在 (0, 85) 范围内。
+0 mm 表示完全打开, 85 mm 表示完全闭合。</p></li>
+<li><p><strong>vmax</strong> (<em>float</em>) – 最大运动速度，单位为毫米/秒(mm/s)。
+必须在 (0, 350) 范围内。
+默认值为 80 mm/s。</p></li>
+<li><p><strong>fmax</strong> (<em>float</em>) – 最大输出力，单位为牛顿(N)。
+必须在 (0, 60) 范围内。
+默认值为 27 N。</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em>) – 判定运动完成的位置误差容忍度，单位为毫米(mm)。
+默认值为 0.01 mm。</p></li>
+<li><p><strong>timeout</strong> (<em>float</em>) – 等待目标位置到达的最大时间，单位为秒。
+默认值为 5.0 秒。</p></li>
+<li><p><strong>poll_interval</strong> (<em>float</em>) – 位置检查的时间间隔，单位为秒。
+默认值为 0.05 秒。</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – Triggered when any input parameter exceeds its allowed physical limit range.</p>
+<dd class="field-even"><p><strong>ValueError</strong> – 当任何输入参数超出其允许的物理限制范围时触发。</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns True if the gripper reaches the target position within the timeout period (within the allowed error range), otherwise returns False.</p>
+<dd class="field-odd"><p>若夹爪在超时时间内到达目标位置（在允许的误差范围内），则返回 True, 否则返回 False。</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>bool</p>
@@ -140,7 +150,7 @@
 
 </div>
 <section id="id1">
-<h2>Example Code<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
 
@@ -174,8 +184,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="get_gripper_status.html" class="btn btn-neutral float-left" title="get_gripper_status Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="set_speed.html" class="btn btn-neutral float-right" title="set_speed Method" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="get_gripper_status.html" class="btn btn-neutral float-left" title="get_gripper_status 方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="set_speed.html" class="btn btn-neutral float-right" title="set_speed方法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

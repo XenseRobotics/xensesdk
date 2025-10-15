@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>create Method &mdash; xense  documentation</title>
+  <title>create 方法 &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -26,8 +26,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="set_position Method" href="set_position.html" />
-    <link rel="prev" title="Using GripperSDK API" href="../methodlist.html" /> 
+    <link rel="next" title="set_position方法" href="set_position.html" />
+    <link rel="prev" title="使用GripperSDK API" href="../methodlist.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,32 +49,33 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Installing GripperSDK</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">Using GripperSDK API</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">create Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">硬件连接与网络配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation.html">安装GripperSDK</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">使用GripperSDK API</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">create 方法</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.create"><code class="docutils literal notranslate"><span class="pre">XenseGripper.create()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Example Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">示例代码</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="set_position.html">set_position Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="open_gripper.html">open_gripper Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="get_gripper_status.html">get_gripper_status Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_position_sync.html">set_position_sync Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_speed.html">set_speed Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="set_led_color.html">set_led_color Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mode.html">mode Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_position.html">set_position方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="open_gripper.html">open_gripper 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="close_gripper.html">close_gripper 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_gripper_status.html">get_gripper_status 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_position_sync.html">set_position_sync方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_speed.html">set_speed方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_led_color.html">set_led_color方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mode.html">mode 方法</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../connect_sensor.html">传感器连接</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../EzROS/EzROS.html">EzROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui使用指南</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Hardware/Hardware.html">Hardware</a></li>
@@ -95,8 +96,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../GripperSDK.html">GripperSDK</a></li>
-          <li class="breadcrumb-item"><a href="../methodlist.html">Using GripperSDK API</a></li>
-      <li class="breadcrumb-item active">create Method</li>
+          <li class="breadcrumb-item"><a href="../methodlist.html">使用GripperSDK API</a></li>
+      <li class="breadcrumb-item active">create 方法</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -109,18 +110,18 @@
            <div itemprop="articleBody">
              
   <section id="create">
-<span id="tag-grippercreate"></span><h1>create Method<a class="headerlink" href="#create" title="Link to this heading"></a></h1>
+<span id="tag-grippercreate"></span><h1>create 方法<a class="headerlink" href="#create" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.create">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mac_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.create" title="Link to this definition"></a></dt>
-<dd><p>Create an XenseGripper instance</p>
+<dd><p>创建一个 XenseGripper 实例</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>mac_addr</strong> (<em>str</em><em>, </em><em>可选</em>) – Provide the correct MAC communication address. For how to query the MAC address, see: <a class="reference external" href="../EzROS/usr/ezros_example.html">ezros</a> .</p>
+<dd class="field-odd"><p><strong>mac_addr</strong> (<em>str</em>) – 提供正确的 mac 通信地址, MAC地址查询方式请看: <a class="reference external" href="../EzROS/usr/ezros_example.html">ezros</a> 。</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A gripper instance that implements the <cite>Gripper</cite> interface.</p>
+<dd class="field-even"><p>实现 <cite>Gripper</cite> 接口的夹爪实例。</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">XenseTCPGripper</span></code></p>
@@ -130,9 +131,9 @@
 
 </div>
 <section id="id1">
-<h2>Example Code<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>示例代码<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
-<p>Connect to the gripper via MAC address</p>
+<p>通过 MAC 地址连接夹爪</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
 
 <span class="c1"># 使用 MAC 地址创建连接的夹爪实例</span>
@@ -141,8 +142,8 @@
 </div>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Tips</p>
-<p>If you are unsure of the gripper’s MAC address, you can use the <code class="docutils literal notranslate"><span class="pre">ezros</span></code> tool to query it. For details, please refer to <a class="reference internal" href="../EzROS/usr/ezros_example.html"><span class="doc">Using the EzROS Command Line Tool</span></a>.</p>
+<p class="admonition-title">tips</p>
+<p>如果不清楚夹爪的MAC地址,可以使用 <code class="docutils literal notranslate"><span class="pre">ezros</span></code> 工具进行查询, 具体请参考 <a class="reference internal" href="../EzROS/usr/ezros_example.html"><span class="doc">使用EzROS命令行工具</span></a>。</p>
 </div>
 </section>
 </section>
@@ -151,8 +152,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../methodlist.html" class="btn btn-neutral float-left" title="Using GripperSDK API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="set_position.html" class="btn btn-neutral float-right" title="set_position Method" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../methodlist.html" class="btn btn-neutral float-left" title="使用GripperSDK API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="set_position.html" class="btn btn-neutral float-right" title="set_position方法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

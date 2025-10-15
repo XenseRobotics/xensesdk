@@ -11,28 +11,28 @@ create方法
         创建一个传感器实例，使用完成后请调用 :meth:`~Sensor.release` 释放资源。
 
         :param cam_id: 传感器 ID、序列号或视频路径。默认为 0。
-        :type cam_id: int | str, 可选
+        :type cam_id: int | str
         
         :param use_gpu: 是否使用 GPU 进行推理。
-        :type use_gpu: bool, 可选
+        :type use_gpu: bool
         
         :param config_path: 配置文件路径或目录。若为目录，需包含与传感器序列号同名的标定文件。
-        :type config_path: str | Path, 可选
+        :type config_path: str | Path
         
         :param api: 相机 API 类型（如 OpenCV 后端），用于指定相机访问方式。
-        :type api: Enum, 可选
+        :type api: Enum
         
         :param check_serial: 是否检查传感器序列号。
-        :type check_serial: bool, 可选
+        :type check_serial: bool
         
         :param rectify_size: 校正图像尺寸（宽, 高）。
-        :type rectify_size: tuple[int, int], 可选
+        :type rectify_size: tuple[int, int]
         
         :param mac_address: 远程连接使用的相机 MAC 地址。
-        :type mac_address: str, 可选
+        :type mac_address: str
         
         :param video_path: 离线模拟的视频路径。
-        :type video_path: str, 可选
+        :type video_path: str
         
         :return: 传感器实例，用于后续数据采集和处理。
         :rtype: :class:`Sensor`

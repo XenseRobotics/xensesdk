@@ -6,8 +6,12 @@
 1、工具清单
 ------------
 
-#. 柔性替换件×1
-#. 小扳手/电动螺丝刀(M2批头)×1
+.. rubric:: a.柔性替换件×1
+   :class: step-title
+
+.. rubric:: b.小扳手/电动螺丝刀(M2批头)×1
+   :class: step-title
+
 
 .. figure:: ../images/tools.png
    :alt: 数采控制区

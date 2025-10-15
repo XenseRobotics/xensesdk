@@ -20,9 +20,9 @@ GripperSDK
     }
     </style>
 
-.. raw:: html
-
-    <div class="custom-h2">核心功能</div>
+.. rubric:: 核心功能
+   :class: step-title
+   
 
 .. container:: step-block
 
@@ -46,9 +46,8 @@ GripperSDK
           - 通过 ``EzROS`` 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。  
 
 
-.. raw:: html
-
-    <div class="custom-h2">主目录</div>
+.. rubric:: 主目录
+   :class: step-title
 
 .. container:: step-block
  
@@ -60,6 +59,8 @@ GripperSDK
         * - :ref:`安装指南 <tag_Gripperinstallation>`
         
         * - :ref:`API文档 <tag_Grippermethodlist>`
+
+        * - :ref:`连接传感器 <tag_Gripperconnect_sensor>`
         
         * - :ref:`EzROS调试工具 <tag_ezros>` 
 
@@ -75,6 +76,8 @@ GripperSDK
    user/Installation
 
    user/methodlist
+
+   user/connect_sensor
    
    user/EzROS/EzROS
   
