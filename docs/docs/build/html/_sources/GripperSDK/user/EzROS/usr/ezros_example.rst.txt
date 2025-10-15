@@ -1,54 +1,54 @@
 .. _tag_ezros_example:
 
-使用EzROS命令行工具
-========================
+Using the EzROS Command-Line Tool
+=====================================
 
 .. container:: ezros-tool-guide
 
-    初次使用可以通过以下命令来快速了解 ezros 的功能。
+    For first-time use, you can quickly learn about ezros's functions through the following command.
 
     .. code-block:: bash
 
         ezros -h
-        # 或者 ezros --help
+        # or ezros --help
 
-    终端打印如下信息：
+    The terminal will print the following information:
 
     .. code-block:: text
 
         usage: ezros [-h] [-d DOMAIN_ID] [-q] [-a] [-t TIMEOUT] [-f FILTER] {service,topic} ...
 
-        EzROS CLI - 简单的网络工具
+        EzROS CLI - A simple network tool
 
         positional arguments:
-          {service,topic}       命令
-            service             调用服务
-            topic               监听话题
+          {service,topic}       Commands
+            service             Call a service
+            topic               Listen to a topic
 
         optional arguments:
           -h, --help            show this help message and exit
           -d DOMAIN_ID, --domain-id DOMAIN_ID
-                                DDS域ID
-          -q, --quiet           静默模式
-          -a, --all             显示所有节点信息
+                                DDS domain ID
+          -q, --quiet           Quiet mode
+          -a, --all             Display all node information
           -t TIMEOUT, --timeout TIMEOUT
-                                扫描超时时间(秒),默认2秒
+                                Scan timeout in seconds, default 2 seconds
           -f FILTER, --filter FILTER
-                                过滤包含指定字符串的节点名，默认匹配所有节点
+                                Filter node names containing the specified string, default matches all nodes
 
     .. container:: ezros-cmd-catalog-section
 
-        更多详细用法请见目录 EzROS 中的调试命令:
+        For more detailed usage, please refer to the debugging commands in the EzROS directory:
 
         .. container:: command-catalog
 
-            - :ref:`查看EzROS服务信息 <tag_all_info>`
-            - :ref:`监控话题 <tag_echo>`
-            - :ref:`调用服务 <tag_service>`
+            - :ref:`Viewing EzROS Service Information <tag_all_info>`
+            - :ref:`Monitoring Topics <tag_echo>`
+            - :ref:`Calling Services <tag_service>`
 
 .. toctree::
    :maxdepth: 2
-   :caption: 目录
+   :caption: Table of Contents
    :hidden:
 
    API/all_info

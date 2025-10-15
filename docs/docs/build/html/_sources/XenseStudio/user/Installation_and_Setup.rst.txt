@@ -1,16 +1,16 @@
 .. _tag_installation_and_setup:
 
-三、安装与设置
-=================
+III. Installation and Setup
+================================
 
-1、 安装步骤
--------------
+1. Installation Steps
+-------------------------
 
-**Windows平台**
-提供XenseStudio.exe安装程序。双击以后，按照提示操作。安装完毕后将在桌面显示其快捷方式：Xense Studio。
+**Windows Platform**
+The XenseStudio.exe installer is provided. Double-click the file and follow the on-screen prompts to complete the installation. After installation, a shortcut named "Xense Studio" will be displayed on the desktop.
 
-**Linux平台**
-提供安装程序xensestudio.deb，使用sudo命令进行安装：
+**Linux Platform**
+The xensestudio.deb installer is provided. Use the sudo command to install it:
 
 .. code-block:: bash
 
@@ -34,7 +34,7 @@
                transition: all 0.3s ease;
            ">
             <i class="fa fa-download" style="margin-right: 0.5rem;"></i>
-            下载 XenseStudio
+            Install XenseStudio
         </a>
     </div>
 
@@ -46,14 +46,14 @@
         }
     </style>
 
-2、 初始配置
------------------
-程序启动以后软件显示界面如图1所示：
+2. Initial Configuration
+-----------------------------
+After the program starts, the software interface will be displayed as shown in Figure 1:
 
 .. figure:: ../images/initial_setup.png
-    :alt: 软件初始设置
+    :alt: Software Initial Configuration
     :align: center
     :scale: 100%
     :name: _xs-initial_setup
 
-    图 1 软件初始设置
+    Figure 1: Software Initial Configuration

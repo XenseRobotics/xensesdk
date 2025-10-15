@@ -1,24 +1,23 @@
-
 .. _tag_set_control_param_:
 
-set_control_param方法
-=====================
+set_control_param Method
+==============================
 
 .. container:: step-block
 
    .. py:method:: XenseGripper.set_control_param(self, stiffness: float = None, kp: float = None, ki: float = None, kd: float = None) -> None
        :module: xensegripper
 
-       设置 SAFE 模式下的控制器参数(PID 控制参数)。
+       Sets the controller parameters (PID control parameters) in SAFE mode.
 
-       :param stiffness: 目标力参数，可选参数。
+       :param stiffness: Target force parameter, optional.
        :type stiffness: float, optional
        
-       :param kp: PID 控制器的比例系数(Kp), 可选参数。
+       :param kp: Proportional gain (Kp) of the PID controller, optional.
        :type kp: float, optional
        
-       :param ki: PID 控制器的积分系(Ki), 可选参数。
+       :param ki: Integral gain (Ki) of the PID controller, optional.
        :type ki: float, optional
        
-       :param kd: PID 控制器的微分系数(Kd), 可选参数。
+       :param kd: Derivative gain (Kd) of the PID controller, optional.
        :type kd: float, optional

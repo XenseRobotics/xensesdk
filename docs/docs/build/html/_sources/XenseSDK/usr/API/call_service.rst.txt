@@ -1,25 +1,25 @@
 .. _tag_call_service:
 
-call_service 方法
+call_service Method
 =======================
 
 .. container:: step-block
 
     .. py:function:: call_service(master_ip: str, service_name: str, action_name: str, *args, **kwargs) -> dict
 
-        调用算力板上的服务。
+        Calls the service on the computing board.
 
-        :param master_ip: 算力板 IP 地址，例如: ``192.168.99.2``
+        :param master_ip: IP address of the computing board, e.g.: ``192.168.99.2``
         :type master_ip: str
-        :param service_name: 服务名称
+        :param service_name: Name of the service
         :type service_name: str
-        :param action_name: 服务支持的 action 名称
+        :param action_name: Name of the action supported by the service
         :type action_name: str
-        :param args: 传递给服务的可变参数
-        :param kwargs: 传递给服务的关键字参数
-        :return: 包含调用结果的字典
+        :param args: Variable arguments passed to the service
+        :param kwargs: Keyword arguments passed to the service
+        :return: Dictionary containing the call result
         :rtype: dict
-        :return: 字典结构为:
-            ``{"success": True, "ret": ret}``，其中：
-            - ``success``: 布尔值，表示调用是否成功
-            - ``ret``: 服务返回的具体结果数据
+        :return: The dictionary structure is:
+            ``{"success": True, "ret": ret}``, where:
+            - ``success``: Boolean value indicating whether the call was successful
+            - ``ret``: Specific result data returned by the service

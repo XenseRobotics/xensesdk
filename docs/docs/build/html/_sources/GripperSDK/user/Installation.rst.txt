@@ -1,7 +1,7 @@
 .. _tag_Gripperinstallation:
 
-安装GripperSDK
-===================
+Installing GripperSDK
+===========================
 
 .. raw:: html
 
@@ -37,15 +37,15 @@
     </style>
 
 
-.. rubric:: 步骤 1: 准备 Python 开发环境
+.. rubric:: Step 1: Prepare the Python Development Environment
    :class: step-title
 
 .. container:: step-content
 
-    GripperSDK 依赖 XenseSDK, 因此需要安装 Python 开发环境, 请参考 `XenseSDK <../../XenseSDK/usr/Installation.html>`_ Python开发环境准备。
+    GripperSDK depends on XenseSDK, so a Python development environment needs to be installed. Please refer to the Python development environment preparation in `XenseSDK <../../XenseSDK/usr/Installation.html>`_.
 
 
-.. rubric:: 步骤 2: 安装 GripperSDK 包
+.. rubric:: Step 2: Install the GripperSDK Package
    :class: step-title
 
 .. container:: step-content
@@ -57,5 +57,4 @@
 .. admonition:: tips
    :class: tip
 
-   最新版本的 GripperSDK 请在 `Github官方网站 <https://github.com/XenseRobotics/xensesdk/releases>`_ 获取。
-
+   For the latest version of GripperSDK, please obtain it from the `official Github website <https://github.com/XenseRobotics/xensesdk/releases>`_.

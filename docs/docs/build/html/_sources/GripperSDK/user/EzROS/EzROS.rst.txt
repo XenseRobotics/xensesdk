@@ -7,16 +7,16 @@ EzROS
    :widths: 100
    :header-rows: 1 
 
-   * - 命令行工具
-   * - :ref:`EzROS命令行工具的使用 <tag_ezros_example>` 
-   * - :ref:`查看EzROS服务信息 <tag_all_info>`
-   * - :ref:`监控话题 <tag_echo>`
-   * - :ref:`调用服务 <tag_service>`
+   * - Command-Line Tools
+   * - :ref:`Using the EzROS Command-Line Tool <tag_ezros_example>` 
+   * - :ref:`Viewing EzROS Service Information <tag_all_info>`
+   * - :ref:`Monitoring Topics <tag_echo>`
+   * - :ref:`Calling Services <tag_service>`
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: 目录
+   :caption: Table of Contents
    :hidden:
 
    usr/ezros_example

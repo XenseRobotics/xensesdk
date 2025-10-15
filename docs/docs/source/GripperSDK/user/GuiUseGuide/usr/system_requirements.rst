@@ -1,38 +1,38 @@
 .. _tag_system_requirements:
 
-二、系统要求
-============
+II. System Requirements
+===============================
 
-1、 硬件要求
------------------
-要顺利运行 Xense Gripper，用户的计算机系统需满足以下硬件要求：
+1. Hardware Requirements
+------------------------------
+To run Xense Gripper smoothly, the user's computer system must meet the following hardware requirements:
 
-**处理器**
-至少需配备双核处理器，推荐使用四核或更高性能的处理器（如 Intel i5、AMD Ryzen 5 或以上）。
+**Processor**
+A dual-core processor is the minimum requirement; a quad-core or higher-performance processor (such as Intel i5, AMD Ryzen 5 or above) is recommended.
 
-**内存**
-最低要求为 16GB RAM，推荐使用 32GB RAM 或更高，以确保更好的性能。
+**Memory (RAM)**
+The minimum requirement is 16GB RAM; 32GB RAM or higher is recommended to ensure better performance.
 
-**存储**
-需要至少 3GB 的可用硬盘空间用于安装软件及其依赖文件。推荐使用固态硬盘（SSD）以提高数据读写速度。
+**Storage**
+At least 3GB of available hard disk space is required for installing the software and its dependent files. A Solid-State Drive (SSD) is recommended to improve data read/write speed.
 
-**显卡**
-最低支持集成显卡，推荐使用英伟达显卡，加速数据处理。
+**Graphics Card**
+Integrated graphics cards are supported at minimum; an NVIDIA graphics card is recommended to accelerate data processing.
 
-**显示器分辨率**
-推荐 1920x1080 或更高分辨率以获得更好的用户体验。
+**Monitor Resolution**
+A resolution of 1920x1080 or higher is recommended for a better user experience.
 
-**其他硬件**
-建议配置网络，以方便在线获取更新的软件包，也方便与软件厂商在线沟通。
+**Other Hardware**
+Network configuration is recommended to facilitate online access to updated software packages and online communication with the software vendor.
 
-2、 软件系统
-------------------
-要顺利运行 Xense Gripper，用户的计算机系统需满足以下软件要求：
+2. Software System
+-----------------------
+To run Xense Gripper smoothly, the user's computer system must meet the following software requirements:
 
-**操作系统**
-Windows 10 或更高版本（64 位）。
+**Operating System**
+Windows 10 or later (64-bit).
 
-Linux（Ubuntu 20.04 或更高版本，需 64 位支持）。
+Linux (Ubuntu 20.04 or later, 64-bit support required).
 
-**依赖库**
-如果配置了英伟达显卡，需要安装英伟达显卡驱动。
+**Dependent Libraries**
+If an NVIDIA graphics card is configured, the NVIDIA graphics card driver needs to be installed.

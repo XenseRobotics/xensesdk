@@ -49,12 +49,12 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">Hardware Connection &amp; Network Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation.html">Installing GripperSDK</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">Using GripperSDK API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create_gripper.html">create Method</a></li>
@@ -73,7 +73,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../EzROS/EzROS.html">EzROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">GUI User Guide</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Hardware/Hardware.html">Hardware</a></li>
@@ -107,20 +107,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="set-control-param">
-<span id="tag-set-control-param"></span><h1>set_control_param Method<a class="headerlink" href="#set-control-param" title="Link to this heading"></a></h1>
+  <section id="set-control-param-method">
+<span id="tag-set-control-param"></span><h1>set_control_param Method<a class="headerlink" href="#set-control-param-method" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.set_control_param">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">set_control_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ki</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#xensegripper.XenseGripper.set_control_param" title="Link to this definition"></a></dt>
-<dd><p>Set the controller parameters (PID control parameters) in SAFE mode.</p>
+<dd><p>Sets the controller parameters (PID control parameters) in SAFE mode.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>stiffness</strong> (<em>float</em><em>, </em><em>optional</em>) – Target force parameter, optional parameter.</p></li>
-<li><p><strong>kp</strong> (<em>float</em><em>, </em><em>optional</em>) – Proportional gain (Kp) of the PID controller, optional parameter.</p></li>
-<li><p><strong>ki</strong> (<em>float</em><em>, </em><em>optional</em>) – Integral gain (Ki) of the PID controller, optional parameter.</p></li>
-<li><p><strong>kd</strong> (<em>float</em><em>, </em><em>optional</em>) – Derivative gain (Kd) of the PID controller, optional parameter.</p></li>
+<li><p><strong>stiffness</strong> (<em>float</em><em>, </em><em>optional</em>) – Target force parameter, optional.</p></li>
+<li><p><strong>kp</strong> (<em>float</em><em>, </em><em>optional</em>) – Proportional gain (Kp) of the PID controller, optional.</p></li>
+<li><p><strong>ki</strong> (<em>float</em><em>, </em><em>optional</em>) – Integral gain (Ki) of the PID controller, optional.</p></li>
+<li><p><strong>kd</strong> (<em>float</em><em>, </em><em>optional</em>) – Derivative gain (Kd) of the PID controller, optional.</p></li>
 </ul>
 </dd>
 </dl>

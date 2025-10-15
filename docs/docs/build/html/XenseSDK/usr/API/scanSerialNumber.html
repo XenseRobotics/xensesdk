@@ -49,13 +49,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../XenseSDK.html">XenseSDK</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Introduction.html">What is XenseSDK?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Install XenseSDK</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../methodList.html">Using XenseSDK API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Installing XenseSDK</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../methodList.html">Using the XenseSDK API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create.html">create Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="selectSensorInfo.html">selectSensorInfo Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="getCameraID.html">getCameraID Method</a></li>
@@ -90,7 +90,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../XenseSDK.html">XenseSDK</a></li>
-          <li class="breadcrumb-item"><a href="../methodList.html">Using XenseSDK API</a></li>
+          <li class="breadcrumb-item"><a href="../methodList.html">Using the XenseSDK API</a></li>
       <li class="breadcrumb-item active">scanSerialNumber Method</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
@@ -103,17 +103,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="scanserialnumber">
-<span id="tag-scanserialnumber"></span><h1>scanSerialNumber Method<a class="headerlink" href="#scanserialnumber" title="Link to this heading"></a></h1>
+  <section id="scanserialnumber-method">
+<span id="tag-scanserialnumber"></span><h1>scanSerialNumber Method<a class="headerlink" href="#scanserialnumber-method" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">Sensor.</span></span><span class="sig-name descname"><span class="pre">scanSerialNumber</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span></dt>
-<dd><p>Scan and return information of all connected sensors on the current device.</p>
-<p>This method detects sensor devices connected to the system and returns the mapping relationship between their serial numbers and corresponding camera IDs, facilitating the subsequent creation of sensor instances via serial numbers.</p>
+<dd><p>Scans and returns information about all connected sensors on the current device.</p>
+<p>This method detects sensor devices connected to the system and returns the mapping between their serial numbers and corresponding camera IDs, facilitating the creation of sensor instances via serial numbers later.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dictionary containing all connected sensors, where the keys are sensor serial numbers (<code class="docutils literal notranslate"><span class="pre">serial_number</span></code>) and the values are corresponding camera IDs (<code class="docutils literal notranslate"><span class="pre">camera_id</span></code>)</p>
+<dd class="field-odd"><p>A dictionary containing all connected sensors, where keys are sensor serial numbers (<code class="docutils literal notranslate"><span class="pre">serial_number</span></code>) and values are corresponding camera IDs (<code class="docutils literal notranslate"><span class="pre">camera_id</span></code>)</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>dict</p>

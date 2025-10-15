@@ -1,30 +1,30 @@
 .. _tag_exportRuntimeConfig:
 
-exportRuntimeConfig 方法
-==============================
+exportRuntimeConfig Method
+==================================
 
 .. container:: step-block
 
     .. py:method:: Sensor.exportRuntimeConfig(self, save_dir=".", binary=False)
         :module: xensesdk
 
-         将当前传感器的运行时配置导出到指定目录。
+        Exports the current sensor's runtime configuration to the specified directory.
 
-        :param save_dir: 配置文件保存目录，默认为当前目录。
-        :type save_dir: Union[str,Path], 可选
+        :param save_dir: Directory for saving the configuration file, defaults to the current directory.
+        :type save_dir: Union[str, Path], optional
 
-        :param binary: 是否返回二进制加密数据而非保存到文件，默认为 False。
-        :type binary: bool, 可选
+        :param binary: Whether to return binary encrypted data instead of saving to a file, defaults to False.
+        :type binary: bool, optional
 
         :return: None
 
-        :raises RuntimeError: 远程连接模式下导出配置失败时抛出。
+        :raises RuntimeError: Thrown when configuration export fails in remote connection mode.
 
         :note:
 
-            保存的文件名格式为 "runtime_<序列号>"。
+            The saved file name follows the format "runtime_<serial_number>".
 
-示例方法
+Example Method
 -----------------
 
 .. container:: step-block
@@ -33,7 +33,7 @@ exportRuntimeConfig 方法
 
         from pathlib import Path
         SCRIPT_DIR = Path(__file__).resolve().parent
-        SAVE_DIR = Path(SCRIPT_DIR / "test_dir")  # 存放目录
+        SAVE_DIR = Path(SCRIPT_DIR / "test_dir")  # Storage directory
         SAVE_DIR.mkdir(parents=True, exist_ok=True)
         import cv2
         import time
@@ -45,7 +45,7 @@ exportRuntimeConfig 方法
 
         def save_data():
             fps = 30
-            duration = 3   # 秒
+            duration = 3   # seconds
             frame_interval = 1.0 / fps
             total_frames = fps * duration
 
@@ -53,23 +53,23 @@ exportRuntimeConfig 方法
             for i in range(total_frames):
                 start_time = time.time()
                 
-                # 采集一帧
+                # Capture one frame
                 rec = sensor_0.selectSensorInfo(Sensor.OutputType.Rectify)
                 
-                # 生成文件名
+                # Generate filename
                 filename = SAVE_DIR / f"{sensor_id}_{i:03d}.png"
                 
-                # 保存图片
+                # Save image
                 cv2.imwrite(str(filename), rec)
                 print(f"Saved {filename}")
                 
-                # 控制帧率（30Hz）
+                # Control frame rate (30Hz)
                 elapsed = time.time() - start_time
                 sleep_time = frame_interval - elapsed
                 if sleep_time > 0:
                     time.sleep(sleep_time)
 
-            # 导出配置
+            # Export configuration
             sensor_0.exportRuntimeConfig(SAVE_DIR)
 
             sensor_0.release()
@@ -94,4 +94,3 @@ exportRuntimeConfig 方法
             save_data()
             replay_data()
             print("Data saved and replayed successfully.")
-                

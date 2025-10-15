@@ -1,8 +1,8 @@
 .. _tag_xensesdkintroduction:
 
-****************
-什么是XenseSDK？
-****************
+*********************
+What is XenseSDK?
+*********************
 .. container:: step-block
 
-    Xense SDK 是一款为触觉-视觉传感器和可视化工具设计的开发工具包，旨在帮助高效且无缝地将其集成到应用程序中。
+    Xense SDK is a development kit designed for tactile-visual sensors and visualization tools. It aims to enable efficient and seamless integration of these components into applications.

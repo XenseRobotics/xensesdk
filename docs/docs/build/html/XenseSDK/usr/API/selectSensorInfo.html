@@ -49,17 +49,17 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../XenseSDK.html">XenseSDK</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Introduction.html">What is XenseSDK?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Install XenseSDK</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../methodList.html">Using XenseSDK API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Installing XenseSDK</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../methodList.html">Using the XenseSDK API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create.html">create Method</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">selectSensorInfo Method</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#xensesdk.Sensor.selectSensorInfo"><code class="docutils literal notranslate"><span class="pre">Sensor.selectSensorInfo()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Example Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-code">Example Code</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="getCameraID.html">getCameraID Method</a></li>
@@ -94,7 +94,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../XenseSDK.html">XenseSDK</a></li>
-          <li class="breadcrumb-item"><a href="../methodList.html">Using XenseSDK API</a></li>
+          <li class="breadcrumb-item"><a href="../methodList.html">Using the XenseSDK API</a></li>
       <li class="breadcrumb-item active">selectSensorInfo Method</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
@@ -107,20 +107,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="selectsensorinfo">
-<span id="tagselect-sensor-info-method"></span><h1>selectSensorInfo Method<a class="headerlink" href="#selectsensorinfo" title="Link to this heading"></a></h1>
+  <section id="selectsensorinfo-method">
+<span id="tagselect-sensor-info-method"></span><h1>selectSensorInfo Method<a class="headerlink" href="#selectsensorinfo-method" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensesdk.Sensor.selectSensorInfo">
 <span class="sig-prename descclassname"><span class="pre">Sensor.</span></span><span class="sig-name descname"><span class="pre">selectSensorInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensesdk.Sensor.selectSensorInfo" title="Link to this definition"></a></dt>
-<dd><p>Obtain specified types of sensor data; the number and order of returns are consistent with the input parameters.</p>
+<dd><p>Retrieves sensor data of specified types, with the quantity and order matching the input parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>Sensor.OutputType</em>) – Any number of <code class="docutils literal notranslate"><span class="pre">Sensor.OutputType</span></code> enums, used to specify the types of data to obtain. The supported enum values and corresponding data are as follows:</p>
+<dd class="field-odd"><p><strong>args</strong> (<em>Sensor.OutputType</em>) – Any number of <code class="docutils literal notranslate"><span class="pre">Sensor.OutputType</span></code> enums specifying the data types to retrieve. Supported enum values and corresponding data are as follows:</p>
 </dd>
 </dl>
-<table class="docutils align-default" id="id2">
-<caption><span class="caption-text">Supported Data Types and Descriptions</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Supported Data Types and Descriptions</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 20.0%" />
 <col style="width: 30.0%" />
@@ -159,7 +159,7 @@
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Marker2D</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
-<td><p>Tangential displacement, shape=(35, 20, 2)</p></td>
+<td><p>Tangential displacement, shape=(35,20,2)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Sensor.OutputType.Mesh3D</span></code></p></td>
 <td><p>Optional[np.ndarray]</p></td>
@@ -181,10 +181,10 @@
 </table>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The requested sensor data; the number and order of returns are consistent with the input parameters.</p>
+<dd class="field-odd"><p>Requested sensor data with quantity and order matching input parameters.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code> corresponding to the input parameters (when data is not obtained)</p>
+<dd class="field-even"><p>Corresponding <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code> (when data is unavailable)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -192,29 +192,29 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you need to obtain multiple types of data at the same time, use a single function call in the form shown in the routine. This ensures all data comes from the same frame and the calculation speed is optimized.</p>
+<p>If you need to retrieve multiple types of data simultaneously, use a single function call as shown in the example. This ensures all data comes from the same frame and optimizes calculation speed.</p>
 </div>
-<section id="id1">
-<h2>Example Code<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="example-code">
+<h2>Example Code<a class="headerlink" href="#example-code" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sensor</span>
 
-<span class="c1"># 创建传感器实例</span>
+<span class="c1"># Create sensor instance</span>
 <span class="n">sensor</span> <span class="o">=</span> <span class="n">Sensor</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;OP000064&#39;</span><span class="p">)</span>
 
-<span class="c1"># 获取指定类型的传感器数据</span>
+<span class="c1"># Retrieve specified types of sensor data</span>
 <span class="n">rectify</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">force</span> <span class="o">=</span> <span class="n">sensor</span><span class="o">.</span><span class="n">selectSensorInfo</span><span class="p">(</span>
     <span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Rectify</span><span class="p">,</span>
     <span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Depth</span><span class="p">,</span>
     <span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Force</span>
 <span class="p">)</span>
 
-<span class="c1"># 输出数据形状（示例）</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;校正图像形状:&quot;</span><span class="p">,</span> <span class="n">rectify</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>       <span class="c1"># (700, 400, 3)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;深度图像形状:&quot;</span><span class="p">,</span> <span class="n">depth</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>         <span class="c1"># (700, 400)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;三维力分布形状:&quot;</span><span class="p">,</span> <span class="n">force</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>       <span class="c1"># (35, 20, 3)</span>
+<span class="c1"># Output data shapes (example)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rectified image shape:&quot;</span><span class="p">,</span> <span class="n">rectify</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>       <span class="c1"># (700, 400, 3)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Depth image shape:&quot;</span><span class="p">,</span> <span class="n">depth</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>             <span class="c1"># (700, 400)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3D force distribution shape:&quot;</span><span class="p">,</span> <span class="n">force</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>   <span class="c1"># (35, 20, 3)</span>
 
-<span class="c1"># 释放资源</span>
+<span class="c1"># Release resources</span>
 <span class="n">sensor</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
 </pre></div>
 </div>

@@ -49,12 +49,12 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">Hardware Connection &amp; Network Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation.html">Installing GripperSDK</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">Using GripperSDK API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create_gripper.html">create Method</a></li>
@@ -70,13 +70,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.mode"><code class="docutils literal notranslate"><span class="pre">XenseGripper.mode()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.enable_mode"><code class="docutils literal notranslate"><span class="pre">XenseGripper.enable_mode()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.disable_mode"><code class="docutils literal notranslate"><span class="pre">XenseGripper.disable_mode()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Example Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-code">Example Code</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../EzROS/EzROS.html">EzROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">GUI User Guide</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Hardware/Hardware.html">Hardware</a></li>
@@ -110,28 +110,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="mode">
-<span id="tag-mode"></span><h1>mode Method<a class="headerlink" href="#mode" title="Link to this heading"></a></h1>
+  <section id="mode-method">
+<span id="tag-mode"></span><h1>mode Method<a class="headerlink" href="#mode-method" title="Link to this heading"></a></h1>
 <p>XenseGripper supports three control modes, which can be switched via the <code class="docutils literal notranslate"><span class="pre">mode</span></code> method (context manager) or the <code class="docutils literal notranslate"><span class="pre">enable_mode</span></code>/<code class="docutils literal notranslate"><span class="pre">disable_mode</span></code> methods:</p>
 <ul class="simple">
-<li><p><strong>POSITION</strong>: Position control mode (default), precisely controls the gripper to reach the specified position</p></li>
-<li><p><strong>SPEED</strong>: Speed control mode, drives the gripper to move at the set speed</p></li>
-<li><p><strong>SAFE</strong>: Safe control mode (sensor required), realizes safe operation with force feedback</p></li>
+<li><p><strong>POSITION</strong>: Position control mode (default), precisely controls the gripper to reach a specified position.</p></li>
+<li><p><strong>SPEED</strong>: Speed control mode, drives the gripper to move at the set speed.</p></li>
+<li><p><strong>SAFE</strong>: Safe control mode (sensor required), enables safe operation with force feedback.</p></li>
 </ul>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.mode">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.mode" title="Link to this definition"></a></dt>
-<dd><p>A context manager used to temporarily switch the gripper control mode; the original mode is automatically restored when exiting the context (recommended). Use this method with the with statement to ensure the mode is automatically reset after the code block is executed, avoiding exceptions caused by residual modes.</p>
+<dd><p>A context manager for temporarily switching the gripper’s control mode. The original mode is automatically restored when exiting the context (recommended for use).
+Use this method with a <code class="docutils literal notranslate"><span class="pre">with</span></code> statement to ensure the mode is automatically reset after the code block is executed, preventing abnormalities caused by residual modes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>control_mode</strong> (<em>XenseGripper.ControlMode</em>) – Control mode enumeration values: <code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.POSITION</span></code>: Position control mode <code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.SPEED</span></code>: Speed control mode <code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.SAFE</span></code>: Safe control mode</p></li>
-<li><p><strong>serial_number</strong> (<em>str</em><em>, </em><em>可选</em>) – Sensor serial number (required only for safe mode; the first scanned sensor is used by default)</p></li>
+<li><p><strong>control_mode</strong> (<em>XenseGripper.ControlMode</em>) – Enumerated value of the control mode.
+<code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.POSITION</span></code>: Position control mode.
+<code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.SPEED</span></code>: Speed control mode.
+<code class="docutils literal notranslate"><span class="pre">XenseGripper.ControlMode.SAFE</span></code>: Safe control mode.</p></li>
+<li><p><strong>serial_number</strong> (<em>str</em><em>, </em><em>optional</em>) – Sensor serial number (required only for SAFE mode; defaults to the first detected sensor).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Context manager object, used to temporarily switch modes in the with statement block</p>
+<dd class="field-even"><p>Context manager object, used to temporarily switch modes in a <code class="docutils literal notranslate"><span class="pre">with</span></code> statement block.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>context manager</p>
@@ -142,16 +146,16 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.enable_mode">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">enable_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.enable_mode" title="Link to this definition"></a></dt>
-<dd><p>Manually enable the specified control mode</p>
+<dd><p>Manually enables the specified control mode.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>control_mode</strong> (<em>XenseGripper.ControlMode</em>) – Control mode enumeration values (same as the mode method)</p></li>
-<li><p><strong>serial_number</strong> (<em>str</em><em>, </em><em>可选</em>) – Sensor serial number (required only for safe mode)</p></li>
+<li><p><strong>control_mode</strong> (<em>XenseGripper.ControlMode</em>) – Enumerated value of the control mode (same as the <code class="docutils literal notranslate"><span class="pre">mode</span></code> method).</p></li>
+<li><p><strong>serial_number</strong> (<em>str</em><em>, </em><em>optional</em>) – Sensor serial number (required only for SAFE mode).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Whether the operation is successful</p>
+<dd class="field-even"><p>Whether the operation is successful.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
@@ -162,10 +166,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.disable_mode">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">disable_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.disable_mode" title="Link to this definition"></a></dt>
-<dd><p>Manually disable the current control mode, automatically restore to the default mode and stop the action</p>
+<dd><p>Manually disables the current control mode, automatically restores to the default mode, and stops the action.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Whether the operation is successful</p>
+<dd class="field-odd"><p>Whether the operation is successful.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>bool</p>
@@ -174,50 +178,50 @@
 </dd></dl>
 
 </div>
-<section id="id1">
-<h2>Example Code<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="example-code">
+<h2>Example Code<a class="headerlink" href="#example-code" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
 <ol class="arabic simple">
-<li><p>Position control mode (default mode, no manual switching required)</p></li>
+<li><p>Position Control Mode (default mode, no manual switching required)</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
 
 <span class="n">gripper</span> <span class="o">=</span> <span class="n">XenseGripper</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">mac_addr</span><span class="o">=</span><span class="s2">&quot;9a14e81bb832&quot;</span><span class="p">)</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>  <span class="c1"># 直接设置位置（默认在 POSITION 模式）</span>
+<span class="n">gripper</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>  <span class="c1"># Directly set position (defaults to POSITION mode)</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>Speed Control Mode</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用上下文管理器 (推荐)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use context manager (recommended)</span>
 <span class="k">with</span> <span class="n">gripper</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">XenseGripper</span><span class="o">.</span><span class="n">ControlMode</span><span class="o">.</span><span class="n">SPEED</span><span class="p">):</span>
-    <span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>   <span class="c1"># 设置速度 50 mm/s</span>
+    <span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>   <span class="c1"># Set speed to 50 mm/s</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="c1"># 停止</span>
+    <span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="c1"># Stop</span>
 
-<span class="c1"># 手动模式切换</span>
+<span class="c1"># Manual mode switching</span>
 <span class="n">gripper</span><span class="o">.</span><span class="n">enable_mode</span><span class="p">(</span><span class="n">XenseGripper</span><span class="o">.</span><span class="n">ControlMode</span><span class="o">.</span><span class="n">SPEED</span><span class="p">)</span>
 <span class="n">gripper</span><span class="o">.</span><span class="n">set_speed</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">disable_mode</span><span class="p">()</span>  <span class="c1"># 自动停止并恢复原模式</span>
+<span class="n">gripper</span><span class="o">.</span><span class="n">disable_mode</span><span class="p">()</span>  <span class="c1"># Automatically stop and restore original mode</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>Safe Control Mode (Sensor Required)</p></li>
+<li><p>Safe Control Mode (sensor required)</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用上下文管理器 (推荐)</span>
-<span class="c1"># 可指定传感器序列号，默认使用扫描到的第一个传感器</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use context manager (recommended)</span>
+<span class="c1"># Sensor serial number can be specified; defaults to the first detected sensor</span>
 <span class="k">with</span> <span class="n">gripper</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">XenseGripper</span><span class="o">.</span><span class="n">ControlMode</span><span class="o">.</span><span class="n">SAFE</span><span class="p">,</span> <span class="n">serial_number</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="c1"># 设置控制参数 (可选，刚度范围 0.1~0.6)</span>
+    <span class="c1"># Set control parameters (optional; stiffness range: 0.1~0.6)</span>
     <span class="n">gripper</span><span class="o">.</span><span class="n">set_control_param</span><span class="p">(</span><span class="n">stiffness</span><span class="o">=</span><span class="mf">0.35</span><span class="p">)</span>
 
-    <span class="c1"># 位置控制 (带力反馈保护)</span>
+    <span class="c1"># Position control (with force feedback protection)</span>
     <span class="n">gripper</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
-<span class="c1"># 手动模式切换</span>
+<span class="c1"># Manual mode switching</span>
 <span class="n">gripper</span><span class="o">.</span><span class="n">enable_mode</span><span class="p">(</span><span class="n">XenseGripper</span><span class="o">.</span><span class="n">ControlMode</span><span class="o">.</span><span class="n">SAFE</span><span class="p">,</span> <span class="n">serial_number</span><span class="o">=</span><span class="s2">&quot;OG000285&quot;</span><span class="p">)</span>
 <span class="n">gripper</span><span class="o">.</span><span class="n">set_control_param</span><span class="p">(</span><span class="n">stiffness</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 <span class="n">gripper</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">disable_mode</span><span class="p">()</span>  <span class="c1"># 自动停止并恢复原模式</span>
+<span class="n">gripper</span><span class="o">.</span><span class="n">disable_mode</span><span class="p">()</span>  <span class="c1"># Automatically stop and restore original mode</span>
 </pre></div>
 </div>
 </div>

@@ -1,6 +1,6 @@
 .. _tag_set_speed_:
 
-set_speed方法
+set_speed Method
 =====================
 
 .. container:: step-block
@@ -8,21 +8,21 @@ set_speed方法
    .. py:method:: XenseGripper.set_speed(self, velocity, fmax=27)
        :module: xensegripper
 
-       速度闭环控制（设置夹爪的运动速度）。
+       Speed closed-loop control (sets the movement speed of the gripper).
 
-       :param velocity: 夹爪的目标速度，单位为毫米/秒 (mm/s)。
-                        正值表示闭合方向运动, 负值表示打开方向运动, 0 表示停止。
-                        速度绝对值必须在 (0, 440) 范围内。
+       :param velocity: Target speed of the gripper in millimeters per second (mm/s).
+                        A positive value indicates movement in the closing direction, a negative value indicates movement in the opening direction, and 0 indicates stopping.
+                        The absolute value of the speed must be within the range (0, 440).
        :type velocity: float
        
-       :param fmax: 最大推力，单位为牛顿 (N)。
-                    必须在 [0, 60] 范围内。
-                    默认值为 27 N。
-       :type fmax: float, 可选
+       :param fmax: Maximum thrust force in Newtons (N).
+                    Must be within the range [0, 60].
+                    Default value is 27 N.
+       :type fmax: float, optional
 
 
-示例代码
---------
+Example Code
+------------------
 .. container:: step-block
 
     .. code-block:: python
@@ -44,14 +44,14 @@ set_speed方法
                 if key == keyboard.Key.space:
                     if CLOSE:
                         CLOSE = False
-                        print("开始打开")
+                        print("Start opening")
                     else:
                         CLOSE = True
-                        print("开始关闭")
+                        print("Start closing")
                 if key == keyboard.Key.esc:
                     global BREAK
                     BREAK = True
-                    print("退出程序")
+                    print("Exit program")
                     return False
 
             except AttributeError:
@@ -70,30 +70,23 @@ set_speed方法
         data_fetch_thread = Thread(target=data_fetch, daemon=True)
         data_fetch_thread.start()   
 
-        # 下列方法二选一
+        # Choose one of the following two methods
         # with gripper.mode(XenseGripper.ControlMode.SAFE) as gripper:
         #     while True:
         #         if not CLOSE:  
-        #             # print("正在打开")
+        #             # print("Opening")
         #             gripper.set_position(80)
         #         else:
-        #             # print("正在关闭")
+        #             # print("Closing")
         #             gripper.set_position(0) 
         #             pass
         #         time.sleep(0.05)       
         with gripper.mode(XenseGripper.ControlMode.SPEED) as gripper:
             while True:
                 if not CLOSE:  
-                    # print("正在打开")
+                    # print("Opening")
                     gripper.set_speed(40)
                 else:
-                    # print("正在关闭")
+                    # print("Closing")
                     gripper.set_speed(-40) 
                 time.sleep(0.05)
-
-
-
-
-
-
-

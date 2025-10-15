@@ -5,19 +5,19 @@ XenseSDK
    :width: 30
    :header-rows: 1
 
-   * - 主目录
+   * - Main Directory
   
-   * - :ref:`简介 <tag_xensesdkintroduction>`
+   * - :ref:`Introduction <tag_xensesdkintroduction>`
   
-   * - :ref:`安装指南 <tag_xensesdkinstallation>`
+   * - :ref:`Installation Guide <tag_xensesdkinstallation>`
    
-   * - :ref:`API文档 <tag_xensesdkmethodlist>` 
+   * - :ref:`API Documentation <tag_xensesdkmethodlist>` 
 
-   * - :ref:`代码示例 <tag_repo_example>`
+   * - :ref:`Code Examples <tag_repo_example>`
   
 .. toctree::
    :maxdepth: 2
-   :caption: 目录
+   :caption: Table of Contents
    :hidden:
    
    usr/Introduction

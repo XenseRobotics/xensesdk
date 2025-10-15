@@ -1,41 +1,41 @@
 .. _tag_echo:
 
-监控话题
-============
+Monitoring Topics
+=====================
 
 .. container:: step-block
 
-    当要对特定 Topic 查询时，可使用如下命令：
+    When you need to query a specific Topic, use the following commands:
 
     .. tab-set::
 
-        .. tab-item:: 监听 Sensor
+        .. tab-item:: Monitor Sensor
 
             .. code-block:: bash
 
                 ezros topic -e OG000285 -t 30
 
-        .. tab-item:: 监听 Gripper
+        .. tab-item:: Monitor Gripper
 
             .. code-block:: bash
 
                 ezros topic -e gripper_d672f584b17a -t 30
 
 
-    终端打印信息如下：
+    The terminal will print the following information:
 
     .. tab-set::
 
-        .. tab-item:: 监听 Sensor 输出
+        .. tab-item:: Sensor Monitoring Output
 
             .. code-block:: text
 
-                监听话题: OG000285
-                持续时间: 30 秒
-                按 Ctrl+C 停止
+                Monitoring Topic: OG000285
+                Duration: 30 seconds
+                Press Ctrl+C to stop
                 ============================================================
-                成功订阅话题 OG000285 (类型: BytesMessage)
-                开始监听话题 OG000285...
+                Successfully subscribed to topic OG000285 (Type: BytesMessage)
+                Start monitoring topic OG000285...
 
                 [02:51:54] [OG000285]: {<OutputType.Depth: 3>: array([[0.        , 0.        , 0.        , ..., 0.        , 0.        ,    0.        ],
                     [0.        , 0.        , 0.        , ..., 0.        , 0.        ,0.        ],
@@ -75,16 +75,16 @@
                     [110, 109, 110]]], dtype=uint8)}
 
 
-        .. tab-item:: 监听 Gripper 输出
+        .. tab-item:: Gripper Monitoring Output
 
             .. code-block:: text
 
-                监听话题: gripper_d672f584b17a
-                持续时间: 30 秒
-                按 Ctrl+C 停止
-                ============================================================
-                成功订阅话题 gripper_d672f584b17a (类型: BytesMessage)
-                开始监听话题 gripper_d672f584b17a...
+                Monitoring Topic: gripper_d672f584b17a
+                Duration: 30 seconds
+                Press Ctrl+C to stop
+                ==========================================================================
+                Successfully subscribed to topic gripper_d672f584b17a (Type: BytesMessage)
+                Start monitoring topic gripper_d672f584b17a...
 
                 [02:52:30] [gripper_d672f584b17a]: {'position': 0.0, 'velocity': 0.0, 'force': 2.37, 'temperature': 46}
                 [02:52:30] [gripper_d672f584b17a]: {'position': 0.0, 'velocity': 0.0, 'force': 2.37, 'temperature': 46}
@@ -103,22 +103,22 @@
                 [02:52:31] [gripper_d672f584b17a]: {'position': 0.0, 'velocity': 0.0, 'force': 2.41, 'temperature': 46}
                 [02:52:31] [gripper_d672f584b17a]: {'position': 0.0, 'velocity': 0.0, 'force': 2.37, 'temperature': 46}
 
-                监听被用户中断
+                Monitoring interrupted by user
 
-        .. tab-item:: 未能检测话题
+        .. tab-item:: Topic Not Detected
             
             .. code-block:: text
 
-                监听话题: gripper_d672f584b18a
-                持续时间: 30 秒
-                按 Ctrl+C 停止
-                ============================================================
-                未能检测到话题类型,话题可能不存在或无发布者/订阅者
+                Monitoring Topic: gripper_d672f584b18a
+                Duration: 30 seconds
+                Press Ctrl+C to stop
+                =====================================================================================
+                Failed to detect topic type; the topic may not exist or has no publisher/subscriber
 
 
 .. admonition:: tips
     :class: tip
 
-    - `topic` 子命令，表明本次操作是调用某个话题；
-    - `--echo/-e` 必选参数，指定要监听的 Topic 名称；
-    - `--timeout/-t` 可选参数，指定监听的持续时间，默认为 30 秒。
+    - The `topic` subcommand indicates that this operation is to call a specific topic;
+    - The `--echo/-e` parameter is mandatory and specifies the name of the Topic to monitor;
+    - The `--timeout/-t` parameter is optional and specifies the duration of monitoring, with a default of 30 seconds.

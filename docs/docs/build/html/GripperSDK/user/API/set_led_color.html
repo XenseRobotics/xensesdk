@@ -49,12 +49,12 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre_configuration.html">Hardware Connection &amp; Network Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation.html">Installing GripperSDK</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../methodlist.html">Using GripperSDK API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create_gripper.html">create Method</a></li>
@@ -67,14 +67,14 @@
 <li class="toctree-l3"><a class="reference internal" href="set_control_param.html">set_control_param Method</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">set_led_color Method</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#xensegripper.XenseGripper.set_led_color"><code class="docutils literal notranslate"><span class="pre">XenseGripper.set_led_color()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Example Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-code">Example Code</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mode.html">mode Method</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../EzROS/EzROS.html">EzROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GuiUseGuide/GuiUseGuide.html">GUI User Guide</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Hardware/Hardware.html">Hardware</a></li>
@@ -108,19 +108,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="set-led-color">
-<span id="tag-set-led-color"></span><h1>set_led_color Method<a class="headerlink" href="#set-led-color" title="Link to this heading"></a></h1>
+  <section id="set-led-color-method">
+<span id="tag-set-led-color"></span><h1>set_led_color Method<a class="headerlink" href="#set-led-color-method" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensegripper.XenseGripper.set_led_color">
 <span class="sig-prename descclassname"><span class="pre">XenseGripper.</span></span><span class="sig-name descname"><span class="pre">set_led_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensegripper.XenseGripper.set_led_color" title="Link to this definition"></a></dt>
-<dd><p>Set the color of the gripper’s LED light, controlled via RGB three-color values.</p>
+<dd><p>Sets the color of the gripper’s LED light, controlled via RGB color values.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>r</strong> (<em>int</em>) – Red channel value, range: 0-255.</p></li>
-<li><p><strong>g</strong> (<em>int</em>) – Green channel value, range: 0-255.</p></li>
-<li><p><strong>b</strong> (<em>int</em>) – Blue channel value, range: 0-255.</p></li>
+<li><p><strong>r</strong> (<em>int</em>) – Red channel value, ranging from 0 to 255.</p></li>
+<li><p><strong>g</strong> (<em>int</em>) – Green channel value, ranging from 0 to 255.</p></li>
+<li><p><strong>b</strong> (<em>int</em>) – Blue channel value, ranging from 0 to 255.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
@@ -130,28 +130,28 @@
 </dd></dl>
 
 </div>
-<section id="id1">
-<h2>Example Code<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="example-code">
+<h2>Example Code<a class="headerlink" href="#example-code" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensegripper</span><span class="w"> </span><span class="kn">import</span> <span class="n">XenseGripper</span>
 
-<span class="c1"># 创建夹爪实例</span>
+<span class="c1"># Create a gripper instance</span>
 <span class="n">gripper</span> <span class="o">=</span> <span class="n">XenseGripper</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;9a14e81bb832&quot;</span><span class="p">)</span>
 
-<span class="c1"># 设置LED颜色 (RGB 0-255)</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>    <span class="c1"># 红色</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>    <span class="c1"># 绿色</span>
-<span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>    <span class="c1"># 蓝色</span>
+<span class="c1"># Set LED color (RGB 0-255)</span>
+<span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>    <span class="c1"># Red</span>
+<span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>    <span class="c1"># Green</span>
+<span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>    <span class="c1"># Blue</span>
 
 
-<span class="c1"># 错误示例：颜色值超出范围</span>
+<span class="c1"># Error example: Color value out of range</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># 300超过最大255限制</span>
+    <span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># 300 exceeds the maximum limit of 255</span>
 <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># -10低于最小0限制</span>
+    <span class="n">gripper</span><span class="o">.</span><span class="n">set_led_color</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># -10 is below the minimum limit of 0</span>
 <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>

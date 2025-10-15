@@ -1,19 +1,19 @@
 .. _tag_Gripper_get_gripper_status_:
 
-get_gripper_status 方法
-=========================
+get_gripper_status Method
+===================================
 
 .. container:: step-block
 
     .. py:method:: XenseGripper.get_gripper_status(self)
         :module: xensegripper
 
-        获取夹爪当前的状态信息（包括运行参数和设备状态），用于读取夹爪的实时工作数据，返回包含关键运行参数的字典，可用于监控夹爪的当前状态。
+        Retrieves the current status information of the gripper (including operating parameters and device status). It is used to read real-time working data of the gripper and returns a dictionary containing key operating parameters, which can be used to monitor the current state of the gripper.
 
-        :return: 夹爪当前状态的字典，包含以下键值：
+        :return: A dictionary of the gripper's current status, containing the following key-value pairs:
 
-                 - ``position``: 当前位置 (单位: mm)
-                 - ``velocity``: 当前速度 (单位: mm/s)
-                 - ``force``: 当前输出力 (单位: N)
-                 - ``temperature``: 电机温度（单位：℃）
+                 - ``position``: Current position (unit: mm)
+                 - ``velocity``: Current velocity (unit: mm/s)
+                 - ``force``: Current output force (unit: N)
+                 - ``temperature``: Motor temperature (unit: ℃)
         :rtype: dict

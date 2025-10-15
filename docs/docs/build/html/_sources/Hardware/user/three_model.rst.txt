@@ -1,19 +1,20 @@
 .. _tag_three_model:
 
-二、触觉传感器金属外壳三维模型
-========================================
 
-1、 WS传感器外部尺寸
----------------------------
+II. 3D Model of Tactile Sensor Metal Housing
+================================================
+
+1. External Dimensions of WS Sensor
+--------------------------------------
 
 .. figure:: ../images/WS_chuan.png
-    :alt: 软件初始设置
+    :alt: Initial Software Setup
     :align: center
     :width: 400px
     :name: _hd-chuan
     :class: preserve-aspect-ratio
 
-    图 1
+    Figure 1
 
 .. raw:: html
 
@@ -29,13 +30,13 @@
     </style>
 
 .. figure:: ../images/WS_chuan2.png
-    :alt: 软件初始设置
+    :alt: Software Initial Setup
     :align: center
     :width: 400px
     :name: _hd-chuan2
     :class: preserve-aspect-ratio
 
-    图 2
+    Figure 2
 
 
 
@@ -50,14 +51,14 @@
         
         <!-- 文件信息 -->
         <div style="text-align: left;">
-            <div style="font-weight: 600; color: #333333; font-size: 16px;">WS传感器模型.stp</div>
-            <div style="font-size: 14px; color: #666666; margin-top: 4px;">3D模型文件 · STP格式</div>
+            <div style="font-weight: 600; color: #333333; font-size: 16px;">WS Sensor Model.stp</div>
+            <div style="font-size: 14px; color: #666666; margin-top: 4px;">3D Model File・STP Format</div>
         </div>
         
         <!-- Sphinx自带的下载指令 -->
         <a href=":download:`../../../../_static/WS传感器模型.stp"
             style="padding: 8px 16px; border: 1px solid #dddddd; border-radius: 6px; color: #333333; text-decoration: none; background-color: #ffffff; font-weight: 500; transition: all 0.2s ease; white-space: nowrap;">
-            <i class="fa fa-download" style="margin-right: 6px;"></i> 下载文件
+            <i class="fa fa-download" style="margin-right: 6px;"></i> Download File
         </a>
       </div>
     </div>
@@ -67,23 +68,23 @@
 ---------------------------
 
 .. figure:: ../images/OS_chuan.png
-    :alt: 软件初始设置
+    :alt: Software Initial Setup
     :align: center
     :width: 400px
     :name: _hd-OS_chuan
     :class: preserve-aspect-ratio
 
-    图 3
+    Figure 3
 
 
 .. figure:: ../images/OS_chuan2.png
-    :alt: 软件初始设置
+    :alt: Software Initial Setup
     :align: center
     :width: 400px
     :name: _hd-OS_chuan2
     :class: preserve-aspect-ratio
 
-    图 4
+    Figure 4
 
 .. raw:: html
 
@@ -96,15 +97,15 @@
         
         <!-- 文件信息 -->
         <div style="text-align: left;">
-            <div style="font-weight: 600; color: #333333; font-size: 16px;">OS传感器模型.stp</div>
-            <div style="font-size: 14px; color: #666666; margin-top: 4px;">3D模型文件 · STP格式</div>
+            <div style="font-weight: 600; color: #333333; font-size: 16px;">OS Sensor Model.stp</div>
+            <div style="font-size: 14px; color: #666666; margin-top: 4px;">3D Model File・STP Format</div>
         </div>
         
         
          <!-- Sphinx自带的下载指令 -->
         <a href=":download:`../../../../_static/OS传感器模型.stp"
             style="padding: 8px 16px; border: 1px solid #dddddd; border-radius: 6px; color: #333333; text-decoration: none; background-color: #ffffff; font-weight: 500; transition: all 0.2s ease; white-space: nowrap;">
-            <i class="fa fa-download" style="margin-right: 6px;"></i> 下载文件
+            <i class="fa fa-download" style="margin-right: 6px;"></i> Download File
         </a>
       </div>
     </div>

@@ -49,13 +49,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../XenseSDK.html">XenseSDK</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Introduction.html">What is XenseSDK?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Install XenseSDK</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../methodList.html">Using XenseSDK API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Installation.html">Installing XenseSDK</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../methodList.html">Using the XenseSDK API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create.html">create Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="selectSensorInfo.html">selectSensorInfo Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="getCameraID.html">getCameraID Method</a></li>
@@ -67,7 +67,7 @@
 <li class="toctree-l3"><a class="reference internal" href="createSolver.html">createSolver Method</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">exportRuntimeConfig Method</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#xensesdk.Sensor.exportRuntimeConfig"><code class="docutils literal notranslate"><span class="pre">Sensor.exportRuntimeConfig()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Example Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-method">Example Method</a></li>
 </ul>
 </li>
 </ul>
@@ -94,7 +94,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../XenseSDK.html">XenseSDK</a></li>
-          <li class="breadcrumb-item"><a href="../methodList.html">Using XenseSDK API</a></li>
+          <li class="breadcrumb-item"><a href="../methodList.html">Using the XenseSDK API</a></li>
       <li class="breadcrumb-item active">exportRuntimeConfig Method</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
@@ -107,27 +107,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="exportruntimeconfig">
-<span id="tag-exportruntimeconfig"></span><h1>exportRuntimeConfig Method<a class="headerlink" href="#exportruntimeconfig" title="Link to this heading"></a></h1>
+  <section id="exportruntimeconfig-method">
+<span id="tag-exportruntimeconfig"></span><h1>exportRuntimeConfig Method<a class="headerlink" href="#exportruntimeconfig-method" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <dl class="py method">
 <dt class="sig sig-object py" id="xensesdk.Sensor.exportRuntimeConfig">
 <span class="sig-prename descclassname"><span class="pre">Sensor.</span></span><span class="sig-name descname"><span class="pre">exportRuntimeConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xensesdk.Sensor.exportRuntimeConfig" title="Link to this definition"></a></dt>
-<dd><blockquote>
-<div><p>Export the runtime configuration of the current sensor to the specified directory.</p>
-</div></blockquote>
+<dd><p>Exports the current sensor’s runtime configuration to the specified directory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>save_dir</strong> (<em>Union</em><em>[</em><em>str</em><em>,</em><em>Path</em><em>]</em><em>, </em><em>可选</em>) – Directory for saving the configuration file; defaults to the current directory.</p></li>
-<li><p><strong>binary</strong> (<em>bool</em><em>, </em><em>可选</em>) – Whether to return binary encrypted data instead of saving it to a file; defaults to False.</p></li>
+<li><p><strong>save_dir</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>Path</em><em>]</em><em>, </em><em>optional</em>) – Directory for saving the configuration file, defaults to the current directory.</p></li>
+<li><p><strong>binary</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to return binary encrypted data instead of saving to a file, defaults to False.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError</strong> – Raised when configuration export fails in remote connection mode.</p>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – Thrown when configuration export fails in remote connection mode.</p>
 </dd>
 <dt class="field-even">Note<span class="colon">:</span></dt>
 <dd class="field-even"><p>The saved file name follows the format “runtime_&lt;serial_number&gt;”.</p>
@@ -136,12 +134,12 @@
 </dd></dl>
 
 </div>
-<section id="id1">
-<h2>Example Method<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="example-method">
+<h2>Example Method<a class="headerlink" href="#example-method" title="Link to this heading"></a></h2>
 <div class="step-block docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="n">SCRIPT_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span>
-<span class="n">SAVE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">SCRIPT_DIR</span> <span class="o">/</span> <span class="s2">&quot;test_dir&quot;</span><span class="p">)</span>  <span class="c1"># 存放目录</span>
+<span class="n">SAVE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">SCRIPT_DIR</span> <span class="o">/</span> <span class="s2">&quot;test_dir&quot;</span><span class="p">)</span>  <span class="c1"># Storage directory</span>
 <span class="n">SAVE_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
@@ -153,7 +151,7 @@
 
 <span class="k">def</span><span class="w"> </span><span class="nf">save_data</span><span class="p">():</span>
     <span class="n">fps</span> <span class="o">=</span> <span class="mi">30</span>
-    <span class="n">duration</span> <span class="o">=</span> <span class="mi">3</span>   <span class="c1"># 秒</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="mi">3</span>   <span class="c1"># seconds</span>
     <span class="n">frame_interval</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">fps</span>
     <span class="n">total_frames</span> <span class="o">=</span> <span class="n">fps</span> <span class="o">*</span> <span class="n">duration</span>
 
@@ -161,23 +159,23 @@
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_frames</span><span class="p">):</span>
         <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
-        <span class="c1"># 采集一帧</span>
+        <span class="c1"># Capture one frame</span>
         <span class="n">rec</span> <span class="o">=</span> <span class="n">sensor_0</span><span class="o">.</span><span class="n">selectSensorInfo</span><span class="p">(</span><span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Rectify</span><span class="p">)</span>
 
-        <span class="c1"># 生成文件名</span>
+        <span class="c1"># Generate filename</span>
         <span class="n">filename</span> <span class="o">=</span> <span class="n">SAVE_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sensor_id</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">03d</span><span class="si">}</span><span class="s2">.png&quot;</span>
 
-        <span class="c1"># 保存图片</span>
+        <span class="c1"># Save image</span>
         <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">rec</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-        <span class="c1"># 控制帧率（30Hz）</span>
+        <span class="c1"># Control frame rate (30Hz)</span>
         <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
         <span class="n">sleep_time</span> <span class="o">=</span> <span class="n">frame_interval</span> <span class="o">-</span> <span class="n">elapsed</span>
         <span class="k">if</span> <span class="n">sleep_time</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_time</span><span class="p">)</span>
 
-    <span class="c1"># 导出配置</span>
+    <span class="c1"># Export configuration</span>
     <span class="n">sensor_0</span><span class="o">.</span><span class="n">exportRuntimeConfig</span><span class="p">(</span><span class="n">SAVE_DIR</span><span class="p">)</span>
 
     <span class="n">sensor_0</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>

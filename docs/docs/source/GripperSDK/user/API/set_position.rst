@@ -1,35 +1,35 @@
 .. _tag_set_position_:
 
-set_position方法
-=====================
+set_position Method
+=======================
 
 .. container:: step-block
 
     .. py:method:: XenseGripper.set_position(self, position, vmax=80.0, fmax=27.0)
         :module: xensegripper
 
-        设置夹爪的目标位置。
+        Sets the target position of the gripper.
 
-        :param position: 夹爪的目标位置，单位为毫米(mm)。
-                            必须在 (0, 85) 范围内。
-                            85 mm 表示完全打开, 0 mm 表示完全闭合。
+        :param position: Target position of the gripper in millimeters (mm).
+                            Must be within the range (0, 85).
+                            85 mm indicates fully open, 0 mm indicates fully closed.
         :type position: float
         
-        :param vmax: 最大运动速度，单位为毫米/秒(mm/s)。
-                        必须在 (0, 350) 范围内。
-                        默认值为 80 mm/s。
-        :type vmax: float, 可选
+        :param vmax: Maximum movement speed in millimeters per second (mm/s).
+                        Must be within the range (0, 350).
+                        Default value is 80 mm/s.
+        :type vmax: float, optional
         
-        :param fmax: 最大输出力，单位为牛顿(N)。
-                        必须在 (0, 60) 范围内。
-                        默认值为 27 N。
-        :type fmax: float, 可选
+        :param fmax: Maximum output force in Newtons (N).
+                        Must be within the range (0, 60).
+                        Default value is 27 N.
+        :type fmax: float, optional
         
-        :raises ValueError: 当任何输入参数超出其允许的物理限制范围时触发。
+        :raises ValueError: Triggered when any input parameter exceeds its allowed physical limit range.
 
 
-示例代码
---------
+Example Code
+----------------
 
 .. container:: step-block
 
@@ -67,5 +67,3 @@ set_position方法
                     gripper.set_position(10, 80, 20)
                     flag = not flag
                 time.sleep(1)
-
-

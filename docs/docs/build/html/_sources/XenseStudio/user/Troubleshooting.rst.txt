@@ -1,70 +1,68 @@
 .. _tag_troubleshooting:
 
-五、故障排查
-================
+V. Troubleshooting
+======================
 
 
-1、 初始化时打印
------------------
+1. Printing During Initialization
+-------------------------------------
 
-    问题描述：
+    Problem Description:
 
-        安装后的初次启动加载会比较慢
+        The first launch and loading after installation may be relatively slow.
 
-    解决方案：
+    Solution:
 
-        初始化时，第一次需要加载所有组件并缓存，后续可正常使用
+        During initialization, all components need to be loaded and cached for the first time. Normal usage will be restored in subsequent launches.
 
-2、 显卡驱动
------------------
+2. Graphics Card Driver
+---------------------------
 
-    问题描述：
+    Problem Description:
 
-        如果不插传感器能启动,但插传感器无法启动，且命令行有如下类似报错或输出
+        The software can start without a sensor connected, but fails to start when a sensor is connected. The command line may show similar errors or outputs as follows:
 
     .. code-block:: bash
-        :caption: 命令行输出
+        :caption: Command Line Output
         :linenos:
 
-        段错误已中止(核心已转储)
+        Segmentation fault (core dumped)
         Segmentation Fault
         Init infer engine   
         infer session using CPU(GPU) 
            
 
-    解决方案：
+    Solution:
 
-        大概率是显卡驱动问题,
-        先安装适配的显卡驱动
-        (如果显卡是nvidia显卡的话)检查如下命令是否正常输出,如果不正常的话，先安装适配的显卡驱动。
+        This issue is most likely caused by a graphics card driver problem.
+        First, install a compatible graphics card driver.
+        (If the graphics card is an NVIDIA card) Check if the following command outputs normally. If not, install a compatible graphics card driver first.
 
     .. code-block:: bash
-        :caption: 命令行输入
+        :caption: Command Line Input
 
         nvidia-smi
         
-3、 报错处理
---------------------
+3. Error Handling
+---------------------
 
-    问题描述：
+    Problem Description:
 
     .. code-block:: bash
-        :caption: 命令行输出
+        :caption: Command Line Output
         :linenos:
 
-        from 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to lload the Qt xcb platform plugin.
-        Could not load the Qt platform plugin "xcb" in "" even tkhough it was found. This
-        application failed to start because no Qt platform plugiIn could be initialized.
+        From version 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.
+        Could not load the Qt platform plugin "xcb" in "" even though it was found. This
+        application failed to start because no Qt platform plugin could be initialized.
         Reinstalling the application may fix this problem.
         
         
-    解决方案：
+    Solution:
 
     .. code-block:: bash
-        :caption: 命令行输入
+        :caption: Command Line Input
         :linenos:
 
         sudo apt-get update
         sudo apt-get install libxcb-cursor0
-        
-    

@@ -1,41 +1,37 @@
 .. _tag_Grippercreate_:
 
-create 方法
-=============
+create Method
+==================
 
 .. container:: step-block
 
     .. py:method:: XenseGripper.create(mac_addr=None)
         :module: xensegripper
 
-        创建一个 XenseGripper 实例
+        Creates an XenseGripper instance.
 
-        :param mac_addr: 提供正确的 mac 通信地址, MAC地址查询方式请看: `ezros <../EzROS/usr/ezros_example.html>`_ 。
-        :type mac_addr: str, 可选
+        :param mac_addr: Provide the correct MAC communication address. For how to query the MAC address, see: `ezros <../EzROS/usr/ezros_example.html>`_.
+        :type mac_addr: str, optional
         
-        :return: 实现 `Gripper` 接口的夹爪实例。
+        :return: A gripper instance that implements the `Gripper` interface.
         :rtype: :class:`XenseTCPGripper`
 
-示例代码
---------
+Example Code
+-----------------
 
 .. container:: step-block
 
-    通过 MAC 地址连接夹爪
+    Connect to the gripper via MAC address
 
     .. code-block:: python
 
         from xensegripper import XenseGripper
 
-        # 使用 MAC 地址创建连接的夹爪实例
+        # Create a connected gripper instance using the MAC address
         gripper = XenseGripper.create(mac_addr="9a14e81bb832")
 
    
 .. admonition:: tips
    :class: tip
 
-   如果不清楚夹爪的MAC地址,可以使用 ``ezros`` 工具进行查询, 具体请参考 :doc:`../EzROS/usr/ezros_example`。
-
-
-
-            
+   If you don't know the gripper's MAC address, you can use the ``ezros`` tool to query it. For details, please refer to :doc:`../EzROS/usr/ezros_example`.

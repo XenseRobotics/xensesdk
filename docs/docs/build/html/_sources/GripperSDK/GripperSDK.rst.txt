@@ -22,7 +22,7 @@ GripperSDK
 
 .. raw:: html
 
-    <div class="custom-h2">核心功能</div>
+    <div class="custom-h2">Core Functions</div>
 
 .. container:: step-block
 
@@ -30,44 +30,44 @@ GripperSDK
         :header-rows: 1
         :widths: 20 60
 
-        * - 功能模块
-          - 说明
-        * - 夹爪控制
-          - 支持以 200 Hz 频率接收夹爪数据，同时可对夹爪运动进行精准控制。  
-        * - 传感器控制
-          - 提供传感器启动、关闭操作接口，支持读取传感器实时数据，满足不同场景下的数据采集需求。  
-        * - 服务联网自启动
-          - 无论设备是直连电脑，还是通过交换机接入网络，实现 “即插即用” 。  
-        * - 服务自动发现
-          - SDK 可自动扫描可连接的服务节点，简化人工配置流程，提升系统部署效率。  
-        * - 休眠模式
-          - 若传感器 10 min 未被使用，自动关闭传感器以降低功耗，仅保留主服务节点持续运行，保障基础服务不中断。  
-        * - CLI 调试工具
-          - 通过 ``EzROS`` 命令行工具，可快速测试服务状态，便于开发与运维阶段排查问题。  
+        * - Function Module
+          - Description
+        * - Gripper Control
+          - Supports receiving gripper data at a frequency of 200 Hz, while enabling precise control of gripper movement.  
+        * - Sensor Control
+          - Provides interfaces for sensor startup and shutdown operations, and supports reading real-time sensor data to meet data collection needs in different scenarios.  
+        * - Service Auto-Startup on Network Connection
+          - Enables "plug-and-play" functionality regardless of whether the device is directly connected to a computer or accessed via a switch.  
+        * - Service Auto-Discovery
+          - The SDK can automatically scan for connectable service nodes, simplifying manual configuration processes and improving system deployment efficiency.  
+        * - Sleep Mode
+          - If the sensor is not used for 10 minutes, it will automatically turn off to reduce power consumption, while only keeping the main service node running continuously to ensure uninterrupted basic services.  
+        * - CLI Debugging Tool
+          - Through the ``EzROS`` command-line tool, you can quickly test the service status, facilitating problem troubleshooting during development and operation phases.  
 
 
 .. raw:: html
 
-    <div class="custom-h2">主目录</div>
+    <div class="custom-h2">Main Directory</div>
 
 .. container:: step-block
  
     .. list-table::
         :width: 30
         
-        * - :ref:`硬件连接与网络配置 <tag_Gripperpre_configuration>`
+        * - :ref:`Hardware Connection & Network Configuration <tag_Gripperpre_configuration>`
         
-        * - :ref:`安装指南 <tag_Gripperinstallation>`
+        * - :ref:`Installation Guide <tag_Gripperinstallation>`
         
-        * - :ref:`API文档 <tag_Grippermethodlist>`
+        * - :ref:`API Documentation <tag_Grippermethodlist>`
         
-        * - :ref:`EzROS调试工具 <tag_ezros>` 
+        * - :ref:`EzROS Debugging Tool <tag_ezros>` 
 
-        * - :ref:`Gui使用指南 <tag_guiUseGuide>` 
+        * - :ref:`GUI User Guide <tag_guiUseGuide>` 
 
 .. toctree::
    :maxdepth: 3
-   :caption: 目录
+   :caption: Table of Contents
    :hidden:
    
    user/pre_configuration

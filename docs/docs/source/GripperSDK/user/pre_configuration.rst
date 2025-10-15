@@ -1,9 +1,9 @@
 .. _tag_Gripperpre_configuration:
 
-硬件连接与网络配置
-=====================
+Hardware Connection & Network Configuration
+=================================================
 
-将服务器端与上位机连接于同一局域网内，使得二者可以进行通信。
+Connect the server side and the host computer to the same local area network (LAN) to enable communication between them.
 
 .. raw:: html
 
@@ -40,53 +40,54 @@
     </style>
 
 
-.. rubric:: 步骤 1: 连接夹爪设备电源
+
+.. rubric:: Step 1: Connect the Gripper Device to Power
    :class: step-title  
 
 .. container:: step-content
 
-    1. 将夹爪设备的电源适配器插入市电插座。
-    2. 等待夹爪完成初始化，观察到状态灯先闪烁后常亮。
+    1. Plug the power adapter of the gripper device into a mains socket.
+    2. Wait for the gripper to complete initialization, and observe that the status light first flashes and then stays on.
 
 
-.. rubric:: 步骤 2: 连接网络
+.. rubric:: Step 2: Connect to the Network
    :class: step-title
 
 .. container:: step-content
 
-    .. rubric:: 方法一: 使用交换机
+    .. rubric:: Method 1: Using a Switch
        :class: method-title  
 
-    将夹爪与计算机分别接入交换机的不同网口并确保网络通路, 此时夹爪的IP地址使用 ``dhcp`` 自动获取，后续需利用 `ezros <./EzROS/usr/ezros_example.html>`_ 进行扫描。
+    Connect the gripper and the computer to different network ports of the switch respectively, and ensure the network is connected. At this time, the gripper's IP address is automatically obtained using ``dhcp``, and subsequent scanning needs to be performed using `ezros <./EzROS/usr/ezros_example.html>`_.
 
 
-    .. rubric:: 方法二: 直连电脑网口
+    .. rubric:: Method 2: Direct Connection to Computer's Network Port
        :class: method-title
 
-    此时夹爪为静态 IP ``192.168.99.2``，电脑端需要在和夹爪同一网段内设置自身 IP(打开网络设置 -> 有线设置 -> IPv4)。
-    设置参考如下:
+    In this case, the gripper uses a static IP ``192.168.99.2``, and the computer needs to set its own IP within the same network segment as the gripper (open Network Settings -> Wired Settings -> IPv4).
+    Reference settings are as follows:
 
     .. list-table::
         :widths: 15 20 35
         :header-rows: 1  
 
-        * - 参数项  
-          - 示例/固定值 
-          - 配置说明  
+        * - Parameter Item  
+          - Example/Fixed Value 
+          - Configuration Description  
             
-        * - IP 地址  
+        * - IP Address  
           - ``192.168.99.10`` 
-          - 格式为 ``192.168.99.X``, (x的取值范围为 1-254, 避开夹爪 IP)
-        * - 子网掩码  
+          - Format: ``192.168.99.X``, (X ranges from 1 to 254, avoiding the gripper's IP)
+        * - Subnet Mask  
           - ``255.255.255.0`` 
-          - 固定配置，无需变动  
+          - Fixed configuration, no modification required  
 
-    使用以太网线将PC的以太网接口与夹爪设备的网口直接连接, 确保PC端网线接口牢固插入。
+    Use an Ethernet cable to directly connect the PC's Ethernet port to the gripper device's network port, and ensure the Ethernet cable is firmly plugged into the PC's port.
 
     .. admonition:: tips
         :class: tip
 
-        在使用sdk时，如果上位机既有线连接了夹爪，又连接了wifi，请在程序开头配置多网卡发现：
+        When using the SDK, if the host computer is connected to both the gripper via a wired connection and WiFi, configure multi-network card discovery at the beginning of the program:
 
         .. code-block:: python
 
@@ -95,30 +96,30 @@
             setup_multi_net_interface()
 
 
-.. rubric:: 步骤 3: 测试网络连通性
+.. rubric:: Step 3: Test Network Connectivity
    :class: step-title
 
 .. container:: step-content
 
-    1. 打开PC的命令提示符 (Windows系统: 按下 ``Win+R``，输入 ``cmd`` 后回车; Linux: 打开终端)。
-    2. 在命令行中输入以下命令并回车：
+    1. Open the PC's command prompt (Windows: Press ``Win+R``, enter ``cmd`` and press Enter; Linux: Open the terminal).
+    2. Enter the following command in the command line and press Enter:
 
         .. code-block:: bash
 
             ping 192.168.99.2
 
-    3. 结果判断:
+    3. Result Judgment:
    
         .. tab-set::
 
-            .. tab-item:: 网络连通成功
+            .. tab-item:: Successful Network Connection
                 
-                若显示 **"Reply from 192.168.99.2"** 等类似信息，可直接继续后续操作。
+                If messages like **"Reply from 192.168.99.2"** are displayed, you can directly proceed with subsequent operations.
 
-            .. tab-item:: 连接超时
+            .. tab-item:: Connection Timeout
 
-                若显示 **"Request timed out"**，请依次排查以下项：
+                If **"Request timed out"** is displayed, please check the following items in sequence:
 
-                - 以太网IP配置是否正确 (重新核对步骤 2)
-                - 以太网线是否松动或损坏
-                - 夹爪设备是否已完成初始化（状态灯是否常亮）
+                - Whether the Ethernet IP configuration is correct (recheck Step 2)
+                - Whether the Ethernet cable is loose or damaged
+                - Whether the gripper device has completed initialization (whether the status light stays on)

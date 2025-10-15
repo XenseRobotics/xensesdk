@@ -1,74 +1,74 @@
 .. _tag_set_position_sync_:
 
-set_position_sync方法
-=====================
+set_position_sync Method
+============================
 
 .. container:: step-block
 
     .. py:method:: XenseGripper.set_position_sync(self, position, vmax=80.0, fmax=27.0, tolerance=0.01, timeout=5.0, poll_interval=0.05)
         :module: xensegripper
 
-        同步位置控制 (将夹爪移动到目标位置，并阻塞直到到达目标位置或超时)
+        Synchronous position control (moves the gripper to the target position and blocks until the target position is reached or a timeout occurs).
 
-        :param position: 夹爪的目标位置，单位为毫米(mm)。
-                            必须在 (0, 85) 范围内。
-                            0 mm 表示完全打开, 85 mm 表示完全闭合。
+        :param position: Target position of the gripper in millimeters (mm).
+                            Must be within the range (0, 85).
+                            0 mm indicates fully open, 85 mm indicates fully closed.
         :type position: float
         
-        :param vmax: 最大运动速度，单位为毫米/秒(mm/s)。
-                        必须在 (0, 350) 范围内。
-                        默认值为 80 mm/s。
+        :param vmax: Maximum movement speed in millimeters per second (mm/s).
+                        Must be within the range (0, 350).
+                        Default value is 80 mm/s.
         :type vmax: float
         
-        :param fmax: 最大输出力，单位为牛顿(N)。
-                        必须在 (0, 60) 范围内。
-                        默认值为 27 N。
+        :param fmax: Maximum output force in Newtons (N).
+                        Must be within the range (0, 60).
+                        Default value is 27 N.
         :type fmax: float
         
-        :param tolerance: 判定运动完成的位置误差容忍度，单位为毫米(mm)。
-                            默认值为 0.01 mm。
-        :type tolerance: float, 可选
+        :param tolerance: Position error tolerance for determining movement completion, in millimeters (mm).
+                            Default value is 0.01 mm.
+        :type tolerance: float, optional
 
-        :param timeout: 等待目标位置到达的最大时间，单位为秒。
-                        默认值为 5.0 秒。
-        :type timeout: float, 可选
+        :param timeout: Maximum time to wait for the target position to be reached, in seconds.
+                        Default value is 5.0 seconds.
+        :type timeout: float, optional
 
-        :param poll_interval: 位置检查的时间间隔，单位为秒。
-                                默认值为 0.05 秒。
-        :type poll_interval: float, 可选
+        :param poll_interval: Time interval for position checks, in seconds.
+                                Default value is 0.05 seconds.
+        :type poll_interval: float, optional
         
-        :raises ValueError: 当任何输入参数超出其允许的物理限制范围时触发。
+        :raises ValueError: Triggered when any input parameter exceeds its allowed physical limit range.
 
-        :return: 若夹爪在超时时间内到达目标位置（在允许的误差范围内），则返回 True, 否则返回 False。
+        :return: Returns True if the gripper reaches the target position within the timeout period (within the allowed error range), otherwise returns False.
         :rtype: bool
 
 
 
-示例代码
---------
+Example Code
+-------------------
 .. container:: step-block
 
     .. code-block:: python
 
         from xensegripper import XenseGripper
 
-        # 创建夹爪实例
+        # Create a gripper instance
         gripper = XenseGripper.create("9a14e81bb832")
 
-        # 同步设置夹爪位置为 30mm，使用默认参数
+        # Synchronously set the gripper position to 30mm using default parameters
         success = gripper.set_position_sync(30)
 
-        # 同步设置夹爪位置为 70mm，指定参数（符合最新范围）
+        # Synchronously set the gripper position to 70mm with specified parameters (complying with the latest ranges)
         success = gripper.set_position_sync(
-            position=70,          # 在 (0, 85) 范围内
-            vmax=250,             # 在 (0, 350) 范围内（高于原示例，体现新上限）
-            fmax=50,              # 在 (0, 60) 范围内（高于原示例，体现新上限）
+            position=70,          # Within (0, 85) range
+            vmax=250,             # Within (0, 350) range (higher than original example, reflecting new upper limit)
+            fmax=50,              # Within (0, 60) range (higher than original example, reflecting new upper limit)
             tolerance=0.02,
             timeout=8.0,
             poll_interval=0.04
         )
-        # 错误示例：力参数超出范围（体现最新上限60N）
+        # Error example: Force parameter out of range (reflecting the latest upper limit of 60N)
         try:
-            gripper.set_position_sync(40, fmax=70)  # 70N 超过最大 60N 限制
+            gripper.set_position_sync(40, fmax=70)  # 70N exceeds the maximum limit of 60N
         except ValueError as e:
             print(e)

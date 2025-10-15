@@ -1,39 +1,39 @@
 .. _tag_service:
 
-Service调用
-=============
+Service Call
+================
 
 .. container:: step-block
 
-    当要对特定Service服务调用时, 可使用如下命令：
+    When you need to call a specific Service, use the following commands:
 
     .. tab-set::
 
-        .. tab-item:: 调用Sensor服务
+        .. tab-item:: Call Sensor Service
 
             .. code-block:: bash
 
                 ezros service -n OG000285 -c get_img
 
-        .. tab-item:: 调用Gripper服务
+        .. tab-item:: Call Gripper Service
 
             .. code-block:: bash
 
                 ezros service -n gripper_d672f584b17a -c set_led_color:=255,0,0
 
-    以下为打印信息：
+    The following is the printed information:
 
     .. tab-set::
 
-        .. tab-item:: Sensor服务调用输出
+        .. tab-item:: Sensor Service Call Output
 
             .. code-block:: text
 
-                调用服务: OG000285
-                动作: get_img
-                参数: []
+                Calling Service: OG000285
+                Action: get_img
+                Parameters: []
                 ----------------------------------------
-                响应:  [[[227 156  83]
+                Response:  [[[227 156  83]
                 [230 151  85]
                 [229 149  86]
                 ...
@@ -49,18 +49,18 @@ Service调用
                 [114  44  36]
                 [ 75  44  31]]]
 
-        .. tab-item:: Gripper服务调用输出
+        .. tab-item:: Gripper Service Call Output
             
             .. code-block:: text
 
-                调用服务: gripper_d672f584b17a
-                动作: set_led_color
-                参数: [255, 0, 0]
+                Calling Service: gripper_d672f584b17a
+                Action: set_led_color
+                Parameters: [255, 0, 0]
                 ----------------------------------------
 
 .. admonition:: tips
     :class: tip
 
-    - `service` 子命令，表明本次操作是调用某个服务；
-    - `--name/-n` 必选参数，指定要调用的 Service 名称；
-    - `--call/-c` 必须参数，指定要调用的服务动作及参数，格式为 “动作名:= 参数”。
+    - The `service` subcommand indicates that this operation is to call a specific service;
+    - The `--name/-n` parameter is mandatory and specifies the name of the Service to call;
+    - The `--call/-c` parameter is mandatory and specifies the service action and parameters to call, in the format of "action name:= parameters".

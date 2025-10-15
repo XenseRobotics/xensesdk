@@ -1,6 +1,6 @@
 .. _tag_createSolver:
 
-createSlover 方法
+createSolver Method
 ==========================
 
 .. container:: step-block
@@ -9,19 +9,19 @@ createSlover 方法
         :module: xensesdk
         :classmethod:
 
-        工厂方法（类方法），用于从给定的 runtime 配置路径创建一个 SensorSolver 实例。
+        A factory method (class method) used to create a SensorSolver instance from a given runtime configuration path.
 
-        :param runtime_path: - 指向 runtime 配置文件的路径
+        :param runtime_path: Path pointing to the runtime configuration file
         :type runtime_path: Union [str, Path]
 
-        :return: 成功时返回 SensorSolver 实例，失败时返回 False。
+        :return: Returns a SensorSolver instance on success, or False on failure.
         :rtype: SensorSolver | bool
 
-        :raises AssertionError: 解密后的数据格式不正确或缺少必要的 "ConfigManager" 键时触发。
-        :raises Exception: 读取文件、解密过程中发生错误时触发（具体错误信息会被捕获并打印）。
+        :raises AssertionError: Triggered when the decrypted data format is incorrect or the necessary "ConfigManager" key is missing.
+        :raises Exception: Triggered when errors occur during file reading or decryption (specific error information will be captured and printed).
 
-示例方法
-----------------
+Example Method
+------------------
 
 .. container:: step-block
 
@@ -29,7 +29,7 @@ createSlover 方法
 
         from pathlib import Path
         SCRIPT_DIR = Path(__file__).resolve().parent
-        SAVE_DIR = Path(SCRIPT_DIR / "test_dir")  # 存放目录
+        SAVE_DIR = Path(SCRIPT_DIR / "test_dir")  # Storage directory
         SAVE_DIR.mkdir(parents=True, exist_ok=True)
         import cv2
         import time
@@ -41,7 +41,7 @@ createSlover 方法
 
         def save_data():
             fps = 30
-            duration = 3   # 秒
+            duration = 3   # seconds
             frame_interval = 1.0 / fps
             total_frames = fps * duration
 
@@ -49,23 +49,23 @@ createSlover 方法
             for i in range(total_frames):
                 start_time = time.time()
 
-                # 采集一帧
+                # Capture one frame
                 rec = sensor_0.selectSensorInfo(Sensor.OutputType.Rectify)
 
-                # 生成文件名
+                # Generate filename
                 filename = SAVE_DIR / f"{sensor_id}_{i:03d}.png"
 
-                # 保存图片
+                # Save image
                 cv2.imwrite(str(filename), rec)
                 print(f"Saved {filename}")
 
-                # 控制帧率（30Hz）
+                # Control frame rate (30Hz)
                 elapsed = time.time() - start_time
                 sleep_time = frame_interval - elapsed
                 if sleep_time > 0:
                     time.sleep(sleep_time)
 
-            # 导出配置
+            # Export configuration
             sensor_0.exportRuntimeConfig(SAVE_DIR)
 
             sensor_0.release()

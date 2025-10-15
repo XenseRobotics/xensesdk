@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IV. User Interface and Interaction &mdash; xense  documentation</title>
+  <title>IV. Interface and Interaction &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -49,21 +49,21 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../Introduction.html">XenseStudio</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Software_Introduction.html">I. Software Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software_Introduction.html">I. Software Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="System_Requirment.html">II. System Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation_and_Setup.html">III. Installation and Setup</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">IV. User Interface and Interaction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">1. Select Sensor</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">Sensor Status Prompt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">Perception Mode Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">View Switching</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">IV. Interface and Interaction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sensor-selection">1. Sensor Selection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sensor-status-indicators">Sensor Status Indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#perception-mode-configuration">Perception Mode Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-switching">View Switching</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">2. Open Data Stream</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">3. Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-data-stream">2. Open Data Stream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toolbar">3. Toolbar</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Troubleshooting.html">V. Troubleshooting</a></li>
@@ -90,7 +90,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../Introduction.html">XenseStudio</a></li>
-      <li class="breadcrumb-item active">IV. User Interface and Interaction</li>
+      <li class="breadcrumb-item active">IV. Interface and Interaction</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -102,61 +102,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tag-user-interface-and-interaction">
-<span id="id1"></span><h1>IV. User Interface and Interaction<a class="headerlink" href="#tag-user-interface-and-interaction" title="Link to this heading"></a></h1>
-<section id="id2">
-<h2>1. Select Sensor<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+  <section id="iv-interface-and-interaction">
+<span id="tag-user-interface-and-interaction"></span><h1>IV. Interface and Interaction<a class="headerlink" href="#iv-interface-and-interaction" title="Link to this heading"></a></h1>
+<section id="sensor-selection">
+<h2>1. Sensor Selection<a class="headerlink" href="#sensor-selection" title="Link to this heading"></a></h2>
 <figure class="align-center" id="xs-sensor-selection">
-<a class="reference internal image-reference" href="../../_images/Data_or_Record_control_area.png"><img alt="Data Acquisition Control Area" src="../../_images/Data_or_Record_control_area.png" style="width: 315.0px; height: 60.0px;" />
+<a class="reference internal image-reference" href="../../_images/Data_or_Record_control_area.png"><img alt="Data Acquisition Control Area" src="../../_images/Data_or_Record_control_area.png" style="width: 326.0px; height: 48.0px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">Figure 1: Data Acquisition Control Area</span><a class="headerlink" href="#xs-sensor-selection" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>Under the “Select Sensor” option in the current Data Acquisition Control Area, real-time monitoring of the sensor’s multimodal perception information is available. It also supports recording the sensor’s feedback information for later “opening data stream” to conduct review, recap, and analysis.</p>
+<p>Under the “Select Sensor” option in the current Data Acquisition Control Area, you can monitor the multimodal perception information of the sensor in real time. It also supports recording the sensor feedback information for later “opening data stream” to conduct review, recap, and analysis.</p>
 <blockquote>
 <div><figure class="align-center" id="xs-device-selection">
-<a class="reference internal image-reference" href="../../_images/elements_selection_area.png"><img alt="Device Selection Area" src="../../_images/elements_selection_area.png" style="width: 417.0px; height: 45.0px;" />
+<a class="reference internal image-reference" href="../../_images/elements_selection_area.png"><img alt="Device Selection Area" src="../../_images/elements_selection_area.png" style="width: 281.0px; height: 27.0px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">Figure 2: Device Selection Area</span><a class="headerlink" href="#xs-device-selection" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
-<p>The software supports simultaneous connection of multiple sensors and quick switching between them. The Device Selection Area can display all sensor names. By clicking <a class="reference internal" href="../../_images/select_button.png"><img alt="Select Button" class="align-middle" src="../../_images/select_button.png" style="width: 16px; height: 16px;" /></a>, you can quickly switch to the target sensor from the list of detected sensors and display its collected information in the visualization area.</p>
-<section id="id3">
-<h3>Sensor Status Prompt<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>The software supports connecting multiple sensors simultaneously and enables quick switching between them.
+The Device Selection Area displays the names of all sensors. By clicking <a class="reference internal" href="../../_images/select_button.png"><img alt="Select Button" class="align-middle" src="../../_images/select_button.png" style="width: 16px; height: 16px;" /></a> ,
+you can quickly switch from the list of detected sensors to the target sensor, and its collected information will be displayed in the visualization area.</p>
+<section id="sensor-status-indicators">
+<h3>Sensor Status Indicators<a class="headerlink" href="#sensor-status-indicators" title="Link to this heading"></a></h3>
 <p><a class="reference internal" href="../../_images/online_icon1.png"><img alt="Online Icon" class="align-middle" src="../../_images/online_icon1.png" style="width: 16px; height: 16px;" /></a> : Indicates the device is online</p>
 <p><a class="reference internal" href="../../_images/offline_icon1.png"><img alt="Offline Icon" class="align-middle" src="../../_images/offline_icon1.png" style="width: 16px; height: 16px;" /></a> : Indicates the device is offline</p>
-<p><a class="reference internal" href="../../_images/error_icon1.png"><img alt="Error Icon" class="align-middle" src="../../_images/error_icon1.png" style="width: 16px; height: 16px;" /></a> : Indicates a sensor abnormality; hovering the mouse will display the abnormal information (sensor config file reading failed).</p>
-<p>After unplugging/plugging in the sensor, you need to click <a class="reference internal" href="../../_images/resetup1.png"><img alt="Rescan Icon" class="align-middle" src="../../_images/resetup1.png" style="width: 64px; height: 16px;" /></a> to rescan the sensor.</p>
+<p><a class="reference internal" href="../../_images/error_icon1.png"><img alt="Error Icon" class="align-middle" src="../../_images/error_icon1.png" style="width: 16px; height: 16px;" /></a> : Indicates a sensor error. Hovering the mouse over it will display the error message (sensor config file failed to load).</p>
+<p>After unplugging/plugging in the sensor, you need to click <a class="reference internal" href="../../_images/resetup1.png"><img alt="Rescan Icon" class="align-middle" src="../../_images/resetup1.png" style="width: 64px; height: 16px;" /></a> to rescan the sensors.</p>
 </section>
-<section id="id4">
-<h3>Perception Mode Configuration<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<section id="perception-mode-configuration">
+<h3>Perception Mode Configuration<a class="headerlink" href="#perception-mode-configuration" title="Link to this heading"></a></h3>
 <div class="row docutils container">
 <div class="perception-image docutils container">
 <p><img alt="Perception Mode Configuration Area" class="align-middle" src="../../_images/Perception_Mode_Configuration_Area.png" /></p>
 </div>
 <div class="perception-options docutils container">
-<p><a class="reference internal" href="../../_images/default(selected).png"><img alt="Default Selected Icon" class="align-middle" src="../../_images/default%28selected%29.png" style="width: 16px; height: 16px;" /></a> / <a class="reference internal" href="../../_images/default(unselected).png"><img alt="Default Unselected Icon" class="align-middle" src="../../_images/default%28unselected%29.png" style="width: 16px; height: 16px;" /></a> Default: When the program is newly launched or the “Default” icon on the left side of the Perception Mode Configuration Area is clicked, the visualization area will display the sensor’s tactile image information</p>
-<p><a class="reference internal" href="../../_images/contactforce(selected).png"><img alt="Contact Force Selected Icon" class="align-middle" src="../../_images/contactforce%28selected%29.png" style="width: 16px; height: 16px;" /></a> / <a class="reference internal" href="../../_images/contactforce(unselected).png"><img alt="Contact Force Unselected Icon" class="align-middle" src="../../_images/contactforce%28unselected%29.png" style="width: 16px; height: 16px;" /></a> Contact Force: When the “Contact Force” icon on the left side of the Perception Module Configuration Area is clicked, the visualization area will display the contact force reconstruction results and surface deformation field</p>
-<p><a class="reference internal" href="../../_images/video(selected).png"><img alt="Video Selected Icon" class="align-middle" src="../../_images/video%28selected%29.png" style="width: 16px; height: 16px;" /></a> / <a class="reference internal" href="../../_images/video(unselected).png"><img alt="Video Unselected Icon" class="align-middle" src="../../_images/video%28unselected%29.png" style="width: 16px; height: 16px;" /></a> Recording: Click the “Recording” icon on the left side of the Perception Module Configuration Area, click the bottom right corner to select the data stream storage location, then click <a class="reference internal" href="../../_images/record_button.png"><img alt="Record Button" class="align-middle" src="../../_images/record_button.png" style="width: 16px; height: 16px;" /></a> at the bottom center to start recording, and click <a class="reference internal" href="../../_images/pause_button.png"><img alt="Pause Button" class="align-middle" src="../../_images/pause_button.png" style="width: 16px; height: 16px;" /></a> to stop recording and save the file to the target path</p>
+<p><a class="reference internal" href="../../_images/default(selected).png"><img alt="Default Selected Icon" class="align-middle" src="../../_images/default%28selected%29.png" style="width: 16px; height: 16px;" /></a> / <a class="reference internal" href="../../_images/default(unselected).png"><img alt="Default Unselected Icon" class="align-middle" src="../../_images/default%28unselected%29.png" style="width: 16px; height: 16px;" /></a> Default: When the program is newly launched or the “Default” icon on the left side of the Perception Mode Configuration Area is clicked,
+the visualization area will display the sensor’s tactile image information</p>
+<p><a class="reference internal" href="../../_images/contactforce(selected).png"><img alt="Contact Force Selected Icon" class="align-middle" src="../../_images/contactforce%28selected%29.png" style="width: 16px; height: 16px;" /></a> / <a class="reference internal" href="../../_images/contactforce(unselected).png"><img alt="Contact Force Unselected Icon" class="align-middle" src="../../_images/contactforce%28unselected%29.png" style="width: 16px; height: 16px;" /></a> Contact Force: Click the “Contact Force” icon on the left side of the Perception Mode Configuration Area,
+and the visualization area will display the contact force reconstruction results and surface deformation field</p>
+<p><a class="reference internal" href="../../_images/video(selected).png"><img alt="Recording Selected Icon" class="align-middle" src="../../_images/video%28selected%29.png" style="width: 16px; height: 16px;" /></a> / <a class="reference internal" href="../../_images/video(unselected).png"><img alt="Recording Unselected Icon" class="align-middle" src="../../_images/video%28unselected%29.png" style="width: 16px; height: 16px;" /></a> Recording: Click the “Recording” icon on the left side of the Perception Mode Configuration Area,
+click the bottom-right corner to select the data stream storage location, then click <a class="reference internal" href="../../_images/record_button.png"><img alt="Record Button" class="align-middle" src="../../_images/record_button.png" style="width: 16px; height: 16px;" /></a> at the bottom center to start recording, and click <a class="reference internal" href="../../_images/pause_button.png"><img alt="Pause Button" class="align-middle" src="../../_images/pause_button.png" style="width: 16px; height: 16px;" /></a> to stop recording and save the file to the target path</p>
 </div>
 </div>
 <div class="caption docutils container">
 <p>Figure 3: Perception Mode Configuration Area</p>
 </div>
 </section>
-<section id="id5">
-<h3>View Switching<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
-<figure class="align-right" id="id8">
+<section id="view-switching">
+<h3>View Switching<a class="headerlink" href="#view-switching" title="Link to this heading"></a></h3>
+<figure class="align-right" id="id1">
 <img alt="View Switching" class="right-figure" src="../../_images/views_switch.png" />
 <figcaption>
-<p><span class="caption-text">Figure 4: View Switching</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+<p><span class="caption-text">Figure 4: View Switching</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="content-paragraph docutils container">
-<p>View switching enables flexible conversion of the sensor’s feedback tactile and contact force information between 2D plane and 3D space, and presents it in multimodal forms such as tactile images, contact force, and surface deformation field.</p>
+<p>View switching enables flexible conversion of the tactile and contact force information fed back by the sensor between 2D planar and 3D spatial views. It presents the information in multimodal forms such as tactile images, contact force, and surface deformation field.</p>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -175,13 +180,14 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>When the tactile image information is distorted or sensor data stagnation occurs, click the <a class="reference internal" href="../../_images/calibration_button.png"><img alt="Calibration Button" class="align-middle" src="../../_images/calibration_button.png" style="width: 16px; height: 16px;" /></a> at the bottom center under no-load condition to recalibrate the sensor and refresh the display.</p>
+<p>When the tactile image information is distorted or sensor data retention occurs, click the <a class="reference internal" href="../../_images/calibration_button.png"><img alt="Calibration Button" class="align-middle" src="../../_images/calibration_button.png" style="width: 16px; height: 16px;" /></a> at the bottom center under no-load condition.
+This allows recalibrating the sensor to refresh the display.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <blockquote>
 <div><figure class="align-center" id="contactforce-info">
-<a class="reference internal image-reference" href="../../_images/contactforce_new.jpg"><img alt="Contact Force" src="../../_images/contactforce_new.jpg" style="width: 500px; height: 450px;" />
+<a class="reference internal image-reference" href="../../_images/contactforce_new.jpg"><img alt="Contact Force Information" src="../../_images/contactforce_new.jpg" style="width: 500px; height: 450px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">Figure 6: Contact Force Information</span><a class="headerlink" href="#contactforce-info" title="Link to this image"></a></p>
@@ -191,24 +197,27 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>The arrows in the 3D view are the results of contact force reconstruction. The direction of the arrow indicates the direction of the force, the length of the arrow indicates the magnitude of the force, and the curved surface part under the arrow displays the perception result of the contact deformation field. In the 2D view, only the surface deformation field is displayed due to the limitation of visualization dimensions.</p>
+<p>The arrows in the 3D view are the results of contact force reconstruction. The direction of the arrow indicates the direction of the force, and the length of the arrow indicates the magnitude of the force. The curved surface area below the arrow
+displays the perception result of the contact deformation field. In the 2D view, only the surface deformation field is displayed due to the limitation of visualization dimensions.</p>
 </section>
 </section>
-<section id="id6">
-<h2>2. Open Data Stream<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
-<p>Click “Open Data Stream” in the Data Acquisition Control Area, then click <a class="reference internal" href="../../_images/open_videos.png"><img alt="Open Data Stream Button" class="align-middle" src="../../_images/open_videos.png" style="width: 80px; height: 16px;" /></a> to load the previously recorded data stream file. After loading, the software will cyclically display the information obtained from the data stream file and show the calculation results. The Sensor Selection Area displays the name of the saved data stream file <a class="reference internal" href="../../_images/name_of_the_sensor.png"><img alt="Sensor Name" class="align-middle" src="../../_images/name_of_the_sensor.png" style="width: 80px; height: 16px;" /></a> ; the name of the virtual sensor is derived from the data stream file name. After loading the data stream, see 3.1 Default Mode and Contact Force Mode for details, but there is no Recording Mode. For Perception Mode Configuration, refer to 3.1.2 ( <a class="reference internal" href="../../_images/video(selected).png"><img alt="Video Selected Icon" class="align-middle" src="../../_images/video%28selected%29.png" style="width: 16px; height: 16px;" /></a> / <a class="reference internal" href="../../_images/video(unselected).png"><img alt="Video Unselected Icon" class="align-middle" src="../../_images/video%28unselected%29.png" style="width: 16px; height: 16px;" /></a> Recording ); for View Switching, refer to 3.1.3.</p>
+<section id="open-data-stream">
+<h2>2. Open Data Stream<a class="headerlink" href="#open-data-stream" title="Link to this heading"></a></h2>
+<p>Click “Open Data Stream” in the Data Acquisition Control Area, then click <a class="reference internal" href="../../_images/open_videos.png"><img alt="Open Data Stream Button" class="align-middle" src="../../_images/open_videos.png" style="width: 80px; height: 16px;" /></a> to load the previously recorded data stream file. After loading, the software will cyclically display the information obtained from the data stream file and present the calculation results.
+The Sensor Selection Area displays the name of the saved data stream file <a class="reference internal" href="../../_images/name_of_the_sensor.png"><img alt="Sensor Name" class="align-middle" src="../../_images/name_of_the_sensor.png" style="width: 80px; height: 16px;" /></a> . The name of the virtual sensor is derived from the data stream file name. After loading the data stream, refer to 3.1 Default Mode and Contact Force Mode for details, but there is no Recording Mode.
+For the perception mode configuration, refer to 3.1.2 ( <a class="reference internal" href="../../_images/video(selected).png"><img alt="Recording Selected Icon" class="align-middle" src="../../_images/video%28selected%29.png" style="width: 16px; height: 16px;" /></a> / <a class="reference internal" href="../../_images/video(unselected).png"><img alt="Recording Unselected Icon" class="align-middle" src="../../_images/video%28unselected%29.png" style="width: 16px; height: 16px;" /></a> Recording ). For view switching, refer to 3.1.3.</p>
 </section>
-<section id="id7">
-<h2>3. Toolbar<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<section id="toolbar">
+<h2>3. Toolbar<a class="headerlink" href="#toolbar" title="Link to this heading"></a></h2>
 <figure class="align-center" id="xs-toolbar">
-<a class="reference internal image-reference" href="../../_images/toolbar1.png"><img alt="Toolbar" src="../../_images/toolbar1.png" style="width: 417.0px; height: 93.0px;" />
+<a class="reference internal image-reference" href="../../_images/toolbar1.png"><img alt="Toolbar" src="../../_images/toolbar1.png" style="width: 295.0px; height: 40.0px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">Figure 7: Toolbar</span><a class="headerlink" href="#xs-toolbar" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><a class="reference internal" href="../../_images/theme_switch1.png"><img alt="Theme Switch Button" class="align-middle" src="../../_images/theme_switch1.png" style="width: 16px; height: 16px;" /></a> Theme Switch: Click to select the interface theme</p>
-<p><a class="reference internal" href="../../_images/help1.png"><img alt="Help Button" class="align-middle" src="../../_images/help1.png" style="width: 16px; height: 16px;" /></a> Help: Open help documentation and FAQ</p>
+<p><a class="reference internal" href="../../_images/help1.png"><img alt="Help Button" class="align-middle" src="../../_images/help1.png" style="width: 16px; height: 16px;" /></a> Help: Open help documentation and FAQ (Frequently Asked Questions)</p>
 <p><a class="reference internal" href="../../_images/about1.png"><img alt="About Button" class="align-middle" src="../../_images/about1.png" style="width: 16px; height: 16px;" /></a> About: Display application information</p>
 <p><a class="reference internal" href="../../_images/minimization1.png"><img alt="Minimize Button" class="align-middle" src="../../_images/minimization1.png" style="width: 16px; height: 16px;" /></a> Minimize: Minimize the application to the background</p>
 <p><a class="reference internal" href="../../_images/exit1.png"><img alt="Exit Button" class="align-middle" src="../../_images/exit1.png" style="width: 16px; height: 16px;" /></a> Exit: Close the current application</p>

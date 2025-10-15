@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hardware Connection and Network Configuration &mdash; xense  documentation</title>
+  <title>Hardware Connection &amp; Network Configuration &mdash; xense  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -49,16 +49,16 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Hardware Connection and Network Configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hardware Connection &amp; Network Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation.html">Installing GripperSDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="methodlist.html">Using GripperSDK API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EzROS/EzROS.html">EzROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GuiUseGuide/GuiUseGuide.html">GUI User Guide</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Hardware/Hardware.html">Hardware</a></li>
@@ -79,7 +79,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../GripperSDK.html">GripperSDK</a></li>
-      <li class="breadcrumb-item active">Hardware Connection and Network Configuration</li>
+      <li class="breadcrumb-item active">Hardware Connection &amp; Network Configuration</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
              Homepage 
@@ -91,9 +91,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tag-gripperpre-configuration">
-<span id="id1"></span><h1>Hardware Connection and Network Configuration<a class="headerlink" href="#tag-gripperpre-configuration" title="Link to this heading"></a></h1>
-<p>Connect the server and the host computer to the same local area network (LAN) to enable communication between them.</p>
+  <section id="hardware-connection-network-configuration">
+<span id="tag-gripperpre-configuration"></span><h1>Hardware Connection &amp; Network Configuration<a class="headerlink" href="#hardware-connection-network-configuration" title="Link to this heading"></a></h1>
+<p>Connect the server side and the host computer to the same local area network (LAN) to enable communication between them.</p>
 <style>
 /* 步骤标题样式（外显，无边框） */
 .step-title {
@@ -124,19 +124,20 @@
     padding-left: 5px !important;
     border-left: 3px solid #3498db !important; /* 左侧装饰线 */
 }
-</style><p class="step-title rubric">STEP1: Connect the gripper device to power</p>
+</style><p class="step-title rubric">Step 1: Connect the Gripper Device to Power</p>
 <div class="step-content docutils container">
 <ol class="arabic simple">
-<li><p>Plug the power adapter of the gripper device into a mains power socket.</p></li>
-<li><p>Wait for the gripper to complete initialization, and observe that the status light first flashes and then stays on steadily.</p></li>
+<li><p>Plug the power adapter of the gripper device into a mains socket.</p></li>
+<li><p>Wait for the gripper to complete initialization, and observe that the status light first flashes and then stays on.</p></li>
 </ol>
 </div>
-<p class="step-title rubric">Step 2: Connect to the network</p>
+<p class="step-title rubric">Step 2: Connect to the Network</p>
 <div class="step-content docutils container">
-<p class="method-title rubric">Method 1: Use a switch</p>
-<p>Connect the gripper and the computer to different network ports of the switch respectively and ensure network connectivity. At this time, the gripper’s IP address is automatically obtained using <code class="docutils literal notranslate"><span class="pre">dhcp</span></code>; later, you need to use <a class="reference external" href="./EzROS/usr/ezros_example.html">ezros</a> for scanning.</p>
-<p class="method-title rubric">Method 2: Directly connect to the computer’s network port</p>
-<p>At this time, the gripper uses a static IP <code class="docutils literal notranslate"><span class="pre">192.168.99.2</span></code>. The computer needs to set its own IP in the same network segment as the gripper (open Network Settings -&gt; Wired Settings -&gt; IPv4). The reference settings are as follows:</p>
+<p class="method-title rubric">Method 1: Using a Switch</p>
+<p>Connect the gripper and the computer to different network ports of the switch respectively, and ensure the network is connected. At this time, the gripper’s IP address is automatically obtained using <code class="docutils literal notranslate"><span class="pre">dhcp</span></code>, and subsequent scanning needs to be performed using <a class="reference external" href="./EzROS/usr/ezros_example.html">ezros</a>.</p>
+<p class="method-title rubric">Method 2: Direct Connection to Computer’s Network Port</p>
+<p>In this case, the gripper uses a static IP <code class="docutils literal notranslate"><span class="pre">192.168.99.2</span></code>, and the computer needs to set its own IP within the same network segment as the gripper (open Network Settings -&gt; Wired Settings -&gt; IPv4).
+Reference settings are as follows:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 21.4%" />
@@ -152,18 +153,18 @@
 <tbody>
 <tr class="row-even"><td><p>IP Address</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">192.168.99.10</span></code></p></td>
-<td><p>Format: <code class="docutils literal notranslate"><span class="pre">192.168.99.X</span></code> (X ranges from 1 to 254, excluding the gripper’s IP)</p></td>
+<td><p>Format: <code class="docutils literal notranslate"><span class="pre">192.168.99.X</span></code>, (X ranges from 1 to 254, avoiding the gripper’s IP)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Subnet Mask</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code></p></td>
-<td><p>Fixed configuration, no changes needed</p></td>
+<td><p>Fixed configuration, no modification required</p></td>
 </tr>
 </tbody>
 </table>
-<p>Use an Ethernet cable to directly connect the Ethernet port of the PC to the network port of the gripper device, and ensure the Ethernet cable is firmly plugged into the PC’s port.</p>
+<p>Use an Ethernet cable to directly connect the PC’s Ethernet port to the gripper device’s network port, and ensure the Ethernet cable is firmly plugged into the PC’s port.</p>
 <div class="tip admonition">
-<p class="admonition-title">Tips</p>
-<p>When using the SDK, if the host computer is both wired to the gripper and connected to WiFi, configure multi-network card discovery at the beginning of the program:</p>
+<p class="admonition-title">tips</p>
+<p>When using the SDK, if the host computer is connected to both the gripper via a wired connection and WiFi, configure multi-network card discovery at the beginning of the program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup_multi_net_interface</span>
 
 <span class="n">setup_multi_net_interface</span><span class="p">()</span>
@@ -171,10 +172,10 @@
 </div>
 </div>
 </div>
-<p class="step-title rubric">Step 3: Test network connectivity</p>
+<p class="step-title rubric">Step 3: Test Network Connectivity</p>
 <div class="step-content docutils container">
 <ol class="arabic">
-<li><p>Open the PC’s command prompt (Windows: press <code class="docutils literal notranslate"><span class="pre">Win+R</span></code>, enter <code class="docutils literal notranslate"><span class="pre">cmd</span></code> and press Enter; Linux: open the terminal).</p></li>
+<li><p>Open the PC’s command prompt (Windows: Press <code class="docutils literal notranslate"><span class="pre">Win+R</span></code>, enter <code class="docutils literal notranslate"><span class="pre">cmd</span></code> and press Enter; Linux: Open the terminal).</p></li>
 <li><p>Enter the following command in the command line and press Enter:</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ping<span class="w"> </span><span class="m">192</span>.168.99.2
@@ -187,17 +188,17 @@
 <div><div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Network Connection Successful</label><div class="sd-tab-content docutils">
-<p>If a message similar to <strong>“Reply from 192.168.99.2”</strong> is displayed, you can directly proceed with the subsequent operations.</p>
+Successful Network Connection</label><div class="sd-tab-content docutils">
+<p>If messages like <strong>“Reply from 192.168.99.2”</strong> are displayed, you can directly proceed with subsequent operations.</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 Connection Timeout</label><div class="sd-tab-content docutils">
-<p>If <strong>“Request timed out”</strong> is displayed, troubleshoot the following items in order:</p>
+<p>If <strong>“Request timed out”</strong> is displayed, please check the following items in sequence:</p>
 <ul class="simple">
 <li><p>Whether the Ethernet IP configuration is correct (recheck Step 2)</p></li>
 <li><p>Whether the Ethernet cable is loose or damaged</p></li>
-<li><p>Whether the gripper device has completed initialization (whether the status light is on steadily)</p></li>
+<li><p>Whether the gripper device has completed initialization (whether the status light stays on)</p></li>
 </ul>
 </div>
 </div>

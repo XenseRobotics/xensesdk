@@ -1,81 +1,81 @@
 .. _tag_xensesdkinstallation:
 
-***************
-安装XenseSDK
-***************
+**********************
+Installing XenseSDK
+**********************
 
-安装指南
--------------
+Installation Guide
+----------------------
 .. container:: step-block
 
-    **步骤 1:** 准备 Python 开发环境
+    **Step 1:** Prepare the Python Development Environment
 
 
 
     .. code-block:: bash
         
-        # 进入 Xense SDK 目录
+        # Navigate to the Xense SDK directory
         cd xensesdk
 
-        # 创建并激活虚拟环境
+        # Create and activate a virtual environment
         conda create -n xenseenv python=3.9
-        #or conda create -n xenseenv python=3.10
+        # or conda create -n xenseenv python=3.10
 
         conda activate xenseenv
 
 .. note:: 
 
-    推荐使用 Anaconda,并使用 Python 版本 3.9或者3.10。
+    It is recommended to use Anaconda with Python version 3.9 or 3.10.
 
 .. container:: step-block
 
-    **步骤 2:** 安装 CUDA 工具包和 cuDNN
+    **Step 2:** Install CUDA Toolkit and cuDNN
 
-    SDK 需要 onnxruntime_gpu， 以及配套的cudnn、 cudatoolkit。根据您的环境，选择以下安装方式：
+    The SDK requires onnxruntime_gpu, along with the matching cuDNN and cudatoolkit. Select the following installation method based on your environment:
 
-    .. tab-set:: 
+    .. tab-set::
 
-        .. tab-item:: 选项 1：onnxruntime_gpu>1.18.0
+        .. tab-item:: Option 1: onnxruntime_gpu>1.18.0  
 
-            1.安装所需版本：
+            1. Install the required versions:
 
             .. code-block:: bash
 
-                # 这个例子使用cuda12.9
+                # This example uses CUDA 12.9
                 conda install nvidia/label/cuda-12.9.0::cuda-toolkit nvidia::cudnn
 
-            2.将cuda的路径加入环境变量 ‘LD_LIBRARY_PATH‘：
+            2. Add the CUDA path to the environment variable 'LD_LIBRARY_PATH':
 
             .. code-block:: bash
 
-                # linux里可以运行如下命令
-                export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$CONDA_PREFIX/lib64 #（临时）
-                mkdir -p $CONDA_PREFIX/etc/conda/activate.d && echo 'export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$CONDA_PREFIX/lib64:$LD_LIBRARY_PATH' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh #（永久）
-                        
-        .. tab-item:: 选项 2：onnxruntime_gpu==1.18.0 (50系列显卡不可用)
+                # Run the following command in Linux
+                export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$CONDA_PREFIX/lib64 # (Temporary)
+                mkdir -p $CONDA_PREFIX/etc/conda/activate.d && echo 'export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$CONDA_PREFIX/lib64:$LD_LIBRARY_PATH' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh # (Permanent)
 
-            1.搜索所需版本：
+        .. tab-item:: Option 2: onnxruntime_gpu==1.18.0 (Not available for Series 50 GPUs)  
+
+            1. Search for the required versions:
 
             .. code-block:: bash
 
                 conda search cudnn
                 conda search cudatoolkit
 
-            2.安装所需版本：
+            2. Install the required versions:
 
             .. code-block:: bash
 
                 conda install cudnn==8.9.2.26 cudatoolkit==11.8.0
 
+
 .. container:: step-block
 
-    **步骤 3:** 安装 Xense SDK 包
-    将 SDK 包安装到您的环境中:
+    **Step 3:** Install the Xense SDK Package
+    Install the SDK package into your environment:
 
     .. code-block:: bash
 
-        # 如果是从本地目录安装
-        pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl # (对于定制软件包)
-        # 或者从 PyPI 安装
-        pip install xensesdk 
-
+        # Install from a local directory (for custom packages)
+        pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl 
+        # Or install from PyPI
+        pip install xensesdk -i https://repo.huaweicloud.com/repository/pypi/simple/

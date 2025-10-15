@@ -26,8 +26,8 @@
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="Gui User Guide" href="../../../GuiUseGuide/GuiUseGuide.html" />
-    <link rel="prev" title="Monitor Topic" href="echo.html" /> 
+    <link rel="next" title="GUI User Guide" href="../../../GuiUseGuide/GuiUseGuide.html" />
+    <link rel="prev" title="Monitoring Topics" href="echo.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,27 +49,27 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../../GripperSDK.html">GripperSDK</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">Hardware Connection and Network Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pre_configuration.html">Hardware Connection &amp; Network Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Installation.html">Installing GripperSDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../methodlist.html">Using GripperSDK API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../EzROS.html">EzROS</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../ezros_example.html">Using the EzROS Command Line Tool</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="all_info.html">View EzROS Service Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="echo.html">Monitor Topic</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ezros_example.html">Using the EzROS Command-Line Tool</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="all_info.html">Viewing EzROS Service Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="echo.html">Monitoring Topics</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Service Call</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="all_info.html">View EzROS Service Information</a></li>
-<li class="toctree-l3"><a class="reference internal" href="echo.html">Monitor Topic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="all_info.html">Viewing EzROS Service Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="echo.html">Monitoring Topics</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Service Call</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GuiUseGuide/GuiUseGuide.html">Gui User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GuiUseGuide/GuiUseGuide.html">GUI User Guide</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../Hardware/Hardware.html">Hardware</a></li>
@@ -91,7 +91,7 @@
       <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../../GripperSDK.html">GripperSDK</a></li>
           <li class="breadcrumb-item"><a href="../../EzROS.html">EzROS</a></li>
-          <li class="breadcrumb-item"><a href="../ezros_example.html">Using the EzROS Command Line Tool</a></li>
+          <li class="breadcrumb-item"><a href="../ezros_example.html">Using the EzROS Command-Line Tool</a></li>
       <li class="breadcrumb-item active">Service Call</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
@@ -104,10 +104,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="service">
-<span id="tag-service"></span><h1>Service Call<a class="headerlink" href="#service" title="Link to this heading"></a></h1>
+  <section id="service-call">
+<span id="tag-service"></span><h1>Service Call<a class="headerlink" href="#service-call" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
-<p>When you need to call a specific Service, you can use the following commands:</p>
+<p>When you need to call a specific Service, use the following commands:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
@@ -129,11 +129,11 @@ Call Gripper Service</label><div class="sd-tab-content docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
 Sensor Service Call Output</label><div class="sd-tab-content docutils">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>调用服务: OG000285
-动作: get_img
-参数: []
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Calling Service: OG000285
+Action: get_img
+Parameters: []
 ----------------------------------------
-响应:  [[[227 156  83]
+Response:  [[[227 156  83]
 [230 151  85]
 [229 149  86]
 ...
@@ -154,9 +154,9 @@ Sensor Service Call Output</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
 Gripper Service Call Output</label><div class="sd-tab-content docutils">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>调用服务: gripper_d672f584b17a
-动作: set_led_color
-参数: [255, 0, 0]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Calling Service: gripper_d672f584b17a
+Action: set_led_color
+Parameters: [255, 0, 0]
 ----------------------------------------
 </pre></div>
 </div>
@@ -164,11 +164,11 @@ Gripper Service Call Output</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Tips</p>
+<p class="admonition-title">tips</p>
 <ul class="simple">
 <li><p>The <cite>service</cite> subcommand indicates that this operation is to call a specific service;</p></li>
-<li><p>The <cite>–name/-n</cite> mandatory parameter specifies the name of the Service to be called;</p></li>
-<li><p>The <cite>–call/-c</cite> mandatory parameter specifies the service action and parameters to be called, in the format of “action_name:= parameter”.</p></li>
+<li><p>The <cite>–name/-n</cite> parameter is mandatory and specifies the name of the Service to call;</p></li>
+<li><p>The <cite>–call/-c</cite> parameter is mandatory and specifies the service action and parameters to call, in the format of “action name:= parameters”.</p></li>
 </ul>
 </div>
 </section>
@@ -177,8 +177,8 @@ Gripper Service Call Output</label><div class="sd-tab-content docutils">
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="echo.html" class="btn btn-neutral float-left" title="Monitor Topic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../../GuiUseGuide/GuiUseGuide.html" class="btn btn-neutral float-right" title="Gui User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="echo.html" class="btn btn-neutral float-left" title="Monitoring Topics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../GuiUseGuide/GuiUseGuide.html" class="btn btn-neutral float-right" title="GUI User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

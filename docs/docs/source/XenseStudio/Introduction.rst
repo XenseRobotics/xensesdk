@@ -1,4 +1,3 @@
-
 XenseStudio
 =================
 
@@ -6,28 +5,28 @@ XenseStudio
    :width: 30
    :header-rows: 1
 
-   * - 主目录
+   * - Main Directory
 
-   * - :ref:`软件简介<tag_software_introduction>`
-
-
-   * - :ref:`系统要求<tag_system_requirement>`
+   * - :ref:`Software Introduction<tag_software_introduction>`
 
 
-   * - :ref:`安装与设置<tag_installation_and_setup>`
+   * - :ref:`System Requirements<tag_system_requirement>`
 
 
-   * - :ref:`界面与交互<tag_user_interface_and_interaction>`
+   * - :ref:`Installation and Setup<tag_installation_and_setup>`
 
 
-   * - :ref:`故障排查<tag_troubleshooting>`
+   * - :ref:`Interface and Interaction<tag_user_interface_and_interaction>`
 
 
-   * - :ref:`联系方式<tag_contact_information>`
+   * - :ref:`Troubleshooting<tag_troubleshooting>`
+
+
+   * - :ref:`Contact Information<tag_contact_information>`
 
 .. toctree::
    :maxdepth: 3
-   :caption: 目录
+   :caption: Table of Contents
    :hidden:
 
    user/Software_Introduction

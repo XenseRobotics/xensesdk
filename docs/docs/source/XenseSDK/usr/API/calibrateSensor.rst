@@ -1,10 +1,10 @@
 .. _tag_calibrateSensor:
 
-calibrateSensor 方法
+calibrateSensor Method
 =========================
 
 .. container:: step-block
 
     .. py:method:: Sensor.calibrateSensor()
 
-        重新校准传感器，(需在无物理接触时调用)。
+        Recalibrates the sensor (must be called when there is no physical contact).

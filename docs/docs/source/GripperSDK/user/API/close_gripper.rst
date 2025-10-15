@@ -1,6 +1,6 @@
 .. _tag_Gripper_close_gripper_:
 
-close_gripper 方法
+close_gripper Method
 =========================
 
 .. container:: step-block
@@ -8,7 +8,6 @@ close_gripper 方法
     .. py:method:: XenseGripper.close_gripper(self)
         :module: xensegripper
 
-        关闭夹爪（将夹爪位置设置为关闭状态）。
+        Closes the gripper (sets the gripper position to the closed state).
 
-        该方法通过调用 :meth:`~XenseGripper.set_position` 实现。
-
+        This method is implemented by calling :meth:`~XenseGripper.set_position`.

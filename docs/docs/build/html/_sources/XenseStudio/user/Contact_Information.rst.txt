@@ -1,24 +1,24 @@
 .. _tag_contact_information:
 
-六、联系方式
-================
+VI. Contact Information
+============================
 
-1、 技术支持信息
-------------------
+1. Technical Support Information
+-------------------------------------
 
-如果您在使用Xense Studio过程中遇到任何技术问题或需要获得帮助，请通过以下方式与我们的技术支持团队联系：
+If you encounter any technical issues or need assistance while using Xense Studio, please contact our technical support team through the following channels:
 
-	服务时间：周一至周五 9:00 - 18:00。
+    Service Hours: Monday to Friday, 9:00 - 18:00 (GMT+8).
 
-	电子邮件：contactus@xenserobotics.com。
+    Email: contactus@xenserobotics.com.
 
-	在线支持：访问我们的客服支持页面，获取在线聊天或提交支持请求的选项。
+    Online Support: Visit our customer support page to access options for online chat or submitting a support request.
 
-	用户文档：请查看我们的用户手册，以获取详细的故障排除指南和使用技巧。
+    User Documentation: Refer to our user manual for detailed troubleshooting guides and usage tips.
 
-2、 反馈渠道
-------------------
-我们非常重视用户的反馈，您的意见将帮助我们不断改进Xense Studio。您可以通过电子邮件向我们提供反馈：
+2. Feedback Channel
+------------------------
+We highly value user feedback, as your opinions help us continuously improve Xense Studio. You can provide feedback to us via email:
 
-请发送您的反馈至 contactus@xenserobotics.com，确保在邮件标题中注明“反馈”字样，以便我们迅速处理。
-感谢您对千觉机器人及Xense Studio的支持和关注，我们期待与您保持联系！
+Please send your feedback to contactus@xenserobotics.com, and ensure to include "Feedback" in the email subject line for us to process it promptly.
+Thank you for your support and attention to Xense Robotics and Xense Studio. We look forward to staying in touch with you!

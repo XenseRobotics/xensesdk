@@ -1,13 +1,13 @@
 .. _tag_software_introductions:
 
-一、软件简介
-================
+I. Software Introduction
+============================
 
 
-1、兼容多种传感器：支持曲面传感器、平面传感器、指尖传感器，满足不同场景下的触觉感知需求。
+1. Compatible with Multiple Sensors: Supports curved sensors, planar sensors, and fingertip sensors to meet tactile perception needs in different scenarios.
 
-2、跨架构/跨平台支持：兼容x86和ARM架构，支持Linux和Windows操作系统，提供SDK，确保在不同硬件和软件环境下的无缝适配。
+2. Cross-Architecture/Cross-Platform Support: Compatible with x86 and ARM architectures, supports Linux and Windows operating systems, and provides an SDK to ensure seamless adaptation in different hardware and software environments.
 
-3、集成多模态感知算法：精准解算切向滑移、表面形貌和分布式六维力，为复杂触觉分析提供全面数据支持。
+3. Integrated Multi-Modal Perception Algorithms: Accurately calculates tangential slip, surface topography, and distributed six-dimensional force, providing comprehensive data support for complex tactile analysis.
 
-4、丰富可视化功能：提供二维、数字孪生等多种可视化方式，帮助用户直观理解触觉数据。
+4. Rich Visualization Functions: Offers multiple visualization methods such as 2D visualization and digital twins to help users intuitively understand tactile data.

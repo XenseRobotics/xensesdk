@@ -5,20 +5,18 @@ Hardware
    :width: 30
    :header-rows: 1
 
-   * - 主目录
+   * - Main Directory
 
-   * - :ref:`柔性替换件拆装说明<tag_Disassembly_Instructions>`
+   * - :ref:`Flexible Replacement Part Disassembly & Assembly Instructions<tag_Disassembly_Instructions>`
 
 
-   * - :ref:`触觉传感器金属外壳三维模型<tag_three_model>`
+   * - :ref:`3D Model of Tactile Sensor Metal Housing<tag_three_model>`
 
 .. toctree::
    :maxdepth: 3
-   :caption: 目录
+   :caption: Table of Contents
    :hidden:
 
    user/Disassembly_Instructions
 
    user/three_model
-
-   

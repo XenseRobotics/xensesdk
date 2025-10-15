@@ -1,34 +1,34 @@
 .. _tag_guiUseGuide:
 
-Gui使用指南
-===================
+GUI User Guide
+=====================
 
 .. list-table::
    :width: 30
    :header-rows: 1
 
-   * - 主目录
+   * - Main Directory
 
-   * - :ref:`软件简介<tag_software_introductions>`
-
-
-   * - :ref:`系统要求<tag_system_requirements>`
+   * - :ref:`Software Introduction<tag_software_introductions>`
 
 
-   * - :ref:`安装与设置<tag_installation_and_setups>`
+   * - :ref:`System Requirements<tag_system_requirements>`
 
 
-   * - :ref:`界面与交互<tag_user_interface_and_interactions>`
+   * - :ref:`Installation and Setup<tag_installation_and_setups>`
 
 
-   * - :ref:`故障排查<tag_troubleshootings>`
+   * - :ref:`User Interface and Interaction<tag_user_interface_and_interactions>`
 
 
-   * - :ref:`联系方式<tag_contact_informations>`
+   * - :ref:`Troubleshooting<tag_troubleshootings>`
+
+
+   * - :ref:`Contact Information<tag_contact_informations>`
 
 .. toctree::
    :maxdepth: 3
-   :caption: 目录
+   :caption: Table of Contents
    :hidden:
 
    usr/software_introductions

@@ -1,13 +1,13 @@
 .. _tagget_camera_id_method:
 
-getCameraID 方法
-====================
+getCameraID Method
+=======================
 
 .. container:: step-block
 
     .. py:method:: Sensor.getCameraID
         :module: xensesdk
 
-        获取当前传感器的相机编号
+        Retrieves the camera ID of the current sensor.
 
-        :return: 当前传感器的相机编号
+        :return: Camera ID of the current sensor
