@@ -138,8 +138,17 @@
 <section id="id3">
 <h2>2、 初始配置<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <p>程序启动以后软件显示界面如图1所示：</p>
-<figure class="align-center" id="xs-initial-setup">
-<a class="reference internal image-reference" href="../../_images/initial_setup1.png"><img alt="软件初始设置" src="../../_images/initial_setup1.png" style="width: 843.0px; height: 478.0px;" />
+<style>
+    /* 强制制强制图片比例保持原始比例 */
+    .preserve-aspect-ratio img {
+        max-width: 100%;    /* 最大宽度不超过容器 */
+        height: auto !important;  /* 强制高度自适应，!important覆盖默认样式 */
+        object-fit: contain;      /* 保持比例，不裁剪 */
+        display: block;
+        margin: 0 auto;
+    }
+</style><figure class="align-center" id="xs-initial-setup">
+<a class="preserve-aspect-ratio reference internal image-reference" href="../../_images/initial_setup1.png"><img alt="软件初始设置" class="preserve-aspect-ratio" src="../../_images/initial_setup1.png" style="width: 1250.0px; height: 719.0px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">图 1 软件初始设置</span><a class="headerlink" href="#xs-initial-setup" title="Link to this image"></a></p>

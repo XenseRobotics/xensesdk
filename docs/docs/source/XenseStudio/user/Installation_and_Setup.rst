@@ -50,10 +50,24 @@
 -----------------
 程序启动以后软件显示界面如图1所示：
 
+.. raw:: html
+
+    <style>
+        /* 强制制强制图片比例保持原始比例 */
+        .preserve-aspect-ratio img {
+            max-width: 100%;    /* 最大宽度不超过容器 */
+            height: auto !important;  /* 强制高度自适应，!important覆盖默认样式 */
+            object-fit: contain;      /* 保持比例，不裁剪 */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
 .. figure:: ../images/initial_setup.png
     :alt: 软件初始设置
     :align: center
     :scale: 100%
     :name: _xs-initial_setup
+    :class: preserve-aspect-ratio 
 
     图 1 软件初始设置

@@ -137,8 +137,8 @@
 
     图 4 工具栏
 
-.. |theme_switch| image:: ../../images/theme_switch.png
-    :alt: 主题切换按钮
+.. |theme_switch| image:: ../../images/settings.png
+    :alt: 设置按钮
     :align: middle
     :width: 16px
     :height: 16px
@@ -161,18 +161,26 @@
     :width: 16px
     :height: 16px
     
+.. |maximization| image:: ../../images/maximization.png
+    :alt: 最大化按钮
+    :align: middle
+    :width: 16px
+    :height: 16px    
+
 .. |exit| image:: ../../images/exit.png
     :alt: 退出按钮
     :align: middle
     :width: 16px
     :height: 16px
 
-|theme_switch| 主题切换：点击可选择界面主题
+|theme_switch| 设置：设置界面的主题外观与语言类型
 
 |help| 帮助：打开帮助文档、常见问题解答
 
 |about| 关于：展示应用信息
 
 |minimization| 最小化：将应用最小化至后台
+
+|maximization| 最大化：将应用程序最大化以占据整个屏幕
 
 |exit| 退出：关闭当前应用
