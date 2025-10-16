@@ -136,8 +136,8 @@ When the tactile image information is distorted or sensor data is stuck, click t
 
     Figure 4: Toolbar
 
-.. |theme_switch| image:: ../../images/theme_switch.png
-    :alt: Theme Switch Button
+.. |theme_switch| image:: ../../images/settings.png
+    :alt: Settings Button
     :align: middle
     :width: 16px
     :height: 16px
@@ -159,6 +159,12 @@ When the tactile image information is distorted or sensor data is stuck, click t
     :align: middle
     :width: 16px
     :height: 16px
+
+.. |maximization| image:: ../../images/maximization.png
+    :alt: Maximize Button
+    :align: middle
+    :width: 16px
+    :height: 16px
     
 .. |exit| image:: ../../images/exit.png
     :alt: Exit Button
@@ -166,12 +172,14 @@ When the tactile image information is distorted or sensor data is stuck, click t
     :width: 16px
     :height: 16px
 
-|theme_switch| Theme Switch: Click to select the interface theme
+|theme_switch| Settings: Theme appearance and language type in the settings interface
 
 |help| Help: Opens help documentation and FAQ (Frequently Asked Questions)
 
 |about| About: Displays application information
 
 |minimization| Minimize: Minimizes the application to the background
+
+|maximization| Maximize: Maximize the application to occupy the entire screen
 
 |exit| Exit: Closes the current application

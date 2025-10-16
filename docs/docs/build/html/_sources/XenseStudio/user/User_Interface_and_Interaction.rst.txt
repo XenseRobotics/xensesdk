@@ -230,8 +230,8 @@ For the perception mode configuration, refer to 3.1.2 ( |video(selected)| / |vid
 
     Figure 7: Toolbar
 
-.. |theme_switch| image:: ../images/theme_switch.png
-    :alt: Theme Switch Button
+.. |theme_switch| image:: ../images/settings.png
+    :alt: Settings Button
     :align: middle
     :width: 16px
     :height: 16px
@@ -253,6 +253,13 @@ For the perception mode configuration, refer to 3.1.2 ( |video(selected)| / |vid
     :align: middle
     :width: 16px
     :height: 16px
+
+.. |maximization| image:: ../images/maximization.png
+    :alt: Maximize Button
+    :align: middle
+    :width: 16px
+    :height: 16px
+
     
 .. |exit| image:: ../images/exit.png
     :alt: Exit Button
@@ -260,12 +267,14 @@ For the perception mode configuration, refer to 3.1.2 ( |video(selected)| / |vid
     :width: 16px
     :height: 16px
 
-|theme_switch| Theme Switch: Click to select the interface theme
+|theme_switch| Settings: Theme appearance and language type in the settings interface
 
 |help| Help: Open help documentation and FAQ (Frequently Asked Questions)
 
 |about| About: Display application information
 
 |minimization| Minimize: Minimize the application to the background
+
+|maximization| Maximize: Maximize the application to occupy the entire screen
 
 |exit| Exit: Close the current application

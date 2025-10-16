@@ -60,6 +60,8 @@ GripperSDK
         * - :ref:`Installation Guide <tag_Gripperinstallation>`
         
         * - :ref:`API Documentation <tag_Grippermethodlist>`
+
+        * - :ref:`Sensor Connection <tag_Gripperconnect_sensor>`
         
         * - :ref:`EzROS Debugging Tool <tag_ezros>` 
 
@@ -75,6 +77,8 @@ GripperSDK
    user/Installation
 
    user/methodlist
+
+   user/connect_sensor
    
    user/EzROS/EzROS
   

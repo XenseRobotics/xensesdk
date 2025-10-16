@@ -52,10 +52,24 @@ The xensegripper.deb installer is provided. Use the sudo command to install it:
 ----------------------------
 After the program starts, the software interface will be displayed as shown in Figure 1:
 
+.. raw:: html
+
+    <style>
+        /* 强制制强制图片比例保持原始比例 */
+        .preserve-aspect-ratio img {
+            max-width: 100%;    /* 最大宽度不超过容器 */
+            height: auto !important;  /* 强制高度自适应，!important覆盖默认样式 */
+            object-fit: contain;      /* 保持比例，不裁剪 */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
 .. figure:: ../../images/initial_setup.png
     :alt: Initial Software Setup
     :align: center
     :scale: 100%
     :name: _gs-initial_setup
+    :class: preserve-aspect-ratio
 
     Figure 1: Initial Software Setup

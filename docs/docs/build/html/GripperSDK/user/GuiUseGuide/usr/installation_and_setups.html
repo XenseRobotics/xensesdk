@@ -49,7 +49,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../../XenseStudio/Introduction.html">XenseStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../XenseSDK/XenseSDK.html">XenseSDK</a></li>
@@ -57,6 +57,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../pre_configuration.html">Hardware Connection &amp; Network Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation.html">Installing GripperSDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../methodlist.html">Using GripperSDK API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../connect_sensor.html">Sensor Connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../EzROS/EzROS.html">EzROS</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../GuiUseGuide.html">GUI User Guide</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="software_introductions.html">I. Software Introduction</a></li>
@@ -146,8 +147,17 @@ The xensegripper.deb installer is provided. Use the sudo command to install it:<
 <section id="initial-configuration">
 <h2>2. Initial Configuration<a class="headerlink" href="#initial-configuration" title="Link to this heading"></a></h2>
 <p>After the program starts, the software interface will be displayed as shown in Figure 1:</p>
-<figure class="align-center" id="gs-initial-setup">
-<a class="reference internal image-reference" href="../../../../_images/initial_setup.png"><img alt="Initial Software Setup" src="../../../../_images/initial_setup.png" style="width: 1256.0px; height: 708.0px;" />
+<style>
+    /* 强制制强制图片比例保持原始比例 */
+    .preserve-aspect-ratio img {
+        max-width: 100%;    /* 最大宽度不超过容器 */
+        height: auto !important;  /* 强制高度自适应，!important覆盖默认样式 */
+        object-fit: contain;      /* 保持比例，不裁剪 */
+        display: block;
+        margin: 0 auto;
+    }
+</style><figure class="align-center" id="gs-initial-setup">
+<a class="preserve-aspect-ratio reference internal image-reference" href="../../../../_images/initial_setup.png"><img alt="Initial Software Setup" class="preserve-aspect-ratio" src="../../../../_images/initial_setup.png" style="width: 1256.0px; height: 708.0px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">Figure 1: Initial Software Setup</span><a class="headerlink" href="#gs-initial-setup" title="Link to this image"></a></p>
