@@ -6,10 +6,10 @@ III. Installation and Setup
 1. Installation Steps
 -------------------------
 
-**Windows Platform**
+**Windows Platform：**
 The XenseStudio.exe installer is provided. Double-click the file and follow the on-screen prompts to complete the installation. After installation, a shortcut named "Xense Studio" will be displayed on the desktop.
 
-**Linux Platform**
+**Linux Platform：**
 The xensestudio.deb installer is provided. Use the sudo command to install it:
 
 .. code-block:: bash

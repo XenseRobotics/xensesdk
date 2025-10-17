@@ -8,6 +8,7 @@ Viewing EzROS Service Information
     EzROS supports combining global parameters to realize "full information display" or "target node filtering display". The specific usage for different scenarios is explained below:
 
     **Scenario 1: View All Nodes, Topics, and Services (Full Information)**  
+    
     Trigger a full scan using the ``-a/--all`` parameter to display complete information of all nodes in the network:
 
     .. code-block:: bash
@@ -36,6 +37,7 @@ Viewing EzROS Service Information
 
 
     **Scenario 2: Filter and View Target Nodes (Only Display Nodes Containing the Target String)**  
+
     Combine the ``-a/--all`` and ``-f/--filter`` parameters to display only information of nodes whose names contain the specified string (e.g., only view "gripper"-related nodes):
 
     .. code-block:: bash

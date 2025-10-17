@@ -6,10 +6,10 @@ III. Installation and Setup
 1. Installation Steps
 ------------------------
 
-**Windows Platform**
+**Windows Platform：**
 The XenseGripper.exe installer is provided. Double-click it and follow the on-screen prompts to complete the installation. After installation, a shortcut named "Xense Gripper" will appear on the desktop.
 
-**Linux Platform**
+**Linux Platform：**
 The xensegripper.deb installer is provided. Use the sudo command to install it:
 
 .. code-block:: bash

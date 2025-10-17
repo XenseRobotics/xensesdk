@@ -109,8 +109,8 @@
 <span id="tag-all-info"></span><h1>Viewing EzROS Service Information<a class="headerlink" href="#viewing-ezros-service-information" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <p>EzROS supports combining global parameters to realize “full information display” or “target node filtering display”. The specific usage for different scenarios is explained below:</p>
-<p><strong>Scenario 1: View All Nodes, Topics, and Services (Full Information)</strong>
-Trigger a full scan using the <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> parameter to display complete information of all nodes in the network:</p>
+<p><strong>Scenario 1: View All Nodes, Topics, and Services (Full Information)</strong></p>
+<p>Trigger a full scan using the <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> parameter to display complete information of all nodes in the network:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a
 <span class="c1"># or ezros --all</span>
 </pre></div>
@@ -132,8 +132,8 @@ EzROS Network Node Information
     - master_d672f584b17a: [scan_sensor_sn, kill_sensor, launch_camera, launch_gripper, list_camera, reboot, kill_camera, launch_sensor, kill_gripper]
 </pre></div>
 </div>
-<p><strong>Scenario 2: Filter and View Target Nodes (Only Display Nodes Containing the Target String)</strong>
-Combine the <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> and <code class="docutils literal notranslate"><span class="pre">-f/--filter</span></code> parameters to display only information of nodes whose names contain the specified string (e.g., only view “gripper”-related nodes):</p>
+<p><strong>Scenario 2: Filter and View Target Nodes (Only Display Nodes Containing the Target String)</strong></p>
+<p>Combine the <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> and <code class="docutils literal notranslate"><span class="pre">-f/--filter</span></code> parameters to display only information of nodes whose names contain the specified string (e.g., only view “gripper”-related nodes):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a<span class="w"> </span>-f<span class="w"> </span>gripper<span class="w">  </span><span class="c1"># Filter to show nodes with &quot;gripper&quot; in their names</span>
 </pre></div>
 </div>
