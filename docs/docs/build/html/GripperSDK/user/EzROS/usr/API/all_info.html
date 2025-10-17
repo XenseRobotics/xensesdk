@@ -109,8 +109,8 @@
 <span id="tag-all-info"></span><h1>查看ezros服务信息<a class="headerlink" href="#ezros" title="Link to this heading"></a></h1>
 <div class="step-block docutils container">
 <p>EzROS 支持通过全局参数组合，实现“全量信息展示”或“指定节点过滤展示”，以下分场景说明具体用法：</p>
-<p><strong>场景1: 查看所有节点、话题和服务（全量信息）</strong>
-通过 <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> 参数触发全量扫描，展示网络中所有节点的完整信息：</p>
+<p><strong>场景1: 查看所有节点、话题和服务（全量信息）</strong></p>
+<p>通过 <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> 参数触发全量扫描，展示网络中所有节点的完整信息：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a
 <span class="c1"># 或者 ezros --all</span>
 </pre></div>
@@ -132,8 +132,8 @@ EzROS 网络节点信息
     - master_d672f584b17a: [scan_sensor_sn, kill_sensor, launch_camera, launch_gripper, list_camera, reboot, kill_camera, launch_sensor, kill_gripper]
 </pre></div>
 </div>
-<p><strong>场景2: 过滤查看指定节点（仅展示含目标字符串的节点）</strong>
-结合 <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-f/--filter</span></code> 参数，仅展示节点名包含指定字符串的信息（如仅看“gripper”相关节点）：</p>
+<p><strong>场景2: 过滤查看指定节点（仅展示含目标字符串的节点）</strong></p>
+<p>结合 <code class="docutils literal notranslate"><span class="pre">-a/--all</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-f/--filter</span></code> 参数，仅展示节点名包含指定字符串的信息（如仅看“gripper”相关节点）：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ezros<span class="w"> </span>-a<span class="w"> </span>-f<span class="w"> </span>gripper<span class="w">  </span><span class="c1"># 过滤节点名包含&quot;gripper&quot;的信息</span>
 </pre></div>
 </div>
