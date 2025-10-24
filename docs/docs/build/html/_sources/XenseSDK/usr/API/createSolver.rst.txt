@@ -1,6 +1,6 @@
 .. _tag_createSolver:
 
-createSlover 方法
+createSolver 方法
 ==========================
 
 .. container:: step-block

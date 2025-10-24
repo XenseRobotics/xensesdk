@@ -40,7 +40,7 @@ selectSensorInfo 方法
           - 六维合力,shape=(6,)
         * - ``Sensor.OutputType.Marker2D``
           - Optional[np.ndarray]
-          - 切向位移,shape=(35,20,2)   
+          - 切向位移,shape=(26,14,2)   
         * - ``Sensor.OutputType.Mesh3D``
           - Optional[np.ndarray]
           - 当前帧 3D 网格,shape=(35, 20, 3)
