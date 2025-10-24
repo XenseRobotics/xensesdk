@@ -19,11 +19,7 @@ Using the XenseSDK API
 
         * - :ref:`getCameraID Method <tagget_camera_id_method>`
 
-        * - :ref:`resetReferenceImage Method <tagreset_reference_image_method>`
-
         * - :ref:`release Method <tagrelease_method>`
-
-        * - :ref:`call_service Method <tag_call_service>`
 
         * - :ref:`calibrateSensor Method <tag_calibrateSensor>`
 
@@ -33,6 +29,7 @@ Using the XenseSDK API
         
         * - :ref:`exportRuntimeConfig Method <tag_exportRuntimeConfig>`  
 
+        * - :ref:`call_service Method <tag_call_service>`
 .. toctree:: 
     :maxdepth: 1
     :hidden:
@@ -41,10 +38,9 @@ Using the XenseSDK API
     API/create
     API/selectSensorInfo
     API/getCameraID
-    API/resetReferenceImage
     API/release
-    API/call_service
     API/calibrateSensor
     API/scanSerialNumber
     API/createSolver
     API/exportRuntimeConfig
+    API/call_service

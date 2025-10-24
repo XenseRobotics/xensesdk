@@ -40,7 +40,7 @@ selectSensorInfo Method
           - 6-dimensional resultant force, shape=(6,)
         * - ``Sensor.OutputType.Marker2D``
           - Optional[np.ndarray]
-          - Tangential displacement, shape=(35,20,2)   
+          - Tangential displacement, shape=(26,14,2)   
         * - ``Sensor.OutputType.Mesh3D``
           - Optional[np.ndarray]
           - Current frame 3D mesh, shape=(35, 20, 3)
