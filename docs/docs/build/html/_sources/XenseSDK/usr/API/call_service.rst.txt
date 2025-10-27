@@ -17,9 +17,8 @@ call_service 方法
         :type action_name: str
         :param args: 传递给服务的可变参数
         :param kwargs: 传递给服务的关键字参数
-        :return: 包含调用结果的字典
-        :rtype: dict
         :return: 字典结构为:
             ``{"success": True, "ret": ret}``，其中：
             - ``success``: 布尔值，表示调用是否成功
             - ``ret``: 服务返回的具体结果数据
+        :rtype: dict

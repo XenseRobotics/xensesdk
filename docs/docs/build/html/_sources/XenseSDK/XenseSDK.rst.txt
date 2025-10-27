@@ -13,7 +13,11 @@ XenseSDK
    
    * - :ref:`API文档 <tag_xensesdkmethodlist>` 
 
+   * - :ref:`数据采集与处理 <tag_data_collection_process>`
+
    * - :ref:`代码示例 <tag_repo_example>`
+
+
   
 .. toctree::
    :maxdepth: 2
@@ -25,5 +29,7 @@ XenseSDK
    usr/Installation
 
    usr/methodList
+
+   usr/data_collection_process
 
    usr/repo_example

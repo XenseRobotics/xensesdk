@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数据采集与处理 &mdash; xense  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="更多代码示例" href="repo_example.html" />
+    <link rel="prev" title="call_service 方法" href="API/call_service.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">主目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../XenseStudio/Introduction.html">XenseStudio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../XenseSDK.html">XenseSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html">什么是XenseSDK？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation.html">安装XenseSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methodList.html">使用XenseSDK API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">数据采集与处理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">一、 核心接口说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">二、 数据采集处理完整示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="repo_example.html">更多代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../GripperSDK/GripperSDK.html">GripperSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Hardware/Hardware.html">Hardware</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../XenseSDK.html">XenseSDK</a></li>
+      <li class="breadcrumb-item active">数据采集与处理</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tag-data-collection-process">
+<span id="id1"></span><h1>数据采集与处理<a class="headerlink" href="#tag-data-collection-process" title="Link to this heading"></a></h1>
+<p>在传感器数据的采集与后处理流程中， <code class="docutils literal notranslate"><span class="pre">exportRuntimeConfig</span></code> 和 <code class="docutils literal notranslate"><span class="pre">createSolver</span></code> 是两个关键接口，分别承担配置导出和数据解析的核心作用，以下是接口说明及最佳实践方式。</p>
+<section id="id2">
+<h2>一、 核心接口说明<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<div class="step-content docutils container">
+<p class="method-title rubric">1. <code class="docutils literal notranslate"><span class="pre">exportRuntimeConfig</span></code> 接口</p>
+<p><code class="docutils literal notranslate"><span class="pre">Sensor.exportRuntimeConfig(self,</span> <span class="pre">save_dir=&quot;&quot;,</span> <span class="pre">binary=False)</span></code> 用于导出传感器运行时配置，将当前传感器的运行时参数（如校准数据、硬件特性等）持久化到指定目录，为后续离线数据解析提供配置依据。</p>
+<ul class="simple">
+<li><p><strong>参数</strong>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">save_dir</span></code> (<code class="docutils literal notranslate"><span class="pre">Union[str,</span> <span class="pre">Path]</span></code>): 配置文件保存目录，默认为当前工作目录。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">binary（bool）：是否以二进制加密格式返回数据（而非保存为文件），默认</span> <span class="pre">False</span></code>。</p></li>
+<li><p><strong>返回值</strong>：<code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><strong>作用</strong>：确保采集的原始数据在离线解析时，能使用与采集时一致的传感器配置，保证处理结果的准确性。</p></li>
+</ul>
+<p class="method-title rubric">2. <code class="docutils literal notranslate"><span class="pre">createSolver</span></code> 接口</p>
+<p><code class="docutils literal notranslate"><span class="pre">Sensor.createSolver(runtime_path)</span></code> 是工厂类方法，用于从指定的 runtime 配置路径创建 <code class="docutils literal notranslate"><span class="pre">SensorSolver</span></code> 实例，该实例是离线解析传感器数据的核心工具。</p>
+<ul class="simple">
+<li><p><strong>参数</strong>：</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runtime_path（Union[str,</span> <span class="pre">Path]）：指向</span> <span class="pre">runtime</span> <span class="pre">配置文件的路径（由</span> <span class="pre">exportRuntimeConfig</span></code> 生成）。</p></li>
+<li><p><strong>返回值</strong>：成功时返回 <code class="docutils literal notranslate"><span class="pre">SensorSolver</span></code> 实例，失败时返回 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p></li>
+<li><p><strong>作用</strong>：加载采集时导出的配置，基于原始数据计算深度图、力值等衍生数据，实现离线后处理。</p></li>
+</ul>
+</div>
+</section>
+<section id="id3">
+<h2>二、 数据采集处理完整示例<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>以下是结合两个接口的“数据采集-配置导出-离线处理”完整流程，包含代码实现与关键步骤说明。</p>
+<div class="step-content docutils container">
+<p class="method-title rubric">1. 数据采集与配置导出（<code class="docutils literal notranslate"><span class="pre">save_data</span></code> 函数）</p>
+<div class="step-block docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="n">SCRIPT_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">SAVE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">SCRIPT_DIR</span> <span class="o">/</span> <span class="s2">&quot;test_dir&quot;</span><span class="p">)</span>  <span class="c1"># 数据保存目录</span>
+<span class="n">SAVE_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sensor</span>
+
+<span class="n">sensor_id</span> <span class="o">=</span> <span class="s1">&#39;OG000232&#39;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">save_data</span><span class="p">():</span>
+    <span class="n">fps</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># 秒</span>
+    <span class="n">frame_interval</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">fps</span>
+    <span class="n">total_frames</span> <span class="o">=</span> <span class="n">fps</span> <span class="o">*</span> <span class="n">duration</span>
+
+    <span class="c1"># 创建传感器实例</span>
+    <span class="n">sensor_0</span> <span class="o">=</span> <span class="n">Sensor</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">sensor_id</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_frames</span><span class="p">):</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="c1"># 采集一帧 rectify 类型图像（原始数据）</span>
+        <span class="n">rec</span> <span class="o">=</span> <span class="n">sensor_0</span><span class="o">.</span><span class="n">selectSensorInfo</span><span class="p">(</span><span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Rectify</span><span class="p">)</span>
+
+        <span class="c1"># 生成文件名</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">SAVE_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sensor_id</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">03d</span><span class="si">}</span><span class="s2">.png&quot;</span>
+
+        <span class="c1"># 保存图片</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">rec</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 控制帧率（确保稳定30Hz）</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+        <span class="n">sleep_time</span> <span class="o">=</span> <span class="n">frame_interval</span> <span class="o">-</span> <span class="n">elapsed</span>
+        <span class="k">if</span> <span class="n">sleep_time</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_time</span><span class="p">)</span>
+
+    <span class="c1"># 导出运行时配置</span>
+    <span class="n">sensor_0</span><span class="o">.</span><span class="n">exportRuntimeConfig</span><span class="p">(</span><span class="n">SAVE_DIR</span><span class="p">)</span>
+
+    <span class="n">sensor_0</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p class="method-title rubric">2. 离线数据解析与后处理（<code class="docutils literal notranslate"><span class="pre">replay_data</span></code> 函数）</p>
+<div class="step-block docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">replay_data</span><span class="p">():</span>
+    <span class="n">sensor_solver</span> <span class="o">=</span> <span class="n">Sensor</span><span class="o">.</span><span class="n">createSolver</span><span class="p">(</span><span class="n">SAVE_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;runtime_</span><span class="si">{</span><span class="n">sensor_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">png_file</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">SAVE_DIR</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.png&quot;</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">png_file</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;_depth.png&quot;</span><span class="p">):</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">png_file</span><span class="p">),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_UNCHANGED</span><span class="p">)</span>
+
+            <span class="n">depth</span><span class="p">,</span> <span class="n">force</span><span class="p">,</span> <span class="n">diff</span> <span class="o">=</span> <span class="n">sensor_solver</span><span class="o">.</span><span class="n">selectSensorInfo</span><span class="p">(</span>
+                <span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Depth</span><span class="p">,</span>
+                <span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Force</span><span class="p">,</span>
+                <span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Difference</span><span class="p">,</span>
+                <span class="n">rectify_image</span><span class="o">=</span><span class="n">img</span>
+            <span class="p">)</span>
+
+            <span class="n">depth_norm</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">NORM_MINMAX</span><span class="p">)</span>
+            <span class="n">depth_vis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="n">depth_norm</span><span class="p">)</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">SAVE_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">png_file</span><span class="o">.</span><span class="n">stem</span><span class="si">}</span><span class="s2">_depth.png&quot;</span><span class="p">,</span> <span class="n">depth_vis</span><span class="p">)</span>
+
+    <span class="n">sensor_solver</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p class="method-title rubric">3. 主流程执行</p>
+<div class="step-block docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">save_data</span><span class="p">()</span>    <span class="c1"># 执行数据采集与配置导出</span>
+    <span class="n">replay_data</span><span class="p">()</span>  <span class="c1"># 执行离线数据解析与后处理</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data saved and replayed successfully.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p class="step-title rubric">三、流程说明</p>
+<div class="step-content docutils container">
+<ul class="simple">
+<li><p><strong>采集阶段</strong>：通过 <code class="docutils literal notranslate"><span class="pre">Sensor.create</span></code> 初始化传感器，按固定帧率采集原始图像，并在结束后调用 <code class="docutils literal notranslate"><span class="pre">exportRuntimeConfig</span></code> 导出配置，确保“数据-配置”对应。</p></li>
+<li><p><strong>后处理阶段</strong>：通过 <code class="docutils literal notranslate"><span class="pre">createSolver</span></code> 加载导出的配置，创建解析器实例，对原始图像进行深度计算等处理，最终生成衍生数据（如深度图）。</p></li>
+</ul>
+<p>该流程保证了数据采集与解析的一致性，适用于需要离线分析传感器数据的场景（如算法验证、数据可视化等）。</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="API/call_service.html" class="btn btn-neutral float-left" title="call_service 方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="repo_example.html" class="btn btn-neutral float-right" title="更多代码示例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, 千觉机器人科技(上海)有限公司.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

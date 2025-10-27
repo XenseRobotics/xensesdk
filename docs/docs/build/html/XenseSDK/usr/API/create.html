@@ -63,15 +63,15 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="selectSensorInfo.html">selectSensorInfo 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="getCameraID.html">getCameraID 方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="resetReferenceImage.html">resetReferenceImage 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html">release 方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="call_service.html">call_service 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calibrateSensor.html">calibrateSensor 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="scanSerialNumber.html">scanSerialNumber 方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="createSolver.html">createSlover 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="createSolver.html">createSolver 方法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exportRuntimeConfig.html">exportRuntimeConfig 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call_service.html">call_service 方法</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../data_collection_process.html">数据采集与处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../repo_example.html">更多代码示例</a></li>
 </ul>
 </li>
@@ -117,14 +117,14 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cam_id</strong> (<em>int</em><em> | </em><em>str</em>) – 传感器 ID、序列号或视频路径。默认为 0。</p></li>
-<li><p><strong>use_gpu</strong> (<em>bool</em>) – 是否使用 GPU 进行推理。</p></li>
-<li><p><strong>config_path</strong> (<em>str</em><em> | </em><em>Path</em>) – 配置文件路径或目录。若为目录，需包含与传感器序列号同名的标定文件。</p></li>
-<li><p><strong>api</strong> (<em>Enum</em>) – 相机 API 类型（如 OpenCV 后端），用于指定相机访问方式。</p></li>
-<li><p><strong>check_serial</strong> (<em>bool</em>) – 是否检查传感器序列号。</p></li>
-<li><p><strong>rectify_size</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em>) – 校正图像尺寸（宽, 高）。</p></li>
-<li><p><strong>mac_address</strong> (<em>str</em>) – 远程连接使用的相机 MAC 地址。</p></li>
-<li><p><strong>video_path</strong> (<em>str</em>) – 离线模拟的视频路径。</p></li>
+<li><p><strong>cam_id</strong> (<em>int</em><em> | </em><em>str，可选</em>) – 传感器 ID、序列号或视频路径。默认为 0。</p></li>
+<li><p><strong>use_gpu</strong> (<em>bool，可选</em>) – 是否使用 GPU 进行推理。</p></li>
+<li><p><strong>config_path</strong> (<em>str</em><em> | </em><em>Path，可选</em>) – 配置文件路径或目录。若为目录，需包含与传感器序列号同名的标定文件。</p></li>
+<li><p><strong>api</strong> (<em>Enum，可选</em>) – 相机 API 类型（如 OpenCV 后端），用于指定相机访问方式。</p></li>
+<li><p><strong>check_serial</strong> (<em>bool，可选</em>) – 是否检查传感器序列号。</p></li>
+<li><p><strong>rectify_size</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>，可选</em>) – 校正图像尺寸（宽, 高）。</p></li>
+<li><p><strong>mac_address</strong> (<em>str，可选</em>) – 远程连接使用的相机 MAC 地址。</p></li>
+<li><p><strong>video_path</strong> (<em>str，可选</em>) – 离线模拟的视频路径。</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>

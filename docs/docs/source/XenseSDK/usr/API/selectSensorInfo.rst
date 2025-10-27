@@ -52,7 +52,7 @@ selectSensorInfo 方法
           - 网格形变向量，shape=(35, 20, 3)
         * - ``Sensor.OutputType.TimeStamp``
           - Optional[np.ndarray]
-          - 传感器时间戳，shape=(35, 20, 3)
+          - 传感器时间戳，shape=(26,14,2)
 
     :return: 所请求的传感器数据，返回数量和顺序与输入参数一致。
     :rtype: 与输入参数对应的 ``np.ndarray`` 或 ``None`` (数据未获取到时)
