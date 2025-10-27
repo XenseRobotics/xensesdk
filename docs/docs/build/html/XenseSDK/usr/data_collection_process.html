@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Collection and Processing &mdash; xense  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f0a164dd" />
+      <link rel="stylesheet" type="text/css" href="../../_static/rst-tips.css?v=1dd3dd68" />
+      <link rel="stylesheet" type="text/css" href="../../_static/rst-note.css?v=423ff88c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/container_step.css?v=626adea8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../../_static/custom.js?v=68f4a4f9"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="More Code Examples" href="repo_example.html" />
+    <link rel="prev" title="call_service Method" href="API/call_service.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xense
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Main Directory</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../XenseStudio/Introduction.html">XenseStudio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../XenseSDK.html">XenseSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html">What is XenseSDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation.html">Installing XenseSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methodList.html">Using the XenseSDK API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Collection and Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core-interface-description">1. Core Interface Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#complete-example-of-data-collection-and-processing">2. Complete Example of Data Collection and Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#process-description">3. Process Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="repo_example.html">More Code Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../GripperSDK/GripperSDK.html">GripperSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Hardware/Hardware.html">Hardware</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../XenseSDK.html">XenseSDK</a></li>
+      <li class="breadcrumb-item active">Data Collection and Processing</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/XenseRobotics/xensesdk" class="fa fa-github" target="_blank">
+             Homepage 
+        </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-collection-and-processing">
+<span id="tag-data-collection-process"></span><h1>Data Collection and Processing<a class="headerlink" href="#data-collection-and-processing" title="Link to this heading"></a></h1>
+<p>In the process of sensor data collection and post-processing, <code class="docutils literal notranslate"><span class="pre">exportRuntimeConfig</span></code> and <code class="docutils literal notranslate"><span class="pre">createSolver</span></code> are two key interfaces, which are respectively responsible for the core functions of configuration export and data parsing. The following is the interface description and best practices.</p>
+<section id="core-interface-description">
+<h2>1. Core Interface Description<a class="headerlink" href="#core-interface-description" title="Link to this heading"></a></h2>
+<div class="step-content docutils container">
+<p class="method-title rubric">1. <code class="docutils literal notranslate"><span class="pre">exportRuntimeConfig</span></code> Interface</p>
+<p><code class="docutils literal notranslate"><span class="pre">Sensor.exportRuntimeConfig(self,</span> <span class="pre">save_dir=&quot;&quot;,</span> <span class="pre">binary=False)</span></code> is used to export the sensor runtime configuration. It persists the current sensor’s runtime parameters (such as calibration data, hardware characteristics, etc.) to a specified directory, providing a configuration basis for subsequent offline data parsing.</p>
+<ul class="simple">
+<li><p><strong>Parameters</strong>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">save_dir</span></code> (<code class="docutils literal notranslate"><span class="pre">Union[str,</span> <span class="pre">Path]</span></code>): Directory for saving configuration files, default is the current working directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">binary</span> <span class="pre">(bool)</span></code>: Whether to return data in binary encrypted format (instead of saving to a file), default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>Return Value</strong>: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><strong>Function</strong>: Ensure that the collected raw data can use the same sensor configuration as during collection when parsed offline, thus guaranteeing the accuracy of processing results.</p></li>
+</ul>
+<p class="method-title rubric">2. <code class="docutils literal notranslate"><span class="pre">createSolver</span></code> Interface</p>
+<p><code class="docutils literal notranslate"><span class="pre">Sensor.createSolver(runtime_path)</span></code> is a factory class method. It is used to create a <code class="docutils literal notranslate"><span class="pre">SensorSolver</span></code> instance from a specified runtime configuration path, and this instance is a core tool for offline parsing of sensor data.</p>
+<ul class="simple">
+<li><p><strong>Parameter</strong>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runtime_path</span> <span class="pre">(Union[str,</span> <span class="pre">Path])</span></code>: Path pointing to the runtime configuration file (generated by <code class="docutils literal notranslate"><span class="pre">exportRuntimeConfig</span></code>).</p></li>
+<li><p><strong>Return Value</strong>: Returns a <code class="docutils literal notranslate"><span class="pre">SensorSolver</span></code> instance on success, and returns <code class="docutils literal notranslate"><span class="pre">False</span></code> on failure.</p></li>
+<li><p><strong>Function</strong>: Load the configuration exported during collection, calculate derived data such as depth maps and force values based on raw data, and realize offline post-processing.</p></li>
+</ul>
+</div>
+</section>
+<section id="complete-example-of-data-collection-and-processing">
+<h2>2. Complete Example of Data Collection and Processing<a class="headerlink" href="#complete-example-of-data-collection-and-processing" title="Link to this heading"></a></h2>
+<p>The following is a complete process of “data collection - configuration export - offline processing” combining the two interfaces, including code implementation and key step explanations.</p>
+<div class="step-content docutils container">
+<p class="method-title rubric">1. Data Collection and Configuration Export (<code class="docutils literal notranslate"><span class="pre">save_data</span></code> Function)</p>
+<div class="step-block docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="n">SCRIPT_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">SAVE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">SCRIPT_DIR</span> <span class="o">/</span> <span class="s2">&quot;test_dir&quot;</span><span class="p">)</span>  <span class="c1"># Directory for saving data</span>
+<span class="n">SAVE_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">xensesdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sensor</span>
+<span class="n">sensor_id</span> <span class="o">=</span> <span class="s1">&#39;OG000232&#39;</span>  <span class="c1"># Sensor ID</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">save_data</span><span class="p">():</span>
+    <span class="n">fps</span> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># Data collection frame rate</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Duration in seconds</span>
+    <span class="n">frame_interval</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">fps</span>  <span class="c1"># Time interval between frames</span>
+    <span class="n">total_frames</span> <span class="o">=</span> <span class="n">fps</span> <span class="o">*</span> <span class="n">duration</span>  <span class="c1"># Total number of collected frames</span>
+
+    <span class="c1"># Create a sensor instance</span>
+    <span class="n">sensor_0</span> <span class="o">=</span> <span class="n">Sensor</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">sensor_id</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_frames</span><span class="p">):</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="c1"># Collect a frame of rectify type image (raw data)</span>
+        <span class="n">rec</span> <span class="o">=</span> <span class="n">sensor_0</span><span class="o">.</span><span class="n">selectSensorInfo</span><span class="p">(</span><span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Rectify</span><span class="p">)</span>
+
+        <span class="c1"># Generate file name</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">SAVE_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sensor_id</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">03d</span><span class="si">}</span><span class="s2">.png&quot;</span>
+
+        <span class="c1"># Save the image</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">rec</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Control frame rate (ensure stable 30Hz)</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+        <span class="n">sleep_time</span> <span class="o">=</span> <span class="n">frame_interval</span> <span class="o">-</span> <span class="n">elapsed</span>
+        <span class="k">if</span> <span class="n">sleep_time</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_time</span><span class="p">)</span>
+
+    <span class="c1"># Export runtime configuration</span>
+    <span class="n">sensor_0</span><span class="o">.</span><span class="n">exportRuntimeConfig</span><span class="p">(</span><span class="n">SAVE_DIR</span><span class="p">)</span>
+
+    <span class="c1"># Release sensor resources</span>
+    <span class="n">sensor_0</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p class="method-title rubric">2. Offline Data Parsing and Post-Processing (<code class="docutils literal notranslate"><span class="pre">replay_data</span></code> Function)</p>
+<div class="step-block docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">replay_data</span><span class="p">():</span>
+    <span class="c1"># Create a solver instance by loading the runtime configuration</span>
+    <span class="n">sensor_solver</span> <span class="o">=</span> <span class="n">Sensor</span><span class="o">.</span><span class="n">createSolver</span><span class="p">(</span><span class="n">SAVE_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;runtime_</span><span class="si">{</span><span class="n">sensor_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Traverse all collected PNG files and process them one by one</span>
+    <span class="k">for</span> <span class="n">png_file</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">SAVE_DIR</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.png&quot;</span><span class="p">)):</span>
+        <span class="c1"># Skip the already generated depth maps to avoid duplicate processing</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">png_file</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;_depth.png&quot;</span><span class="p">):</span>
+            <span class="c1"># Read the raw collected image</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">png_file</span><span class="p">),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_UNCHANGED</span><span class="p">)</span>
+
+            <span class="c1"># Parse depth map, force value, and difference map based on raw image</span>
+            <span class="n">depth</span><span class="p">,</span> <span class="n">force</span><span class="p">,</span> <span class="n">diff</span> <span class="o">=</span> <span class="n">sensor_solver</span><span class="o">.</span><span class="n">selectSensorInfo</span><span class="p">(</span>
+                <span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Depth</span><span class="p">,</span>
+                <span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Force</span><span class="p">,</span>
+                <span class="n">Sensor</span><span class="o">.</span><span class="n">OutputType</span><span class="o">.</span><span class="n">Difference</span><span class="p">,</span>
+                <span class="n">rectify_image</span><span class="o">=</span><span class="n">img</span>  <span class="c1"># Pass the raw rectify image as input</span>
+            <span class="p">)</span>
+
+            <span class="c1"># Normalize the depth map for visualization</span>
+            <span class="n">depth_norm</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">NORM_MINMAX</span><span class="p">)</span>
+            <span class="c1"># Convert the normalized depth map to 8-bit image format</span>
+            <span class="n">depth_vis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="n">depth_norm</span><span class="p">)</span>
+            <span class="c1"># Save the visualized depth map</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">SAVE_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">png_file</span><span class="o">.</span><span class="n">stem</span><span class="si">}</span><span class="s2">_depth.png&quot;</span><span class="p">,</span> <span class="n">depth_vis</span><span class="p">)</span>
+
+    <span class="c1"># Release solver resources</span>
+    <span class="n">sensor_solver</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p class="method-title rubric">3. Main Process Execution</p>
+<div class="step-block docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">save_data</span><span class="p">()</span>    <span class="c1"># Execute data collection and configuration export</span>
+    <span class="n">replay_data</span><span class="p">()</span>  <span class="c1"># Execute offline data parsing and post-processing</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data saved and replayed successfully.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="process-description">
+<h2>3. Process Description<a class="headerlink" href="#process-description" title="Link to this heading"></a></h2>
+<div class="step-content docutils container">
+<ul class="simple">
+<li><p><strong>Collection Phase</strong>: Initialize the sensor through <code class="docutils literal notranslate"><span class="pre">Sensor.create</span></code>, collect raw images at a fixed frame rate, and call <code class="docutils literal notranslate"><span class="pre">exportRuntimeConfig</span></code> to export the configuration after collection is completed, ensuring the correspondence between “data and configuration”.</p></li>
+<li><p><strong>Post-Processing Phase</strong>: Load the exported configuration through <code class="docutils literal notranslate"><span class="pre">createSolver</span></code>, create a parser instance, perform processing such as depth calculation on the raw images, and finally generate derived data (e.g., depth maps).</p></li>
+</ul>
+<p>This process ensures the consistency of data collection and parsing, and is applicable to scenarios that require offline analysis of sensor data (such as algorithm verification, data visualization, etc.).</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="API/call_service.html" class="btn btn-neutral float-left" title="call_service Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="repo_example.html" class="btn btn-neutral float-right" title="More Code Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, 千觉机器人科技(上海)有限公司.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

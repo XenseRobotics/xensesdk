@@ -17,9 +17,8 @@ call_service Method
         :type action_name: str
         :param args: Variable arguments passed to the service
         :param kwargs: Keyword arguments passed to the service
-        :return: Dictionary containing the call result
-        :rtype: dict
         :return: The dictionary structure is:
             ``{"success": True, "ret": ret}``, where:
             - ``success``: Boolean value indicating whether the call was successful
             - ``ret``: Specific result data returned by the service
+        :rtype: dict

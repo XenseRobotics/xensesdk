@@ -13,6 +13,8 @@ XenseSDK
    
    * - :ref:`API Documentation <tag_xensesdkmethodlist>` 
 
+   * - :ref:`Data Collection and Processing <tag_data_collection_process>`
+
    * - :ref:`Code Examples <tag_repo_example>`
   
 .. toctree::
@@ -25,5 +27,7 @@ XenseSDK
    usr/Installation
 
    usr/methodList
+
+   usr/data_collection_process
 
    usr/repo_example
