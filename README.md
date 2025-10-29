@@ -170,7 +170,7 @@ sensor =  Sensor.create('OP000064', ip_address="192.168.66.66")
     * Difference: Optional[np.ndarray]       # 差分图像, shape=(700, 400, 3), RGB
     * Depth: Optional[np.ndarray]            # 深度图像, shape=(700, 400), 单位mm
 
-    * Marker2D: Optional[np.ndarray]         # 切向位移, shape=(35, 20, 2)
+    * Marker2D: Optional[np.ndarray]         # 切向位移, shape=(26, 14, 2)
     * Force: Optional[np.ndarray]            # 三维力分布, shape=(35, 20, 3)
     * ForceNorm: Optional[np.ndarray]        # 法向力分量, shape=(35, 20, 3)
     * ForceResultant: Optional[np.ndarray]   # 六维合力, shape=(6,)
@@ -178,6 +178,8 @@ sensor =  Sensor.create('OP000064', ip_address="192.168.66.66")
     * Mesh3D: Optional[np.ndarray]           # 当前帧3D网格, shape=(35, 20, 3)
     * Mesh3DInit: Optional[np.ndarray]       # 初始3D网格, shape=(35, 20, 3)
     * Mesh3DFlow: Optional[np.ndarray]       # 网格形变向量, shape=(35, 20, 3)
+
+    * TimeStamp: Optional[np.ndarray]        # 传感器时间戳，shape=(26,14,2)
 
 ### 返回
 
