@@ -1,0 +1,167 @@
+.. _tag_Aurora_Lite_Adapter_Flange:
+
+III. Aurora Lite Adapter Flange
+========================================
+
+1. Franka Adapter Flange
+---------------------------
+.. figure:: ../images/Aurora-Lite-Flange-FR3-Panda.png
+    :alt: 软件初始设置
+    :align: center
+    :width: 400px
+    :name: Aurora-Lite-Flange-FR3-Panda
+    :class: preserve-aspect-ratio
+
+    Figure 1
+
+.. raw:: html
+
+    <style>
+        /* 强制制强制图片比例保持原始比例 */
+        .preserve-aspect-ratio img {
+            max-width: 100%;    /* 最大宽度不超过容器 */
+            height: auto !important;  /* 强制高度自适应，!important覆盖默认样式 */
+            object-fit: contain;      /* 保持比例，不裁剪 */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+.. raw:: html
+
+    <div style="display: flex; justify-content: center; margin: 1.5em 0;">
+      <div style="display: flex; align-items: center; gap: 15px; padding: 15px 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <!-- 文件图标 -->
+        <div style="width: 52px; height: 52px; background-color: #f5f5f5; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+            <i class="fa fa-cube" style="font-size: 28px; color: #555555;"></i>
+        </div>
+        
+        <!-- 文件信息 -->
+        <div style="text-align: left;">
+            <div style="font-weight: 600; color: #333333; font-size: 16px;">Aurora Lite-Flange-FR3&Panda.STEP</div>
+            <div style="font-size: 14px; color: #666666; margin-top: 4px;">Model File・STEP Format</div>
+        </div>
+        
+        <!-- Sphinx自带的下载指令 -->
+        <a href=":download:`../../../../_static/Aurora Lite-Flange-FR3&Panda.STEP"
+            style="padding: 8px 16px; border: 1px solid #dddddd; border-radius: 6px; color: #333333; text-decoration: none; background-color: #ffffff; font-weight: 500; transition: all 0.2s ease; white-space: nowrap;">
+            <i class="fa fa-download" style="margin-right: 6px;"></i> 下载文件
+        </a>
+      </div>
+    </div>
+
+
+
+
+2. Rizon4 Robotic Arm Adapter Flange
+----------------------------------------
+
+.. figure:: ../images/Aurora-Lite-Flange-Rizon4.png
+    :alt: 软件初始设置
+    :align: center
+    :width: 400px
+    :name: Aurora-Lite-Flange-Rizon4
+    :class: preserve-aspect-ratio
+
+    Figure 2
+
+
+
+.. raw:: html
+
+    <div style="display: flex; justify-content: center; margin: 1.5em 0;">
+      <div style="display: flex; align-items: center; gap: 15px; padding: 15px 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <!-- 文件图标 -->
+        <div style="width: 52px; height: 52px; background-color: #f5f5f5; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+            <i class="fa fa-cube" style="font-size: 28px; color: #555555;"></i>
+        </div>
+        
+        <!-- 文件信息 -->
+        <div style="text-align: left;">
+            <div style="font-weight: 600; color: #333333; font-size: 16px;">Aurora Lite-Flange-Rizon4.STEP</div>
+            <div style="font-size: 14px; color: #666666; margin-top: 4px;">Model File・STEP Format</div>
+        </div>
+        
+        <!-- Sphinx自带的下载指令 -->
+        <a href=":download:`../../../../_static/Aurora Lite-Flange-Rizon4.STEP"
+            style="padding: 8px 16px; border: 1px solid #dddddd; border-radius: 6px; color: #333333; text-decoration: none; background-color: #ffffff; font-weight: 500; transition: all 0.2s ease; white-space: nowrap;">
+            <i class="fa fa-download" style="margin-right: 6px;"></i> 下载文件
+        </a>
+      </div>
+    </div>
+
+
+3. UR5 Robotic Arm Adapter Flange
+-------------------------------------
+
+.. figure:: ../images/Aurora-Lite-Flange-UR5.png
+    :alt: 软件初始设置
+    :align: center
+    :width: 400px
+    :name: Aurora-Lite-Flange-UR5
+    :class: preserve-aspect-ratio
+
+    Figure 3
+
+
+.. raw:: html
+
+    <div style="display: flex; justify-content: center; margin: 1.5em 0;">
+      <div style="display: flex; align-items: center; gap: 15px; padding: 15px 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <!-- 文件图标 -->
+        <div style="width: 52px; height: 52px; background-color: #f5f5f5; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+            <i class="fa fa-cube" style="font-size: 28px; color: #555555;"></i>
+        </div>
+        
+        <!-- 文件信息 -->
+        <div style="text-align: left;">
+            <div style="font-weight: 600; color: #333333; font-size: 16px;">Aurora Lite-Flange-UR5.STEP</div>
+            <div style="font-size: 14px; color: #666666; margin-top: 4px;">Model File・STEP Format</div>
+        </div>
+        
+        
+         <!-- Sphinx自带的下载指令 -->
+        <a href=":download:`../../../../_static/Aurora Lite-Flange-UR5.STEP"
+            style="padding: 8px 16px; border: 1px solid #dddddd; border-radius: 6px; color: #333333; text-decoration: none; background-color: #ffffff; font-weight: 500; transition: all 0.2s ease; white-space: nowrap;">
+            <i class="fa fa-download" style="margin-right: 6px;"></i> 下载文件
+        </a>
+      </div>
+    </div>
+
+
+
+4. JAKA-S5 Robotic Arm Adapter Flange
+-----------------------------------------
+
+.. figure:: ../images/Aurora-Lite-Flange-JAKA-S5.png
+    :alt: 软件初始设置
+    :align: center
+    :width: 400px
+    :name: Aurora-Lite-Flange-JAKA-S5
+    :class: preserve-aspect-ratio
+
+    Figure 4
+
+.. raw:: html
+
+    <div style="display: flex; justify-content: center; margin: 1.5em 0;">
+      <div style="display: flex; align-items: center; gap: 15px; padding: 15px 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <!-- 文件图标 -->
+        <div style="width: 52px; height: 52px; background-color: #f5f5f5; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+            <i class="fa fa-cube" style="font-size: 28px; color: #555555;"></i>
+        </div>
+        
+        <!-- 文件信息 -->
+        <div style="text-align: left;">
+            <div style="font-weight: 600; color: #333333; font-size: 16px;">Aurora Lite-Flange-JAKA S5.STEP</div>
+            <div style="font-size: 14px; color: #666666; margin-top: 4px;">Model File・STEP Format</div>
+        </div>
+        
+        
+         <!-- Sphinx自带的下载指令 -->
+        <a href=":download:`../../../../_static/Aurora Lite-Flange-JAKA S5.STEP"
+            style="padding: 8px 16px; border: 1px solid #dddddd; border-radius: 6px; color: #333333; text-decoration: none; background-color: #ffffff; font-weight: 500; transition: all 0.2s ease; white-space: nowrap;">
+            <i class="fa fa-download" style="margin-right: 6px;"></i> 下载文件
+        </a>
+      </div>
+    </div>
