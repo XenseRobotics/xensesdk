@@ -84,16 +84,16 @@ Connect the server side and the host computer to the same local area network (LA
 
     Use an Ethernet cable to directly connect the PC's Ethernet port to the gripper device's network port, and ensure the Ethernet cable is firmly plugged into the PC's port.
 
-    .. admonition:: tips
-        :class: tip
+    .. .. admonition:: tips
+    ..     :class: tip
 
-        When using the SDK, if the host computer is connected to both the gripper via a wired connection and WiFi, configure multi-network card discovery at the beginning of the program:
+    ..     When using the SDK, if the host computer is connected to both the gripper via a wired connection and WiFi, configure multi-network card discovery at the beginning of the program:
 
-        .. code-block:: python
+    ..     .. code-block:: python
 
-            from xensesdk import setup_multi_net_interface
+    ..         from xensesdk import setup_multi_net_interface
 
-            setup_multi_net_interface()
+    ..         setup_multi_net_interface()
 
 
 .. rubric:: Step 3: Test Network Connectivity
