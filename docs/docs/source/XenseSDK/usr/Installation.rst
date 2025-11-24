@@ -79,3 +79,38 @@ Installation Guide
         pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl 
         # Or install from PyPI
         pip install xensesdk -i https://repo.huaweicloud.com/repository/pypi/simple/
+
+
+.. container:: step-block
+
+    **Step 4:** Ubuntu Environment Notes
+
+       For first-time installation of xensesdk >= 1.6.7 on Ubuntu, run the following script first for proper operation.
+
+    .. code-block:: bash
+
+        #!/bin/bash
+
+        # 1) Create group (won't error if already exists)
+        sudo groupadd -f xense
+
+        # If rule file already exists, remove it first (optional)
+        if [ -f '/etc/udev/rules.d/99-xense.rules' ]; then
+            echo "Udev rule already exists, removing old one..."
+            sudo rm /etc/udev/rules.d/99-xense.rules
+        fi
+
+        # 2) Write udev rule (matches vendor id 3938, applies to all current and future Xense devices)
+        sudo tee /etc/udev/rules.d/99-xense.rules > /dev/null <<'EOF'
+        # 99-xense.rules - allow users in 'xense' group to access Xense Robotics USB devices
+        SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="3938", MODE="0660", GROUP="xense"
+        EOF
+
+        # 3) Reload udev rules and trigger (to activate the rules)
+        sudo udevadm control --reload-rules
+        sudo udevadm trigger
+
+        # 4)  Add you (or other users) to xense group (replace with specific username or run multiple times)
+        sudo usermod -aG xense $USER
+
+        echo "Xense udev rule installed. Please reboot"
