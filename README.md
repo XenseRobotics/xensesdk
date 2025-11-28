@@ -88,17 +88,15 @@ if [ -f '/etc/udev/rules.d/99-xense.rules' ]; then
 fi
 
 # 2) 写 udev 规则（匹配 vendor id 3938，适用于所有当前和将来 Xense 设备）
-sudo tee /etc/udev/rules.d/99-xense.rules > /dev/null <<'EOF'
+sudo tee /etc/udev/rules.d/99-xense.rules > /dev/null <<EOF
 # 99-xense.rules - allow users in 'xense' group to access Xense Robotics USB devices
-SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="3938", MODE="0660", GROUP="xense"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="3938", MODE="0660", GROUP="${USER}"
 EOF
 
 # 3) 重新加载 udev 规则并触发（使规则生效）
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 
-# 4) 把你（或其它用户）加入 xense 组（替换为具体用户名或多次运行）
-sudo usermod -aG xense $USER
 
 echo "Xense udev rule installed. Please reboot"
 ```
