@@ -5,19 +5,18 @@ from xensesdk import call_service
 
 
 def main():
-    MASTERP_IP = "192.168.1.120"
-    
+    MASTER_SERVICE = "master_6ebbc5f53240"
     # find all sensors
-    ret = call_service(MASTERP_IP, "MasterService", "scan_sensor_sn")
-    if ret["success"] is False:
-        print(f"Failed to scan sensors: {ret['ret']}")
+    ret = call_service(MASTER_SERVICE, "scan_sensor_sn")
+    if ret is None:
+        print(f"Failed to scan sensors")
         sys.exit(1)
     else:
-        print(f"Found sensors: {ret['ret']}, using the first one.")
-    serial_number = list(ret["ret"].keys())[0]
+        print(f"Found sensors: {ret}, using the first one.")
+    serial_number = list(ret.keys())[0]
 
     # create a sensor
-    sensor_0 = Sensor.create(serial_number, ip_address=MASTERP_IP)
+    sensor_0 = Sensor.create(serial_number, mac_addr=MASTER_SERVICE.split("_")[-1])
     View = ExampleView(sensor_0)
     View2d = View.create2d(Sensor.OutputType.Difference, Sensor.OutputType.Depth)
     
