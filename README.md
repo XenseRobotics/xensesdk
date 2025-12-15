@@ -14,14 +14,15 @@ SDK开发文档和软件操作手册更新至： https://xensedoc.readthedocs.io
 
 ### 步骤 1: 准备 Python 开发环境
 
-推荐使用 **Anaconda**，并使用 Python 版本 **3.9.19**。
+推荐使用 **Anaconda**，并使用 Python 版本 **3.9** 或 **3.10**。
 
 ```bash
 # 进入 Xense SDK 目录
 cd xensesdk
 
 # 创建并激活虚拟环境
-conda create -n xenseenv python=3.9.19
+conda create -n xenseenv python=3.9
+# or conda create -n xenseenv python=3.10
 conda activate xenseenv
 ```
 
@@ -63,10 +64,12 @@ SDK 需要 **onnxruntime_gpu**，以及配套的**cudnn、 cudatoolkit**。根�
 
 将 SDK 包安装到您的环境中：
 ```bash
+# 从 PyPI 安装
 pip install xensesdk -i https://repo.huaweicloud.com/repository/pypi/simple/
 ```
 或:
 ```bash
+# 从本地目录安装
 pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl # (对于定制软件包)
 ```
 
@@ -158,31 +161,44 @@ if __name__ == '__main__':
 * **config\_path** (`str | Path`, 可选): 配置文件路径或目录。如果是目录，需包含与传感器序列号同名的标定文件。
 * **api** (`Enum`, 可选): 相机 API 类型（如 OpenCV 后端），用于指定相机访问方式。
 * **check\_serial** (`bool`, 可选): 是否检查传感器序列号，默认 True。
-* **rectify\_size** (`tuple[int, int]`, 可选): 校正图像尺寸。
-* **ip\_address** (`str`, 可选): 远程连接使用的相机 IP。
+* **rectify\_size** (`tuple[int, int]`, 可选): 校正图像尺寸（宽, 高）。
+* **mac\_address** (`str`, 可选): 远程连接使用的相机 MAC 地址。
 * **video\_path** (`str`, 可选): 离线模拟的视频路径。
 
 ### 返回
 
+* 传感器实例，用于后续数据采集和处理。
+
+### 返回类型
+
 * `Sensor` 对象
+
+### 备注
+
+* 使用完毕后务必调用 `release()` 释放系统资源。
+
 
 ### 示例
 
 ```python
 
-# Example 1：  用SN码开启
+# Example 1：  使用传感器序列号（SN）创建实例
 from xensesdk import Sensor
 sensor = Sensor.create('OP000064') 
 
-# Example 2：  用相机编号开启
+# Example 2：  使用相机编号（如 0、1）创建实例
 sensor = Sensor.create(0) 
 
-# Example 3： 打开储存的数据
+# Example 3： 通过 video_path 加载本地数据（cam_id 设为 None）
 sensor = Sensor.create(None, video_path=r"data.h5")
 
-# Example 4： 打开算力板上的传感器
+# Example 4： 指定 IP 地址连接远程传感器
 sensor =  Sensor.create('OP000064', ip_address="192.168.66.66")
 ```
+#### tips
+
+示例4中的 mac_address 参数兼容设备 IP 地址，如何获取设备 MAC 可参考 EzROS。
+
 
 ---
 
@@ -190,14 +206,14 @@ sensor =  Sensor.create('OP000064', ip_address="192.168.66.66")
 
 ### 描述
 
-获取指定类型的传感器数据。
+获取指定类型的传感器数据，返回数量和顺序与输入参数一致。
 
 ### 输入参数
 
-* **args**: 任意数量的 `Sensor.OutputType` 枚举，用于指定需要获取的数据类型：
+* **args**: 任意数量的 `Sensor.OutputType` 枚举，用于指定需要获取的数据类型。支持的枚举值及对应数据如下：
 
-    * Rectify: Optional[np.ndarray]          # 校正图像, shape=(700, 400, 3), RGB
-    * Difference: Optional[np.ndarray]       # 差分图像, shape=(700, 400, 3), RGB
+    * Rectify: Optional[np.ndarray]          # 校正图像, shape=(700, 400, 3), BGR格式
+    * Difference: Optional[np.ndarray]       # 差分图像, shape=(700, 400, 3), BGR格式
     * Depth: Optional[np.ndarray]            # 深度图像, shape=(700, 400), 单位mm
 
     * Marker2D: Optional[np.ndarray]         # 切向位移, shape=(26, 14, 2)
@@ -209,11 +225,15 @@ sensor =  Sensor.create('OP000064', ip_address="192.168.66.66")
     * Mesh3DInit: Optional[np.ndarray]       # 初始3D网格, shape=(35, 20, 3)
     * Mesh3DFlow: Optional[np.ndarray]       # 网格形变向量, shape=(35, 20, 3)
 
-    * TimeStamp: Optional[np.ndarray]        # 传感器时间戳，shape=(26,14,2)
+    * TimeStamp: Optional[float]        # 传感器时间戳，单位s
 
 ### 返回
 
 * 所请求的传感器数据（返回数量和顺序与参数一致）
+
+### 备注
+
+* 如果需要同时获取多种类型的数据，请按照例程中的形式用同一次函数调用获取，这样可以保证所有数据来自于同一帧，并且计算速度是最优化的
 
 ### 示例
 
@@ -228,6 +248,7 @@ rectify, marker3d, marker3dInit, marker3dFlow, depth = sensor.selectSensorInfo(
     Sensor.OutputType.Depth
 )
 ...
+# 释放资源
 sensor.release()
 ```
 
@@ -252,6 +273,7 @@ sensor.release()
 ### 返回
 
 * 包含所有已连接传感器的字典，键为传感器序列号( serial_number )，值为对应的相机 ID( camera_id )
+* 返回类型：dict
 
 ---
 
@@ -261,6 +283,7 @@ sensor.release()
 ### 描述
 
 获取当前传感器的相机编号。
+* 返回:当前传感器的相机编号
 
 ---
 
@@ -278,6 +301,10 @@ sensor.release()
 ### 返回
 
 * 成功时返回 SensorSolver 实例，失败时返回 False。
+* 类型：SensorSolver | bool
+* 抛出：
+  * AssertionError -- 解密后的数据格式不正确或缺少必要的 "ConfigManager" 键时触发。
+  * Exception -- 读取文件、解密过程中发生错误时触发（具体错误信息会被捕获并打印）。
 
 ### 示例
 
@@ -364,6 +391,10 @@ if __name__ == '__main__':
 ### 返回
 
 * 无
+* 抛出：RuntimeError -- 远程连接模式下导出配置失败时抛出。
+
+### Note
+* 保存的文件名格式为 "runtime_<序列号>"。
 
 ### 示例
 
@@ -462,6 +493,8 @@ if __name__ == '__main__':
 
 释放资源，关闭传感器。
 
+* 返回：None
+
 ---
 
 ## 常见问题解答 (FAQ)
@@ -475,7 +508,7 @@ Could not load the Qt platform plugin "xcb" in "" even though it was found. This
 
 **答：** 终端内执行：
 
-```shelll
+```shell
 sudo apt-get update
 sudo apt-get install libxcb-cursor0
 ```
