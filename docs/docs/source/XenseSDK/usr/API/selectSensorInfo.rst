@@ -52,7 +52,7 @@ selectSensorInfo Method
           - Mesh deformation vector, shape=(35, 20, 3)
         * - ``Sensor.OutputType.TimeStamp``
           - Optional[np.ndarray]
-          - Sensor timestamp, shape=(26,14,2) 
+          - Sensor timestamp, unit s
 
     :return: Requested sensor data with quantity and order matching input parameters.
     :rtype: Corresponding ``np.ndarray`` or ``None`` (when data is unavailable)
