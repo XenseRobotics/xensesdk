@@ -18,7 +18,7 @@
 .. raw:: html
 
     <div class="download-button-container" style="text-align: center; margin: 2em 0;">
-        <a href="https://pan.baidu.com/s/1pifsPkFevYTWBEq1PUNwDQ?pwd=yjcd"
+        <a href="https://www.xenserobotics.com/about/372"
            class="download-button"
            style="
                display: inline-flex;
