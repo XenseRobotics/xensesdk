@@ -47,46 +47,35 @@ The following is a complete process of "data collection - configuration export -
 
             from pathlib import Path
             SCRIPT_DIR = Path(__file__).resolve().parent
-            SAVE_DIR = Path(SCRIPT_DIR / "test_dir")  # Directory for saving data
+            SAVE_DIR = Path(SCRIPT_DIR / "test_dir")  # 存放目录
             SAVE_DIR.mkdir(parents=True, exist_ok=True)
             import cv2
             import time
             import numpy as np
             from xensesdk import Sensor
-            sensor_id = 'OG000232'  # Sensor ID
-            
+            sensor_id = 'OG000265'
             def save_data():
-                fps = 30  # Data collection frame rate
-                duration = 3  # Duration in seconds
-                frame_interval = 1.0 / fps  # Time interval between frames
-                total_frames = fps * duration  # Total number of collected frames
-                
-                # Create a sensor instance
+                fps = 30
+                duration = 3   # 秒
+                frame_interval = 1.0 / fps
+                total_frames = fps * duration
                 sensor_0 = Sensor.create(sensor_id)
-                
                 for i in range(total_frames):
                     start_time = time.time()
-                    
-                    # Collect a frame of rectify type image (raw data)
+                    # 采集一帧
                     rec = sensor_0.selectSensorInfo(Sensor.OutputType.Rectify)
-                    
-                    # Generate file name
+                    # 生成文件名
                     filename = SAVE_DIR / f"{sensor_id}_{i:03d}.png"
-                    
-                    # Save the image
+                    # 保存图片
                     cv2.imwrite(str(filename), rec)
                     print(f"Saved {filename}")
-                    
-                    # Control frame rate (ensure stable 30Hz)
+                    # 控制帧率（30Hz）
                     elapsed = time.time() - start_time
                     sleep_time = frame_interval - elapsed
                     if sleep_time > 0:
                         time.sleep(sleep_time)
-                
-                # Export runtime configuration
+                # 导出配置
                 sensor_0.exportRuntimeConfig(SAVE_DIR)
-                
-                # Release sensor resources
                 sensor_0.release()
     
     .. rubric:: 2. Offline Data Parsing and Post-Processing (``replay_data`` Function)
@@ -97,33 +86,18 @@ The following is a complete process of "data collection - configuration export -
         .. code-block:: python
 
             def replay_data():
-                # Create a solver instance by loading the runtime configuration
-                sensor_solver = Sensor.createSolver(SAVE_DIR / f"runtime_{sensor_id}")
-                
-                # Traverse all collected PNG files and process them one by one
-                for png_file in sorted(SAVE_DIR.glob("*.png")):
-                    # Skip the already generated depth maps to avoid duplicate processing
-                    if not png_file.name.endswith("_depth.png"):
-                        # Read the raw collected image
-                        img = cv2.imread(str(png_file), cv2.IMREAD_UNCHANGED)
-                        
-                        # Parse depth map, force value, and difference map based on raw image
-                        depth, force, diff = sensor_solver.selectSensorInfo(
-                            Sensor.OutputType.Depth,
-                            Sensor.OutputType.Force,
-                            Sensor.OutputType.Difference,
-                            rectify_image=img  # Pass the raw rectify image as input
-                        )
-                        
-                        # Normalize the depth map for visualization
-                        depth_norm = cv2.normalize(depth, None, 0, 255, cv2.NORM_MINMAX)
-                        # Convert the normalized depth map to 8-bit image format
-                        depth_vis = np.uint8(depth_norm)
-                        # Save the visualized depth map
-                        cv2.imwrite(SAVE_DIR / f"{png_file.stem}_depth.png", depth_vis)
-                
-                # Release solver resources
-                sensor_solver.release()
+            sensor_solver = Sensor.createSolver(SAVE_DIR / f"runtime_{sensor_id}")
+            for png_file in sorted(SAVE_DIR.glob("*.png")):
+                img = cv2.imread(str(png_file), cv2.IMREAD_UNCHANGED)
+                depth, force, diff = sensor_solver.selectSensorInfo(
+                    Sensor.OutputType.Depth,
+                    Sensor.OutputType.Force,
+                    Sensor.OutputType.Difference,
+                    rectify_image=img
+                )
+                depth_vis = np.clip(depth*200, 0, 255)
+                cv2.imwrite(SAVE_DIR / f"{png_file.stem}_depth.png", depth_vis)
+            sensor_solver.release()
     
     .. rubric:: 3. Main Process Execution
        :class: method-title  
@@ -133,8 +107,8 @@ The following is a complete process of "data collection - configuration export -
         .. code-block:: python
 
             if __name__ == '__main__':
-                save_data()    # Execute data collection and configuration export
-                replay_data()  # Execute offline data parsing and post-processing
+                save_data()
+                replay_data()
                 print("Data saved and replayed successfully.")
 
 3. Process Description
