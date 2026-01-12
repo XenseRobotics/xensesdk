@@ -2,7 +2,7 @@
 
 **如有使用问题，请添加微信 qjrobot9966 来交流**
 
-SDK开发文档和软件操作手册更新至： https://xensedoc.readthedocs.io/en/latest/
+SDK开发文档和软件操作手册更新至： https://xensesdk-cn.readthedocs.io/zh-cn/latest/
 
 ## 概述
 
