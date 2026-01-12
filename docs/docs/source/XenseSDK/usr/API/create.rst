@@ -5,7 +5,7 @@ create Method
 
 .. container:: step-block
 
-    .. py:method:: Sensor.create(cam_id=0, use_gpu=True, config_path=None, api=None, check_serial=True, rectify_size=None, ip_address=None, video_path=None)
+    .. py:method:: Sensor.create(cam_id=0, use_gpu=True, config_path=None, api=None, check_serial=True, rectify_size=None, mac_addr=None, video_path=None)
         :module: xensesdk
 
         Creates a sensor instance. After use, call :meth:`~Sensor.release` to free up resources.
@@ -28,8 +28,8 @@ create Method
         :param rectify_size: Rectified image size (width, height).
         :type rectify_size: tuple[int, int], optional
         
-        :param mac_address: Camera MAC address used for remote connection.
-        :type mac_address: str, optional
+        :param mac_addr: Camera MAC address used for remote connection.
+        :type mac_addr: str, optional
         
         :param video_path: Video path for offline simulation.
         :type video_path: str, optional
