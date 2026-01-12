@@ -83,7 +83,7 @@
         </div>
         
         <!-- Sphinx自带的下载指令 -->
-        <a href=":download:`../../../../_static/g1-ws-Robotiq 2F-85.STEP"
+        <a href=":download:`../../../../_static/g1-ws-Robotiq 2F-85.stp"
             style="padding: 8px 16px; border: 1px solid #dddddd; border-radius: 6px; color: #333333; text-decoration: none; background-color: #ffffff; font-weight: 500; transition: all 0.2s ease; white-space: nowrap;">
             <i class="fa fa-download" style="margin-right: 6px;"></i> 下载文件
         </a>
