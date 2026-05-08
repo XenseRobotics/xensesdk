@@ -31,9 +31,6 @@ create Method
         :param mac_addr: Camera MAC address used for remote connection.
         :type mac_addr: str, optional
         
-        :param video_path: Video path for offline simulation.
-        :type video_path: str, optional
-        
         :return: Sensor instance, used for subsequent data collection and processing.
         :rtype: :class:`Sensor`
 
