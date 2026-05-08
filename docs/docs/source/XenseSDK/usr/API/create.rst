@@ -31,9 +31,6 @@ create方法
         :param mac_addr: 远程连接使用的相机 MAC 地址。
         :type mac_addr: str，可选
         
-        :param video_path: 离线模拟的视频路径。
-        :type video_path: str，可选
-        
         :return: 传感器实例，用于后续数据采集和处理。
         :rtype: :class:`Sensor`
 
