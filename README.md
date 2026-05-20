@@ -56,12 +56,21 @@ conda install --use-local cudnn-8.9.2.26-cuda11_0.conda
 
 将 SDK 包安装到您的环境中：
 ```bash
-pip install xensesdk 
+pip install xensesdk[full] 
 ```
 或:
 ```bash
-pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl # (对于定制软件包)
+pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl[full] # (对于定制软件包)
 ```
+
+**可选依赖**
+
+XenseSDK 提供多种安装选项，可通过 pip extras 安装额外功能：
+
+- 核心包： `pip install xensesdk`
+- 可视化： `pip install xensesdk[viz]`
+- ONNX 推理： `pip install xensesdk[onnx]`
+- 完整安装： `pip install xensesdk[full]`
 
 ---
 

@@ -76,13 +76,24 @@ Installation Guide
     .. code-block:: bash
 
         # Install from a local directory (for custom packages)
-        pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl 
+        pip install xensesdk-0.1.0-cp39-cp39-win_amd64.whl[full] 
         # Or install from PyPI
-        pip install xensesdk -i https://repo.huaweicloud.com/repository/pypi/simple/
+        pip install xensesdk[full] -i https://repo.huaweicloud.com/repository/pypi/simple/
 
 
 .. container:: step-block
 
+    **Optional Dependencies**
+
+        XenseSDK provides multiple installation options, with extra features available via pip extras:
+
+        - Core package: ``pip install xensesdk``
+        - Visualization: ``pip install xensesdk[viz]``
+        - ONNX inference: ``pip install xensesdk[onnx]``
+        - Full installation: ``pip install xensesdk[full]``
+
+.. container:: step-block
+    
     **Step 4:** Ubuntu Environment Notes
 
        For first-time installation of xensesdk >= 1.6.7 on Ubuntu, run the following script first for proper operation.
