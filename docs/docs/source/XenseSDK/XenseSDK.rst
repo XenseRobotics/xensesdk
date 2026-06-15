@@ -15,7 +15,6 @@ XenseSDK
 
    * - :ref:`数据采集与处理 <tag_data_collection_process>`
 
-   * - :ref:`代码示例 <tag_repo_example>`
 
 
   
@@ -31,5 +30,3 @@ XenseSDK
    usr/methodList
 
    usr/data_collection_process
-
-   usr/repo_example

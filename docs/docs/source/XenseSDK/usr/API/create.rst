@@ -13,9 +13,6 @@ create方法
         :param cam_id: 传感器 ID、序列号或视频路径。默认为 0。
         :type cam_id: int | str，可选
         
-        :param use_gpu: 是否使用 GPU 进行推理。
-        :type use_gpu: bool，可选
-        
         :param config_path: 配置文件路径或目录。若为目录，需包含与传感器序列号同名的标定文件。
         :type config_path: str | Path，可选
         
@@ -68,26 +65,15 @@ create方法
                 # 使用完毕后释放资源
                 sensor.release()
 
-        .. tab-item:: 示例 3:打开存储的离线数据
+        .. tab-item:: 示例 3:连接远程算力板上的传感器
 
             .. code-block:: python
 
                 from xensesdk import Sensor
 
-                # 通过 video_path 加载本地数据（cam_id 设为 None）
-                sensor = Sensor.create(None, video_path=r"data.h5")
-
-                # 使用完毕后释放资源
-                sensor.release()
-
-        .. tab-item:: 示例 4:连接远程算力板上的传感器
-
-            .. code-block:: python
-
-                from xensesdk import Sensor
-
-                # 指定 IP 地址连接远程传感器
-                sensor = Sensor.create('OP000064', ip_address="192.168.66.66")
+                # 指定 MAC 地址连接远程传感器
+                master_service = "master_000000000000"
+                sensor = Sensor.create('OP000064', mac_addr="000000000000")
 
                 # 使用完毕后释放资源
                 sensor.release()
@@ -95,5 +81,5 @@ create方法
 .. admonition:: tips
     :class: tip
 
-        示例 4中的 mac_address 参数兼容设备 IP 地址，如何获取设备 MAC 可参考
+        如何获取示例 3中master_service 可参考
         `EzROS </home/xense/projects/doc/xensesdk/docs/docs/source//GripperSDK/user/EzROS/ezros_example.html>`_。
