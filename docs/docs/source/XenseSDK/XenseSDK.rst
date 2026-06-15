@@ -15,7 +15,6 @@ XenseSDK
 
    * - :ref:`Data Collection and Processing <tag_data_collection_process>`
 
-   * - :ref:`Code Examples <tag_repo_example>`
   
 .. toctree::
    :maxdepth: 2
@@ -29,5 +28,3 @@ XenseSDK
    usr/methodList
 
    usr/data_collection_process
-
-   usr/repo_example

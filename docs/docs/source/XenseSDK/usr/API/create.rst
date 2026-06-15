@@ -13,9 +13,6 @@ create Method
         :param cam_id: Sensor ID, serial number, or video path. Defaults to 0.
         :type cam_id: int | str, optional
         
-        :param use_gpu: Whether to use GPU for inference.
-        :type use_gpu: bool, optional
-        
         :param config_path: Path or directory of the configuration file. If it is a directory, it must contain a calibration file with the same name as the sensor serial number.
         :type config_path: str | Path, optional
         
@@ -68,26 +65,15 @@ Example Code
                 # Release resources after use
                 sensor.release()
 
-        .. tab-item:: Example 3: Open Stored Offline Data
+        .. tab-item:: Example 3: Connect to Sensor on Remote Computing Board
 
             .. code-block:: python
 
                 from xensesdk import Sensor
 
-                # Load local data via video_path (set cam_id to None)
-                sensor = Sensor.create(None, video_path=r"data.h5")
-
-                # Release resources after use
-                sensor.release()
-
-        .. tab-item:: Example 4: Connect to Sensor on Remote Computing Board
-
-            .. code-block:: python
-
-                from xensesdk import Sensor
-
-                # Specify the IP address to connect to the remote sensor
-                sensor = Sensor.create('OP000064', ip_address="192.168.66.66")
+                # Specify the MAC address to connect to the remote sensor
+                master_service = "master_000000000000"
+                sensor = Sensor.create('OP000064', mac_addr="000000000000")
 
                 # Release resources after use
                 sensor.release()
@@ -95,5 +81,5 @@ Example Code
 .. admonition:: tips
     :class: tip
 
-        The mac_address parameter in Example 4 is compatible with the device IP address. For instructions on how to obtain the device MAC address, refer to
+        You can refer to how to get the master_service in Example 3.
         `EzROS </home/xense/projects/docs-en/xensesdk/docs/docs/source//GripperSDK/user/EzROS/ezros_example.html>`_.
