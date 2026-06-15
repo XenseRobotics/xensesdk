@@ -31,7 +31,8 @@ Using the XenseSDK API
 
         * - :ref:`call_service Method <tag_call_service>`
 
-    For more code examples, please visit the project homepage.：
+    For more code examples, please visit the project homepage：
+
     .. raw:: html
 
         <div style="margin: 20px 0; text-align: center;">
@@ -44,6 +45,7 @@ Using the XenseSDK API
         </div>
 
     If you encounter issues with the examples, please feel free to share your usage scenarios in the Issues section of the repository to help us improve the examples！
+    
 .. toctree:: 
     :maxdepth: 1
     :hidden:
