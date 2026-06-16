@@ -5,7 +5,7 @@ create方法
 
 .. container:: step-block
 
-    .. py:method:: Sensor.create(cam_id=0, use_gpu=True, config_path=None, api=None, check_serial=True, rectify_size=None, mac_addr=None, video_path=None)
+    .. py:method:: Sensor.create(cam_id=0, config_path=None, api=None, check_serial=True, rectify_size=None, mac_addr=None)
         :module: xensesdk
 
         创建一个传感器实例，使用完成后请调用 :meth:`~Sensor.release` 释放资源。
