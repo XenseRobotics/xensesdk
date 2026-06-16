@@ -5,7 +5,7 @@ create Method
 
 .. container:: step-block
 
-    .. py:method:: Sensor.create(cam_id=0, use_gpu=True, config_path=None, api=None, check_serial=True, rectify_size=None, mac_addr=None, video_path=None)
+    .. py:method:: Sensor.create(cam_id=0, config_path=None, api=None, check_serial=True, rectify_size=None, mac_addr=None)
         :module: xensesdk
 
         Creates a sensor instance. After use, call :meth:`~Sensor.release` to free up resources.
