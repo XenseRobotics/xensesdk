@@ -12,14 +12,14 @@
     :scale: 40%
     :name: _xs-sensor_selection
 
-    图 1 数采控制区
+    图 1 传感器控制区
 
 当前数采控制区的“选择传感器”选项下，可实时监测传感器多模态感知信息。
  
  .. figure:: ../images/elements_selection_area.png
     :alt: 设备选择区
     :align: center
-    :scale: 100%
+    :scale: 50%
     :name: _xs-device_selection
 
     图 2 设备选择区
