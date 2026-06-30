@@ -14,7 +14,7 @@ IV. Interface and Interaction
 
     Figure 1: Data Acquisition Control Area
 
-Under the "Select Sensor" option in the current Data Acquisition Control Area, you can monitor the multimodal perception information of the sensor in real time. It also supports recording the sensor feedback information for later "opening data stream" to conduct review, recap, and analysis.
+Under the "Select Sensor" option in the current Data Acquisition Control Area, you can monitor the multimodal perception information of the sensor in real time.
  
  .. figure:: ../images/elements_selection_area.png
     :alt: Device Selection Area
