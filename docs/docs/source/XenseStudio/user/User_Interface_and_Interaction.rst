@@ -19,7 +19,7 @@ Under the "Select Sensor" option in the current Data Acquisition Control Area, y
  .. figure:: ../images/elements_selection_area.png
     :alt: Device Selection Area
     :align: center
-    :scale: 100%
+    :scale: 50%
     :name: _xs-device_selection
 
     Figure 2: Device Selection Area
