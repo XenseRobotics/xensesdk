@@ -9,7 +9,7 @@ IV. Interface and Interaction
 .. figure:: ../images/Data_or_Record_control_area.png
     :alt: Data Acquisition Control Area
     :align: center
-    :scale: 100%
+    :scale: 40%
     :name: _xs-sensor_selection
 
     Figure 1: Data Acquisition Control Area
