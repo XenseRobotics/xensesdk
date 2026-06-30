@@ -100,30 +100,6 @@ Perception Mode Configuration
     :width: 16px
     :height: 16px
 
-.. |video(selected)| image:: ../images/video(selected).png
-    :alt: Recording Selected Icon
-    :align: middle
-    :width: 16px
-    :height: 16px
-
-.. |video(unselected)| image:: ../images/video(unselected).png
-    :alt: Recording Unselected Icon
-    :align: middle
-    :width: 16px
-    :height: 16px
-
-.. |record_button| image:: ../images/record_button.png
-    :alt: Record Button
-    :align: middle
-    :width: 16px
-    :height: 16px
-
-.. |pause_button| image:: ../images/pause_button.png
-    :alt: Pause Button
-    :align: middle
-    :width: 16px
-    :height: 16px
-
 .. container:: row
 
     .. container:: perception-image
@@ -138,26 +114,16 @@ Perception Mode Configuration
         |contactforce(selected)| / |contactforce(unselected)| Contact Force: Click the "Contact Force" icon on the left side of the Perception Mode Configuration Area,
         and the visualization area will display the contact force reconstruction results and surface deformation field
     
-        |video(selected)| / |video(unselected)| Recording: Click the "Recording" icon on the left side of the Perception Mode Configuration Area,
-        click the bottom-right corner to select the data stream storage location, then click |record_button| at the bottom center to start recording, and click |pause_button| to stop recording and save the file to the target path
-    
 .. container:: caption
     
     Figure 3: Perception Mode Configuration Area
 
-View Switching
+Perception Mode Switching
 ##################
-
-.. figure:: ../images/views_switch.png
-    :alt: View Switching
-    :align: right
-    :class: right-figure
-
-    Figure 4: View Switching
 
 .. container:: content-paragraph
     
-    View switching enables flexible conversion of the tactile and contact force information fed back by the sensor between 2D planar and 3D spatial views. It presents the information in multimodal forms such as tactile images, contact force, and surface deformation field.
+    Perception Mode switching enables flexible conversion of the tactile and contact force information fed back by the sensor between 2D planar and 3D spatial views. It presents the information in multimodal forms such as tactile images, contact force, and surface deformation field.
 
 |
 |
@@ -185,7 +151,7 @@ This allows recalibrating the sensor to refresh the display.
 
 |
 
- .. figure:: ../images/contactforce_new.jpg
+ .. figure:: ../images/contactforce_new.png
     :alt: Contact Force Information
     :align: center
     :width: 500px
@@ -199,27 +165,9 @@ This allows recalibrating the sensor to refresh the display.
 The arrows in the 3D view are the results of contact force reconstruction. The direction of the arrow indicates the direction of the force, and the length of the arrow indicates the magnitude of the force. The curved surface area below the arrow
 displays the perception result of the contact deformation field. In the 2D view, only the surface deformation field is displayed due to the limitation of visualization dimensions.
 
-2. Open Data Stream
------------------------
-
-.. |open_videos| image:: ../images/open_videos.png
-    :alt: Open Data Stream Button
-    :align: middle
-    :width: 80px
-    :height: 16px
-
-.. |name_of_the_sensor| image:: ../images/name_of_the_sensor.png
-    :alt: Sensor Name
-    :align: middle
-    :width: 80px
-    :height: 16px
 
 
-Click "Open Data Stream" in the Data Acquisition Control Area, then click |open_videos| to load the previously recorded data stream file. After loading, the software will cyclically display the information obtained from the data stream file and present the calculation results.
-The Sensor Selection Area displays the name of the saved data stream file |name_of_the_sensor| . The name of the virtual sensor is derived from the data stream file name. After loading the data stream, refer to 3.1 Default Mode and Contact Force Mode for details, but there is no Recording Mode.
-For the perception mode configuration, refer to 3.1.2 ( |video(selected)| / |video(unselected)| Recording ). For view switching, refer to 3.1.3.
-
-3. Toolbar
+1. Toolbar
 -------------
 
 .. figure:: ../images/toolbar.png
