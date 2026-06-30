@@ -9,7 +9,7 @@
 .. figure:: ../images/Data_or_Record_control_area.png
     :alt: 数采控制区
     :align: center
-    :scale: 100%
+    :scale: 40%
     :name: _xs-sensor_selection
 
     图 1 数采控制区
