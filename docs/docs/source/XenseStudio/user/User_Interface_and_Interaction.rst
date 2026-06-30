@@ -100,30 +100,6 @@
     :width: 16px
     :height: 16px
 
-.. |video(selected)| image:: ../images/video(selected).png
-    :alt: 视频选中图标
-    :align: middle
-    :width: 16px
-    :height: 16px
-
-.. |video(unselected)| image:: ../images/video(unselected).png
-    :alt: 视频未选中图标
-    :align: middle
-    :width: 16px
-    :height: 16px
-
-.. |record_button| image:: ../images/record_button.png
-    :alt: 录制按钮
-    :align: middle
-    :width: 16px
-    :height: 16px
-
-.. |pause_button| image:: ../images/pause_button.png
-    :alt: 暂停按钮
-    :align: middle
-    :width: 16px
-    :height: 16px
-
 .. container:: row
 
     .. container:: perception-image
@@ -137,27 +113,17 @@
         
         |contactforce(selected)| / |contactforce(unselected)| 接触力: 点击感知模块配置区左侧的“接触力”图标，
         可视化区将显示接触力重建结果和曲面变形场
-    
-        |video(selected)| / |video(unselected)| 录制：点击感知模块配置区左侧的“录制”图标,
-        点击右下角 选择数据流存放位置，随后点击正下方 |record_button| 开始录制，点击 |pause_button| 停止录制并将文件保存至目标路径
-    
+
 .. container:: caption
     
     图 3 感知模态配置区
 
-视图切换
+感知模态切换
 #################
-
-.. figure:: ../images/views_switch.png
-    :alt: 视图切换
-    :align: right
-    :class: right-figure
-
-    图 4 视图切换
 
 .. container:: content-paragraph
     
-    视图切换可实现传感器反馈的触觉及接触力信息在二维平面与三维立体空间的灵活转换，并以触觉图像、接触力、曲面变形场等多模态形式予以呈现
+    感知模态切换可实现传感器反馈的触觉及接触力信息在二维平面与三维立体空间的灵活转换，并以触觉图像、接触力、曲面变形场等多模态形式予以呈现
 
 |
 |
@@ -185,7 +151,7 @@
 
 |
 
- .. figure:: ../images/contactforce_new.jpg
+ .. figure:: ../images/contactforce_new.png
     :alt: 接触力
     :align: center
     :width: 500px
@@ -199,27 +165,7 @@
 三维视图上的箭头，即为接触力重建的结果箭头方向表示力的方向，箭头的长度表示力的大小，箭头之下的曲面部分，
 显示了接触变形场的感知结果。二维视图下，由于可视化维度的限制，只显示曲面变形场。
 
-2、 打开数据流
-----------------
-
-.. |open_videos| image:: ../images/open_videos.png
-    :alt: 打开数据流按钮
-    :align: middle
-    :width: 80px
-    :height: 16px
-
-.. |name_of_the_sensor| image:: ../images/name_of_the_sensor.png
-    :alt: 传感器名称
-    :align: middle
-    :width: 80px
-    :height: 16px
-
-
-在数采控制区点击“打开数据流”，点击 |open_videos| ，可以加载之前录制的数据流文件。加载以后，软件将循环展示从数据流文件中获取的信息，并展示计算结果。
-传感器选择区显示保存的数据流文件名称 |name_of_the_sensor| ，虚拟传感器的名称来自数据流文件名。加载数据流以后，详见3.1默认模式和接触力模式，但没有录制模式。
-感知模式配置可参考3.1.2（ |video(selected)| / |video(unselected)| 录制），视图切换可参考3.1.3。
-
-3、 工具栏
+2、 工具栏
 ----------------
 
 .. figure:: ../images/toolbar.png
